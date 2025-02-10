@@ -1,0 +1,80 @@
+{
+  "photos": [
+    "https://cache08.housesigma.com/file/pix-treb/X9238910/7bb74_1.jpg?4e9f8f05",
+    "https://cache09.housesigma.com/file/pix-treb/X9238910/7bb74_2.jpg?4e9f8f05",
+    "https://cache16.housesigma.com/file/pix-treb/X9238910/7bb74_3.jpg?4e9f8f05",
+    "https://cache17.housesigma.com/file/pix-treb/X9238910/7bb74_4.jpg?4e9f8f05",
+    "https://cache18.housesigma.com/file/pix-treb/X9238910/7bb74_5.jpg?4e9f8f05",
+    "https://cache19.housesigma.com/file/pix-treb/X9238910/7bb74_6.jpg?4e9f8f05",
+    "https://cache-e11.housesigma.com/file/pix-treb/X9238910/7bb74_7.jpg?4e9f8f05",
+    "https://cache-e12.housesigma.com/file/pix-treb/X9238910/7bb74_8.jpg?4e9f8f05",
+    "https://cache-e13.housesigma.com/file/pix-treb/X9238910/7bb74_9.jpg?4e9f8f05",
+    "https://cache-e14.housesigma.com/file/pix-treb/X9238910/7bb74_10.jpg?4e9f8f05",
+    "https://cache05.housesigma.com/file/pix-treb/X9238910/7bb74_11.jpg?4e9f8f05",
+    "https://cache06.housesigma.com/file/pix-treb/X9238910/7bb74_12.jpg?4e9f8f05",
+    "https://cache08.housesigma.com/file/pix-treb/X9238910/7bb74_13.jpg?4e9f8f05",
+    "https://cache09.housesigma.com/file/pix-treb/X9238910/7bb74_14.jpg?4e9f8f05",
+    "https://cache16.housesigma.com/file/pix-treb/X9238910/7bb74_15.jpg?4e9f8f05",
+    "https://cache17.housesigma.com/file/pix-treb/X9238910/7bb74_16.jpg?4e9f8f05",
+    "https://cache18.housesigma.com/file/pix-treb/X9238910/7bb74_17.jpg?4e9f8f05",
+    "https://cache19.housesigma.com/file/pix-treb/X9238910/7bb74_18.jpg?4e9f8f05",
+    "https://cache-e11.housesigma.com/file/pix-treb/X9238910/7bb74_19.jpg?4e9f8f05",
+    "https://cache-e12.housesigma.com/file/pix-treb/X9238910/7bb74_20.jpg?4e9f8f05",
+    "https://cache-e13.housesigma.com/file/pix-treb/X9238910/7bb74_21.jpg?4e9f8f05",
+    "https://cache-e14.housesigma.com/file/pix-treb/X9238910/7bb74_22.jpg?4e9f8f05",
+    "https://cache05.housesigma.com/file/pix-treb/X9238910/7bb74_23.jpg?4e9f8f05",
+    "https://cache06.housesigma.com/file/pix-treb/X9238910/7bb74_24.jpg?4e9f8f05"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "32 Oak St",
+      "municipality": "Grimsby",
+      "postalCode": "L3M3G7",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": null,
+    "coordinates": {
+      "latitude": 43.19123,
+      "longitude": -79.56269
+    },
+    "propertyTax": 4060,
+    "lotSize": 5616,
+    "squareFootage": 1750,
+    "askingPrice": 649900,
+    "daysOnMarket": 183,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2024-08-03T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "mZRW7n2MRjR7EBO9",
+        "event": "For Sale"
+      },
+      {
+        "startDate": "2024-08-02T00:00:00.000Z",
+        "endDate": "2025-01-15T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "4KAX7Nj6B8o7eRPJ",
+        "event": "Terminated"
+      }
+    ],
+    "estimatePrice": 637400,
+    "estimatePriceConfident": 0.56,
+    "estimateRent": 2595,
+    "estimateRentDays": 21,
+    "estimateRentYearReturn": 3.96,
+    "scores": {
+      "school": 7,
+      "growth": 6,
+      "rent": 7
+    },
+    "communityValue": {
+      "value": 935500,
+      "growth": 0.054000000000000006,
+      "growth5YearAverage": 0.45,
+      "growth10YearAverage": 0.85
+    }
+  }
+}

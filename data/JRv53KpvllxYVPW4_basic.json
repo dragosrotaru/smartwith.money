@@ -1,0 +1,106 @@
+{
+  "photos": [
+    "https://cache14.housesigma.com/file/pix-itso/155682079/b3561_1.jpg?5b11c86c",
+    "https://cache15.housesigma.com/file/pix-itso/155682079/b3561_2.jpg?5b11c86c",
+    "https://cache08.housesigma.com/file/pix-itso/155682079/b3561_3.jpg?5b11c86c",
+    "https://cache09.housesigma.com/file/pix-itso/155682079/b3561_4.jpg?5b11c86c",
+    "https://cache-e14.housesigma.com/file/pix-itso/155682079/b3561_5.jpg?5b11c86c",
+    "https://cache14.housesigma.com/file/pix-itso/155682079/b3561_6.jpg?5b11c86c",
+    "https://cache15.housesigma.com/file/pix-itso/155682079/b3561_7.jpg?5b11c86c",
+    "https://cache08.housesigma.com/file/pix-itso/155682079/b3561_8.jpg?5b11c86c",
+    "https://cache09.housesigma.com/file/pix-itso/155682079/b3561_9.jpg?5b11c86c",
+    "https://cache-e14.housesigma.com/file/pix-itso/155682079/b3561_10.jpg?5b11c86c",
+    "https://cache14.housesigma.com/file/pix-itso/155682079/b3561_11.jpg?5b11c86c",
+    "https://cache15.housesigma.com/file/pix-itso/155682079/b3561_12.jpg?5b11c86c",
+    "https://cache08.housesigma.com/file/pix-itso/155682079/b3561_13.jpg?5b11c86c",
+    "https://cache09.housesigma.com/file/pix-itso/155682079/b3561_14.jpg?5b11c86c",
+    "https://cache-e14.housesigma.com/file/pix-itso/155682079/b3561_15.jpg?5b11c86c",
+    "https://cache14.housesigma.com/file/pix-itso/155682079/b3561_16.jpg?5b11c86c",
+    "https://cache15.housesigma.com/file/pix-itso/155682079/b3561_17.jpg?5b11c86c",
+    "https://cache08.housesigma.com/file/pix-itso/155682079/b3561_18.jpg?5b11c86c",
+    "https://cache09.housesigma.com/file/pix-itso/155682079/b3561_19.jpg?5b11c86c",
+    "https://cache-e14.housesigma.com/file/pix-itso/155682079/b3561_20.jpg?5b11c86c",
+    "https://cache14.housesigma.com/file/pix-itso/155682079/b3561_21.jpg?5b11c86c",
+    "https://cache15.housesigma.com/file/pix-itso/155682079/b3561_22.jpg?5b11c86c",
+    "https://cache08.housesigma.com/file/pix-itso/155682079/b3561_23.jpg?5b11c86c",
+    "https://cache09.housesigma.com/file/pix-itso/155682079/b3561_24.jpg?5b11c86c",
+    "https://cache-e14.housesigma.com/file/pix-itso/155682079/b3561_25.jpg?5b11c86c",
+    "https://cache14.housesigma.com/file/pix-itso/155682079/b3561_26.jpg?5b11c86c",
+    "https://cache15.housesigma.com/file/pix-itso/155682079/b3561_27.jpg?5b11c86c",
+    "https://cache08.housesigma.com/file/pix-itso/155682079/b3561_28.jpg?5b11c86c",
+    "https://cache09.housesigma.com/file/pix-itso/155682079/b3561_29.jpg?5b11c86c"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "46 Oriole Crescent",
+      "municipality": "Grimsby",
+      "postalCode": "L3M3X6",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": "Residential",
+    "coordinates": {
+      "latitude": 43.198214,
+      "longitude": -79.587005
+    },
+    "propertyTax": 4469,
+    "lotSize": 9648,
+    "squareFootage": 998,
+    "askingPrice": 739000,
+    "daysOnMarket": 72,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2024-11-22T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "JRv53KpvllxYVPW4",
+        "event": "For Sale"
+      },
+      {
+        "startDate": "2011-02-22T00:00:00.000Z",
+        "endDate": "2011-05-10T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "B5bO3xXDQM63kWVP",
+        "event": "Sold"
+      },
+      {
+        "startDate": "2005-09-24T00:00:00.000Z",
+        "endDate": "2005-12-15T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "XeEn7X6MlAgYrPo8",
+        "event": "Sold"
+      },
+      {
+        "startDate": "2005-07-12T00:00:00.000Z",
+        "endDate": "2005-09-12T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "1DBW7RDMdVLYqlAp",
+        "event": "Expired"
+      },
+      {
+        "startDate": "2005-04-19T00:00:00.000Z",
+        "endDate": "2005-06-30T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "dXze3eKMMMMy8m9K",
+        "event": "Expired"
+      }
+    ],
+    "estimatePrice": 717900,
+    "estimatePriceConfident": 1.36,
+    "estimateRent": 2636,
+    "estimateRentDays": 33,
+    "estimateRentYearReturn": 3.38,
+    "scores": {
+      "school": 7,
+      "growth": 3,
+      "rent": 5
+    },
+    "communityValue": {
+      "value": 935500,
+      "growth": 0.054000000000000006,
+      "growth5YearAverage": 0.45,
+      "growth10YearAverage": 0.85
+    }
+  }
+}

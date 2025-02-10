@@ -1,0 +1,1332 @@
+[
+  {
+    "results": [
+      {
+        "month": 12,
+        "cashFlow": -3935.03,
+        "equity": 101174.47,
+        "opportunityCost": 96261.8,
+        "netWorth": 101174.47,
+        "difference": 28978.12
+      },
+      {
+        "month": 24,
+        "cashFlow": -3962.4,
+        "equity": 175629.92,
+        "opportunityCost": 115448.94,
+        "netWorth": 175629.92,
+        "difference": 89043.21
+      },
+      {
+        "month": 36,
+        "cashFlow": -3990.95,
+        "equity": 255929.67,
+        "opportunityCost": 138363.59,
+        "netWorth": 255929.67,
+        "difference": 152156.97
+      },
+      {
+        "month": 48,
+        "cashFlow": -4020.71,
+        "equity": 342549.75,
+        "opportunityCost": 165714.18,
+        "netWorth": 342549.75,
+        "difference": 218264.11
+      },
+      {
+        "month": 60,
+        "cashFlow": -4051.75,
+        "equity": 436005.76,
+        "opportunityCost": 198341.19,
+        "netWorth": 436005.76,
+        "difference": 287249.86
+      },
+      {
+        "month": 120,
+        "cashFlow": -4228.03,
+        "equity": 1027084.36,
+        "opportunityCost": 459136,
+        "netWorth": 1027084.36,
+        "difference": 682732.35
+      },
+      {
+        "month": 240,
+        "cashFlow": -4713.24,
+        "equity": 3177528.51,
+        "opportunityCost": 2419935.71,
+        "netWorth": 3177528.51,
+        "difference": 1362576.72
+      },
+      {
+        "month": 360,
+        "cashFlow": -5449.95,
+        "equity": 7888862.59,
+        "opportunityCost": 12695084.09,
+        "netWorth": 7888862.59,
+        "difference": -1632450.47
+      }
+    ],
+    "params": {
+      "mortgage": {
+        "interestRate": 4.2,
+        "amortizationYears": 30,
+        "paymentFrequency": "monthly"
+      },
+      "house": {
+        "purchasePrice": 665100,
+        "annualPropertyTax": 4469,
+        "squareFootage": 998,
+        "annualAppreciationRate": 0.08499999999999999,
+        "annualPropertyTaxIncreaseRate": 0.01,
+        "annualUpkeepPercentage": 0.015
+      },
+      "rental": {
+        "monthlyIncome": 790.8,
+        "rentedSquareFootage": 299.4,
+        "vacancyRate": 0.04
+      },
+      "economic": {
+        "annualIndexFundReturn": 0.18,
+        "inflationRate": 0.04,
+        "monthlyRentPlusUtilities": 2500
+      },
+      "rennovation": {
+        "cost": 29800,
+        "roi": 0.5488235294117647
+      }
+    }
+  },
+  {
+    "results": [
+      {
+        "month": 12,
+        "cashFlow": -3704.81,
+        "equity": 142468.01,
+        "opportunityCost": 127901.97,
+        "netWorth": 142468.01,
+        "difference": 46541.53
+      },
+      {
+        "month": 24,
+        "cashFlow": -3702.32,
+        "equity": 236504.86,
+        "opportunityCost": 141993.83,
+        "netWorth": 236504.86,
+        "difference": 130009.49
+      },
+      {
+        "month": 36,
+        "cashFlow": -3699.64,
+        "equity": 337704.11,
+        "opportunityCost": 157534.08,
+        "netWorth": 337704.11,
+        "difference": 219553.55
+      },
+      {
+        "month": 48,
+        "cashFlow": -3696.75,
+        "equity": 446646.72,
+        "opportunityCost": 174659.67,
+        "netWorth": 446646.72,
+        "difference": 315651.96
+      },
+      {
+        "month": 60,
+        "cashFlow": -3693.66,
+        "equity": 563962.12,
+        "opportunityCost": 193518.96,
+        "netWorth": 563962.12,
+        "difference": 418822.9
+      },
+      {
+        "month": 120,
+        "cashFlow": -3674.78,
+        "equity": 1302097.27,
+        "opportunityCost": 312895.11,
+        "netWorth": 1302097.27,
+        "difference": 1067425.94
+      },
+      {
+        "month": 240,
+        "cashFlow": -3616.39,
+        "equity": 3963303.43,
+        "opportunityCost": 808339.14,
+        "netWorth": 3963303.43,
+        "difference": 3357049.07
+      },
+      {
+        "month": 360,
+        "cashFlow": -3521.53,
+        "equity": 9760113.29,
+        "opportunityCost": 2066568.84,
+        "netWorth": 9760113.29,
+        "difference": 8210186.65
+      },
+      {
+        "month": 360,
+        "cashFlow": -3521.53,
+        "equity": 9760113.29,
+        "opportunityCost": 2036514.14,
+        "netWorth": 9760113.29,
+        "difference": 8232727.68
+      }
+    ],
+    "params": {
+      "mortgage": {
+        "interestRate": 3.3,
+        "amortizationYears": 30,
+        "paymentFrequency": "monthly"
+      },
+      "house": {
+        "purchasePrice": 812900.0000000001,
+        "annualPropertyTax": 4469,
+        "squareFootage": 998,
+        "annualAppreciationRate": 0.08499999999999999,
+        "annualPropertyTaxIncreaseRate": 0.01,
+        "annualUpkeepPercentage": 0.015
+      },
+      "rental": {
+        "monthlyIncome": 1581.6,
+        "rentedSquareFootage": 598.8,
+        "vacancyRate": 0.04
+      },
+      "economic": {
+        "annualIndexFundReturn": 0.1,
+        "inflationRate": 0.02,
+        "monthlyRentPlusUtilities": 2500
+      },
+      "rennovation": {
+        "cost": 49500,
+        "roi": 0.354
+      }
+    }
+  },
+  {
+    "results": [
+      {
+        "month": 12,
+        "cashFlow": -4414.63,
+        "equity": 88027.49,
+        "opportunityCost": 77239.96,
+        "netWorth": 88027.49,
+        "difference": 30097.53
+      },
+      {
+        "month": 24,
+        "cashFlow": -4429.39,
+        "equity": 175524.36,
+        "opportunityCost": 83089.57,
+        "netWorth": 175524.36,
+        "difference": 113207.19
+      },
+      {
+        "month": 36,
+        "cashFlow": -4445,
+        "equity": 269780.14,
+        "opportunityCost": 89273.1,
+        "netWorth": 269780.14,
+        "difference": 202825.32
+      },
+      {
+        "month": 48,
+        "cashFlow": -4461.51,
+        "equity": 371338.19,
+        "opportunityCost": 95805.52,
+        "netWorth": 371338.19,
+        "difference": 299484.05
+      },
+      {
+        "month": 60,
+        "cashFlow": -4478.96,
+        "equity": 480786.59,
+        "opportunityCost": 102702.21,
+        "netWorth": 480786.59,
+        "difference": 403759.93
+      },
+      {
+        "month": 120,
+        "cashFlow": -4582,
+        "equity": 1170598.53,
+        "opportunityCost": 133327.72,
+        "netWorth": 1170598.53,
+        "difference": 1070602.74
+      },
+      {
+        "month": 240,
+        "cashFlow": -4890.33,
+        "equity": 3659744.23,
+        "opportunityCost": 219282.96,
+        "netWorth": 3659744.23,
+        "difference": 3495282
+      },
+      {
+        "month": 360,
+        "cashFlow": -5399.82,
+        "equity": 9064816.58,
+        "opportunityCost": 357862.66,
+        "netWorth": 9064816.58,
+        "difference": 8796419.59
+      },
+      {
+        "month": 360,
+        "cashFlow": -5399.82,
+        "equity": 9064816.58,
+        "opportunityCost": 358536.47,
+        "netWorth": 9064816.58,
+        "difference": 8795914.23
+      },
+      {
+        "month": 360,
+        "cashFlow": -5399.82,
+        "equity": 9064816.58,
+        "opportunityCost": 359210.29,
+        "netWorth": 9064816.58,
+        "difference": 8795408.87
+      }
+    ],
+    "params": {
+      "mortgage": {
+        "interestRate": 4.5,
+        "amortizationYears": 25,
+        "paymentFrequency": "monthly"
+      },
+      "house": {
+        "purchasePrice": 775950,
+        "annualPropertyTax": 4469,
+        "squareFootage": 998,
+        "annualAppreciationRate": 0.08499999999999999,
+        "annualPropertyTaxIncreaseRate": 0.01,
+        "annualUpkeepPercentage": 0.015
+      },
+      "rental": {
+        "monthlyIncome": 1581.6,
+        "rentedSquareFootage": 598.8,
+        "vacancyRate": 0.04
+      },
+      "economic": {
+        "annualIndexFundReturn": 0.05,
+        "inflationRate": 0.04,
+        "monthlyRentPlusUtilities": 2500
+      },
+      "rennovation": {
+        "cost": 10000,
+        "roi": 0.6166666666666667
+      }
+    }
+  },
+  {
+    "results": [
+      {
+        "month": 12,
+        "cashFlow": -4121.42,
+        "equity": 142582.36,
+        "opportunityCost": 121790.15,
+        "netWorth": 142582.36,
+        "difference": 51239.75
+      },
+      {
+        "month": 24,
+        "cashFlow": -4136.17,
+        "equity": 236256.83,
+        "opportunityCost": 133294.17,
+        "netWorth": 236256.83,
+        "difference": 136286.2
+      },
+      {
+        "month": 36,
+        "cashFlow": -4151.79,
+        "equity": 337011.44,
+        "opportunityCost": 145796.33,
+        "netWorth": 337011.44,
+        "difference": 227664.2
+      },
+      {
+        "month": 48,
+        "cashFlow": -4168.3,
+        "equity": 445413.89,
+        "opportunityCost": 159376.64,
+        "netWorth": 445413.89,
+        "difference": 325881.41
+      },
+      {
+        "month": 60,
+        "cashFlow": -4185.74,
+        "equity": 562078.81,
+        "opportunityCost": 174120.98,
+        "netWorth": 562078.81,
+        "difference": 431488.08
+      },
+      {
+        "month": 120,
+        "cashFlow": -4288.78,
+        "equity": 1294663.35,
+        "opportunityCost": 258190.99,
+        "netWorth": 1294663.35,
+        "difference": 1101020.11
+      },
+      {
+        "month": 240,
+        "cashFlow": -4597.12,
+        "equity": 3921571.06,
+        "opportunityCost": 559748.15,
+        "netWorth": 3921571.06,
+        "difference": 3501759.95
+      },
+      {
+        "month": 360,
+        "cashFlow": -5106.61,
+        "equity": 9605362.38,
+        "opportunityCost": 1207072.6,
+        "netWorth": 9605362.38,
+        "difference": 8700057.93
+      },
+      {
+        "month": 360,
+        "cashFlow": -5106.61,
+        "equity": 9605362.38,
+        "opportunityCost": 1205690.94,
+        "netWorth": 9605362.38,
+        "difference": 8701094.18
+      },
+      {
+        "month": 360,
+        "cashFlow": -5106.61,
+        "equity": 9605362.38,
+        "opportunityCost": 1204309.28,
+        "netWorth": 9605362.38,
+        "difference": 8702130.42
+      },
+      {
+        "month": 360,
+        "cashFlow": -5106.61,
+        "equity": 9605362.38,
+        "opportunityCost": 1202927.62,
+        "netWorth": 9605362.38,
+        "difference": 8703166.67
+      }
+    ],
+    "params": {
+      "mortgage": {
+        "interestRate": 3.8,
+        "amortizationYears": 25,
+        "paymentFrequency": "monthly"
+      },
+      "house": {
+        "purchasePrice": 775950,
+        "annualPropertyTax": 4469,
+        "squareFootage": 998,
+        "annualAppreciationRate": 0.08499999999999999,
+        "annualPropertyTaxIncreaseRate": 0.01,
+        "annualUpkeepPercentage": 0.015
+      },
+      "rental": {
+        "monthlyIncome": 1581.6,
+        "rentedSquareFootage": 598.8,
+        "vacancyRate": 0.04
+      },
+      "economic": {
+        "annualIndexFundReturn": 0.08,
+        "inflationRate": 0.04,
+        "monthlyRentPlusUtilities": 2500
+      },
+      "rennovation": {
+        "cost": 49500,
+        "roi": 0.354
+      }
+    }
+  },
+  {
+    "results": [
+      {
+        "month": 12,
+        "cashFlow": -5046.15,
+        "equity": 119263.28,
+        "opportunityCost": 98693.06,
+        "netWorth": 119263.28,
+        "difference": 45243.49
+      },
+      {
+        "month": 24,
+        "cashFlow": -5057.8,
+        "equity": 209415.19,
+        "opportunityCost": 106308.15,
+        "netWorth": 209415.19,
+        "difference": 129684.08
+      },
+      {
+        "month": 36,
+        "cashFlow": -5069.59,
+        "equity": 306551.69,
+        "opportunityCost": 114375.66,
+        "netWorth": 306551.69,
+        "difference": 220769.95
+      },
+      {
+        "month": 48,
+        "cashFlow": -5081.53,
+        "equity": 411235.32,
+        "opportunityCost": 122916.84,
+        "netWorth": 411235.32,
+        "difference": 319047.69
+      },
+      {
+        "month": 60,
+        "cashFlow": -5093.6,
+        "equity": 524074.97,
+        "opportunityCost": 131953.56,
+        "netWorth": 524074.97,
+        "difference": 425109.8
+      },
+      {
+        "month": 120,
+        "cashFlow": -5156.17,
+        "equity": 1235689.41,
+        "opportunityCost": 171595.95,
+        "netWorth": 1235689.41,
+        "difference": 1106992.44
+      },
+      {
+        "month": 240,
+        "cashFlow": -5292.61,
+        "equity": 3806913.61,
+        "opportunityCost": 282685.24,
+        "netWorth": 3806913.61,
+        "difference": 3594899.68
+      },
+      {
+        "month": 360,
+        "cashFlow": -5444.6,
+        "equity": 9397564.12,
+        "opportunityCost": 461331.82,
+        "netWorth": 9397564.12,
+        "difference": 9051565.26
+      },
+      {
+        "month": 360,
+        "cashFlow": -5444.6,
+        "equity": 9397564.12,
+        "opportunityCost": 462199.17,
+        "netWorth": 9397564.12,
+        "difference": 9050914.75
+      },
+      {
+        "month": 360,
+        "cashFlow": -5444.6,
+        "equity": 9397564.12,
+        "opportunityCost": 463066.52,
+        "netWorth": 9397564.12,
+        "difference": 9050264.23
+      },
+      {
+        "month": 360,
+        "cashFlow": -5444.6,
+        "equity": 9397564.12,
+        "opportunityCost": 463933.87,
+        "netWorth": 9397564.12,
+        "difference": 9049613.72
+      },
+      {
+        "month": 360,
+        "cashFlow": -5444.6,
+        "equity": 9397564.12,
+        "opportunityCost": 464801.23,
+        "netWorth": 9397564.12,
+        "difference": 9048963.21
+      }
+    ],
+    "params": {
+      "mortgage": {
+        "interestRate": 4.5,
+        "amortizationYears": 25,
+        "paymentFrequency": "monthly"
+      },
+      "house": {
+        "purchasePrice": 775950,
+        "annualPropertyTax": 4469,
+        "squareFootage": 998,
+        "annualAppreciationRate": 0.08499999999999999,
+        "annualPropertyTaxIncreaseRate": 0.01,
+        "annualUpkeepPercentage": 0.015
+      },
+      "rental": {
+        "monthlyIncome": 790.8,
+        "rentedSquareFootage": 299.4,
+        "vacancyRate": 0.04
+      },
+      "economic": {
+        "annualIndexFundReturn": 0.05,
+        "inflationRate": 0.02,
+        "monthlyRentPlusUtilities": 2500
+      },
+      "rennovation": {
+        "cost": 29800,
+        "roi": 0.5488235294117647
+      }
+    }
+  },
+  {
+    "results": [
+      {
+        "month": 12,
+        "cashFlow": -3728.31,
+        "equity": 115144.29,
+        "opportunityCost": 103926.23,
+        "netWorth": 115144.29,
+        "difference": 37199.61
+      },
+      {
+        "month": 24,
+        "cashFlow": -3725.1,
+        "equity": 202157.22,
+        "opportunityCost": 117775.39,
+        "netWorth": 202157.22,
+        "difference": 113825.68
+      },
+      {
+        "month": 36,
+        "cashFlow": -3721.69,
+        "equity": 295907.11,
+        "opportunityCost": 133354.76,
+        "netWorth": 295907.11,
+        "difference": 195891.04
+      },
+      {
+        "month": 48,
+        "cashFlow": -3718.06,
+        "equity": 396941.09,
+        "opportunityCost": 150865.59,
+        "netWorth": 396941.09,
+        "difference": 283791.9
+      },
+      {
+        "month": 60,
+        "cashFlow": -3714.21,
+        "equity": 505851.84,
+        "opportunityCost": 170530.34,
+        "netWorth": 505851.84,
+        "difference": 377954.08
+      },
+      {
+        "month": 120,
+        "cashFlow": -3691.29,
+        "equity": 1192998.25,
+        "opportunityCost": 302057.95,
+        "netWorth": 1192998.25,
+        "difference": 966454.78
+      },
+      {
+        "month": 240,
+        "cashFlow": -3623.53,
+        "equity": 3681969.61,
+        "opportunityCost": 933583.38,
+        "netWorth": 3681969.61,
+        "difference": 2981782.08
+      },
+      {
+        "month": 360,
+        "cashFlow": -3517.25,
+        "equity": 9118510.95,
+        "opportunityCost": 2847837.32,
+        "netWorth": 9118510.95,
+        "difference": 6982632.96
+      },
+      {
+        "month": 360,
+        "cashFlow": -3517.25,
+        "equity": 9118510.95,
+        "opportunityCost": 2796106.37,
+        "netWorth": 9118510.95,
+        "difference": 7021431.17
+      },
+      {
+        "month": 360,
+        "cashFlow": -3517.25,
+        "equity": 9118510.95,
+        "opportunityCost": 2744375.42,
+        "netWorth": 9118510.95,
+        "difference": 7060229.39
+      },
+      {
+        "month": 360,
+        "cashFlow": -3517.25,
+        "equity": 9118510.95,
+        "opportunityCost": 2692644.48,
+        "netWorth": 9118510.95,
+        "difference": 7099027.6
+      },
+      {
+        "month": 360,
+        "cashFlow": -3517.25,
+        "equity": 9118510.95,
+        "opportunityCost": 2640913.53,
+        "netWorth": 9118510.95,
+        "difference": 7137825.81
+      },
+      {
+        "month": 360,
+        "cashFlow": -3517.25,
+        "equity": 9118510.95,
+        "opportunityCost": 2589182.58,
+        "netWorth": 9118510.95,
+        "difference": 7176624.02
+      }
+    ],
+    "params": {
+      "mortgage": {
+        "interestRate": 3.8,
+        "amortizationYears": 30,
+        "paymentFrequency": "monthly"
+      },
+      "house": {
+        "purchasePrice": 775950,
+        "annualPropertyTax": 4469,
+        "squareFootage": 998,
+        "annualAppreciationRate": 0.08499999999999999,
+        "annualPropertyTaxIncreaseRate": 0.01,
+        "annualUpkeepPercentage": 0.015
+      },
+      "rental": {
+        "monthlyIncome": 1581.6,
+        "rentedSquareFootage": 598.8,
+        "vacancyRate": 0.04
+      },
+      "economic": {
+        "annualIndexFundReturn": 0.12,
+        "inflationRate": 0.02,
+        "monthlyRentPlusUtilities": 2500
+      },
+      "rennovation": {
+        "cost": 29800,
+        "roi": 0.5488235294117647
+      }
+    }
+  },
+  {
+    "results": [
+      {
+        "month": 12,
+        "cashFlow": -5528.6,
+        "equity": 142117.95,
+        "opportunityCost": 119884.63,
+        "netWorth": 142117.95,
+        "difference": 52204.48
+      },
+      {
+        "month": 24,
+        "cashFlow": -5603.26,
+        "equity": 235302.47,
+        "opportunityCost": 129160.66,
+        "netWorth": 235302.47,
+        "difference": 138431.97
+      },
+      {
+        "month": 36,
+        "cashFlow": -5682.2,
+        "equity": 335586.62,
+        "opportunityCost": 139079.97,
+        "netWorth": 335586.62,
+        "difference": 231276.65
+      },
+      {
+        "month": 48,
+        "cashFlow": -5765.7,
+        "equity": 443540.44,
+        "opportunityCost": 149687.98,
+        "netWorth": 443540.44,
+        "difference": 331274.45
+      },
+      {
+        "month": 60,
+        "cashFlow": -5854.01,
+        "equity": 559781.03,
+        "opportunityCost": 161033.76,
+        "netWorth": 559781.03,
+        "difference": 439005.71
+      },
+      {
+        "month": 120,
+        "cashFlow": -6378.52,
+        "equity": 1290706.86,
+        "opportunityCost": 210701.56,
+        "netWorth": 1290706.86,
+        "difference": 1132680.69
+      },
+      {
+        "month": 240,
+        "cashFlow": -8000.32,
+        "equity": 3918088.87,
+        "opportunityCost": 353568.54,
+        "netWorth": 3918088.87,
+        "difference": 3652912.46
+      },
+      {
+        "month": 360,
+        "cashFlow": -10875.18,
+        "equity": 9611993.93,
+        "opportunityCost": 600263.88,
+        "netWorth": 9611993.93,
+        "difference": 9161796.02
+      },
+      {
+        "month": 360,
+        "cashFlow": -10875.18,
+        "equity": 9611993.93,
+        "opportunityCost": 624601.86,
+        "netWorth": 9611993.93,
+        "difference": 9143542.54
+      },
+      {
+        "month": 360,
+        "cashFlow": -10875.18,
+        "equity": 9611993.93,
+        "opportunityCost": 648939.85,
+        "netWorth": 9611993.93,
+        "difference": 9125289.05
+      },
+      {
+        "month": 360,
+        "cashFlow": -10875.18,
+        "equity": 9611993.93,
+        "opportunityCost": 673277.83,
+        "netWorth": 9611993.93,
+        "difference": 9107035.56
+      },
+      {
+        "month": 360,
+        "cashFlow": -10875.18,
+        "equity": 9611993.93,
+        "opportunityCost": 697615.82,
+        "netWorth": 9611993.93,
+        "difference": 9088782.07
+      },
+      {
+        "month": 360,
+        "cashFlow": -10875.18,
+        "equity": 9611993.93,
+        "opportunityCost": 721953.8,
+        "netWorth": 9611993.93,
+        "difference": 9070528.58
+      },
+      {
+        "month": 360,
+        "cashFlow": -10875.18,
+        "equity": 9611993.93,
+        "opportunityCost": 746291.78,
+        "netWorth": 9611993.93,
+        "difference": 9052275.09
+      }
+    ],
+    "params": {
+      "mortgage": {
+        "interestRate": 4,
+        "amortizationYears": 25,
+        "paymentFrequency": "monthly"
+      },
+      "house": {
+        "purchasePrice": 775950,
+        "annualPropertyTax": 4469,
+        "squareFootage": 998,
+        "annualAppreciationRate": 0.08499999999999999,
+        "annualPropertyTaxIncreaseRate": 0.01,
+        "annualUpkeepPercentage": 0.015
+      },
+      "rental": {
+        "monthlyIncome": 0,
+        "rentedSquareFootage": 0,
+        "vacancyRate": 0.04
+      },
+      "economic": {
+        "annualIndexFundReturn": 0.05,
+        "inflationRate": 0.06,
+        "monthlyRentPlusUtilities": 2500
+      },
+      "rennovation": {
+        "cost": 49500,
+        "roi": 0.354
+      }
+    }
+  },
+  {
+    "results": [
+      {
+        "month": 12,
+        "cashFlow": -4187.08,
+        "equity": 89146,
+        "opportunityCost": 80667.74,
+        "netWorth": 89146,
+        "difference": 28645.19
+      },
+      {
+        "month": 24,
+        "cashFlow": -4183.87,
+        "equity": 177827.89,
+        "opportunityCost": 90618.87,
+        "netWorth": 177827.89,
+        "difference": 109863.74
+      },
+      {
+        "month": 36,
+        "cashFlow": -4180.46,
+        "equity": 273226.71,
+        "opportunityCost": 101661.59,
+        "netWorth": 273226.71,
+        "difference": 196980.52
+      },
+      {
+        "month": 48,
+        "cashFlow": -4176.83,
+        "equity": 375879.94,
+        "opportunityCost": 113902.82,
+        "netWorth": 375879.94,
+        "difference": 290452.82
+      },
+      {
+        "month": 60,
+        "cashFlow": -4172.98,
+        "equity": 486369.38,
+        "opportunityCost": 127458.37,
+        "netWorth": 486369.38,
+        "difference": 390775.61
+      },
+      {
+        "month": 120,
+        "cashFlow": -4150.06,
+        "equity": 1180320.94,
+        "opportunityCost": 207736.64,
+        "netWorth": 1180320.94,
+        "difference": 1024518.46
+      },
+      {
+        "month": 240,
+        "cashFlow": -4082.31,
+        "equity": 3668508.14,
+        "opportunityCost": 538719.59,
+        "netWorth": 3668508.14,
+        "difference": 3264468.45
+      },
+      {
+        "month": 360,
+        "cashFlow": -3976.02,
+        "equity": 9047696.04,
+        "opportunityCost": 1375175.77,
+        "netWorth": 9047696.04,
+        "difference": 8016314.22
+      },
+      {
+        "month": 360,
+        "cashFlow": -3976.02,
+        "equity": 9047696.04,
+        "opportunityCost": 1353051.67,
+        "netWorth": 9047696.04,
+        "difference": 8032907.29
+      },
+      {
+        "month": 360,
+        "cashFlow": -3976.02,
+        "equity": 9047696.04,
+        "opportunityCost": 1330927.57,
+        "netWorth": 9047696.04,
+        "difference": 8049500.36
+      },
+      {
+        "month": 360,
+        "cashFlow": -3976.02,
+        "equity": 9047696.04,
+        "opportunityCost": 1308803.48,
+        "netWorth": 9047696.04,
+        "difference": 8066093.44
+      },
+      {
+        "month": 360,
+        "cashFlow": -3976.02,
+        "equity": 9047696.04,
+        "opportunityCost": 1286679.38,
+        "netWorth": 9047696.04,
+        "difference": 8082686.51
+      },
+      {
+        "month": 360,
+        "cashFlow": -3976.02,
+        "equity": 9047696.04,
+        "opportunityCost": 1264555.29,
+        "netWorth": 9047696.04,
+        "difference": 8099279.58
+      },
+      {
+        "month": 360,
+        "cashFlow": -3976.02,
+        "equity": 9047696.04,
+        "opportunityCost": 1242431.19,
+        "netWorth": 9047696.04,
+        "difference": 8115872.65
+      },
+      {
+        "month": 360,
+        "cashFlow": -3976.02,
+        "equity": 9047696.04,
+        "opportunityCost": 1220307.09,
+        "netWorth": 9047696.04,
+        "difference": 8132465.73
+      }
+    ],
+    "params": {
+      "mortgage": {
+        "interestRate": 4,
+        "amortizationYears": 25,
+        "paymentFrequency": "monthly"
+      },
+      "house": {
+        "purchasePrice": 775950,
+        "annualPropertyTax": 4469,
+        "squareFootage": 998,
+        "annualAppreciationRate": 0.08499999999999999,
+        "annualPropertyTaxIncreaseRate": 0.01,
+        "annualUpkeepPercentage": 0.015
+      },
+      "rental": {
+        "monthlyIncome": 1581.6,
+        "rentedSquareFootage": 598.8,
+        "vacancyRate": 0.04
+      },
+      "economic": {
+        "annualIndexFundReturn": 0.1,
+        "inflationRate": 0.02,
+        "monthlyRentPlusUtilities": 2500
+      },
+      "rennovation": {
+        "cost": 10000,
+        "roi": 0.6166666666666667
+      }
+    }
+  },
+  {
+    "results": [
+      {
+        "month": 12,
+        "cashFlow": -5423.7,
+        "equity": 120846.19,
+        "opportunityCost": 105695.45,
+        "netWorth": 120846.19,
+        "difference": 41574.6
+      },
+      {
+        "month": 24,
+        "cashFlow": -5473.83,
+        "equity": 212673.09,
+        "opportunityCost": 121950.52,
+        "netWorth": 212673.09,
+        "difference": 121210.2
+      },
+      {
+        "month": 36,
+        "cashFlow": -5525.86,
+        "equity": 311423.08,
+        "opportunityCost": 140565.64,
+        "netWorth": 311423.08,
+        "difference": 205998.85
+      },
+      {
+        "month": 48,
+        "cashFlow": -5579.85,
+        "equity": 417650.52,
+        "opportunityCost": 161871.34,
+        "netWorth": 417650.52,
+        "difference": 296247.01
+      },
+      {
+        "month": 60,
+        "cashFlow": -5635.89,
+        "equity": 531955.55,
+        "opportunityCost": 186243.45,
+        "netWorth": 531955.55,
+        "difference": 392272.96
+      },
+      {
+        "month": 120,
+        "cashFlow": -5949.69,
+        "equity": 1249368.31,
+        "opportunityCost": 336764.05,
+        "netWorth": 1249368.31,
+        "difference": 996795.27
+      },
+      {
+        "month": 240,
+        "cashFlow": -6785.15,
+        "equity": 3819159.72,
+        "opportunityCost": 1071873.18,
+        "netWorth": 3819159.72,
+        "difference": 3015254.84
+      },
+      {
+        "month": 360,
+        "cashFlow": -8005.68,
+        "equity": 9373812.04,
+        "opportunityCost": 3411817.63,
+        "netWorth": 9373812.04,
+        "difference": 6814948.82
+      },
+      {
+        "month": 360,
+        "cashFlow": -8005.68,
+        "equity": 9373812.04,
+        "opportunityCost": 3494559.87,
+        "netWorth": 9373812.04,
+        "difference": 6752892.14
+      },
+      {
+        "month": 360,
+        "cashFlow": -8005.68,
+        "equity": 9373812.04,
+        "opportunityCost": 3577302.11,
+        "netWorth": 9373812.04,
+        "difference": 6690835.46
+      },
+      {
+        "month": 360,
+        "cashFlow": -8005.68,
+        "equity": 9373812.04,
+        "opportunityCost": 3660044.34,
+        "netWorth": 9373812.04,
+        "difference": 6628778.78
+      },
+      {
+        "month": 360,
+        "cashFlow": -8005.68,
+        "equity": 9373812.04,
+        "opportunityCost": 3742786.58,
+        "netWorth": 9373812.04,
+        "difference": 6566722.1
+      },
+      {
+        "month": 360,
+        "cashFlow": -8005.68,
+        "equity": 9373812.04,
+        "opportunityCost": 3825528.82,
+        "netWorth": 9373812.04,
+        "difference": 6504665.42
+      },
+      {
+        "month": 360,
+        "cashFlow": -8005.68,
+        "equity": 9373812.04,
+        "opportunityCost": 3908271.06,
+        "netWorth": 9373812.04,
+        "difference": 6442608.74
+      },
+      {
+        "month": 360,
+        "cashFlow": -8005.68,
+        "equity": 9373812.04,
+        "opportunityCost": 3991013.3,
+        "netWorth": 9373812.04,
+        "difference": 6380552.07
+      },
+      {
+        "month": 360,
+        "cashFlow": -8005.68,
+        "equity": 9373812.04,
+        "opportunityCost": 4073755.53,
+        "netWorth": 9373812.04,
+        "difference": 6318495.39
+      }
+    ],
+    "params": {
+      "mortgage": {
+        "interestRate": 3.8,
+        "amortizationYears": 25,
+        "paymentFrequency": "monthly"
+      },
+      "house": {
+        "purchasePrice": 775950,
+        "annualPropertyTax": 4469,
+        "squareFootage": 998,
+        "annualAppreciationRate": 0.08499999999999999,
+        "annualPropertyTaxIncreaseRate": 0.01,
+        "annualUpkeepPercentage": 0.015
+      },
+      "rental": {
+        "monthlyIncome": 0,
+        "rentedSquareFootage": 0,
+        "vacancyRate": 0.04
+      },
+      "economic": {
+        "annualIndexFundReturn": 0.12,
+        "inflationRate": 0.04,
+        "monthlyRentPlusUtilities": 2500
+      },
+      "rennovation": {
+        "cost": 29800,
+        "roi": 0.5488235294117647
+      }
+    }
+  },
+  {
+    "results": [
+      {
+        "month": 12,
+        "cashFlow": -4710.04,
+        "equity": 67218.71,
+        "opportunityCost": 64860.33,
+        "netWorth": 67218.71,
+        "difference": 18573.46
+      },
+      {
+        "month": 24,
+        "cashFlow": -4740.8,
+        "equity": 149886.3,
+        "opportunityCost": 72515.2,
+        "netWorth": 149886.3,
+        "difference": 95499.89
+      },
+      {
+        "month": 36,
+        "cashFlow": -4772.86,
+        "equity": 238853.43,
+        "opportunityCost": 80937.42,
+        "netWorth": 238853.43,
+        "difference": 178150.37
+      },
+      {
+        "month": 48,
+        "cashFlow": -4806.28,
+        "equity": 334624.43,
+        "opportunityCost": 90196.99,
+        "netWorth": 334624.43,
+        "difference": 266976.69
+      },
+      {
+        "month": 60,
+        "cashFlow": -4841.12,
+        "equity": 437745.17,
+        "opportunityCost": 100369.92,
+        "netWorth": 437745.17,
+        "difference": 362467.74
+      },
+      {
+        "month": 120,
+        "cashFlow": -5038.83,
+        "equity": 1086070.47,
+        "opportunityCost": 151445.77,
+        "netWorth": 1086070.47,
+        "difference": 972486.15
+      },
+      {
+        "month": 240,
+        "cashFlow": -5581.83,
+        "equity": 3414560.91,
+        "opportunityCost": 333882.93,
+        "netWorth": 3414560.91,
+        "difference": 3164148.71
+      },
+      {
+        "month": 360,
+        "cashFlow": -6404.07,
+        "equity": 8452881.11,
+        "opportunityCost": 732502.45,
+        "netWorth": 8452881.11,
+        "difference": 7903504.27
+      },
+      {
+        "month": 360,
+        "cashFlow": -6404.07,
+        "equity": 8452881.11,
+        "opportunityCost": 744176.7,
+        "netWorth": 8452881.11,
+        "difference": 7894748.58
+      },
+      {
+        "month": 360,
+        "cashFlow": -6404.07,
+        "equity": 8452881.11,
+        "opportunityCost": 755850.95,
+        "netWorth": 8452881.11,
+        "difference": 7885992.9
+      },
+      {
+        "month": 360,
+        "cashFlow": -6404.07,
+        "equity": 8452881.11,
+        "opportunityCost": 767525.19,
+        "netWorth": 8452881.11,
+        "difference": 7877237.21
+      },
+      {
+        "month": 360,
+        "cashFlow": -6404.07,
+        "equity": 8452881.11,
+        "opportunityCost": 779199.44,
+        "netWorth": 8452881.11,
+        "difference": 7868481.52
+      },
+      {
+        "month": 360,
+        "cashFlow": -6404.07,
+        "equity": 8452881.11,
+        "opportunityCost": 790873.69,
+        "netWorth": 8452881.11,
+        "difference": 7859725.84
+      },
+      {
+        "month": 360,
+        "cashFlow": -6404.07,
+        "equity": 8452881.11,
+        "opportunityCost": 802547.94,
+        "netWorth": 8452881.11,
+        "difference": 7850970.15
+      },
+      {
+        "month": 360,
+        "cashFlow": -6404.07,
+        "equity": 8452881.11,
+        "opportunityCost": 814222.19,
+        "netWorth": 8452881.11,
+        "difference": 7842214.46
+      },
+      {
+        "month": 360,
+        "cashFlow": -6404.07,
+        "equity": 8452881.11,
+        "opportunityCost": 825896.44,
+        "netWorth": 8452881.11,
+        "difference": 7833458.78
+      },
+      {
+        "month": 360,
+        "cashFlow": -6404.07,
+        "equity": 8452881.11,
+        "opportunityCost": 837570.69,
+        "netWorth": 8452881.11,
+        "difference": 7824703.09
+      }
+    ],
+    "params": {
+      "mortgage": {
+        "interestRate": 4.2,
+        "amortizationYears": 25,
+        "paymentFrequency": "monthly"
+      },
+      "house": {
+        "purchasePrice": 739000,
+        "annualPropertyTax": 4469,
+        "squareFootage": 998,
+        "annualAppreciationRate": 0.08499999999999999,
+        "annualPropertyTaxIncreaseRate": 0.01,
+        "annualUpkeepPercentage": 0.015
+      },
+      "rental": {
+        "monthlyIncome": 790.8,
+        "rentedSquareFootage": 299.4,
+        "vacancyRate": 0.04
+      },
+      "economic": {
+        "annualIndexFundReturn": 0.08,
+        "inflationRate": 0.04,
+        "monthlyRentPlusUtilities": 2500
+      },
+      "rennovation": {
+        "cost": 0,
+        "roi": 0
+      }
+    }
+  }
+]

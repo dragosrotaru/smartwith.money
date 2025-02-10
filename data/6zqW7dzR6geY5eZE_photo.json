@@ -1,0 +1,370 @@
+{
+  "outside": {
+    "treeCoverage": 30,
+    "proximityToRoad": 20,
+    "proximityToNeighbors": 10,
+    "cookieCutterScore": 70,
+    "architecture": "Suburban",
+    "numberofBuildings": 2,
+    "overallCondition": "Good",
+    "tinyHousePotential": 20,
+    "hasRearAccess": true,
+    "estimatedAge": 20,
+    "estimatedLotSize": 0.2,
+    "hobbyFarmPotential": 10
+  },
+  "workshop": null,
+  "features": {
+    "sauna": false,
+    "jacuzzi": false,
+    "pool": false,
+    "river": false,
+    "pond": false,
+    "gym": false,
+    "terrain": true
+  },
+  "renovations": {
+    "exterior": [
+      {
+        "materialCost": 3000,
+        "laborCost": 2000,
+        "totalCost": 5000,
+        "diyTime": 40,
+        "difficulty": "medium",
+        "roi": 75,
+        "priorityScore": 85,
+        "title": "Driveway Resurfacing",
+        "description": "Resurface the driveway to improve curb appeal and functionality. This involves cleaning, repairing cracks, and applying a new layer of asphalt or concrete."
+      },
+      {
+        "materialCost": 2500,
+        "laborCost": 1500,
+        "totalCost": 4000,
+        "diyTime": 30,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 80,
+        "title": "Front Yard Landscaping",
+        "description": "Enhance the front yard with new plants, mulch, and a small garden. This will improve the aesthetic appeal and increase property value."
+      },
+      {
+        "materialCost": 4000,
+        "laborCost": 3000,
+        "totalCost": 7000,
+        "diyTime": 50,
+        "difficulty": "hard",
+        "roi": 80,
+        "priorityScore": 90,
+        "title": "Deck Renovation",
+        "description": "Renovate the existing deck by replacing worn-out boards, adding a new coat of paint or stain, and possibly expanding the deck area. This will create a more inviting outdoor space."
+      },
+      {
+        "materialCost": 1500,
+        "laborCost": 1000,
+        "totalCost": 2500,
+        "diyTime": 20,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 70,
+        "title": "Shed Refurbishment",
+        "description": "Refurbish the backyard shed by repainting, repairing any structural issues, and adding shelving or storage solutions. This will enhance utility and appearance."
+      },
+      {
+        "materialCost": 2000,
+        "laborCost": 1500,
+        "totalCost": 3500,
+        "diyTime": 25,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 75,
+        "title": "Fence Repair and Staining",
+        "description": "Repair any damaged sections of the fence and apply a fresh coat of stain to protect against weathering. This will improve the overall look and longevity of the fence."
+      }
+    ],
+    "living area": [
+      {
+        "materialCost": 1500,
+        "laborCost": 2000,
+        "totalCost": 3500,
+        "diyTime": 20,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 85,
+        "title": "Floor Refinishing",
+        "description": "Refinish the hardwood floors to restore their shine and remove any scratches or wear. This will enhance the overall look of the living area and increase the property's appeal."
+      },
+      {
+        "materialCost": 800,
+        "laborCost": 1200,
+        "totalCost": 2000,
+        "diyTime": 15,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 75,
+        "title": "Paint Refresh",
+        "description": "Apply a fresh coat of paint to the walls in a modern, neutral color to brighten the space and make it more appealing to potential buyers."
+      },
+      {
+        "materialCost": 1200,
+        "laborCost": 1800,
+        "totalCost": 3000,
+        "diyTime": 25,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 80,
+        "title": "Lighting Upgrade",
+        "description": "Replace outdated lighting fixtures with modern, energy-efficient options to improve the ambiance and functionality of the living area."
+      },
+      {
+        "materialCost": 1000,
+        "laborCost": 1500,
+        "totalCost": 2500,
+        "diyTime": 18,
+        "difficulty": "medium",
+        "roi": 55,
+        "priorityScore": 70,
+        "title": "Window Treatment Update",
+        "description": "Install new window treatments such as blinds or curtains to enhance privacy and style, complementing the overall decor of the living area."
+      },
+      {
+        "materialCost": 500,
+        "laborCost": 800,
+        "totalCost": 1300,
+        "diyTime": 10,
+        "difficulty": "easy",
+        "roi": 50,
+        "priorityScore": 65,
+        "title": "Decorative Molding Installation",
+        "description": "Add decorative crown molding to the ceiling to give the living area a more finished and elegant look."
+      }
+    ],
+    "kitchen": [
+      {
+        "materialCost": 1500,
+        "laborCost": 1000,
+        "totalCost": 2500,
+        "diyTime": 20,
+        "difficulty": "medium",
+        "roi": 80,
+        "priorityScore": 85,
+        "title": "Cabinet Refacing",
+        "description": "Refacing the existing cabinets with new doors and hardware to give the kitchen a modern look without the cost of full replacement."
+      },
+      {
+        "materialCost": 800,
+        "laborCost": 500,
+        "totalCost": 1300,
+        "diyTime": 15,
+        "difficulty": "easy",
+        "roi": 70,
+        "priorityScore": 75,
+        "title": "Countertop Replacement",
+        "description": "Replacing the countertops with a more modern and durable material like quartz or granite to enhance the kitchen's appeal."
+      },
+      {
+        "materialCost": 300,
+        "laborCost": 200,
+        "totalCost": 500,
+        "diyTime": 10,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 65,
+        "title": "Lighting Upgrade",
+        "description": "Installing modern LED lighting fixtures to improve the kitchen's ambiance and energy efficiency."
+      },
+      {
+        "materialCost": 400,
+        "laborCost": 300,
+        "totalCost": 700,
+        "diyTime": 12,
+        "difficulty": "easy",
+        "roi": 50,
+        "priorityScore": 60,
+        "title": "Backsplash Installation",
+        "description": "Adding a stylish backsplash to enhance the kitchen's aesthetic and protect the walls from spills."
+      },
+      {
+        "materialCost": 200,
+        "laborCost": 150,
+        "totalCost": 350,
+        "diyTime": 8,
+        "difficulty": "easy",
+        "roi": 40,
+        "priorityScore": 50,
+        "title": "Painting Walls",
+        "description": "Repainting the kitchen walls with a fresh, neutral color to brighten the space and make it more appealing to potential buyers."
+      }
+    ],
+    "bath": [
+      {
+        "materialCost": 500,
+        "laborCost": 1000,
+        "totalCost": 1500,
+        "diyTime": 10,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 80,
+        "title": "Update Paint and Fixtures",
+        "description": "Repaint the bathrooms with neutral colors and update fixtures such as faucets, towel bars, and light fixtures to modern styles. This will refresh the look and appeal to a broader audience."
+      },
+      {
+        "materialCost": 2000,
+        "laborCost": 3000,
+        "totalCost": 5000,
+        "diyTime": 20,
+        "difficulty": "hard",
+        "roi": 60,
+        "priorityScore": 75,
+        "title": "Install New Vanities",
+        "description": "Replace the existing vanities with modern, stylish ones that offer more storage and a contemporary look. This will enhance functionality and aesthetics."
+      },
+      {
+        "materialCost": 1500,
+        "laborCost": 2500,
+        "totalCost": 4000,
+        "diyTime": 15,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 70,
+        "title": "Upgrade to Energy-Efficient Lighting",
+        "description": "Install energy-efficient LED lighting and smart switches. This not only modernizes the space but also appeals to eco-conscious buyers."
+      },
+      {
+        "materialCost": 3000,
+        "laborCost": 4000,
+        "totalCost": 7000,
+        "diyTime": 25,
+        "difficulty": "hard",
+        "roi": 75,
+        "priorityScore": 85,
+        "title": "Tile Replacement",
+        "description": "Replace outdated tiles with modern, durable options. Consider heated flooring for added luxury, which can be a strong selling point."
+      },
+      {
+        "materialCost": 1000,
+        "laborCost": 1500,
+        "totalCost": 2500,
+        "diyTime": 12,
+        "difficulty": "medium",
+        "roi": 55,
+        "priorityScore": 65,
+        "title": "Add a Frameless Glass Shower Enclosure",
+        "description": "Upgrade the shower area with a frameless glass enclosure to create a more open and luxurious feel. This is a popular feature in modern bathrooms."
+      }
+    ],
+    "other": [
+      {
+        "materialCost": 500,
+        "laborCost": 1000,
+        "totalCost": 1500,
+        "diyTime": 10,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 80,
+        "title": "Update Lighting Fixtures",
+        "description": "Replace outdated lighting fixtures with modern, energy-efficient LED fixtures to enhance the aesthetic appeal and energy efficiency of the space."
+      },
+      {
+        "materialCost": 300,
+        "laborCost": 700,
+        "totalCost": 1000,
+        "diyTime": 8,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 70,
+        "title": "Repaint Walls",
+        "description": "Apply a fresh coat of neutral paint to the walls to brighten up the space and make it more appealing to potential buyers."
+      },
+      {
+        "materialCost": 800,
+        "laborCost": 1200,
+        "totalCost": 2000,
+        "diyTime": 15,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 75,
+        "title": "Upgrade Interior Doors and Hardware",
+        "description": "Replace interior doors and hardware with modern designs to improve the overall look and feel of the home."
+      },
+      {
+        "materialCost": 400,
+        "laborCost": 600,
+        "totalCost": 1000,
+        "diyTime": 12,
+        "difficulty": "easy",
+        "roi": 50,
+        "priorityScore": 60,
+        "title": "Install Crown Molding",
+        "description": "Add crown molding to enhance the architectural interest and elegance of the rooms."
+      },
+      {
+        "materialCost": 600,
+        "laborCost": 900,
+        "totalCost": 1500,
+        "diyTime": 14,
+        "difficulty": "medium",
+        "roi": 55,
+        "priorityScore": 65,
+        "title": "Refinish Staircase",
+        "description": "Refinish the staircase to improve its appearance and durability, making it a focal point of the home."
+      }
+    ],
+    "bedroom": [
+      {
+        "materialCost": 500,
+        "laborCost": 1000,
+        "totalCost": 1500,
+        "diyTime": 10,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 80,
+        "title": "Paint and Accent Wall",
+        "description": "Repaint the bedroom with a neutral color to appeal to a broader audience. Add an accent wall with a modern design or wallpaper to create a focal point."
+      },
+      {
+        "materialCost": 800,
+        "laborCost": 1200,
+        "totalCost": 2000,
+        "diyTime": 15,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 75,
+        "title": "Lighting Upgrade",
+        "description": "Replace outdated light fixtures with modern, energy-efficient options. Consider adding dimmable lights or smart lighting solutions for added appeal."
+      },
+      {
+        "materialCost": 1000,
+        "laborCost": 1500,
+        "totalCost": 2500,
+        "diyTime": 20,
+        "difficulty": "medium",
+        "roi": 60,
+        "priorityScore": 70,
+        "title": "Flooring Enhancement",
+        "description": "Upgrade the flooring to hardwood or high-quality laminate to increase the room's appeal and value. This can significantly enhance the overall look of the bedroom."
+      },
+      {
+        "materialCost": 300,
+        "laborCost": 700,
+        "totalCost": 1000,
+        "diyTime": 8,
+        "difficulty": "easy",
+        "roi": 50,
+        "priorityScore": 60,
+        "title": "Closet Organization System",
+        "description": "Install a closet organization system to maximize storage space and improve functionality. This is a cost-effective way to add value to the bedroom."
+      },
+      {
+        "materialCost": 200,
+        "laborCost": 500,
+        "totalCost": 700,
+        "diyTime": 5,
+        "difficulty": "easy",
+        "roi": 55,
+        "priorityScore": 65,
+        "title": "Window Treatments",
+        "description": "Update window treatments with modern blinds or curtains to enhance privacy and style. Choose materials that complement the room's color scheme."
+      }
+    ]
+  }
+}

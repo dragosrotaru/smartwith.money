@@ -1,0 +1,89 @@
+{
+  "photos": [
+    "https://cache19.housesigma.com/file/pix-treb/X11935370/0ce65_1.jpg?fb34afde",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11935370/0ce65_2.jpg?fb34afde",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11935370/0ce65_3.jpg?fb34afde",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11935370/0ce65_4.jpg?fb34afde",
+    "https://cache-e14.housesigma.com/file/pix-treb/X11935370/0ce65_5.jpg?fb34afde",
+    "https://cache05.housesigma.com/file/pix-treb/X11935370/0ce65_6.jpg?fb34afde",
+    "https://cache06.housesigma.com/file/pix-treb/X11935370/0ce65_7.jpg?fb34afde",
+    "https://cache08.housesigma.com/file/pix-treb/X11935370/0ce65_8.jpg?fb34afde",
+    "https://cache09.housesigma.com/file/pix-treb/X11935370/0ce65_9.jpg?fb34afde",
+    "https://cache16.housesigma.com/file/pix-treb/X11935370/0ce65_10.jpg?fb34afde",
+    "https://cache17.housesigma.com/file/pix-treb/X11935370/0ce65_11.jpg?fb34afde",
+    "https://cache18.housesigma.com/file/pix-treb/X11935370/0ce65_12.jpg?fb34afde",
+    "https://cache19.housesigma.com/file/pix-treb/X11935370/0ce65_13.jpg?fb34afde",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11935370/0ce65_14.jpg?fb34afde",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11935370/0ce65_15.jpg?fb34afde",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11935370/0ce65_16.jpg?fb34afde",
+    "https://cache-e14.housesigma.com/file/pix-treb/X11935370/0ce65_17.jpg?fb34afde",
+    "https://cache05.housesigma.com/file/pix-treb/X11935370/0ce65_18.jpg?fb34afde",
+    "https://cache06.housesigma.com/file/pix-treb/X11935370/0ce65_19.jpg?fb34afde",
+    "https://cache08.housesigma.com/file/pix-treb/X11935370/0ce65_20.jpg?fb34afde",
+    "https://cache09.housesigma.com/file/pix-treb/X11935370/0ce65_21.jpg?fb34afde",
+    "https://cache16.housesigma.com/file/pix-treb/X11935370/0ce65_22.jpg?fb34afde",
+    "https://cache17.housesigma.com/file/pix-treb/X11935370/0ce65_23.jpg?fb34afde",
+    "https://cache18.housesigma.com/file/pix-treb/X11935370/0ce65_24.jpg?fb34afde",
+    "https://cache19.housesigma.com/file/pix-treb/X11935370/0ce65_25.jpg?fb34afde",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11935370/0ce65_26.jpg?fb34afde",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11935370/0ce65_27.jpg?fb34afde",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11935370/0ce65_28.jpg?fb34afde",
+    "https://cache-e14.housesigma.com/file/pix-treb/X11935370/0ce65_29.jpg?fb34afde",
+    "https://cache05.housesigma.com/file/pix-treb/X11935370/0ce65_30.jpg?fb34afde",
+    "https://cache06.housesigma.com/file/pix-treb/X11935370/0ce65_31.jpg?fb34afde",
+    "https://cache08.housesigma.com/file/pix-treb/X11935370/0ce65_32.jpg?fb34afde",
+    "https://cache09.housesigma.com/file/pix-treb/X11935370/0ce65_33.jpg?fb34afde",
+    "https://cache16.housesigma.com/file/pix-treb/X11935370/0ce65_34.jpg?fb34afde",
+    "https://cache17.housesigma.com/file/pix-treb/X11935370/0ce65_35.jpg?fb34afde",
+    "https://cache18.housesigma.com/file/pix-treb/X11935370/0ce65_36.jpg?fb34afde",
+    "https://cache19.housesigma.com/file/pix-treb/X11935370/0ce65_37.jpg?fb34afde",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11935370/0ce65_38.jpg?fb34afde",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11935370/0ce65_39.jpg?fb34afde",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11935370/0ce65_40.jpg?fb34afde"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "4138 Queen Victoria St",
+      "municipality": "Lincoln",
+      "postalCode": "L0R1S0",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": "R2",
+    "coordinates": {
+      "latitude": 43.16329,
+      "longitude": -79.36651
+    },
+    "propertyTax": 3805,
+    "lotSize": 10050,
+    "squareFootage": 1300,
+    "askingPrice": 744500,
+    "daysOnMarket": 15,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2025-01-22T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "MWBVyZEq1ZpYKemj",
+        "event": "SC Escape Clause"
+      }
+    ],
+    "estimatePrice": 721400,
+    "estimatePriceConfident": 0.17,
+    "estimateRent": 2411,
+    "estimateRentDays": 30,
+    "estimateRentYearReturn": 3.15,
+    "scores": {
+      "school": 8,
+      "growth": null,
+      "rent": 4
+    },
+    "communityValue": {
+      "value": 980000,
+      "growth": 0.441,
+      "growth5YearAverage": 0.47,
+      "growth10YearAverage": 1.28
+    }
+  }
+}

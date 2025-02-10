@@ -6,6 +6,7 @@ import Apple from 'next-auth/providers/apple'
 import { DrizzleAdapter } from '@auth/drizzle-adapter'
 import { userAccounts, authenticators, sessions, users, verificationTokens } from './modules/model'
 import { db } from './lib/db'
+import { menu } from './lib/menu'
 
 declare module 'next-auth' {
   interface Session {
@@ -25,9 +26,9 @@ export const config: NextAuthConfig = {
     authenticatorsTable: authenticators,
   }),
   pages: {
-    signIn: '/login',
+    signIn: menu.login.href,
     error: '/error',
-    newUser: '/onboarding',
+    newUser: menu.onboarding.href,
   },
   callbacks: {
     async session({ session, user }) {

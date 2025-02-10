@@ -1,0 +1,83 @@
+{
+  "photos": [
+    "https://cache-e11.housesigma.com/file/pix-treb/X11941380/44086_1.jpg?bcd6bc39",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11941380/44086_2.jpg?bcd6bc39",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11941380/44086_3.jpg?bcd6bc39",
+    "https://cache-e14.housesigma.com/file/pix-treb/X11941380/44086_4.jpg?bcd6bc39",
+    "https://cache05.housesigma.com/file/pix-treb/X11941380/44086_5.jpg?bcd6bc39",
+    "https://cache06.housesigma.com/file/pix-treb/X11941380/44086_6.jpg?bcd6bc39",
+    "https://cache08.housesigma.com/file/pix-treb/X11941380/44086_7.jpg?bcd6bc39",
+    "https://cache09.housesigma.com/file/pix-treb/X11941380/44086_8.jpg?bcd6bc39",
+    "https://cache16.housesigma.com/file/pix-treb/X11941380/44086_9.jpg?bcd6bc39",
+    "https://cache17.housesigma.com/file/pix-treb/X11941380/44086_10.jpg?bcd6bc39",
+    "https://cache18.housesigma.com/file/pix-treb/X11941380/44086_11.jpg?bcd6bc39",
+    "https://cache19.housesigma.com/file/pix-treb/X11941380/44086_12.jpg?bcd6bc39",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11941380/44086_13.jpg?bcd6bc39",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11941380/44086_14.jpg?bcd6bc39",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11941380/44086_15.jpg?bcd6bc39",
+    "https://cache-e14.housesigma.com/file/pix-treb/X11941380/44086_16.jpg?bcd6bc39",
+    "https://cache05.housesigma.com/file/pix-treb/X11941380/44086_17.jpg?bcd6bc39",
+    "https://cache06.housesigma.com/file/pix-treb/X11941380/44086_18.jpg?bcd6bc39",
+    "https://cache08.housesigma.com/file/pix-treb/X11941380/44086_19.jpg?bcd6bc39",
+    "https://cache09.housesigma.com/file/pix-treb/X11941380/44086_20.jpg?bcd6bc39",
+    "https://cache16.housesigma.com/file/pix-treb/X11941380/44086_21.jpg?bcd6bc39",
+    "https://cache17.housesigma.com/file/pix-treb/X11941380/44086_22.jpg?bcd6bc39",
+    "https://cache18.housesigma.com/file/pix-treb/X11941380/44086_23.jpg?bcd6bc39",
+    "https://cache19.housesigma.com/file/pix-treb/X11941380/44086_24.jpg?bcd6bc39",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11941380/44086_25.jpg?bcd6bc39",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11941380/44086_26.jpg?bcd6bc39",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11941380/44086_27.jpg?bcd6bc39"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "111 Leitch Dr",
+      "municipality": "Grimsby",
+      "postalCode": "L3M2T9",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": null,
+    "coordinates": {
+      "latitude": 43.18808,
+      "longitude": -79.53382
+    },
+    "propertyTax": 4430,
+    "lotSize": 10400,
+    "squareFootage": 1113,
+    "askingPrice": 799900,
+    "daysOnMarket": 6,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2025-01-27T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "amgL7AVPNbE3Z1MW",
+        "event": "For Sale"
+      },
+      {
+        "startDate": "2023-11-06T00:00:00.000Z",
+        "endDate": "2023-11-23T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "JKdOYr08bOj754lW",
+        "event": "Sold"
+      }
+    ],
+    "estimatePrice": 783000,
+    "estimatePriceConfident": 1.4,
+    "estimateRent": 2429,
+    "estimateRentDays": 30,
+    "estimateRentYearReturn": 2.85,
+    "scores": {
+      "school": 8,
+      "growth": 5,
+      "rent": 3
+    },
+    "communityValue": {
+      "value": 932500,
+      "growth": 0.042,
+      "growth5YearAverage": 0.57,
+      "growth10YearAverage": 1.34
+    }
+  }
+}

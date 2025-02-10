@@ -1,0 +1,5030 @@
+{
+  "https://housesigma.com/bkv2/api/init/app": {
+    "url": "https://housesigma.com/bkv2/api/init/app",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:00:56.222Z",
+    "data": {
+      "status": true,
+      "data": {
+        "message": "",
+        "timeout_explain": {
+          "explain_title": "View Listing Details",
+          "button_text": "Confirm Login",
+          "explain_text": "Local real estate board’s rules require you to validate login to see this property. <a href=\"https://housesigma.com/blog-en/feature-changes-for-trreb/\" target=\"_blank\" class=\"explain_link\">(Full Details Here)</a>",
+          "explain_subtext": "Please log in again to continue"
+        },
+        "revalidate_explain": {
+          "explain_text": "Your password has expired due to Real Estate Board requirements. Please re-confirm your password. <a href=\"https://housesigma.com/blog-en/faq/other/re-validate-password/\" target=\"_blank\" class=\"explain_link\">(Full Details Here)</a>",
+          "explain_subtext": ""
+        },
+        "apiUrl": "https://housesigma.com/bkv2//api/",
+        "siteUrl": "https://housesigma.com/app",
+        "update": false,
+        "force_update": false,
+        "update_message": "",
+        "update_url": "https://housesigma.com/bkv2//landing/download?c=in_app_update",
+        "qr_code": {
+          "app_download_android": "https://housesigma.com/bkv2//img/qrcode/landingpage_noborder_290.png",
+          "app_download_ios": "https://housesigma.com/bkv2//img/qrcode/landingpage_noborder_290.png",
+          "wechat_public": "https://housesigma.com/bkv2//img/qrcode/qrcode_wechat_noborder_296.png"
+        },
+        "provinces": [
+          {
+            "id": "ON",
+            "name": "Ontario",
+            "proximity": "-79.39296079049416,43.67037569297358",
+            "location": {
+              "lat": 43.6532,
+              "lon": -79.3832
+            },
+            "default_tos": "TREB"
+          },
+          {
+            "id": "BC",
+            "name": "British Columbia",
+            "proximity": "-123.10927972868984,49.22982666354977",
+            "location": {
+              "lat": 49.246292,
+              "lon": -123.116226
+            },
+            "default_tos": "REBGV"
+          },
+          {
+            "id": "AB",
+            "name": "Alberta",
+            "proximity": "-114.07212858564964,51.045004829856964",
+            "location": {
+              "lat": 51.045004829856964,
+              "lon": -114.07212858564964
+            },
+            "default_tos": "PILLAR9"
+          }
+        ],
+        "ua_detection": {
+          "client_type": "desktop_v7",
+          "is_wechat": false,
+          "is_oldWechat": false,
+          "is_robot": false,
+          "device_type": "Desktop",
+          "device_name": "Macintosh",
+          "platform": "macOS",
+          "platform_version": "10.15",
+          "browser": "Firefox",
+          "browser_version": "134.0"
+        },
+        "geoip": {
+          "province_iso": null,
+          "province": null,
+          "country_iso": "CA",
+          "country": "Canada",
+          "continent_iso": "NA",
+          "continent": "North America",
+          "lang": "en_US"
+        },
+        "meta": {
+          "title": "HouseSigma - Canada Real Estate Sold Price and Home Valuation",
+          "header": "Ontario Homes for sale with 16+ years of Nearby sold price history for real estate valuation",
+          "description": "Market trend, listing, price estimation",
+          "image": "https://housesigma.com/bkv2//img/logo/icon_green_400.png",
+          "type": "website",
+          "url": "https://housesigma.com/bkv2//landing/download?c=recommend",
+          "url_ios": "https://housesigma.com/bkv2//landing/download?c=recommend&utm_source=user-share&utm_medium=ios&ign=",
+          "url_android": "https://housesigma.com/bkv2//landing/download?c=recommend&utm_source=user-share&utm_medium=android&ign="
+        },
+        "native_config": {
+          "map_satellite": "https://satellite.housesigma.com/v1/style-special.json?ver=20230602",
+          "map_vector": "https://map.housesigma.com/styles/maptiler-street-v3/style.json?ver=20230602",
+          "map_parcel": "https://mapraster.housesigma.com/styles/map-properties/{z}/{x}/{y}.png?ver=20230602",
+          "map_static": "https://mapraster.housesigma.com/styles/maptiler-street-v3/static/",
+          "url_join_us": "https://team.housesigma.com/join-us/",
+          "url_google_map": "https://www.google.com/maps/dir/?api=1&origin=&destination="
+        },
+        "tos": {
+          "ORTIS": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "ITSO": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "TREB": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "DDF": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "OREB": {
+            "term_text": {
+              "header": "Ottawa Real Estate Board(OREB)",
+              "body": "You are agreeing to comply and be bound by the following terms of service and use.<br><br>The information provided herein shall only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose. The information is deemed reliable but is not guaranteed accurate by OREB."
+            }
+          },
+          "REBGV": {
+            "term_text": {
+              "header": "Real Estate Board of Greater Vancouver(REBGV)",
+              "body": "You are agreeing to comply and be bound by the following terms of service and use.<br><br>the Registrant has received, read and understood the brochure published by the British Columbia Real Estate Association entitled “Privacy Notice and Consent” ; <br><br>the Registrant acknowledges entering into a lawful REALTOR®/ consumer or REALTOR®/client relationship with the Member; <br><br>all data obtained from the MLS® VOW is intended for and may only be used for the Registrant’s personal, non-commercial use; <br><br>the Registrant has a bona fide interest in the purchase, sale or lease of real estate of the type being offered through the MLS® VOW; <br><br>the Registrant will not himself, and will not permit or assist others to, directly or indirectly: (i) copy, redistribute or retransmit any of the MLS® VOW Data or information provided; <br><br>copy, redistribute or retransmit any of the MLS® VOW Data or information provided; <br>display, post, disseminate, distribute, publish, broadcast, transfer, sell or sublicense any of the MLS® VOW Data to another person. <br>engage in Scraping (including “screen scraping” and “database scraping”), “data mining” or any other activity intended to collect, store, re-organize, summarize or manipulate any MLS® VOW Data or any related data; <br>the Registrant acknowledges the Board’s ownership of, and the validity of the Board’s proprietary rights and copyright in the MLS® VOW Data, and listing information; and <br><br>the Registrant expressly authorizes the Board or their duly authorized representatives, to access the MLS® VOW and Registrant’s information provided to the MLS® VOW Participant, for the purposes of verifying compliance with and pursuing enforcement of the Terms of Use and all applicable rules, regulations, bylaws, policies, and laws."
+            }
+          },
+          "RAHB": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "RAHB_2": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "PILLAR9": {
+            "term_text": {
+              "header": "Pillar 9™(Alberta One Realty Listing Services Inc.)",
+              "body": "You are agreeing to comply and be bound by the following terms of service and use.<br><br>Agree not copy, redistribute, or retransmit any of the VOW Content, except in connection with the VOW Customer’s consideration of the purchase or sale of an individual property.<br><br>Acknowledges the Association’s ownership of and the validity of the Association’s copyrights in the MLS® System data.<br><br>Despite the preceding provisions, the MLS®, Association and other Members and their duly authorized representatives may access the VOW for the purposes of verifying compliance with these Regional MLS® Rules and monitoring display of other Members’ listings by the VOW.<br><br>Information is deemed reliable but is not guaranteed accurate by Pillar 9™."
+            }
+          },
+          "RAE": {
+            "term_text": {
+              "header": "REALTORS® Association of Edmonton (RAE)",
+              "body": "By using this website, you agree to comply with and be bound by the following terms of service and use:<br><br>1. You acknowledge that these Terms of Use do not establish an agency relationship with the Participant.<br><br>2. All data obtained from the Virtual Office Website (VOW) is intended solely for your personal, non-commercial use.<br><br>3. You certify that you have a bona fide interest in the purchase, sale, or lease of real estate of the type being offered through the VOW.<br><br>4. You agree not to copy, redistribute, or retransmit any of the VOW Content, except in connection with your consideration of the purchase or sale of an individual property.<br><br>5. You acknowledge the Cooperative ownership of and the validity of the copyright in the MLS® System database."
+            }
+          },
+          "VREB": {
+            "term_text": {
+              "header": "Victoria Real Estate Board (VREB)",
+              "body": "You are agreeing to comply and be bound by the following terms of service and use.<br><br>i. That the registered user has received, read, and understands the brochure published  by the Real Estate Council of BC (RECBC) entitled \"Disclosure of Representation in Trading Services\";<br><br>ii. That all data obtained from the VOW is intended only for the registered user's personal, non-commercial use;<br><br>iii. That the registered user has a bona fide interest in the purchase, sale, or lease of real  estate of the type being offered through the VOW;<br><br>iv. That the registered user will not copy, redistribute, or retransmit any of the Licensed  Data or information provided; and<br><br>v. That the registered user acknowledges the Boards’ copyright in the Licensed Data.<br><br>vi. A Terms of Use (TOU) agreement may not impose a financial obligation on a client or create an agency agreement with a client.<br><br>Privacy Policy:<br><br>By using our services, you agree that we may collect and use your information for the purpose of enabling log-in access and to contact you for inquiries related to real estate. This usage complies with all applicable laws, including the requirements of the Personal Information Protection Act."
+            }
+          }
+        },
+        "copyright": {
+          "RAE": "Data is deemed reliable but is not guaranteed accurate by the REALTORS® Association of Edmonton. Copyright 2025 by the REALTORS® Association of Edmonton. All Rights Reserved."
+        },
+        "show_rae_map_tips": 1,
+        "collect_location": 1,
+        "location_collect_rate": 1,
+        "ddf_tos_banner": {
+          "enable": true,
+          "content": "By using our site, you agree to our <a href=\"https://housesigma.com/blog-en/terms-of-use/\" target=\"_blank\">Terms of Use</a>",
+          "button": "Dismiss"
+        }
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH11"
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/listing/info/disclaimer_v2": {
+    "url": "https://housesigma.com/bkv2/api/listing/info/disclaimer_v2",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:00:56.281Z",
+    "data": {
+      "status": true,
+      "data": {
+        "message": "",
+        "disclaimer": {
+          "ON": {
+            "default": "<p>The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</p><br/>",
+            "desktop_map_bottom": ""
+          },
+          "AB": {
+            "default": "<p>Data is supplied by Pillar 9™ MLS® System. Pillar 9™ is the owner of the copyright in its MLS® System. Data is deemed reliable but is not guaranteed accurate by Pillar 9™. The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by The Canadian Real Estate Association (CREA) and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.</p><br/><p>Data is deemed reliable but is not guaranteed accurate by the REALTORS® Association of Edmonton.</p><p>Copyright 2025 by the REALTORS® Association of Edmonton. All Rights Reserved.</p><br/><p>The trademarks REALTOR®, REALTORS®, and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by CREA and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.</p><p>Data is provided courtesy of Canadian Real Estate Association.</p><br/>",
+            "desktop_map_bottom": "<p>Data is deemed reliable but is not guaranteed accurate by the REALTORS® Association of Edmonton.</p><p>Copyright 2025 by the REALTORS® Association of Edmonton. All Rights Reserved.</p><br/>"
+          }
+        }
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH12"
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/listing/info/detail_v2": {
+    "url": "https://housesigma.com/bkv2/api/listing/info/detail_v2",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:00:56.298Z",
+    "data": {
+      "status": true,
+      "data": {
+        "show_consumer_questionnaire": 0,
+        "assessment": null,
+        "listing_price_change": [],
+        "touring_activities": [],
+        "picture": {
+          "photo_url": "https://cache-e13.housesigma.com/file/pix-treb/X11950649/b9021_1.jpg?a488d866",
+          "photo_list": [
+            "https://cache-e13.housesigma.com/file/pix-treb/X11950649/b9021_1.jpg?a488d866",
+            "https://cache-e14.housesigma.com/file/pix-treb/X11950649/b9021_2.jpg?a488d866",
+            "https://cache05.housesigma.com/file/pix-treb/X11950649/b9021_3.jpg?a488d866",
+            "https://cache06.housesigma.com/file/pix-treb/X11950649/b9021_4.jpg?a488d866",
+            "https://cache08.housesigma.com/file/pix-treb/X11950649/b9021_5.jpg?a488d866",
+            "https://cache09.housesigma.com/file/pix-treb/X11950649/b9021_6.jpg?a488d866",
+            "https://cache16.housesigma.com/file/pix-treb/X11950649/b9021_7.jpg?a488d866",
+            "https://cache17.housesigma.com/file/pix-treb/X11950649/b9021_8.jpg?a488d866",
+            "https://cache18.housesigma.com/file/pix-treb/X11950649/b9021_9.jpg?a488d866",
+            "https://cache19.housesigma.com/file/pix-treb/X11950649/b9021_10.jpg?a488d866",
+            "https://cache-e11.housesigma.com/file/pix-treb/X11950649/b9021_11.jpg?a488d866",
+            "https://cache-e12.housesigma.com/file/pix-treb/X11950649/b9021_12.jpg?a488d866",
+            "https://cache-e13.housesigma.com/file/pix-treb/X11950649/b9021_13.jpg?a488d866",
+            "https://cache-e14.housesigma.com/file/pix-treb/X11950649/b9021_14.jpg?a488d866",
+            "https://cache05.housesigma.com/file/pix-treb/X11950649/b9021_15.jpg?a488d866",
+            "https://cache06.housesigma.com/file/pix-treb/X11950649/b9021_16.jpg?a488d866",
+            "https://cache08.housesigma.com/file/pix-treb/X11950649/b9021_17.jpg?a488d866",
+            "https://cache09.housesigma.com/file/pix-treb/X11950649/b9021_18.jpg?a488d866",
+            "https://cache16.housesigma.com/file/pix-treb/X11950649/b9021_19.jpg?a488d866",
+            "https://cache17.housesigma.com/file/pix-treb/X11950649/b9021_20.jpg?a488d866",
+            "https://cache18.housesigma.com/file/pix-treb/X11950649/b9021_21.jpg?a488d866",
+            "https://cache19.housesigma.com/file/pix-treb/X11950649/b9021_22.jpg?a488d866",
+            "https://cache-e11.housesigma.com/file/pix-treb/X11950649/b9021_23.jpg?a488d866",
+            "https://cache-e12.housesigma.com/file/pix-treb/X11950649/b9021_24.jpg?a488d866",
+            "https://cache-e13.housesigma.com/file/pix-treb/X11950649/b9021_25.jpg?a488d866",
+            "https://cache-e14.housesigma.com/file/pix-treb/X11950649/b9021_26.jpg?a488d866",
+            "https://cache05.housesigma.com/file/pix-treb/X11950649/b9021_27.jpg?a488d866",
+            "https://cache06.housesigma.com/file/pix-treb/X11950649/b9021_28.jpg?a488d866",
+            "https://cache08.housesigma.com/file/pix-treb/X11950649/b9021_29.jpg?a488d866",
+            "https://cache09.housesigma.com/file/pix-treb/X11950649/b9021_30.jpg?a488d866",
+            "https://cache16.housesigma.com/file/pix-treb/X11950649/b9021_31.jpg?a488d866",
+            "https://cache17.housesigma.com/file/pix-treb/X11950649/b9021_32.jpg?a488d866",
+            "https://cache18.housesigma.com/file/pix-treb/X11950649/b9021_33.jpg?a488d866",
+            "https://cache19.housesigma.com/file/pix-treb/X11950649/b9021_34.jpg?a488d866",
+            "https://cache-e11.housesigma.com/file/pix-treb/X11950649/b9021_35.jpg?a488d866",
+            "https://cache-e12.housesigma.com/file/pix-treb/X11950649/b9021_36.jpg?a488d866",
+            "https://cache-e13.housesigma.com/file/pix-treb/X11950649/b9021_37.jpg?a488d866",
+            "https://cache-e14.housesigma.com/file/pix-treb/X11950649/b9021_38.jpg?a488d866",
+            "https://cache05.housesigma.com/file/pix-treb/X11950649/b9021_39.jpg?a488d866"
+          ],
+          "virtual_tour": "https://www.myvisuallistings.com/vt/351770"
+        },
+        "house": {
+          "id_listing": "6zqW7dzJM0vY5eZE",
+          "id_address": "kbEDRYabQLOy1VaB",
+          "seo_municipality": "grimsby-real-estate",
+          "seo_address": "15-burgess-drive",
+          "ml_num": "X11950649",
+          "ml_num_merge": "X11950649",
+          "hash_id": "NJXy4NKtQ9jpv3Zg",
+          "seo_suffix": "15-BURGESS-Dr-Grimsby-L3M2Z1-X11950649-X11950649",
+          "house_type_name": "Detached",
+          "house_type": "D.",
+          "address": "15 BURGESS Dr",
+          "address_seo": "15 BURGESS Dr",
+          "address_navigation": "15 BURGESS Dr, Grimsby, Ontario",
+          "list_status": {
+            "public": 1,
+            "live": 1,
+            "flg_idx": 1,
+            "sold": 0,
+            "s_r": "Sale",
+            "text": "For Sale",
+            "status": "A",
+            "feature": null,
+            "precon": null,
+            "agent_available": true,
+            "premium": 1,
+            "archive": 0,
+            "watched": 0,
+            "watched_text": "Sold Watch",
+            "community_watched": 1,
+            "community_watch_types": [
+              "new",
+              "sold",
+              "delisted"
+            ]
+          },
+          "list_dates": {
+            "date_added": "2025-02-01",
+            "date_added_days": 1,
+            "date_start": "2025-02-01",
+            "date_start_days": 1,
+            "date_start_month": 0,
+            "date_update": "2025-02-01",
+            "date_end": null,
+            "date_end_days": null,
+            "date_list_days": 1,
+            "date_sold_report": null
+          },
+          "id_community": 23639,
+          "id_municipality": 10129,
+          "community_name": "Grimsby East",
+          "municipality_name": "Grimsby",
+          "municipality_area": null,
+          "country": "CA",
+          "province": "ON",
+          "province_name": "Ontario",
+          "cross_street": "DORCHESTER TO BURGESS",
+          "bedroom": 2,
+          "bedroom_plus": 1,
+          "bedroom_string": "2+1",
+          "washroom": 2,
+          "parking": {
+            "total": 1.5,
+            "garage_type": "Attached",
+            "garage": 1.5,
+            "parking_type": null,
+            "parking": 6,
+            "text": "Attached 1.5 garage,  6 parking"
+          },
+          "price": "999,900",
+          "price_int": 999900,
+          "price_abbr": "1M",
+          "price_sold": null,
+          "price_sold_int": null,
+          "price_origin": null,
+          "price_tag": "For Sale",
+          "map": {
+            "lat": 43.1856,
+            "lon": -79.54777
+          },
+          "tax_int": 6024,
+          "maintenance_int": null,
+          "brokerage": "Listed by ROYAL LEPAGE NRC REALTY",
+          "text": {
+            "list_date_short": "List 2025-02-01",
+            "list_date_long": "List 2025-02-01, 1 days ago",
+            "dom_short": "Listed 1 day ago",
+            "dom_short_v2": "1 day ago",
+            "dom_long": "Listed 1 days ago",
+            "rooms_short": "2+1 bd 2 ba 1.5 gr",
+            "rooms_long": "2+1 Bedroom, 2 Bathroom, 1.5 Garage",
+            "status_chg_date": "1 day ago",
+            "hs_exclusive_tag": null
+          },
+          "house_area": {
+            "area": 1337,
+            "area_note": "(SigmaEstimate®)",
+            "unit": "feet²",
+            "estimate": 1337
+          },
+          "land": {
+            "front": 116,
+            "depth": 117,
+            "unit": "feet",
+            "irregular": null,
+            "text": "116 x 117 feet"
+          },
+          "open_house_date": null,
+          "tos_source": "TREB",
+          "data_source_raw": "TREB",
+          "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+          "copyright_text": {
+            "copyright": "<p>Copyright: © 2025 HouseSigma Inc. All rights reserved. HouseSigma Inc. is a registered real estate brokerage in the Province of Ontario.</p>",
+            "housesigmaInc": "HouseSigma Inc. Brokerage",
+            "disclaimer_img": null,
+            "disclaimer_url": null
+          },
+          "agent_user": {
+            "id": 1,
+            "name": "System API",
+            "phone": "2894695060",
+            "picture": "",
+            "created": "2018-06-29 13:58:10"
+          },
+          "bind_agent_user": null,
+          "contact_message": "I'd like to buy/sell something similar to: [X11950649], 15 BURGESS Dr, Grimsby",
+          "postal_code": "L3M2Z1",
+          "postal_code_seo": "L3M2Z1",
+          "pending_review_text": null,
+          "list_agent_name": null,
+          "brokerage_text": null,
+          "schedule_message": "I want to book an appointment to view: [X11950649], 15 BURGESS Dr, Grimsby",
+          "direct_contact_message": "I want to know more about your toured listing: [X11950649], 15 BURGESS Dr, Grimsby",
+          "direct_contact_trreb_questionnaire_message": "I need help on real estate. Please contact me"
+        },
+        "key_facts": null,
+        "key_facts_v2": {
+          "tax": {
+            "name": "Tax",
+            "value": "$6,024 / 2024",
+            "public": 1
+          },
+          "property_type": {
+            "name": "Property Type",
+            "value": "Detached, Bungalow",
+            "public": 1
+          },
+          "maintenance": {
+            "name": "Maintenance",
+            "value": null,
+            "public": 1
+          },
+          "included_utility": {
+            "name": "Included Utility",
+            "value": null,
+            "public": 1
+          },
+          "build_year": {
+            "name": "Building Age",
+            "value": "51-99",
+            "public": 1
+          },
+          "size_without_area_note": {
+            "name": "Size",
+            "value": null,
+            "public": 1
+          },
+          "size_with_area_note": {
+            "name": "Size",
+            "value": "1337 feet² (SigmaEstimate®)",
+            "public": 1
+          },
+          "lot_size": {
+            "name": "Lot Size",
+            "value": "116 x 117 feet",
+            "public": 1
+          },
+          "locker": {
+            "name": "Locker",
+            "value": null,
+            "public": 1
+          },
+          "irregular": {
+            "name": "Lot Irregularities",
+            "value": null,
+            "public": 1
+          },
+          "condo_exposure": {
+            "name": "Exposure",
+            "value": null,
+            "public": 1
+          },
+          "parking": {
+            "name": "Parking",
+            "value": "Attached 1.5 garage,  6 parking",
+            "public": 1
+          },
+          "basement": {
+            "name": "Basement",
+            "value": "Part Bsmt, Part Fin",
+            "public": 1
+          },
+          "coop_commission": {
+            "name": "Coop Commission",
+            "value": null,
+            "public": 1
+          },
+          "ml_num_merge": {
+            "name": "Listing #",
+            "value": "X11950649",
+            "public": 1
+          },
+          "data_source": {
+            "name": "Data Source",
+            "value": "TRREB",
+            "public": 1
+          },
+          "days_on_site_or_market": {
+            "name": "Days on Market",
+            "value": "1 days",
+            "public": 1
+          },
+          "status_chg_date": {
+            "name": "Status Change",
+            "value": "1 day ago",
+            "public": 1
+          },
+          "listed_on": {
+            "name": "Listed on",
+            "value": "2025-02-01",
+            "public": 1
+          },
+          "updated_on": {
+            "name": "Updated on",
+            "value": "2025-02-01",
+            "public": 1
+          },
+          "description1": {
+            "name": "Description",
+            "value": "WELCOME TO 15 BURGESS DRIVE A UNIQUE HALL-OGILVIE 1465 SQUARE FOOT BUNGALOW ON A 116-117 LOT IN THE HIGHLY DESIRABLE NEIGHBOURHOOD OF NELLES ESTATES! LOCATED ON A QUIET STREET THIS SERENE SETTING IS SURROUNDED BY NATURE AND THE NIAGARA ESCARPMENT. THE SELLERS LOVE THEIR NEIGHBOURS AND THE PRIVACY OF THIS QUIET NEIGHBOURHOOD. THE HOME IS CLOSE TO DOWNTOWN, SHOPPING, HOSPITAL, SCHOOLS, EASY HIGHWAY ACCESS AND GO SERVICE TRANSPORTATION INTO DOWNTOWN TORONTO. THE HOME HAS BEAUTIFUL CURB APPEAL AND A WELL MAINTAINED, PRIVATE, POOL SIZED BACKYARD. MANY RECENT UPGRADES INCLUDE: 2024-NEW FRIDGE AND STOVE, SIDEWALK AND SOD TO THE LEFT OF THE GARAGE, NEW DECK BOARDS, BATHROOM FANS, REC ROOM CARPETING AND PAINTING, GARAGE PAINTED; 2023-CALIFORNIA SHUTTERS, DISHWASHER AND PORTION OF THE FENCE; 2020-WASHER/DRYER; 2019-ROOF SHINGLES; 2017-ATTIC INSULATION, MAIN FLOOR PAINTING, PORTION OF THE FENCE, LANDSCAPING AND COMPRESSOR ON FURNACE.",
+            "public": 1
+          },
+          "description2": {
+            "name": "Description",
+            "value": null,
+            "public": 1
+          },
+          "summary": {
+            "name": "Summary",
+            "value": [
+              "The property is located at 15 Burgess Drive in the Nelles Estates neighborhood.",
+              "The home is a Hall-Ogilvie bungalow with 1465 square feet of living space.",
+              "The lot size is 116-117 feet.",
+              "The property is situated on a quiet street surrounded by nature and the Niagara Escarpment.",
+              "The home is close to downtown, shopping, hospital, schools, and has easy highway access and GO service transportation.",
+              "The property features a well-maintained, private, pool-sized backyard with beautiful curb appeal.",
+              "Recent upgrades include a new fridge, stove, sidewalk, sod, deck boards, bathroom fans, rec room carpeting, painting, California shutters, dishwasher, washer/dryer, roof shingles, attic insulation, main floor painting, and compressor on furnace."
+            ],
+            "public": 1
+          },
+          "project_name": {
+            "name": "Project Name",
+            "value": null,
+            "public": 1
+          },
+          "builders": {
+            "name": "Builder(s)",
+            "value": null,
+            "public": 1
+          },
+          "occupancy_date": {
+            "name": "Occupancy Date",
+            "value": null,
+            "public": 1
+          },
+          "aggregated_dom": {
+            "name": "Property Days on Market",
+            "value": "101 days",
+            "public": 1
+          }
+        },
+        "school": [
+          {
+            "distance": 450,
+            "programs": [
+              "English",
+              "JK-6",
+              "7-8"
+            ],
+            "id_school": 3475,
+            "display_score": 1,
+            "id": 3475,
+            "name": "Nelles Public School",
+            "board": "DISTRICT SCHOOL BOARD OF NIAGARA",
+            "address": "118 Main St E",
+            "phone": "(905) 945-8022",
+            "eqao_json": null,
+            "city": "Grimsby",
+            "region": "Ontario",
+            "web": "https://nelles.dsbn.org/",
+            "geo_latitude": 43.189368514907,
+            "geo_longitude": -79.5497914,
+            "school_type": "Elementary",
+            "board_type": "Public",
+            "score": 8.9,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 260,
+            "rank_total": 2975,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "260/2975",
+                "score_name": "Score",
+                "score_value": "9.21"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "398/3044",
+                "score_name": "Score",
+                "score_value": "8.82"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "452/2979",
+                "score_name": "Score",
+                "score_value": "8.63"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "433/2939",
+                "score_name": "Score",
+                "score_value": "8.67"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "251/2749",
+                "score_name": "Score",
+                "score_value": "9.18"
+              }
+            ]
+          },
+          {
+            "distance": 1138,
+            "programs": [
+              "English",
+              "JK-8",
+              "Catholic"
+            ],
+            "id_school": 3524,
+            "display_score": 1,
+            "id": 3524,
+            "name": "St Joseph Catholic Elementary School (GR)",
+            "board": "Niagara Catholic District School Board",
+            "address": "5 Robinson St N",
+            "phone": "905.945.4955",
+            "eqao_json": null,
+            "city": "Grimsby",
+            "region": "Ontario",
+            "web": "https://schools.niagaracatholic.ca/stjoseph-grimsby/",
+            "geo_latitude": 43.192746214909,
+            "geo_longitude": -79.55781265,
+            "school_type": "Elementary",
+            "board_type": "Catholic",
+            "score": 7.3,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 1248,
+            "rank_total": 2975,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "1248/2975",
+                "score_name": "Score",
+                "score_value": "6.22"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "811/3044",
+                "score_name": "Score",
+                "score_value": "7.6"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "1064/2979",
+                "score_name": "Score",
+                "score_value": "6.79"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "427/2939",
+                "score_name": "Score",
+                "score_value": "8.69"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "918/2749",
+                "score_name": "Score",
+                "score_value": "6.99"
+              }
+            ]
+          },
+          {
+            "distance": 2947,
+            "programs": [
+              "English",
+              "9-12",
+              "Catholic"
+            ],
+            "id_school": 4110,
+            "display_score": 1,
+            "id": 4110,
+            "name": "Blessed Trinity Catholic Secondary School",
+            "board": "Niagara Catholic District School Board",
+            "address": "145 Livingston Ave",
+            "phone": "(905) 945-6706",
+            "eqao_json": null,
+            "city": "Grimsby",
+            "region": "Ontario",
+            "web": "https://www.blessedtrinitycatholic.com/",
+            "geo_latitude": 43.197094114911,
+            "geo_longitude": -79.5805213,
+            "school_type": "Secondary",
+            "board_type": "Catholic",
+            "score": 7.2,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 88,
+            "rank_total": 688,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "88/688",
+                "score_name": "Score",
+                "score_value": "8.85"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "253/728",
+                "score_name": "Score",
+                "score_value": "6.87"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "456/722",
+                "score_name": "Score",
+                "score_value": "4.32"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "252/722",
+                "score_name": "Score",
+                "score_value": "6.86"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "156/703",
+                "score_name": "Score",
+                "score_value": "8"
+              },
+              {
+                "year": 2015,
+                "rank_name": "Rank",
+                "rank_value": "113/633",
+                "score_name": "Score",
+                "score_value": "8.39"
+              }
+            ]
+          },
+          {
+            "distance": 2856,
+            "programs": [
+              "English",
+              "9-12"
+            ],
+            "id_school": 3463,
+            "display_score": 1,
+            "id": 3463,
+            "name": "WEST NIAGARA Secondary School",
+            "board": "DISTRICT SCHOOL BOARD OF NIAGARA",
+            "address": "5699 King Street",
+            "phone": "(905) 945-5416",
+            "eqao_json": null,
+            "city": "Lincoln",
+            "region": "Ontario",
+            "web": "https://westniagara.dsbn.org/",
+            "geo_latitude": 43.1836239,
+            "geo_longitude": -79.51265,
+            "school_type": "Secondary",
+            "board_type": "Public",
+            "score": 7.1,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 206,
+            "rank_total": 688,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "206/688",
+                "score_name": "Score",
+                "score_value": "7.31"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "100/728",
+                "score_name": "Score",
+                "score_value": "8.76"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "286/722",
+                "score_name": "Score",
+                "score_value": "6.43"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "167/722",
+                "score_name": "Score",
+                "score_value": "7.92"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "344/703",
+                "score_name": "Score",
+                "score_value": "5.6"
+              },
+              {
+                "year": 2015,
+                "rank_name": "Rank",
+                "rank_value": "241/633",
+                "score_name": "Score",
+                "score_value": "6.57"
+              }
+            ]
+          },
+          {
+            "distance": 1910,
+            "programs": [
+              "French Immersion",
+              "1-8"
+            ],
+            "id_school": 3511,
+            "display_score": 0,
+            "id": 3511,
+            "name": "Central French Immersion Public School",
+            "board": "DISTRICT SCHOOL BOARD OF NIAGARA",
+            "address": "10 Livingston Ave",
+            "phone": "(905) 945-5459",
+            "eqao_json": null,
+            "city": "Grimsby",
+            "region": "Ontario",
+            "web": "https://central.dsbn.org/index.html",
+            "geo_latitude": 43.196136414911,
+            "geo_longitude": -79.56638035,
+            "school_type": "Elementary",
+            "board_type": "Public",
+            "score": 0,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 253,
+            "rank_total": 2975,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "253/2975",
+                "score_name": "Score",
+                "score_value": "9.23"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "415/3044",
+                "score_name": "Score",
+                "score_value": "8.77"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "241/2979",
+                "score_name": "Score",
+                "score_value": "9.27"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "263/2939",
+                "score_name": "Score",
+                "score_value": "9.19"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "223/2749",
+                "score_name": "Score",
+                "score_value": "9.27"
+              }
+            ]
+          },
+          {
+            "distance": 2856,
+            "programs": [
+              "French Immersion",
+              "9-12"
+            ],
+            "id_school": 3463,
+            "display_score": 0,
+            "id": 3463,
+            "name": "WEST NIAGARA Secondary School",
+            "board": "DISTRICT SCHOOL BOARD OF NIAGARA",
+            "address": "5699 King Street",
+            "phone": "(905) 945-5416",
+            "eqao_json": null,
+            "city": "Lincoln",
+            "region": "Ontario",
+            "web": "https://westniagara.dsbn.org/",
+            "geo_latitude": 43.1836239,
+            "geo_longitude": -79.51265,
+            "school_type": "Secondary",
+            "board_type": "Public",
+            "score": 0,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 206,
+            "rank_total": 688,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "206/688",
+                "score_name": "Score",
+                "score_value": "7.31"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "100/728",
+                "score_name": "Score",
+                "score_value": "8.76"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "286/722",
+                "score_name": "Score",
+                "score_value": "6.43"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "167/722",
+                "score_name": "Score",
+                "score_value": "7.92"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "344/703",
+                "score_name": "Score",
+                "score_value": "5.6"
+              },
+              {
+                "year": 2015,
+                "rank_name": "Rank",
+                "rank_value": "241/633",
+                "score_name": "Score",
+                "score_value": "6.57"
+              }
+            ]
+          },
+          {
+            "v3": 1,
+            "distance": 2947,
+            "programs": [
+              "French Immersion",
+              "9-12",
+              "Catholic"
+            ],
+            "id_school": 4110,
+            "display_score": 0,
+            "id": 4110,
+            "name": "Blessed Trinity Catholic Secondary School",
+            "board": "Niagara Catholic District School Board",
+            "address": "145 Livingston Ave",
+            "phone": "(905) 945-6706",
+            "eqao_json": null,
+            "city": "Grimsby",
+            "region": "Ontario",
+            "web": "https://www.blessedtrinitycatholic.com/",
+            "geo_latitude": 43.197094114911,
+            "geo_longitude": -79.5805213,
+            "school_type": "Secondary",
+            "board_type": "Catholic",
+            "score": 0,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 88,
+            "rank_total": 688,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "88/688",
+                "score_name": "Score",
+                "score_value": "8.85"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "253/728",
+                "score_name": "Score",
+                "score_value": "6.87"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "456/722",
+                "score_name": "Score",
+                "score_value": "4.32"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "252/722",
+                "score_name": "Score",
+                "score_value": "6.86"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "156/703",
+                "score_name": "Score",
+                "score_value": "8"
+              },
+              {
+                "year": 2015,
+                "rank_name": "Rank",
+                "rank_value": "113/633",
+                "score_name": "Score",
+                "score_value": "8.39"
+              }
+            ]
+          },
+          {
+            "distance": 2959,
+            "programs": [
+              "French Immersion",
+              "JK-8",
+              "Catholic"
+            ],
+            "id_school": 3525,
+            "display_score": 0,
+            "id": 3525,
+            "name": "St John Catholic Elementary School",
+            "board": "Niagara Catholic District School Board",
+            "address": "5684 King Street",
+            "phone": "905.945.5331",
+            "eqao_json": null,
+            "city": "LINCOLN",
+            "region": "Ontario",
+            "web": "https://schools.niagaracatholic.ca/stjohn/",
+            "geo_latitude": 43.1823673,
+            "geo_longitude": -79.511542,
+            "school_type": "Elementary",
+            "board_type": "Catholic",
+            "score": 0,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 900,
+            "rank_total": 2975,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "900/2975",
+                "score_name": "Score",
+                "score_value": "7.28"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "1421/3044",
+                "score_name": "Score",
+                "score_value": "5.8"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "1728/2979",
+                "score_name": "Score",
+                "score_value": "4.78"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "1139/2939",
+                "score_name": "Score",
+                "score_value": "6.51"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "470/2749",
+                "score_name": "Score",
+                "score_value": "8.46"
+              }
+            ]
+          }
+        ],
+        "property_detail": {
+          "property": {
+            "name": "Property",
+            "value": [
+              {
+                "name": "Property Type",
+                "value": "Detached",
+                "public": 1
+              },
+              {
+                "name": "Style",
+                "value": "Bungalow",
+                "public": 1
+              },
+              {
+                "name": "Fronting on",
+                "value": "E",
+                "public": 1
+              },
+              {
+                "name": "Community",
+                "value": "Grimsby East",
+                "public": 1
+              },
+              {
+                "name": "Municipality",
+                "value": "Grimsby",
+                "public": 1
+              }
+            ]
+          },
+          "building": {
+            "name": "Building",
+            "value": [
+              {
+                "name": "Building Age",
+                "value": "51-99",
+                "public": 1
+              },
+              {
+                "name": "Construction",
+                "value": "Vinyl Siding",
+                "public": 1
+              }
+            ]
+          },
+          "inside": {
+            "name": "Inside",
+            "value": [
+              {
+                "name": "Bedrooms",
+                "value": "2",
+                "public": 1
+              },
+              {
+                "name": "Bathrooms",
+                "value": "2",
+                "public": 1
+              },
+              {
+                "name": "Bathrooms Detail",
+                "value": "1,  3pc Main floor",
+                "public": 1
+              },
+              {
+                "name": "Basement Type",
+                "value": "Part Bsmt(Part Fin)",
+                "public": 1
+              },
+              {
+                "name": "Kitchens",
+                "value": "1",
+                "public": 1
+              },
+              {
+                "name": "Rooms",
+                "value": "10",
+                "public": 1
+              },
+              {
+                "name": "Fireplace",
+                "value": "Y",
+                "public": 1
+              }
+            ]
+          },
+          "utilities": {
+            "name": "Utilities",
+            "value": [
+              {
+                "name": "Water",
+                "value": "Municipal",
+                "public": 1
+              },
+              {
+                "name": "Cooling",
+                "value": "Central Air",
+                "public": 1
+              },
+              {
+                "name": "Heating Type",
+                "value": "Forced Air",
+                "public": 1
+              },
+              {
+                "name": "Heating Fuel",
+                "value": "Gas",
+                "public": 1
+              }
+            ]
+          },
+          "parking": {
+            "name": "Parking",
+            "value": [
+              {
+                "name": "Driveway",
+                "value": "Other",
+                "public": 1
+              },
+              {
+                "name": "Garage Type",
+                "value": "Attached",
+                "public": 1
+              },
+              {
+                "name": "Garage",
+                "value": "1.5",
+                "public": 1
+              },
+              {
+                "name": "Parking Places",
+                "value": "6",
+                "public": 1
+              },
+              {
+                "name": "Total Parking Space",
+                "value": "7.0",
+                "public": 1
+              }
+            ]
+          },
+          "highlights": {
+            "name": "Highlights",
+            "value": [
+              {
+                "name": "Fenced Yard",
+                "value": "Y",
+                "public": 1
+              },
+              {
+                "name": "Hospital",
+                "value": "Y",
+                "public": 1
+              }
+            ]
+          },
+          "land": {
+            "name": "Land",
+            "value": [
+              {
+                "name": "Sewer",
+                "value": "Sewers",
+                "public": 1
+              },
+              {
+                "name": "Frontage",
+                "value": "116.00",
+                "public": 1
+              },
+              {
+                "name": "Depth",
+                "value": "117.00",
+                "public": 1
+              },
+              {
+                "name": "Zoning",
+                "value": "R1",
+                "public": 1
+              },
+              {
+                "name": "Lot Size",
+                "value": "116 x 117 feet",
+                "public": 1
+              },
+              {
+                "name": "Lot Size Code",
+                "value": "Feet",
+                "public": 1
+              },
+              {
+                "name": "Acreage",
+                "value": "< .50",
+                "public": 1
+              },
+              {
+                "name": "Cross Street",
+                "value": "DORCHESTER TO BURGESS",
+                "public": 1
+              }
+            ]
+          }
+        },
+        "listing_history": [
+          {
+            "id_listing": "6zqW7dzJM0vY5eZE",
+            "ml_num": "X11950649",
+            "seo_suffix": "15-BURGESS-Dr-Grimsby-L3M2Z1-X11950649-X11950649",
+            "price": "$999,900",
+            "price_note": null,
+            "price_sold": null,
+            "date_start": "2025-02-01",
+            "date_end": null,
+            "data_source": "TREB",
+            "status": "For Sale",
+            "public": 1,
+            "button": 0,
+            "show_contact_agent": false,
+            "blur_price": false
+          },
+          {
+            "id_listing": "DO1w3W9D8kOy8Jg0",
+            "ml_num": "********",
+            "seo_suffix": "15-BURGESS-Dr-Grimsby-L3M2Z1-X9767601-X9767601-X9767601-40667718",
+            "price": "(Sign-in required)",
+            "price_note": null,
+            "price_sold": "(Sign-in required)",
+            "date_start": null,
+            "date_end": null,
+            "data_source": "TREB",
+            "status": "Expired",
+            "public": -1,
+            "button": 1,
+            "show_contact_agent": false,
+            "blur_price": false
+          },
+          {
+            "id_listing": "0ZxwR7Mqev97KabB",
+            "ml_num": "H3193363",
+            "seo_suffix": "15-Burgess-Drive-Grimsby-L3M2Z1-H3193363-H3193363-X3640226",
+            "price": "$559,000",
+            "price_note": null,
+            "price_sold": "$570,000",
+            "date_start": "2016-10-24",
+            "date_end": "2016-11-10",
+            "data_source": "RAHB",
+            "status": "Sold",
+            "public": 1,
+            "button": 1,
+            "show_contact_agent": false,
+            "blur_price": false
+          },
+          {
+            "id_listing": "xLkv3V9Mvpm7DBNr",
+            "ml_num": "H725187",
+            "seo_suffix": "15-BURGESS-Drive-Grimsby-L3M2Z1-H725187",
+            "price": "$162,500",
+            "price_note": null,
+            "price_sold": "$155,000",
+            "date_start": "1997-10-06",
+            "date_end": "1997-11-05",
+            "data_source": "RAHB",
+            "status": "Sold",
+            "public": 1,
+            "button": 1,
+            "show_contact_agent": false,
+            "blur_price": false
+          }
+        ],
+        "rooms": [
+          {
+            "dc": "California Shutters, Crown Moulding, Fireplace",
+            "lv": "Level: Main",
+            "len": "6.71",
+            "wth": "4.27",
+            "type": "Living",
+            "size_feet": "22 x 14",
+            "size": "6.71 x 4.27"
+          },
+          {
+            "dc": "Bay Window, California Shutters, Crown Moulding",
+            "lv": "Level: Main",
+            "len": "3.96",
+            "wth": "3.05",
+            "type": "Dining",
+            "size_feet": "13 x 10",
+            "size": "3.96 x 3.05"
+          },
+          {
+            "dc": "Crown Moulding, Double Sink",
+            "lv": "Level: Main",
+            "len": "5.79",
+            "wth": "2.59",
+            "type": "Kitchen",
+            "size_feet": "19 x 8.5",
+            "size": "5.79 x 2.59"
+          },
+          {
+            "dc": "4 Pc Ensuite",
+            "lv": "Level: Main",
+            "len": "7.01",
+            "wth": "3.96",
+            "type": "Prim Bdrm",
+            "size_feet": "23 x 13",
+            "size": "7.01 x 3.96"
+          },
+          {
+            "dc": null,
+            "lv": "Level: Main",
+            "len": "3.66",
+            "wth": "3.66",
+            "type": "Br",
+            "size_feet": "12 x 12",
+            "size": "3.66 x 3.66"
+          },
+          {
+            "dc": null,
+            "lv": "Level: Main",
+            "len": "2.44",
+            "wth": "2.13",
+            "type": "Laundry",
+            "size_feet": "8 x 7",
+            "size": "2.44 x 2.13"
+          },
+          {
+            "dc": "Balcony, Fireplace",
+            "lv": "Level: Main",
+            "len": "4.57",
+            "wth": "3.66",
+            "type": "Family",
+            "size_feet": "15 x 12",
+            "size": "4.57 x 3.66"
+          },
+          {
+            "dc": null,
+            "lv": "Level: Main",
+            "len": "1.83",
+            "wth": "1.52",
+            "type": "Foyer",
+            "size_feet": "6 x 5",
+            "size": "1.83 x 1.52"
+          },
+          {
+            "dc": null,
+            "lv": "Level: Bsmt",
+            "len": "6.71",
+            "wth": "4.27",
+            "type": "Rec",
+            "size_feet": "22 x 14",
+            "size": "6.71 x 4.27"
+          },
+          {
+            "dc": null,
+            "lv": "Level: Bsmt",
+            "len": "3.66",
+            "wth": "3.05",
+            "type": "Br",
+            "size_feet": "12 x 10",
+            "size": "3.66 x 3.05"
+          },
+          {
+            "dc": "4 Pc Ensuite",
+            "lv": "Level: Main",
+            "len": "0.00",
+            "wth": "0.00",
+            "type": "Bathroom",
+            "size_feet": "? x ?",
+            "size": "0.00 x 0.00"
+          }
+        ],
+        "rooms_public": 1,
+        "community_stats": {
+          "house_type": "D.",
+          "period": "2025-01-01",
+          "price_sold_median": 932500,
+          "price_sold_growth_yoy": 0.042,
+          "price_sold_growth_yoy_percentile": 54,
+          "sold_count": 2,
+          "sold_count_30": 2,
+          "dom_avg": 34,
+          "new_listing_count": 2,
+          "rent_180_ratio": 0,
+          "active_listing_count": 3,
+          "absorption_rate": 0.22,
+          "price_sold_growth_5y": 57,
+          "price_sold_growth_10y": 134,
+          "temperature_text": "Cold",
+          "period_name": "January 2025",
+          "growth_year": 4.2
+        },
+        "community_stats_all": {
+          "house_type": "all",
+          "period": "2025-01-01",
+          "price_sold_median": 861350,
+          "price_sold_growth_yoy": 0.19,
+          "price_sold_growth_yoy_percentile": 86,
+          "sold_count": 2,
+          "sold_count_30": 2,
+          "dom_avg": 42,
+          "new_listing_count": 4,
+          "rent_180_ratio": 0,
+          "active_listing_count": 7,
+          "absorption_rate": "0.14",
+          "price_sold_growth_5y": 63,
+          "price_sold_growth_10y": 127,
+          "period_name": "January 2025",
+          "growth_year": 19
+        },
+        "analytics": {
+          "estimate_price": "974,000",
+          "estimate_price_int": 974000,
+          "estimate_price_confident": 2.82,
+          "estimate_price_display_directly": 1,
+          "estimate_price_display": 1,
+          "estimate_price_display_top": 1,
+          "estimate_price_date": "2025-02-02",
+          "estimate_price_age": 0,
+          "price_diff": -3,
+          "rent_base": 0,
+          "estimate_price_range": null,
+          "estimate_dom": 48,
+          "estimate_dom_bar": [
+            {
+              "text": "Fast",
+              "dom": 5
+            },
+            {
+              "text": "20 days",
+              "dom": 20
+            },
+            {
+              "text": "60 days",
+              "dom": 60
+            },
+            {
+              "text": "Very Slow",
+              "dom": 100
+            }
+          ],
+          "estimate_rent": "2,906",
+          "estimate_rent_int": 2906,
+          "estimate_rent_days": 29,
+          "estimate_rent_yearreturn": 2.67,
+          "school": {
+            "highschool_score": 7.2,
+            "belowhighschool_score": 8.9
+          },
+          "stars": {
+            "school": 4,
+            "growth": 2.5,
+            "rent": 1
+          },
+          "scores": {
+            "school": 8,
+            "growth": 5,
+            "rent": 2
+          }
+        },
+        "virtual_open_house": [],
+        "public_open_house": [],
+        "community_stats_public": 1,
+        "premium_stats_display": 0,
+        "premium_stats": null,
+        "deposit": null,
+        "province_abbr": "ON",
+        "meta": {
+          "title": "15 BURGESS Dr, Grimsby, Ontario L3M2Z1 For Sale | HouseSigma",
+          "title_share": "15 BURGESS Dr, Grimsby, Ontario L3M2Z1 For Sale | HouseSigma",
+          "description": "Discover the perfect starter home or investment opportunity at 15 BURGESS Dr, Grimsby, Ontario L3M2Z1 with HouseSigma today.",
+          "image": "https://cache-e13.housesigma.com/file/pix-treb/X11950649/b9021_1.jpg?a488d866",
+          "canonical_url": "https://housesigma.com/on/grimsby-real-estate/15-burgess-dr/home/kbEDRYabQLOy1VaB/",
+          "robots": "all"
+        },
+        "component_display": {
+          "my_note": 1,
+          "agent_touring_activities": 1,
+          "not_interested": 1,
+          "community_popularity_index": 1
+        },
+        "show_agent_recruit": 0,
+        "show_trustpilot": false,
+        "banner_top": {
+          "src": "https://static.housesigma.com/images/banner/join_housesigma_v2_750_204.png",
+          "url": "https://team.housesigma.com/join-us/",
+          "inner": false
+        },
+        "banner_bottom": null,
+        "show_premium_unlock": 0,
+        "user_referral_code": "",
+        "premium_share_text": ""
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH14"
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/listing/info/popularity": {
+    "url": "https://housesigma.com/bkv2/api/listing/info/popularity",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:00:57.318Z",
+    "data": {
+      "status": true,
+      "data": {
+        "premium_stats_display": 0,
+        "premium_stats_data": null,
+        "all_stats_data": {
+          "stats_index": [
+            {
+              "day": 0,
+              "community_average": 15,
+              "current_listing": 28
+            },
+            {
+              "day": 1,
+              "community_average": 39,
+              "current_listing": 35
+            },
+            {
+              "day": 2,
+              "community_average": 48,
+              "current_listing": "-"
+            },
+            {
+              "day": 3,
+              "community_average": 55,
+              "current_listing": "-"
+            },
+            {
+              "day": 4,
+              "community_average": 58,
+              "current_listing": "-"
+            },
+            {
+              "day": 5,
+              "community_average": 61,
+              "current_listing": "-"
+            },
+            {
+              "day": 6,
+              "community_average": 62,
+              "current_listing": "-"
+            },
+            {
+              "day": 7,
+              "community_average": 63,
+              "current_listing": "-"
+            },
+            {
+              "day": 8,
+              "community_average": 64,
+              "current_listing": "-"
+            },
+            {
+              "day": 9,
+              "community_average": 65,
+              "current_listing": "-"
+            },
+            {
+              "day": 10,
+              "community_average": 66,
+              "current_listing": "-"
+            },
+            {
+              "day": 11,
+              "community_average": 67,
+              "current_listing": "-"
+            },
+            {
+              "day": 12,
+              "community_average": 68,
+              "current_listing": "-"
+            },
+            {
+              "day": 13,
+              "community_average": 68,
+              "current_listing": "-"
+            },
+            {
+              "day": 14,
+              "community_average": 69,
+              "current_listing": "-"
+            },
+            {
+              "day": 15,
+              "community_average": 70,
+              "current_listing": "-"
+            },
+            {
+              "day": 16,
+              "community_average": 70,
+              "current_listing": "-"
+            },
+            {
+              "day": 17,
+              "community_average": 71,
+              "current_listing": "-"
+            },
+            {
+              "day": 18,
+              "community_average": 73,
+              "current_listing": "-"
+            },
+            {
+              "day": 19,
+              "community_average": 74,
+              "current_listing": "-"
+            },
+            {
+              "day": 20,
+              "community_average": 76,
+              "current_listing": "-"
+            },
+            {
+              "day": 21,
+              "community_average": 77,
+              "current_listing": "-"
+            },
+            {
+              "day": 22,
+              "community_average": 78,
+              "current_listing": "-"
+            },
+            {
+              "day": 23,
+              "community_average": 79,
+              "current_listing": "-"
+            },
+            {
+              "day": 24,
+              "community_average": 79,
+              "current_listing": "-"
+            },
+            {
+              "day": 25,
+              "community_average": 80,
+              "current_listing": "-"
+            },
+            {
+              "day": 26,
+              "community_average": 80,
+              "current_listing": "-"
+            },
+            {
+              "day": 27,
+              "community_average": 80,
+              "current_listing": "-"
+            },
+            {
+              "day": 28,
+              "community_average": 80,
+              "current_listing": "-"
+            },
+            {
+              "day": 29,
+              "community_average": 80,
+              "current_listing": "-"
+            },
+            {
+              "day": 30,
+              "community_average": 80,
+              "current_listing": "-"
+            }
+          ],
+          "community_popularity_index": [
+            {
+              "period": "2021-10",
+              "popularity_index_30": "95.81",
+              "sold_count": "16"
+            },
+            {
+              "period": "2021-11",
+              "popularity_index_30": "96.71",
+              "sold_count": "8"
+            },
+            {
+              "period": "2021-12",
+              "popularity_index_30": "99.14",
+              "sold_count": "4"
+            },
+            {
+              "period": "2022-01",
+              "popularity_index_30": "99.5",
+              "sold_count": "6"
+            },
+            {
+              "period": "2022-02",
+              "popularity_index_30": "98.31",
+              "sold_count": "4"
+            },
+            {
+              "period": "2022-03",
+              "popularity_index_30": "97.3",
+              "sold_count": "5"
+            },
+            {
+              "period": "2022-04",
+              "popularity_index_30": "94.01",
+              "sold_count": "12"
+            },
+            {
+              "period": "2022-05",
+              "popularity_index_30": "78.07",
+              "sold_count": "1"
+            },
+            {
+              "period": "2022-06",
+              "popularity_index_30": "86.28",
+              "sold_count": "9"
+            },
+            {
+              "period": "2022-07",
+              "popularity_index_30": "79.21",
+              "sold_count": "6"
+            },
+            {
+              "period": "2022-08",
+              "popularity_index_30": "85.95",
+              "sold_count": "7"
+            },
+            {
+              "period": "2022-09",
+              "popularity_index_30": "77.97",
+              "sold_count": "5"
+            },
+            {
+              "period": "2022-10",
+              "popularity_index_30": "59.25",
+              "sold_count": "7"
+            },
+            {
+              "period": "2022-11",
+              "popularity_index_30": "49.8",
+              "sold_count": "2"
+            },
+            {
+              "period": "2022-12",
+              "popularity_index_30": "55.98",
+              "sold_count": "2"
+            },
+            {
+              "period": "2023-01",
+              "popularity_index_30": "54.16",
+              "sold_count": "3"
+            },
+            {
+              "period": "2023-02",
+              "popularity_index_30": "74.38",
+              "sold_count": "5"
+            },
+            {
+              "period": "2023-03",
+              "popularity_index_30": "75.99",
+              "sold_count": "9"
+            },
+            {
+              "period": "2023-04",
+              "popularity_index_30": "69.87",
+              "sold_count": "7"
+            },
+            {
+              "period": "2023-05",
+              "popularity_index_30": "71.62",
+              "sold_count": "11"
+            },
+            {
+              "period": "2023-06",
+              "popularity_index_30": "66.93",
+              "sold_count": "11"
+            },
+            {
+              "period": "2023-07",
+              "popularity_index_30": "64.46",
+              "sold_count": "8"
+            },
+            {
+              "period": "2023-08",
+              "popularity_index_30": "67.49",
+              "sold_count": "4"
+            },
+            {
+              "period": "2023-09",
+              "popularity_index_30": "54.3",
+              "sold_count": "2"
+            },
+            {
+              "period": "2023-10",
+              "popularity_index_30": "62.11",
+              "sold_count": "3"
+            },
+            {
+              "period": "2023-11",
+              "popularity_index_30": "60.06",
+              "sold_count": "7"
+            },
+            {
+              "period": "2023-12",
+              "popularity_index_30": "54.83",
+              "sold_count": "0"
+            },
+            {
+              "period": "2024-01",
+              "popularity_index_30": "62.6",
+              "sold_count": "2"
+            },
+            {
+              "period": "2024-02",
+              "popularity_index_30": "65.91",
+              "sold_count": "6"
+            },
+            {
+              "period": "2024-03",
+              "popularity_index_30": "75.22",
+              "sold_count": "4"
+            },
+            {
+              "period": "2024-04",
+              "popularity_index_30": "67.37",
+              "sold_count": "6"
+            },
+            {
+              "period": "2024-05",
+              "popularity_index_30": "63.92",
+              "sold_count": "9"
+            },
+            {
+              "period": "2024-06",
+              "popularity_index_30": "58.17",
+              "sold_count": "9"
+            },
+            {
+              "period": "2024-07",
+              "popularity_index_30": "61.57",
+              "sold_count": "4"
+            },
+            {
+              "period": "2024-08",
+              "popularity_index_30": "58.71",
+              "sold_count": "10"
+            },
+            {
+              "period": "2024-09",
+              "popularity_index_30": "63.81",
+              "sold_count": "3"
+            },
+            {
+              "period": "2024-10",
+              "popularity_index_30": "-",
+              "sold_count": "-"
+            },
+            {
+              "period": "2024-11",
+              "popularity_index_30": "35.07",
+              "sold_count": "0"
+            },
+            {
+              "period": "2024-12",
+              "popularity_index_30": "55.61",
+              "sold_count": "1"
+            },
+            {
+              "period": "2025-01",
+              "popularity_index_30": "74.02",
+              "sold_count": "1"
+            },
+            {
+              "period": "2025-02",
+              "popularity_index_30": "-",
+              "sold_count": "-"
+            }
+          ]
+        },
+        "scores": {
+          "current": "85",
+          "similar": [
+            "56",
+            "89",
+            "40",
+            "87",
+            "63",
+            "72"
+          ],
+          "similar_listings": [
+            {
+              "ml_num": "X11941380",
+              "ml_num_merge": "X11941380",
+              "marker_label": "D 0.8M",
+              "id_listing": "amgL7AVPNbE3Z1MW",
+              "id_address": "0A9X3jPPr8myvgxV",
+              "seo_municipality": "grimsby-real-estate",
+              "seo_address": "111-leitch-drive",
+              "seo_image_alt": "MLS Listing For Sale at 111 Leitch Dr, Grimsby, Ontario, L3M2T9, MLS# X11941380",
+              "seo_suffix": "111-Leitch-Dr-Grimsby-L3M2T9-X11941380",
+              "photo_url": "https://cache-e11.housesigma.com/file/pix-treb/X11941380/44086_1.jpg?bcd6bc39",
+              "photo_source": null,
+              "house_type_name": "Detached",
+              "house_type": "D.",
+              "house_style": "Bungalow",
+              "apt_num": null,
+              "address": "111 Leitch Dr",
+              "address_navigation": "111 Leitch Dr, Grimsby, Ontario",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "For Sale",
+                "text_full": "For Sale",
+                "status": "A",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "Grimsby East",
+              "municipality_name": "Grimsby",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 3,
+              "bedroom_plus": null,
+              "bedroom_string": 3,
+              "washroom": 1,
+              "parking": {
+                "total": 0,
+                "garage_type": "None",
+                "garage": 0,
+                "parking_type": null,
+                "parking": 4,
+                "text": " 0 garage,  4 parking"
+              },
+              "price": "799,900",
+              "price_int": 799900,
+              "price_abbr": "0.8M",
+              "price_sold": null,
+              "price_origin": null,
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.18808,
+                "lon": -79.53382
+              },
+              "house_area": {
+                "area": 1113,
+                "area_note": "(Est.)",
+                "unit": "feet²",
+                "estimate": 1113
+              },
+              "land": {
+                "front": 80,
+                "depth": 130,
+                "unit": "feet"
+              },
+              "date_added": "2025-01-27",
+              "date_added_days": 6,
+              "date_start": "2025-01-27",
+              "date_start_days": 6,
+              "date_start_month": 0,
+              "date_update": "2025-01-27",
+              "date_end": null,
+              "date_end_days": null,
+              "list_days": 6,
+              "feature_header": null,
+              "data_source": "TRREB",
+              "data_source_raw": "TREB",
+              "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+              "tos_source": "TREB",
+              "analytics": {
+                "rent_yield": "2.8",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-02 16:01:58",
+                "estimate_price": "783,000",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "89"
+              },
+              "scores": {
+                "school": 8,
+                "rent": 3,
+                "growth": 5
+              },
+              "tags": [
+                "For Sale"
+              ],
+              "text": {
+                "list_date_short": "List 2025-01-27",
+                "list_date_long": "List 2025-01-27, 6 days ago",
+                "dom_short": "Listed 6 days ago",
+                "dom_short_v2": "6 days ago",
+                "dom_long": "Listed 6 days ago",
+                "rooms_short": "3 bd 1 ba 0 gr",
+                "rooms_long": "3 Bedroom, 1 Bathroom, 0 Garage",
+                "status_chg_date": "6 days ago",
+                "date_preview": "6 days ago",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 89/100"
+              },
+              "open_house_date": [],
+              "brokerage_text": null,
+              "postal_code": "L3M2T9",
+              "date_sold_report": null,
+              "popularity_score": "89",
+              "difference": {
+                "bedroom": 1,
+                "washroom": -1,
+                "house_area": -224,
+                "parking": {
+                  "total": -1.5
+                },
+                "land": {
+                  "front": -36,
+                  "depth": 13
+                }
+              }
+            },
+            {
+              "ml_num": "40681218",
+              "ml_num_merge": "40681218",
+              "marker_label": "D 1.1M",
+              "id_listing": "56k97wJbmwQyKRjD",
+              "id_address": "BGMnKYqqRRRYw1Qr",
+              "seo_municipality": "grimsby-real-estate",
+              "seo_address": "107-dorchester-drive",
+              "seo_image_alt": "MLS Listing For Sale at 107 Dorchester Drive, Grimsby, Ontario, L3M5H5, MLS# 40681218",
+              "seo_suffix": "107-Dorchester-Drive-Grimsby-L3M5H5-40681218-40681218-X11908794",
+              "photo_url": "https://cache15.housesigma.com/file/pix-itso/155737209/41ccb_1.jpg?2a56b2ff",
+              "photo_source": null,
+              "house_type_name": "Single Family Residence",
+              "house_type": "D.",
+              "house_style": "Bungalow",
+              "apt_num": null,
+              "address": "107 Dorchester Drive",
+              "address_navigation": "107 Dorchester Drive, Grimsby, Ontario",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "For Sale",
+                "text_full": "For Sale",
+                "status": "A",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "",
+              "municipality_name": "Grimsby",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 2,
+              "bedroom_plus": 2,
+              "bedroom_string": "2+2",
+              "washroom": 2,
+              "parking": {
+                "total": 2,
+                "garage_type": "Attached",
+                "garage": 2,
+                "parking_type": null,
+                "parking": 4,
+                "text": "Attached 2 garage,  4 parking"
+              },
+              "price": "1,099,000",
+              "price_int": 1099000,
+              "price_abbr": "1.1M",
+              "price_sold": null,
+              "price_origin": null,
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.183313,
+                "lon": -79.543352
+              },
+              "house_area": {
+                "area": "1630",
+                "area_note": null,
+                "unit": "feet²",
+                "estimate": 1630
+              },
+              "land": {
+                "front": 57,
+                "depth": 111,
+                "unit": "feet"
+              },
+              "date_added": "2025-01-06",
+              "date_added_days": 27,
+              "date_start": "2025-01-06",
+              "date_start_days": 27,
+              "date_start_month": 0,
+              "date_update": "2025-01-27",
+              "date_end": null,
+              "date_end_days": null,
+              "list_days": 27,
+              "feature_header": null,
+              "data_source": "ITSO",
+              "data_source_raw": "ITSO",
+              "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+              "tos_source": "ITSO",
+              "analytics": {
+                "rent_yield": "2.5",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-02 14:31:35",
+                "estimate_price": "1,056,400",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "87"
+              },
+              "scores": {
+                "school": 8,
+                "rent": 2,
+                "growth": 6
+              },
+              "tags": [
+                "For Sale"
+              ],
+              "text": {
+                "list_date_short": "List 2025-01-06",
+                "list_date_long": "List 2025-01-06, 27 days ago",
+                "dom_short": "Listed 27 days ago",
+                "dom_short_v2": "27 days ago",
+                "dom_long": "Listed 27 days ago",
+                "rooms_short": "2+2 bd 2 ba 2 gr",
+                "rooms_long": "2+2 Bedroom, 2 Bathroom, 2 Garage",
+                "status_chg_date": "3 weeks ago",
+                "date_preview": "27 days ago",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 87/100"
+              },
+              "open_house_date": [],
+              "brokerage_text": null,
+              "postal_code": "L3M5H5",
+              "date_sold_report": null,
+              "popularity_score": "87",
+              "difference": {
+                "bedroom": null,
+                "washroom": null,
+                "house_area": 293,
+                "parking": {
+                  "total": 0.5
+                },
+                "land": {
+                  "front": -59,
+                  "depth": -6
+                }
+              }
+            },
+            {
+              "ml_num": "X11927443",
+              "ml_num_merge": "X11927443",
+              "marker_label": "D 1.1M",
+              "id_listing": "aQmD7zVqkAA7J9Bo",
+              "id_address": "b1DBW7RAdvEyqlAp",
+              "seo_municipality": "grimsby-real-estate",
+              "seo_address": "9-lynnwood-avenue",
+              "seo_image_alt": "MLS Listing For Sale at 9 Lynnwood Ave, Grimsby, Ontario, L3M2X5, MLS# X11927443",
+              "seo_suffix": "9-Lynnwood-Ave-Grimsby-L3M2X5-X11927443",
+              "photo_url": "https://cache06.housesigma.com/file/pix-treb/X11927443/ec869_1.jpg?668023cb",
+              "photo_source": null,
+              "house_type_name": "Detached",
+              "house_type": "D.",
+              "house_style": "Bungalow",
+              "apt_num": null,
+              "address": "9 Lynnwood Ave",
+              "address_navigation": "9 Lynnwood Ave, Grimsby, Ontario",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "For Sale",
+                "text_full": "For Sale",
+                "status": "A",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "",
+              "municipality_name": "Grimsby",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 3,
+              "bedroom_plus": 1,
+              "bedroom_string": "3+1",
+              "washroom": 3,
+              "parking": {
+                "total": 1,
+                "garage_type": "Attached",
+                "garage": 1,
+                "parking_type": null,
+                "parking": 6,
+                "text": "Attached 1 garage,  6 parking"
+              },
+              "price": "1,149,000",
+              "price_int": 1149000,
+              "price_abbr": "1.1M",
+              "price_sold": null,
+              "price_origin": null,
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.18864,
+                "lon": -79.54047
+              },
+              "house_area": {
+                "area": 1501,
+                "area_note": "(Est.)",
+                "unit": "feet²",
+                "estimate": 1501
+              },
+              "land": {
+                "front": 94,
+                "depth": 100,
+                "unit": "feet"
+              },
+              "date_added": "2025-01-16",
+              "date_added_days": 17,
+              "date_start": "2025-01-15",
+              "date_start_days": 18,
+              "date_start_month": 0,
+              "date_update": "2025-01-22",
+              "date_end": null,
+              "date_end_days": null,
+              "list_days": 18,
+              "feature_header": null,
+              "data_source": "TRREB",
+              "data_source_raw": "TREB",
+              "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+              "tos_source": "TREB",
+              "analytics": {
+                "rent_yield": "2.9",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-02 15:13:09",
+                "estimate_price": "1,107,500",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "72"
+              },
+              "scores": {
+                "school": 8,
+                "rent": 3,
+                "growth": 6
+              },
+              "tags": [
+                "For Sale"
+              ],
+              "text": {
+                "list_date_short": "List 2025-01-15",
+                "list_date_long": "List 2025-01-15, 18 days ago",
+                "dom_short": "Listed 18 days ago",
+                "dom_short_v2": "18 days ago",
+                "dom_long": "Listed 18 days ago",
+                "rooms_short": "3+1 bd 3 ba 1 gr",
+                "rooms_long": "3+1 Bedroom, 3 Bathroom, 1 Garage",
+                "status_chg_date": "2 weeks ago",
+                "date_preview": "18 days ago",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 72/100"
+              },
+              "open_house_date": [],
+              "brokerage_text": null,
+              "postal_code": "L3M2X5",
+              "date_sold_report": null,
+              "popularity_score": "72",
+              "difference": {
+                "bedroom": 1,
+                "washroom": 1,
+                "house_area": 164,
+                "parking": {
+                  "total": -0.5
+                },
+                "land": {
+                  "front": -22,
+                  "depth": -17
+                }
+              }
+            },
+            {
+              "ml_num": "XH4205842",
+              "ml_num_merge": "XH4205842",
+              "marker_label": "D 1.3M",
+              "id_listing": "6zqW7dzWkkXY5eZE",
+              "id_address": "obqB176VRxj7ZajD",
+              "seo_municipality": "grimsby-real-estate",
+              "seo_address": "91-hedge-lawn-drive",
+              "seo_image_alt": "MLS Listing For Sale at 91 Hedge Lawn Drive, Grimsby, Ontario, L3M5H4, MLS# XH4205842",
+              "seo_suffix": "91-Hedge-Lawn-Drive-Grimsby-L3M5H4-XH4205842-X9302947-XH4205842-H4205842",
+              "photo_url": "https://cache08.housesigma.com/file/pix-itso/153667864/be75e_1.jpg?77f68d45",
+              "photo_source": null,
+              "house_type_name": "Detached, Single Family Residence",
+              "house_type": "D.",
+              "house_style": "Sidesplit",
+              "apt_num": null,
+              "address": "91 Hedge Lawn Drive",
+              "address_navigation": "91 Hedge Lawn Drive, Grimsby, Ontario",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "For Sale",
+                "text_full": "For Sale",
+                "status": "A",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "",
+              "municipality_name": "Grimsby",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 5,
+              "bedroom_plus": 1,
+              "bedroom_string": "5+1",
+              "washroom": 5,
+              "parking": {
+                "total": 2,
+                "garage_type": "Attached",
+                "garage": 2,
+                "parking_type": null,
+                "parking": 7,
+                "text": "Attached 2 garage,  7 parking"
+              },
+              "price": "1,297,000",
+              "price_int": 1297000,
+              "price_abbr": "1.3M",
+              "price_sold": null,
+              "price_origin": "1,377,777",
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.183599,
+                "lon": -79.543934
+              },
+              "house_area": {
+                "area": "2500",
+                "area_note": null,
+                "unit": "feet²",
+                "estimate": 2500
+              },
+              "land": {
+                "front": 50,
+                "depth": 108,
+                "unit": "feet"
+              },
+              "date_added": "2024-09-05",
+              "date_added_days": 150,
+              "date_start": "2024-09-05",
+              "date_start_days": 150,
+              "date_start_month": 4,
+              "date_update": "2025-01-02",
+              "date_end": null,
+              "date_end_days": null,
+              "list_days": 150,
+              "feature_header": null,
+              "data_source": "ITSO",
+              "data_source_raw": "ITSO",
+              "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+              "tos_source": "ITSO",
+              "analytics": {
+                "rent_yield": "3.8",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-02 12:15:59",
+                "estimate_price": "1,252,800",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "63"
+              },
+              "scores": {
+                "school": 8,
+                "rent": 6,
+                "growth": 6
+              },
+              "tags": [
+                "For Sale"
+              ],
+              "text": {
+                "list_date_short": "List 2024-09-05",
+                "list_date_long": "List 2024-09-05, 150 days ago",
+                "dom_short": "Listed in Sep 2024",
+                "dom_short_v2": "in Sep 2024",
+                "dom_long": "Listed 150 days ago",
+                "rooms_short": "5+1 bd 5 ba 2 gr",
+                "rooms_long": "5+1 Bedroom, 5 Bathroom, 2 Garage",
+                "status_chg_date": "1 month ago",
+                "date_preview": "2024-09-05",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 63/100"
+              },
+              "open_house_date": [],
+              "brokerage_text": null,
+              "postal_code": "L3M5H4",
+              "date_sold_report": null,
+              "popularity_score": "63",
+              "difference": {
+                "bedroom": 3,
+                "washroom": 3,
+                "house_area": 1163,
+                "parking": {
+                  "total": 0.5
+                },
+                "land": {
+                  "front": -66,
+                  "depth": -9
+                }
+              }
+            },
+            {
+              "ml_num": "X9886977",
+              "ml_num_merge": "X9886977",
+              "marker_label": "D 1.1M",
+              "id_listing": "bqB176ZQabw7ZajD",
+              "id_address": "xmZRW7n2JJJ7EBO9",
+              "seo_municipality": "grimsby-real-estate",
+              "seo_address": "23-pinewood-avenue",
+              "seo_image_alt": "MLS Listing For Sale at 23 PINEWOOD Ave, Grimsby, Ontario, L3M1W2, MLS# X9886977",
+              "seo_suffix": "23-PINEWOOD-Ave-Grimsby-L3M1W2-X9886977-X9886977-X9886977-40668816",
+              "photo_url": "https://cache19.housesigma.com/file/pix-treb/X9886977/cd54a_1.jpg?22f7b7bd",
+              "photo_source": null,
+              "house_type_name": "Detached",
+              "house_type": "D.",
+              "house_style": "Bungalow",
+              "apt_num": null,
+              "address": "23 PINEWOOD Ave",
+              "address_navigation": "23 PINEWOOD Ave, Grimsby, Ontario",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "For Sale",
+                "text_full": "For Sale",
+                "status": "A",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "Grimsby East",
+              "municipality_name": "Grimsby",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 3,
+              "bedroom_plus": 1,
+              "bedroom_string": "3+1",
+              "washroom": 2,
+              "parking": {
+                "total": 0,
+                "garage_type": "Attached",
+                "garage": 0,
+                "parking_type": null,
+                "parking": 4,
+                "text": " 0 garage,  4 parking"
+              },
+              "price": "1,099,000",
+              "price_int": 1099000,
+              "price_abbr": "1.1M",
+              "price_sold": null,
+              "price_origin": null,
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.1905,
+                "lon": -79.54292
+              },
+              "house_area": {
+                "area": 1244,
+                "area_note": "(Est.)",
+                "unit": "feet²",
+                "estimate": 1244
+              },
+              "land": {
+                "front": 80,
+                "depth": 125,
+                "unit": "feet"
+              },
+              "date_added": "2024-10-31",
+              "date_added_days": 94,
+              "date_start": "2024-10-31",
+              "date_start_days": 94,
+              "date_start_month": 3,
+              "date_update": "2024-11-27",
+              "date_end": null,
+              "date_end_days": null,
+              "list_days": 94,
+              "feature_header": null,
+              "data_source": "TRREB",
+              "data_source_raw": "TREB",
+              "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+              "tos_source": "TREB",
+              "analytics": {
+                "rent_yield": "2.8",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-02 13:04:28",
+                "estimate_price": "1,056,300",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "56"
+              },
+              "scores": {
+                "school": 8,
+                "rent": 3,
+                "growth": 5
+              },
+              "tags": [
+                "For Sale"
+              ],
+              "text": {
+                "list_date_short": "List 2024-10-31",
+                "list_date_long": "List 2024-10-31, 94 days ago",
+                "dom_short": "Listed in Oct 2024",
+                "dom_short_v2": "in Oct 2024",
+                "dom_long": "Listed 94 days ago",
+                "rooms_short": "3+1 bd 2 ba 0 gr",
+                "rooms_long": "3+1 Bedroom, 2 Bathroom, 0 Garage",
+                "status_chg_date": "3 months ago",
+                "date_preview": "2024-10-31",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 56/100"
+              },
+              "open_house_date": [],
+              "brokerage_text": null,
+              "postal_code": "L3M1W2",
+              "date_sold_report": null,
+              "popularity_score": "56",
+              "difference": {
+                "bedroom": 1,
+                "washroom": null,
+                "house_area": -93,
+                "parking": {
+                  "total": -1.5
+                },
+                "land": {
+                  "front": -36,
+                  "depth": 8
+                }
+              }
+            },
+            {
+              "ml_num": "X9302947",
+              "ml_num_merge": "X9302947",
+              "marker_label": "D 1.3M",
+              "id_listing": "JRv53KpGv9PYVPW4",
+              "id_address": "obqB176VRxj7ZajD",
+              "seo_municipality": "grimsby-real-estate",
+              "seo_address": "91-hedge-lawn-drive",
+              "seo_image_alt": "MLS Listing For Sale at 91 Hedge Lawn Dr, Grimsby, Ontario, L3M5H4, MLS# X9302947",
+              "seo_suffix": "91-Hedge-Lawn-Dr-Grimsby-L3M5H4-X9302947-H4205842-XH4205842",
+              "photo_url": "https://cache18.housesigma.com/file/pix-treb/X9302947/ccd57_1.jpg?21130149",
+              "photo_source": null,
+              "house_type_name": "Detached",
+              "house_type": "D.",
+              "house_style": "Sidesplit 5",
+              "apt_num": null,
+              "address": "91 Hedge Lawn Dr",
+              "address_navigation": "91 Hedge Lawn Dr, Grimsby, Ontario",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "For Sale",
+                "text_full": "For Sale",
+                "status": "A",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "",
+              "municipality_name": "Grimsby",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 2,
+              "bedroom_plus": 4,
+              "bedroom_string": "2+4",
+              "washroom": 5,
+              "parking": {
+                "total": 2,
+                "garage_type": "Attached",
+                "garage": 2,
+                "parking_type": null,
+                "parking": 5,
+                "text": "Attached 2 garage,  5 parking"
+              },
+              "price": "1,297,000",
+              "price_int": 1297000,
+              "price_abbr": "1.3M",
+              "price_sold": null,
+              "price_origin": "1,377,777",
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.18362,
+                "lon": -79.5439
+              },
+              "house_area": {
+                "area": "2000-2500",
+                "area_note": null,
+                "unit": "feet²",
+                "estimate": 2250
+              },
+              "land": {
+                "front": 50,
+                "depth": 108,
+                "unit": "feet"
+              },
+              "date_added": "2024-10-12",
+              "date_added_days": 113,
+              "date_start": "2024-09-05",
+              "date_start_days": 150,
+              "date_start_month": 4,
+              "date_update": "2025-01-11",
+              "date_end": null,
+              "date_end_days": null,
+              "list_days": 150,
+              "feature_header": null,
+              "data_source": "TRREB",
+              "data_source_raw": "TREB",
+              "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+              "tos_source": "TREB",
+              "analytics": {
+                "rent_yield": "3.3",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-02 12:52:38",
+                "estimate_price": "1,251,800",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "40"
+              },
+              "scores": {
+                "school": 8,
+                "rent": 5,
+                "growth": 6
+              },
+              "tags": [
+                "For Sale"
+              ],
+              "text": {
+                "list_date_short": "List 2024-09-05",
+                "list_date_long": "List 2024-09-05, 150 days ago",
+                "dom_short": "Listed in Sep 2024",
+                "dom_short_v2": "in Sep 2024",
+                "dom_long": "Listed 150 days ago",
+                "rooms_short": "2+4 bd 5 ba 2 gr",
+                "rooms_long": "2+4 Bedroom, 5 Bathroom, 2 Garage",
+                "status_chg_date": "3 weeks ago",
+                "date_preview": "2024-09-05",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 40/100"
+              },
+              "open_house_date": [],
+              "brokerage_text": null,
+              "postal_code": "L3M5H4",
+              "date_sold_report": null,
+              "popularity_score": "40",
+              "difference": {
+                "bedroom": null,
+                "washroom": 3,
+                "house_area": 913,
+                "parking": {
+                  "total": 0.5
+                },
+                "land": {
+                  "front": -66,
+                  "depth": -9
+                }
+              }
+            }
+          ]
+        }
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH14",
+        "ml_server": null,
+        "ml_from_cache": true
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/user/watch/myNote": {
+    "url": "https://housesigma.com/bkv2/api/user/watch/myNote",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:00:57.311Z",
+    "data": {
+      "status": true,
+      "data": {
+        "note": "",
+        "updated_on": null
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH11"
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/listing/info/localagents ": {
+    "url": "https://housesigma.com/bkv2/api/listing/info/localagents ",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:00:57.390Z",
+    "data": {
+      "status": true,
+      "data": {
+        "show_section": true,
+        "transactions": 15,
+        "title": "Transactions in Grimsby by HouseSigma Agents",
+        "listings": [
+          {
+            "label": "D 0.74M",
+            "location": {
+              "lon": -79.559903,
+              "lat": 43.199912
+            },
+            "marker": "sold",
+            "ids": [
+              "xLkv3V6d14m3DBNr"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "D 1.3M",
+            "location": {
+              "lon": -79.550856,
+              "lat": 43.200268
+            },
+            "marker": "sold",
+            "ids": [
+              "bqB176WJQo63ZajD"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "D 1.6M",
+            "location": {
+              "lon": -79.516102,
+              "lat": 43.192453
+            },
+            "marker": "sold",
+            "ids": [
+              "JKdOYrGlabZy54lW"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "TF 0.6M",
+            "location": {
+              "lon": -79.602498,
+              "lat": 43.21082
+            },
+            "marker": "sold",
+            "ids": [
+              "jAXw7QpnkpXyQOzg"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "D •M",
+            "location": {
+              "lon": -79.58582,
+              "lat": 43.19527
+            },
+            "marker": "de-listed",
+            "ids": [
+              "4KAX7NO8AXV3eRPJ"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "C 0.98M",
+            "location": {
+              "lon": -79.59691,
+              "lat": 43.2088
+            },
+            "marker": "sold",
+            "ids": [
+              "dXze3eKOXJOy8m9K"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "C 0.55M",
+            "location": {
+              "lon": -79.599524,
+              "lat": 43.210504
+            },
+            "marker": "sold",
+            "ids": [
+              "4KAX7NO60qV3eRPJ"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "C 1M",
+            "location": {
+              "lon": -79.59888,
+              "lat": 43.21052
+            },
+            "marker": "sold",
+            "ids": [
+              "xLkv3V606PR3DBNr"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "C 0.44M",
+            "location": {
+              "lon": -79.608379,
+              "lat": 43.210496
+            },
+            "marker": "sold",
+            "ids": [
+              "GMnKYq0RlGb3w1Qr"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "TF 0.73M",
+            "location": {
+              "lon": -79.575751,
+              "lat": 43.197908
+            },
+            "marker": "sold",
+            "ids": [
+              "aD6p78NPWp0YwRQr"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "TF 0.58M",
+            "location": {
+              "lon": -79.58225,
+              "lat": 43.19785
+            },
+            "marker": "sold",
+            "ids": [
+              "xLkv3V6QMan3DBNr"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "D 1.1M",
+            "location": {
+              "lon": -79.62897,
+              "lat": 43.20752
+            },
+            "marker": "sold",
+            "ids": [
+              "nM697k54GMgYbmwe"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "TF 0.98M",
+            "location": {
+              "lon": -79.60005,
+              "lat": 43.2111
+            },
+            "marker": "de-listed",
+            "ids": [
+              "1DBW7Rn8boL7qlAp"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "D 0.57M",
+            "location": {
+              "lon": -79.57234,
+              "lat": 43.19331
+            },
+            "marker": "sold",
+            "ids": [
+              "amgL7AVXbjl3Z1MW"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "C 1M",
+            "location": {
+              "lon": -79.600096,
+              "lat": 43.210644
+            },
+            "marker": "sold",
+            "ids": [
+              "10Qqyp5n5Q67LGlV"
+            ],
+            "count": 1,
+            "type": "marker"
+          }
+        ],
+        "agent_title": "Top HouseSigma Agents in Grimsby",
+        "contact_message": "I’d like to know more about 15 BURGESS Dr or similar properties in Grimsby. Please contact me.",
+        "agents": [
+          {
+            "id": 165,
+            "name": "Nick Infante",
+            "first_name": "Nick",
+            "slug": "nick-infante",
+            "avatar": "https://cache16.housesigma.com/hs-teams/2021/09/dbfeb-300x297.png",
+            "province": "ON",
+            "description": "47 deals, 340 tours"
+          },
+          {
+            "id": 205,
+            "name": "Greg Hutton",
+            "first_name": "Greg",
+            "slug": "greg-hutton",
+            "avatar": "https://cache15.housesigma.com/hs-teams/2022/01/Screenshot-2022-01-21-093235-260x300.png",
+            "province": "ON",
+            "description": "42 deals, 305 tours"
+          },
+          {
+            "id": 322,
+            "name": "Lina Velasco Lozano",
+            "first_name": "Lina",
+            "slug": "lina-velasco-lozano",
+            "avatar": "https://cache19.housesigma.com/hs-teams/2023/02/Headshots-22-300x300.png",
+            "province": "ON",
+            "description": "10 deals, 273 tours"
+          }
+        ],
+        "boundary": null
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH12"
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/community/soldpricestats": {
+    "url": "https://housesigma.com/bkv2/api/community/soldpricestats",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:00:57.410Z",
+    "data": {
+      "status": true,
+      "data": {
+        "rowCount": 59,
+        "list": [
+          {
+            "price_sold_median_all_type": 612500,
+            "price_sold_median_all_community": 612500,
+            "period": "2020-03-01",
+            "price_sold_median": 650000,
+            "sold_count": 23
+          },
+          {
+            "price_sold_median_all_type": 614000,
+            "price_sold_median_all_community": 614000,
+            "period": "2020-04-01",
+            "price_sold_median": 650000,
+            "sold_count": 21
+          },
+          {
+            "price_sold_median_all_type": 614500,
+            "price_sold_median_all_community": 614500,
+            "period": "2020-05-01",
+            "price_sold_median": 721000,
+            "sold_count": 21
+          },
+          {
+            "price_sold_median_all_type": 614000,
+            "price_sold_median_all_community": 614000,
+            "period": "2020-06-01",
+            "price_sold_median": 730000,
+            "sold_count": 27
+          },
+          {
+            "price_sold_median_all_type": 670000,
+            "price_sold_median_all_community": 670000,
+            "period": "2020-07-01",
+            "price_sold_median": 757000,
+            "sold_count": 25
+          },
+          {
+            "price_sold_median_all_type": 695000,
+            "price_sold_median_all_community": 695000,
+            "period": "2020-08-01",
+            "price_sold_median": 758500,
+            "sold_count": 32
+          },
+          {
+            "price_sold_median_all_type": 720000,
+            "price_sold_median_all_community": 720000,
+            "period": "2020-09-01",
+            "price_sold_median": 785227,
+            "sold_count": 43
+          },
+          {
+            "price_sold_median_all_type": 737500,
+            "price_sold_median_all_community": 737500,
+            "period": "2020-10-01",
+            "price_sold_median": 782500,
+            "sold_count": 44
+          },
+          {
+            "price_sold_median_all_type": 737500,
+            "price_sold_median_all_community": 737500,
+            "period": "2020-11-01",
+            "price_sold_median": 790000,
+            "sold_count": 49
+          },
+          {
+            "price_sold_median_all_type": 775000,
+            "price_sold_median_all_community": 775000,
+            "period": "2020-12-01",
+            "price_sold_median": 795000,
+            "sold_count": 49
+          },
+          {
+            "price_sold_median_all_type": 771500,
+            "price_sold_median_all_community": 771500,
+            "period": "2021-01-01",
+            "price_sold_median": 790000,
+            "sold_count": 39
+          },
+          {
+            "price_sold_median_all_type": 823500,
+            "price_sold_median_all_community": 823500,
+            "period": "2021-02-01",
+            "price_sold_median": 875000,
+            "sold_count": 36
+          },
+          {
+            "price_sold_median_all_type": 845000,
+            "price_sold_median_all_community": 845000,
+            "period": "2021-03-01",
+            "price_sold_median": 875000,
+            "sold_count": 39
+          },
+          {
+            "price_sold_median_all_type": 871900,
+            "price_sold_median_all_community": 871900,
+            "period": "2021-04-01",
+            "price_sold_median": 926000,
+            "sold_count": 42
+          },
+          {
+            "price_sold_median_all_type": 850000,
+            "price_sold_median_all_community": 850000,
+            "period": "2021-05-01",
+            "price_sold_median": 925000,
+            "sold_count": 45
+          },
+          {
+            "price_sold_median_all_type": 890000,
+            "price_sold_median_all_community": 890000,
+            "period": "2021-06-01",
+            "price_sold_median": 927250,
+            "sold_count": 54
+          },
+          {
+            "price_sold_median_all_type": 905000,
+            "price_sold_median_all_community": 905000,
+            "period": "2021-07-01",
+            "price_sold_median": 931000,
+            "sold_count": 52
+          },
+          {
+            "price_sold_median_all_type": 870000,
+            "price_sold_median_all_community": 870000,
+            "period": "2021-08-01",
+            "price_sold_median": 927500,
+            "sold_count": 49
+          },
+          {
+            "price_sold_median_all_type": 875000,
+            "price_sold_median_all_community": 875000,
+            "period": "2021-09-01",
+            "price_sold_median": 941250,
+            "sold_count": 48
+          },
+          {
+            "price_sold_median_all_type": 851000,
+            "price_sold_median_all_community": 851000,
+            "period": "2021-10-01",
+            "price_sold_median": 1000000,
+            "sold_count": 37
+          },
+          {
+            "price_sold_median_all_type": 885000,
+            "price_sold_median_all_community": 885000,
+            "period": "2021-11-01",
+            "price_sold_median": 1100050,
+            "sold_count": 34
+          },
+          {
+            "price_sold_median_all_type": 1001000,
+            "price_sold_median_all_community": 1001000,
+            "period": "2021-12-01",
+            "price_sold_median": 1185000,
+            "sold_count": 30
+          },
+          {
+            "price_sold_median_all_type": 1026000,
+            "price_sold_median_all_community": 1026000,
+            "period": "2022-01-01",
+            "price_sold_median": 1250000,
+            "sold_count": 27
+          },
+          {
+            "price_sold_median_all_type": 1250000,
+            "price_sold_median_all_community": 1250000,
+            "period": "2022-02-01",
+            "price_sold_median": 1279400,
+            "sold_count": 20
+          },
+          {
+            "price_sold_median_all_type": 1225000,
+            "price_sold_median_all_community": 1225000,
+            "period": "2022-03-01",
+            "price_sold_median": 1355000,
+            "sold_count": 17
+          },
+          {
+            "price_sold_median_all_type": 1250000,
+            "price_sold_median_all_community": 1250000,
+            "period": "2022-04-01",
+            "price_sold_median": 1327500,
+            "sold_count": 22
+          },
+          {
+            "price_sold_median_all_type": 1190000,
+            "price_sold_median_all_community": 1190000,
+            "period": "2022-05-01",
+            "price_sold_median": 1350000,
+            "sold_count": 19
+          },
+          {
+            "price_sold_median_all_type": 1000000,
+            "price_sold_median_all_community": 1000000,
+            "period": "2022-06-01",
+            "price_sold_median": 1288750,
+            "sold_count": 18
+          },
+          {
+            "price_sold_median_all_type": 875000,
+            "price_sold_median_all_community": 875000,
+            "period": "2022-07-01",
+            "price_sold_median": 1195000,
+            "sold_count": 16
+          },
+          {
+            "price_sold_median_all_type": 800000,
+            "price_sold_median_all_community": 800000,
+            "period": "2022-08-01",
+            "price_sold_median": 1250000,
+            "sold_count": 11
+          },
+          {
+            "price_sold_median_all_type": 795000,
+            "price_sold_median_all_community": 795000,
+            "period": "2022-09-01",
+            "price_sold_median": 885000,
+            "sold_count": 15
+          },
+          {
+            "price_sold_median_all_type": 713500,
+            "price_sold_median_all_community": 713500,
+            "period": "2022-10-01",
+            "price_sold_median": 853500,
+            "sold_count": 15
+          },
+          {
+            "price_sold_median_all_type": 795000,
+            "price_sold_median_all_community": 795000,
+            "period": "2022-11-01",
+            "price_sold_median": 980000,
+            "sold_count": 14
+          },
+          {
+            "price_sold_median_all_type": 795000,
+            "price_sold_median_all_community": 795000,
+            "period": "2022-12-01",
+            "price_sold_median": 980000,
+            "sold_count": 11
+          },
+          {
+            "price_sold_median_all_type": 832500,
+            "price_sold_median_all_community": 832500,
+            "period": "2023-01-01",
+            "price_sold_median": 930000,
+            "sold_count": 9
+          },
+          {
+            "price_sold_median_all_type": 835000,
+            "price_sold_median_all_community": 835000,
+            "period": "2023-02-01",
+            "price_sold_median": 990000,
+            "sold_count": 11
+          },
+          {
+            "price_sold_median_all_type": 915000,
+            "price_sold_median_all_community": 915000,
+            "period": "2023-03-01",
+            "price_sold_median": 1070000,
+            "sold_count": 18
+          },
+          {
+            "price_sold_median_all_type": 900000,
+            "price_sold_median_all_community": 900000,
+            "period": "2023-04-01",
+            "price_sold_median": 1017500,
+            "sold_count": 24
+          },
+          {
+            "price_sold_median_all_type": 890000,
+            "price_sold_median_all_community": 890000,
+            "period": "2023-05-01",
+            "price_sold_median": 955000,
+            "sold_count": 32
+          },
+          {
+            "price_sold_median_all_type": 900000,
+            "price_sold_median_all_community": 900000,
+            "period": "2023-06-01",
+            "price_sold_median": 955000,
+            "sold_count": 38
+          },
+          {
+            "price_sold_median_all_type": 886500,
+            "price_sold_median_all_community": 886500,
+            "period": "2023-07-01",
+            "price_sold_median": 925000,
+            "sold_count": 37
+          },
+          {
+            "price_sold_median_all_type": 875000,
+            "price_sold_median_all_community": 875000,
+            "period": "2023-08-01",
+            "price_sold_median": 920000,
+            "sold_count": 34
+          },
+          {
+            "price_sold_median_all_type": 891000,
+            "price_sold_median_all_community": 891000,
+            "period": "2023-09-01",
+            "price_sold_median": 950000,
+            "sold_count": 25
+          },
+          {
+            "price_sold_median_all_type": 875000,
+            "price_sold_median_all_community": 875000,
+            "period": "2023-10-01",
+            "price_sold_median": 970000,
+            "sold_count": 17
+          },
+          {
+            "price_sold_median_all_type": 750000,
+            "price_sold_median_all_community": 750000,
+            "period": "2023-11-01",
+            "price_sold_median": 847500,
+            "sold_count": 16
+          },
+          {
+            "price_sold_median_all_type": 724000,
+            "price_sold_median_all_community": 724000,
+            "period": "2023-12-01",
+            "price_sold_median": 915000,
+            "sold_count": 12
+          },
+          {
+            "price_sold_median_all_type": 724000,
+            "price_sold_median_all_community": 724000,
+            "period": "2024-01-01",
+            "price_sold_median": 895000,
+            "sold_count": 12
+          },
+          {
+            "price_sold_median_all_type": 740000,
+            "price_sold_median_all_community": 740000,
+            "period": "2024-02-01",
+            "price_sold_median": 865000,
+            "sold_count": 15
+          },
+          {
+            "price_sold_median_all_type": 825000,
+            "price_sold_median_all_community": 825000,
+            "period": "2024-03-01",
+            "price_sold_median": 929000,
+            "sold_count": 12
+          },
+          {
+            "price_sold_median_all_type": 865000,
+            "price_sold_median_all_community": 865000,
+            "period": "2024-04-01",
+            "price_sold_median": 944000,
+            "sold_count": 18
+          },
+          {
+            "price_sold_median_all_type": 880000,
+            "price_sold_median_all_community": 880000,
+            "period": "2024-05-01",
+            "price_sold_median": 955000,
+            "sold_count": 25
+          },
+          {
+            "price_sold_median_all_type": 900000,
+            "price_sold_median_all_community": 900000,
+            "period": "2024-06-01",
+            "price_sold_median": 965000,
+            "sold_count": 27
+          },
+          {
+            "price_sold_median_all_type": 940000,
+            "price_sold_median_all_community": 940000,
+            "period": "2024-07-01",
+            "price_sold_median": 1005000,
+            "sold_count": 26
+          },
+          {
+            "price_sold_median_all_type": 975000,
+            "price_sold_median_all_community": 975000,
+            "period": "2024-08-01",
+            "price_sold_median": 1037500,
+            "sold_count": 28
+          },
+          {
+            "price_sold_median_all_type": 875000,
+            "price_sold_median_all_community": 875000,
+            "period": "2024-09-01",
+            "price_sold_median": 975000,
+            "sold_count": 23
+          },
+          {
+            "price_sold_median_all_type": 965000,
+            "price_sold_median_all_community": 965000,
+            "period": "2024-11-01",
+            "price_sold_median": 990000,
+            "sold_count": 9
+          },
+          {
+            "price_sold_median_all_type": 940000,
+            "price_sold_median_all_community": 940000,
+            "period": "2024-12-01",
+            "price_sold_median": 975000,
+            "sold_count": 3
+          },
+          {
+            "price_sold_median_all_type": 861350,
+            "price_sold_median_all_community": 861350,
+            "period": "2025-01-01",
+            "price_sold_median": 932500,
+            "sold_count": 2
+          },
+          {
+            "price_sold_median_all_type": 861350,
+            "price_sold_median_all_community": 861350,
+            "period": "2025-02-01",
+            "price_sold_median": 925000,
+            "sold_count": 2
+          }
+        ],
+        "list_house_type": [
+          {
+            "house_type": "A.",
+            "listing_count": 73,
+            "listing_percent": 0.12,
+            "house_type_name": "Att/Row/Twnhouse"
+          },
+          {
+            "house_type": "C.",
+            "listing_count": 22,
+            "listing_percent": 0.04,
+            "house_type_name": "Condo Apt"
+          },
+          {
+            "house_type": "D.",
+            "listing_count": 418,
+            "listing_percent": 0.69,
+            "house_type_name": "Detached"
+          },
+          {
+            "house_type": "L.",
+            "listing_count": 9,
+            "listing_percent": 0.01,
+            "house_type_name": "Link"
+          },
+          {
+            "house_type": "S.",
+            "listing_count": 10,
+            "listing_percent": 0.02,
+            "house_type_name": "Semi-Detached"
+          },
+          {
+            "house_type": "T.",
+            "listing_count": 56,
+            "listing_percent": 0.09,
+            "house_type_name": "Condo Townhouse"
+          },
+          {
+            "house_type": "Other",
+            "house_type_name": "Other",
+            "listing_count": 22,
+            "listing_percent": 0.04
+          }
+        ],
+        "chart_sold_price": [
+          {
+            "price100k": 7,
+            "sold_count": 1
+          },
+          {
+            "price100k": 8,
+            "sold_count": 1
+          },
+          {
+            "price100k": 9,
+            "sold_count": 3
+          },
+          {
+            "price100k": 10,
+            "sold_count": 4
+          },
+          {
+            "price100k": 11,
+            "sold_count": 1
+          },
+          {
+            "price100k": 12,
+            "sold_count": 0
+          },
+          {
+            "price100k": 13,
+            "sold_count": 0
+          },
+          {
+            "price100k": 14,
+            "sold_count": 0
+          },
+          {
+            "price100k": 15,
+            "sold_count": 0
+          },
+          {
+            "price100k": 16,
+            "sold_count": 0
+          },
+          {
+            "price100k": 17,
+            "sold_count": 0
+          },
+          {
+            "price100k": 18,
+            "sold_count": 0
+          },
+          {
+            "price100k": 19,
+            "sold_count": 1
+          }
+        ]
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH14"
+      },
+      "chart_sold_price_cached": true,
+      "list_cached": false,
+      "list_house_type_cached": true
+    }
+  },
+  "https://housesigma.com/bkv2/api/listing/nearby/sold": {
+    "url": "https://housesigma.com/bkv2/api/listing/nearby/sold",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:00:57.445Z",
+    "data": {
+      "status": true,
+      "data": {
+        "message": "",
+        "house": {
+          "id_listing": "6zqW7dzJM0vY5eZE",
+          "ml_num": "X11950649",
+          "hash_id": "NJXy4NKtQ9jpv3Zg",
+          "seo_suffix": "15-BURGESS-Dr-Grimsby-L3M2Z1-X11950649-X11950649",
+          "photo_url": "https://cache-e13.housesigma.com/file/pix-treb/X11950649/b9021_1.jpg?a488d866",
+          "house_type_name": "Detached",
+          "address": "15 BURGESS Dr",
+          "community_name": "Grimsby East",
+          "municipality_name": "Grimsby",
+          "bedroom": 2,
+          "bedroom_plus": 1,
+          "bedroom_string": "2+1",
+          "washroom": 2,
+          "parking": {
+            "total": 1.5,
+            "garage_type": "Attached",
+            "garage": 1.5,
+            "parking_type": null,
+            "parking": 6,
+            "text": "Attached 1.5 garage,  6 parking"
+          },
+          "house_area": {
+            "area": 1337,
+            "area_note": "(SigmaEstimate®)",
+            "unit": "feet²",
+            "estimate": 1337
+          },
+          "land": {
+            "front": 116,
+            "depth": 117,
+            "unit": "feet",
+            "irregular": null,
+            "text": "116 x 117 feet"
+          },
+          "price": "999,900",
+          "estimate_price": "974,000",
+          "estimate_rent": "2,906",
+          "list_days": 1,
+          "map": {
+            "lat": 43.1856,
+            "lon": -79.54777
+          },
+          "text": {
+            "list_date_short": "List 2025-02-01",
+            "list_date_long": "List 2025-02-01, 1 days ago",
+            "dom_short": "Listed 1 day ago",
+            "dom_short_v2": "1 day ago",
+            "dom_long": "Listed 1 days ago",
+            "rooms_short": "2+1 bd 2 ba 1.5 gr",
+            "rooms_long": "2+1 Bedroom, 2 Bathroom, 1.5 Garage",
+            "status_chg_date": "1 day ago",
+            "date_preview": "1 day ago",
+            "hs_exclusive_tag": null
+          },
+          "list_status": {
+            "public": 1,
+            "live": 1,
+            "sold": 0,
+            "s_r": "Sale",
+            "text": "For Sale",
+            "text_full": "For Sale",
+            "status": "A",
+            "feature": null,
+            "precon": null,
+            "agent_available": true,
+            "premium": 1,
+            "archive": 0
+          },
+          "tos_source": "TREB",
+          "data_source": "TRREB",
+          "data_source_raw": "TREB",
+          "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+          "photo_source": null,
+          "schedule_message": "I want to book an appointment to view: [X11950649], 15 BURGESS Dr, Grimsby"
+        },
+        "chart": [],
+        "nearby": [
+          {
+            "ml_num_merge": "H4199901",
+            "marker_label": "D 0.99M",
+            "id_listing": "6zqW7dzbmokY5eZE",
+            "id_address": "Vwod7vrGwBM75mGN",
+            "seo_municipality": "grimsby-real-estate",
+            "seo_address": "369-nelles-road-n",
+            "seo_image_alt": "MLS Listing Sold at 369 Nelles Road N, Grimsby, Ontario, L3M3A1, MLS# H4199901",
+            "seo_suffix": "369-Nelles-Road-N-Grimsby-L3M3A1-H4199901-XH4199901",
+            "photo_url": "https://cache15.housesigma.com/file/pix-rahb/87fa2213b5b2124f14896f1fa12ed945/f786a_1.jpg?6bb4cde9",
+            "photo_source": null,
+            "house_type_name": "Detached",
+            "house_type": "D.",
+            "house_style": null,
+            "apt_num": null,
+            "address": "369 Nelles Road N",
+            "address_navigation": "369 Nelles Road N, Grimsby, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Grimsby East",
+            "municipality_name": "Grimsby",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 4,
+            "bedroom_plus": 0,
+            "bedroom_string": 4,
+            "washroom": 4,
+            "parking": {
+              "total": 2,
+              "garage_type": null,
+              "garage": 2,
+              "parking_type": "Total",
+              "parking": 4,
+              "text": " 2 garage, Total 4 parking"
+            },
+            "price": "1,099,000",
+            "price_int": 1099000,
+            "price_abbr": "1.1M",
+            "price_sold": "990,000",
+            "price_origin": null,
+            "price_sold_int": 990000,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.19705,
+              "lon": -79.54457
+            },
+            "house_area": {
+              "area": "2279",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 2279
+            },
+            "land": {
+              "front": 54,
+              "depth": 141,
+              "unit": "feet"
+            },
+            "date_added": "2024-07-18",
+            "date_added_days": 199,
+            "date_start": "2024-07-17",
+            "date_start_days": 200,
+            "date_start_month": 6,
+            "date_update": "2024-10-03",
+            "date_end": "2024-09-15",
+            "date_end_days": 140,
+            "list_days": 60,
+            "feature_header": null,
+            "data_source": "RAHB",
+            "data_source_raw": "RAHB_2",
+            "data_source_text": "",
+            "tos_source": "RAHB_2",
+            "analytics": {
+              "rent_yield": "3.8",
+              "rent_base": "3615460",
+              "estimate_price_age": 121,
+              "estimate_price_date": "2024-10-04 03:43:00",
+              "estimate_price": "1,070,500",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "72"
+            },
+            "scores": {
+              "school": 7,
+              "rent": 6,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-09-15",
+              "list_date_long": "Sold 2024-09-15, Dom: 60 days",
+              "dom_short": "Sold in Sep 2024",
+              "dom_short_v2": "in Sep 2024",
+              "dom_long": "Sold 140 days ago, Dom: 60 days",
+              "rooms_short": "4 bd 4 ba 2 gr",
+              "rooms_long": "4 Bedroom, 4 Bathroom, 2 Garage",
+              "status_chg_date": "4 months ago",
+              "date_preview": "2024-09-15",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L3M3A1",
+            "date_sold_report": null,
+            "sold_month": "2024-09",
+            "distance": 1.3,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": 2,
+              "washroom": 2,
+              "house_area": 942,
+              "parking": {
+                "total": 0.5
+              },
+              "land": {
+                "front": -62,
+                "depth": 24
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 1
+          },
+          {
+            "ml_num_merge": "H4202802",
+            "marker_label": "D 0.85M",
+            "id_listing": "ZxwR7MVKKzB3KabB",
+            "id_address": "damgL7A2QZ23Z1MW",
+            "seo_municipality": "grimsby-real-estate",
+            "seo_address": "45-debora-drive",
+            "seo_image_alt": "MLS Listing Sold at 45 Debora Drive, Grimsby, Ontario, L3M4V6, MLS# H4202802",
+            "seo_suffix": "45-Debora-Drive-Grimsby-L3M4V6-H4202802-XH4202802",
+            "photo_url": "https://cache-e14.housesigma.com/file/pix-rahb/b5b049c9e5c2a76c0524d72341cc1853/48982_1.jpg?c5fca4bb",
+            "photo_source": null,
+            "house_type_name": "Detached",
+            "house_type": "D.",
+            "house_style": null,
+            "apt_num": null,
+            "address": "45 Debora Drive",
+            "address_navigation": "45 Debora Drive, Grimsby, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Grimsby East",
+            "municipality_name": "Grimsby",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 4,
+            "bedroom_plus": 1,
+            "bedroom_string": "4+1",
+            "washroom": 2,
+            "parking": {
+              "total": 1,
+              "garage_type": null,
+              "garage": 1,
+              "parking_type": "Total",
+              "parking": 3,
+              "text": " 1 garage, Total 3 parking"
+            },
+            "price": "829,900",
+            "price_int": 829900,
+            "price_abbr": "0.83M",
+            "price_sold": "847,700",
+            "price_origin": null,
+            "price_sold_int": 847700,
+            "price_change_yearly": 7.48945,
+            "price_change_yearly_text": "Sold for 28% gain",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.19283,
+              "lon": -79.55081
+            },
+            "house_area": {
+              "area": "1598",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1598
+            },
+            "land": {
+              "front": 58,
+              "depth": 121,
+              "unit": "feet"
+            },
+            "date_added": "2024-08-13",
+            "date_added_days": 173,
+            "date_start": "2024-08-13",
+            "date_start_days": 173,
+            "date_start_month": 5,
+            "date_update": "2024-10-01",
+            "date_end": "2024-08-14",
+            "date_end_days": 172,
+            "list_days": 1,
+            "feature_header": null,
+            "data_source": "RAHB",
+            "data_source_raw": "RAHB_2",
+            "data_source_text": "",
+            "tos_source": "RAHB_2",
+            "analytics": {
+              "rent_yield": "3.9",
+              "rent_base": "3167524",
+              "estimate_price_age": 124,
+              "estimate_price_date": "2024-10-01 20:44:03",
+              "estimate_price": "810,300",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "77"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 7,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-08-14",
+              "list_date_long": "Sold 2024-08-14, Dom: 1 days",
+              "dom_short": "Sold in Aug 2024",
+              "dom_short_v2": "in Aug 2024",
+              "dom_long": "Sold 172 days ago, Dom: 1 days",
+              "rooms_short": "4+1 bd 2 ba 1 gr",
+              "rooms_long": "4+1 Bedroom, 2 Bathroom, 1 Garage",
+              "status_chg_date": "5 months ago",
+              "date_preview": "2024-08-14",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L3M4V6",
+            "date_sold_report": null,
+            "sold_month": "2024-08",
+            "distance": 0.84,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": 2,
+              "washroom": null,
+              "house_area": 261,
+              "parking": {
+                "total": -0.5
+              },
+              "land": {
+                "front": -58,
+                "depth": 4
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 2
+          },
+          {
+            "ml_num_merge": "H4199243",
+            "marker_label": "D 0.88M",
+            "id_listing": "nM697kV6k5Qybmwe",
+            "id_address": "owJKR7PgvK9yXeLP",
+            "seo_municipality": "grimsby-real-estate",
+            "seo_address": "47-plum-tree-lane",
+            "seo_image_alt": "MLS Listing Sold at 47 Plum Tree Lane, Grimsby, Ontario, L3M5T5, MLS# H4199243",
+            "seo_suffix": "47-Plum-Tree-Lane-Grimsby-L3M5T5-H4199243-X9013313-XH4199243",
+            "photo_url": "https://cache14.housesigma.com/file/pix-rahb/aea8fde6e8fb40b6696f64b4914a0271/49e95_1.jpg?ebf8ad96",
+            "photo_source": null,
+            "house_type_name": "Detached",
+            "house_type": "D.",
+            "house_style": "2 Storey",
+            "apt_num": null,
+            "address": "47 Plum Tree Lane",
+            "address_navigation": "47 Plum Tree Lane, Grimsby, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Grimsby East",
+            "municipality_name": "Grimsby",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 3,
+            "bedroom_plus": 0,
+            "bedroom_string": 3,
+            "washroom": 4,
+            "parking": {
+              "total": 2,
+              "garage_type": null,
+              "garage": 2,
+              "parking_type": "Total",
+              "parking": 6,
+              "text": " 2 garage, Total 6 parking"
+            },
+            "price": "899,900",
+            "price_int": 899900,
+            "price_abbr": "0.9M",
+            "price_sold": "875,000",
+            "price_origin": null,
+            "price_sold_int": 875000,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.19163,
+              "lon": -79.53859
+            },
+            "house_area": {
+              "area": "1875",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1875
+            },
+            "land": {
+              "front": 40,
+              "depth": 180,
+              "unit": "feet"
+            },
+            "date_added": "2024-07-05",
+            "date_added_days": 212,
+            "date_start": "2024-07-05",
+            "date_start_days": 212,
+            "date_start_month": 6,
+            "date_update": "2024-10-01",
+            "date_end": "2024-08-20",
+            "date_end_days": 166,
+            "list_days": 46,
+            "feature_header": null,
+            "data_source": "RAHB",
+            "data_source_raw": "RAHB_2",
+            "data_source_text": "",
+            "tos_source": "RAHB_2",
+            "analytics": {
+              "rent_yield": "4.0",
+              "rent_base": "3254770",
+              "estimate_price_age": 121,
+              "estimate_price_date": "2024-10-04 03:43:29",
+              "estimate_price": "894,900",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "81"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 7,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-08-20",
+              "list_date_long": "Sold 2024-08-20, Dom: 46 days",
+              "dom_short": "Sold in Aug 2024",
+              "dom_short_v2": "in Aug 2024",
+              "dom_long": "Sold 166 days ago, Dom: 46 days",
+              "rooms_short": "3 bd 4 ba 2 gr",
+              "rooms_long": "3 Bedroom, 4 Bathroom, 2 Garage",
+              "status_chg_date": "5 months ago",
+              "date_preview": "2024-08-20",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L3M5T5",
+            "date_sold_report": null,
+            "sold_month": "2024-08",
+            "distance": 1,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": 1,
+              "washroom": 2,
+              "house_area": 538,
+              "parking": {
+                "total": 0.5
+              },
+              "land": {
+                "front": -76,
+                "depth": 63
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 3
+          },
+          {
+            "ml_num_merge": "H4200513",
+            "marker_label": "D 0.7M",
+            "id_listing": "2Zpj399BdMd3DrK8",
+            "id_address": "jJKdOYrZAdnY54lW",
+            "seo_municipality": "grimsby-real-estate",
+            "seo_address": "50-sandra-crescent",
+            "seo_image_alt": "MLS Listing Sold at 50 Sandra Crescent, Grimsby, Ontario, L3M4Y6, MLS# H4200513",
+            "seo_suffix": "50-Sandra-Crescent-Grimsby-L3M4Y6-H4200513-H4200513-X9045396-XH4200513",
+            "photo_url": "https://cache-e14.housesigma.com/file/pix-rahb/5b80f329a5e02f92fb8c4ebba5ab184a/fa361_1.jpg?42e7c883",
+            "photo_source": null,
+            "house_type_name": "Single Family Residence",
+            "house_type": "D.",
+            "house_style": "Backsplit 4",
+            "apt_num": null,
+            "address": "50 Sandra Crescent",
+            "address_navigation": "50 Sandra Crescent, Grimsby, Ontario",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Grimsby East",
+            "municipality_name": "Grimsby",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 2,
+            "bedroom_plus": 1,
+            "bedroom_string": "2+1",
+            "washroom": 2,
+            "parking": {
+              "total": 1,
+              "garage_type": null,
+              "garage": 1,
+              "parking_type": "Total",
+              "parking": 5,
+              "text": " 1 garage, Total 5 parking"
+            },
+            "price": "750,000",
+            "price_int": 750000,
+            "price_abbr": "0.75M",
+            "price_sold": "700,000",
+            "price_origin": null,
+            "price_sold_int": 700000,
+            "price_change_yearly": 15.2576,
+            "price_change_yearly_text": "Sold for 400% gain",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.19258,
+              "lon": -79.54303
+            },
+            "house_area": {
+              "area": "1101",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1101
+            },
+            "land": {
+              "front": 34,
+              "depth": 140,
+              "unit": "feet"
+            },
+            "date_added": "2024-07-18",
+            "date_added_days": 199,
+            "date_start": "2024-07-18",
+            "date_start_days": 199,
+            "date_start_month": 6,
+            "date_update": "2024-10-01",
+            "date_end": "2024-08-09",
+            "date_end_days": 177,
+            "list_days": 22,
+            "feature_header": null,
+            "data_source": "RAHB",
+            "data_source_raw": "RAHB_2",
+            "data_source_text": "",
+            "tos_source": "RAHB_2",
+            "analytics": {
+              "rent_yield": "3.6",
+              "rent_base": "2527140",
+              "estimate_price_age": 121,
+              "estimate_price_date": "2024-10-04 03:42:27",
+              "estimate_price": "737,900",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "34"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 6,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-08-09",
+              "list_date_long": "Sold 2024-08-09, Dom: 22 days",
+              "dom_short": "Sold in Aug 2024",
+              "dom_short_v2": "in Aug 2024",
+              "dom_long": "Sold 177 days ago, Dom: 22 days",
+              "rooms_short": "2+1 bd 2 ba 1 gr",
+              "rooms_long": "2+1 Bedroom, 2 Bathroom, 1 Garage",
+              "status_chg_date": "5 months ago",
+              "date_preview": "2024-08-09",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L3M4Y6",
+            "date_sold_report": null,
+            "sold_month": "2024-08",
+            "distance": 0.87,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": null,
+              "washroom": null,
+              "house_area": -236,
+              "parking": {
+                "total": -0.5
+              },
+              "land": {
+                "front": -82,
+                "depth": 23
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 4
+          },
+          {
+            "ml_num_merge": "H4201413",
+            "marker_label": "D 0.76M",
+            "id_listing": "aD6p78NjXPnYwRQr",
+            "id_address": "jAXw7QwEOjmYQOzg",
+            "seo_municipality": "grimsby-real-estate",
+            "seo_address": "120-central-avenue",
+            "seo_image_alt": "MLS Listing Sold at 120 Central Avenue, Grimsby, Ontario, L3M4Y3, MLS# H4201413",
+            "seo_suffix": "120-Central-Avenue-Grimsby-L3M4Y3-H4201413-XH4201413",
+            "photo_url": "https://cache-e14.housesigma.com/file/pix-rahb/5fabe3991c60b672db749e8ab1b99fec/ac9c2_1.jpg?ddf9cf6a",
+            "photo_source": null,
+            "house_type_name": "Detached",
+            "house_type": "D.",
+            "house_style": "Bungalow",
+            "apt_num": null,
+            "address": "120 Central Avenue",
+            "address_navigation": "120 Central Avenue, Grimsby, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Grimsby East",
+            "municipality_name": "Grimsby",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 2,
+            "bedroom_plus": 0,
+            "bedroom_string": 2,
+            "washroom": 2,
+            "parking": {
+              "total": 2,
+              "garage_type": "Circular Driveway",
+              "garage": 2,
+              "parking_type": "Total",
+              "parking": 4,
+              "text": "Circular Driveway 2 garage, Total 4 parking"
+            },
+            "price": "749,900",
+            "price_int": 749900,
+            "price_abbr": "0.75M",
+            "price_sold": "760,000",
+            "price_origin": null,
+            "price_sold_int": 760000,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.19104,
+              "lon": -79.54388
+            },
+            "house_area": {
+              "area": "1281",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1281
+            },
+            "land": {
+              "front": 70,
+              "depth": 100,
+              "unit": "feet"
+            },
+            "date_added": "2024-07-27",
+            "date_added_days": 190,
+            "date_start": "2024-07-27",
+            "date_start_days": 190,
+            "date_start_month": 6,
+            "date_update": "2024-10-01",
+            "date_end": "2024-08-01",
+            "date_end_days": 185,
+            "list_days": 5,
+            "feature_header": null,
+            "data_source": "RAHB",
+            "data_source_raw": "RAHB_2",
+            "data_source_text": "",
+            "tos_source": "RAHB_2",
+            "analytics": {
+              "rent_yield": "3.3",
+              "rent_base": "2714300",
+              "estimate_price_age": 25,
+              "estimate_price_date": "2025-01-08 06:32:41",
+              "estimate_price": "736,000",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "71"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 5,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-08-01",
+              "list_date_long": "Sold 2024-08-01, Dom: 5 days",
+              "dom_short": "Sold in Aug 2024",
+              "dom_short_v2": "in Aug 2024",
+              "dom_long": "Sold 185 days ago, Dom: 5 days",
+              "rooms_short": "2 bd 2 ba 2 gr",
+              "rooms_long": "2 Bedroom, 2 Bathroom, 2 Garage",
+              "status_chg_date": "6 months ago",
+              "date_preview": "2024-08-01",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L3M4Y3",
+            "date_sold_report": null,
+            "sold_month": "2024-08",
+            "distance": 0.68,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": null,
+              "washroom": null,
+              "house_area": -56,
+              "parking": {
+                "total": 0.5
+              },
+              "land": {
+                "front": -46,
+                "depth": -17
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 5
+          },
+          {
+            "ml_num_merge": "H4201190",
+            "marker_label": "D 0.98M",
+            "id_listing": "eQp5yOpd0r07d0ZE",
+            "id_address": "L4KAX7NWXAo3eRPJ",
+            "seo_municipality": "grimsby-real-estate",
+            "seo_address": "17-mcnab-drive",
+            "seo_image_alt": "MLS Listing Sold at 17 Mcnab Drive, Grimsby, Ontario, L3M2Y7, MLS# H4201190",
+            "seo_suffix": "17-Mcnab-Drive-Grimsby-L3M2Y7-H4201190-X9245759-XH4201190",
+            "photo_url": "https://cache14.housesigma.com/file/pix-rahb/28ebddc2c56bfab667c76c821edf9030/227e5_1.jpg?322decea",
+            "photo_source": null,
+            "house_type_name": "Detached",
+            "house_type": "D.",
+            "house_style": null,
+            "apt_num": null,
+            "address": "17 Mcnab Drive",
+            "address_navigation": "17 Mcnab Drive, Grimsby, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Grimsby East",
+            "municipality_name": "Grimsby",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 3,
+            "bedroom_plus": 0,
+            "bedroom_string": 3,
+            "washroom": 2,
+            "parking": {
+              "total": 1,
+              "garage_type": null,
+              "garage": 1,
+              "parking_type": "Total",
+              "parking": 4,
+              "text": " 1 garage, Total 4 parking"
+            },
+            "price": "999,900",
+            "price_int": 999900,
+            "price_abbr": "1M",
+            "price_sold": "980,500",
+            "price_origin": null,
+            "price_sold_int": 980500,
+            "price_change_yearly": 13.1255,
+            "price_change_yearly_text": "Sold for 480% gain",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.18712,
+              "lon": -79.5461
+            },
+            "house_area": {
+              "area": "1826",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1826
+            },
+            "land": {
+              "front": 91,
+              "depth": 110,
+              "unit": "feet"
+            },
+            "date_added": "2024-08-08",
+            "date_added_days": 178,
+            "date_start": "2024-08-08",
+            "date_start_days": 178,
+            "date_start_month": 5,
+            "date_update": "2024-10-31",
+            "date_end": "2024-08-20",
+            "date_end_days": 166,
+            "list_days": 12,
+            "feature_header": null,
+            "data_source": "RAHB",
+            "data_source_raw": "RAHB_2",
+            "data_source_text": "",
+            "tos_source": "RAHB_2",
+            "analytics": {
+              "rent_yield": "2.9",
+              "rent_base": "3573024",
+              "estimate_price_age": 94,
+              "estimate_price_date": "2024-10-31 06:41:49",
+              "estimate_price": "977,400",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "76"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 3,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-08-20",
+              "list_date_long": "Sold 2024-08-20, Dom: 12 days",
+              "dom_short": "Sold in Aug 2024",
+              "dom_short_v2": "in Aug 2024",
+              "dom_long": "Sold 166 days ago, Dom: 12 days",
+              "rooms_short": "3 bd 2 ba 1 gr",
+              "rooms_long": "3 Bedroom, 2 Bathroom, 1 Garage",
+              "status_chg_date": "5 months ago",
+              "date_preview": "2024-08-20",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L3M2Y7",
+            "date_sold_report": null,
+            "sold_month": "2024-08",
+            "distance": 0.22,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": 1,
+              "washroom": null,
+              "house_area": 489,
+              "parking": {
+                "total": -0.5
+              },
+              "land": {
+                "front": -25,
+                "depth": -7
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 6
+          },
+          {
+            "ml_num_merge": "H4187835",
+            "marker_label": "D 1.9M",
+            "id_listing": "MWBVyZE0m2JYKemj",
+            "id_address": "ZEXrx30EwjpYOklN",
+            "seo_municipality": "grimsby-real-estate",
+            "seo_address": "104-main-street-e",
+            "seo_image_alt": "MLS Listing Sold at 104 Main Street E, Grimsby, Ontario, L3M1N8, MLS# H4187835",
+            "seo_suffix": "104-Main-Street-E-Grimsby-L3M1N8-H4187835-X8145110-XH4187835",
+            "photo_url": "https://cache14.housesigma.com/file/pix-rahb/c4ef01eb4a446ab4db9afbd9f8bdddad/0aeb5_1.jpg?c022d4a4",
+            "photo_source": null,
+            "house_type_name": "Detached",
+            "house_type": "D.",
+            "house_style": "2 1/2 Storey",
+            "apt_num": null,
+            "address": "104 Main Street E",
+            "address_navigation": "104 Main Street E, Grimsby, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Grimsby East",
+            "municipality_name": "Grimsby",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 5,
+            "bedroom_plus": 1,
+            "bedroom_string": "5+1",
+            "washroom": 4,
+            "parking": {
+              "total": 2,
+              "garage_type": null,
+              "garage": 2,
+              "parking_type": "Total",
+              "parking": 18,
+              "text": " 2 garage, Total 18 parking"
+            },
+            "price": "1,999,900",
+            "price_int": 1999900,
+            "price_abbr": "2M",
+            "price_sold": "1,900,000",
+            "price_origin": null,
+            "price_sold_int": 1900000,
+            "price_change_yearly": -1.79097,
+            "price_change_yearly_text": "Sold for 5% less",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.18971,
+              "lon": -79.55245
+            },
+            "house_area": {
+              "area": "4453",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 4453
+            },
+            "land": {
+              "front": 111,
+              "depth": 225,
+              "unit": "feet"
+            },
+            "date_added": "2024-03-14",
+            "date_added_days": 325,
+            "date_start": "2024-03-13",
+            "date_start_days": 326,
+            "date_start_month": 10,
+            "date_update": "2024-10-01",
+            "date_end": "2024-08-12",
+            "date_end_days": 174,
+            "list_days": 152,
+            "feature_header": null,
+            "data_source": "RAHB",
+            "data_source_raw": "RAHB_2",
+            "data_source_text": "",
+            "tos_source": "RAHB_2",
+            "analytics": {
+              "rent_yield": "3.0",
+              "rent_base": "7176740",
+              "estimate_price_age": 124,
+              "estimate_price_date": "2024-10-01 02:42:35",
+              "estimate_price": "1,906,400",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "76"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 4,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-08-12",
+              "list_date_long": "Sold 2024-08-12, Dom: 152 days",
+              "dom_short": "Sold in Aug 2024",
+              "dom_short_v2": "in Aug 2024",
+              "dom_long": "Sold 174 days ago, Dom: 152 days",
+              "rooms_short": "5+1 bd 4 ba 2 gr",
+              "rooms_long": "5+1 Bedroom, 4 Bathroom, 2 Garage",
+              "status_chg_date": "5 months ago",
+              "date_preview": "2024-08-12",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L3M1N8",
+            "date_sold_report": null,
+            "sold_month": "2024-08",
+            "distance": 0.59,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": 3,
+              "washroom": 2,
+              "house_area": 3116,
+              "parking": {
+                "total": 0.5
+              },
+              "land": {
+                "front": -5,
+                "depth": 108
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 7
+          },
+          {
+            "ml_num_merge": "H4201442",
+            "marker_label": "D 1.1M",
+            "id_listing": "nM697kVMGObybmwe",
+            "id_address": "dXawjy46p893rR18",
+            "seo_municipality": "grimsby-real-estate",
+            "seo_address": "16-cherryhill-drive",
+            "seo_image_alt": "MLS Listing Sold at 16 Cherryhill Drive, Grimsby, Ontario, L3M3B4, MLS# H4201442",
+            "seo_suffix": "16-Cherryhill-Drive-Grimsby-L3M3B4-H4201442-X9237856-XH4201442",
+            "photo_url": "https://cache14.housesigma.com/file/pix-rahb/7050329acad75a1c394721b4122743d7/f1052_1.jpg?0fae733b",
+            "photo_source": null,
+            "house_type_name": "Detached",
+            "house_type": "D.",
+            "house_style": "Bungalow",
+            "apt_num": null,
+            "address": "16 Cherryhill Drive",
+            "address_navigation": "16 Cherryhill Drive, Grimsby, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Grimsby East",
+            "municipality_name": "Grimsby",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 3,
+            "bedroom_plus": 0,
+            "bedroom_string": 3,
+            "washroom": 3,
+            "parking": {
+              "total": 2,
+              "garage_type": null,
+              "garage": 2,
+              "parking_type": "Total",
+              "parking": 11,
+              "text": " 2 garage, Total 11 parking"
+            },
+            "price": "1,075,000",
+            "price_int": 1075000,
+            "price_abbr": "1.1M",
+            "price_sold": "1,075,000",
+            "price_origin": null,
+            "price_sold_int": 1075000,
+            "price_change_yearly": 16.1239,
+            "price_change_yearly_text": "Sold for 511% gain",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.18866,
+              "lon": -79.5575
+            },
+            "house_area": {
+              "area": "1639",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1639
+            },
+            "land": {
+              "front": 87,
+              "depth": 139,
+              "unit": "feet"
+            },
+            "date_added": "2024-08-02",
+            "date_added_days": 184,
+            "date_start": "2024-08-02",
+            "date_start_days": 184,
+            "date_start_month": 6,
+            "date_update": "2024-10-31",
+            "date_end": "2024-08-04",
+            "date_end_days": 182,
+            "list_days": 2,
+            "feature_header": null,
+            "data_source": "RAHB",
+            "data_source_raw": "RAHB_2",
+            "data_source_text": "",
+            "tos_source": "RAHB_2",
+            "analytics": {
+              "rent_yield": "3.2",
+              "rent_base": "4063470",
+              "estimate_price_age": 30,
+              "estimate_price_date": "2025-01-03 04:18:24",
+              "estimate_price": "941,500",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "86"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 4,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-08-04",
+              "list_date_long": "Sold 2024-08-04, Dom: 2 days",
+              "dom_short": "Sold in Aug 2024",
+              "dom_short_v2": "in Aug 2024",
+              "dom_long": "Sold 182 days ago, Dom: 2 days",
+              "rooms_short": "3 bd 3 ba 2 gr",
+              "rooms_long": "3 Bedroom, 3 Bathroom, 2 Garage",
+              "status_chg_date": "5 months ago",
+              "date_preview": "2024-08-04",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L3M3B4",
+            "date_sold_report": null,
+            "sold_month": "2024-08",
+            "distance": 0.86,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": 1,
+              "washroom": 1,
+              "house_area": 302,
+              "parking": {
+                "total": 0.5
+              },
+              "land": {
+                "front": -29,
+                "depth": 22
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 8
+          },
+          {
+            "ml_num_merge": "H4197700",
+            "marker_label": "D 1.1M",
+            "id_listing": "jAXw7QpgqOdyQOzg",
+            "id_address": "PXRla7g8rD63jEvL",
+            "seo_municipality": "grimsby-real-estate",
+            "seo_address": "25-orchard-parkway",
+            "seo_image_alt": "MLS Listing Sold at 25 Orchard Parkway, Grimsby, Ontario, L3M3B1, MLS# H4197700",
+            "seo_suffix": "25-Orchard-Parkway-Grimsby-L3M3B1-H4197700-X8457726-XH4197700",
+            "photo_url": "https://cache08.housesigma.com/file/pix-rahb/474ad891655baa8ae29e4f0af13e4998/24864_1.jpg?366b1914",
+            "photo_source": null,
+            "house_type_name": "Detached",
+            "house_type": "D.",
+            "house_style": "2 Storey",
+            "apt_num": null,
+            "address": "25 Orchard Parkway",
+            "address_navigation": "25 Orchard Parkway, Grimsby, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Grimsby East",
+            "municipality_name": "Grimsby",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 4,
+            "bedroom_plus": 0,
+            "bedroom_string": 4,
+            "washroom": 4,
+            "parking": {
+              "total": 1.5,
+              "garage_type": null,
+              "garage": 1.5,
+              "parking_type": "Total",
+              "parking": 7,
+              "text": " 1.5 garage, Total 7 parking"
+            },
+            "price": "1,089,000",
+            "price_int": 1089000,
+            "price_abbr": "1.1M",
+            "price_sold": "1,065,000",
+            "price_origin": null,
+            "price_sold_int": 1065000,
+            "price_change_yearly": -1.04816,
+            "price_change_yearly_text": "Sold for 3% less",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.1875,
+              "lon": -79.55576
+            },
+            "house_area": {
+              "area": "2821",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 2821
+            },
+            "land": {
+              "front": 75,
+              "depth": 140,
+              "unit": "feet"
+            },
+            "date_added": "2024-06-19",
+            "date_added_days": 228,
+            "date_start": "2024-06-19",
+            "date_start_days": 228,
+            "date_start_month": 7,
+            "date_update": "2024-10-01",
+            "date_end": "2024-07-10",
+            "date_end_days": 207,
+            "list_days": 21,
+            "feature_header": null,
+            "data_source": "RAHB",
+            "data_source_raw": "RAHB_2",
+            "data_source_text": "",
+            "tos_source": "RAHB_2",
+            "analytics": {
+              "rent_yield": "4.0",
+              "rent_base": "4040050",
+              "estimate_price_age": 25,
+              "estimate_price_date": "2025-01-08 06:31:10",
+              "estimate_price": "1,136,800",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "79"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 7,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-07-10",
+              "list_date_long": "Sold 2024-07-10, Dom: 21 days",
+              "dom_short": "Sold in Jul 2024",
+              "dom_short_v2": "in Jul 2024",
+              "dom_long": "Sold 207 days ago, Dom: 21 days",
+              "rooms_short": "4 bd 4 ba 1.5 gr",
+              "rooms_long": "4 Bedroom, 4 Bathroom, 1.5 Garage",
+              "status_chg_date": "6 months ago",
+              "date_preview": "2024-07-10",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L3M3B1",
+            "date_sold_report": null,
+            "sold_month": "2024-07",
+            "distance": 0.68,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": 2,
+              "washroom": 2,
+              "house_area": 1484,
+              "parking": {
+                "total": null
+              },
+              "land": {
+                "front": -41,
+                "depth": 23
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 9
+          }
+        ],
+        "meta": {
+          "title": "Ontario, Similar Sold | HouseSigma"
+        }
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH11",
+        "ml_server": "ovh38",
+        "ml_from_cache": false
+      }
+    }
+  }
+}

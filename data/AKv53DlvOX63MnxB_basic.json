@@ -1,0 +1,101 @@
+{
+  "photos": [
+    "https://cache09.housesigma.com/file/pix-itso/155852070/d95d0_1.jpg?073467ef",
+    "https://cache-e14.housesigma.com/file/pix-itso/155852070/d95d0_2.jpg?073467ef",
+    "https://cache14.housesigma.com/file/pix-itso/155852070/d95d0_3.jpg?073467ef",
+    "https://cache15.housesigma.com/file/pix-itso/155852070/d95d0_4.jpg?073467ef",
+    "https://cache08.housesigma.com/file/pix-itso/155852070/d95d0_5.jpg?073467ef",
+    "https://cache09.housesigma.com/file/pix-itso/155852070/d95d0_6.jpg?073467ef",
+    "https://cache-e14.housesigma.com/file/pix-itso/155852070/d95d0_7.jpg?073467ef",
+    "https://cache14.housesigma.com/file/pix-itso/155852070/d95d0_8.jpg?073467ef",
+    "https://cache15.housesigma.com/file/pix-itso/155852070/d95d0_9.jpg?073467ef",
+    "https://cache08.housesigma.com/file/pix-itso/155852070/d95d0_10.jpg?073467ef",
+    "https://cache09.housesigma.com/file/pix-itso/155852070/d95d0_11.jpg?073467ef",
+    "https://cache-e14.housesigma.com/file/pix-itso/155852070/d95d0_12.jpg?073467ef",
+    "https://cache14.housesigma.com/file/pix-itso/155852070/d95d0_13.jpg?073467ef",
+    "https://cache15.housesigma.com/file/pix-itso/155852070/d95d0_14.jpg?073467ef",
+    "https://cache08.housesigma.com/file/pix-itso/155852070/d95d0_15.jpg?073467ef",
+    "https://cache09.housesigma.com/file/pix-itso/155852070/d95d0_16.jpg?073467ef",
+    "https://cache-e14.housesigma.com/file/pix-itso/155852070/d95d0_17.jpg?073467ef",
+    "https://cache14.housesigma.com/file/pix-itso/155852070/d95d0_18.jpg?073467ef",
+    "https://cache15.housesigma.com/file/pix-itso/155852070/d95d0_19.jpg?073467ef",
+    "https://cache08.housesigma.com/file/pix-itso/155852070/d95d0_20.jpg?073467ef",
+    "https://cache09.housesigma.com/file/pix-itso/155852070/d95d0_21.jpg?073467ef",
+    "https://cache-e14.housesigma.com/file/pix-itso/155852070/d95d0_22.jpg?073467ef",
+    "https://cache14.housesigma.com/file/pix-itso/155852070/d95d0_23.jpg?073467ef",
+    "https://cache15.housesigma.com/file/pix-itso/155852070/d95d0_24.jpg?073467ef",
+    "https://cache08.housesigma.com/file/pix-itso/155852070/d95d0_25.jpg?073467ef",
+    "https://cache09.housesigma.com/file/pix-itso/155852070/d95d0_26.jpg?073467ef",
+    "https://cache-e14.housesigma.com/file/pix-itso/155852070/d95d0_27.jpg?073467ef",
+    "https://cache14.housesigma.com/file/pix-itso/155852070/d95d0_28.jpg?073467ef",
+    "https://cache15.housesigma.com/file/pix-itso/155852070/d95d0_29.jpg?073467ef",
+    "https://cache08.housesigma.com/file/pix-itso/155852070/d95d0_30.jpg?073467ef",
+    "https://cache09.housesigma.com/file/pix-itso/155852070/d95d0_31.jpg?073467ef",
+    "https://cache-e14.housesigma.com/file/pix-itso/155852070/d95d0_32.jpg?073467ef",
+    "https://cache14.housesigma.com/file/pix-itso/155852070/d95d0_33.jpg?073467ef",
+    "https://cache15.housesigma.com/file/pix-itso/155852070/d95d0_34.jpg?073467ef",
+    "https://cache08.housesigma.com/file/pix-itso/155852070/d95d0_35.jpg?073467ef",
+    "https://cache09.housesigma.com/file/pix-itso/155852070/d95d0_36.jpg?073467ef",
+    "https://cache-e14.housesigma.com/file/pix-itso/155852070/d95d0_37.jpg?073467ef",
+    "https://cache14.housesigma.com/file/pix-itso/155852070/d95d0_38.jpg?073467ef"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "248 Main Street E",
+      "municipality": "Grimsby",
+      "postalCode": "L3M5P8",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": "RD3",
+    "coordinates": {
+      "latitude": 43.184834,
+      "longitude": -79.530844
+    },
+    "propertyTax": 6102,
+    "lotSize": 22400,
+    "squareFootage": 1608,
+    "askingPrice": 949900,
+    "daysOnMarket": 60,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2024-12-04T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "AKv53DlvOX63MnxB",
+        "event": "For Sale"
+      },
+      {
+        "startDate": "2016-08-20T00:00:00.000Z",
+        "endDate": "2016-09-30T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "GMnKYqpDRRQ3w1Qr",
+        "event": "Leased"
+      },
+      {
+        "startDate": "2013-06-01T00:00:00.000Z",
+        "endDate": "2013-06-03T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "6zqW7dGovkMy5eZE",
+        "event": "Sold"
+      }
+    ],
+    "estimatePrice": 924800,
+    "estimatePriceConfident": 3.12,
+    "estimateRent": 2821,
+    "estimateRentDays": 34,
+    "estimateRentYearReturn": 2.65,
+    "scores": {
+      "school": 8,
+      "growth": 6,
+      "rent": 2
+    },
+    "communityValue": {
+      "value": 935500,
+      "growth": 0.054000000000000006,
+      "growth5YearAverage": 0.45,
+      "growth10YearAverage": 0.85
+    }
+  }
+}

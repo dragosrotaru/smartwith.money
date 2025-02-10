@@ -1,0 +1,86 @@
+{
+  "photos": [
+    "https://cache-e13.housesigma.com/file/pix-treb/X10440832/b9cab_1.jpg?66706868",
+    "https://cache-e14.housesigma.com/file/pix-treb/X10440832/b9cab_2.jpg?66706868",
+    "https://cache05.housesigma.com/file/pix-treb/X10440832/b9cab_3.jpg?66706868",
+    "https://cache06.housesigma.com/file/pix-treb/X10440832/b9cab_4.jpg?66706868",
+    "https://cache08.housesigma.com/file/pix-treb/X10440832/b9cab_5.jpg?66706868",
+    "https://cache09.housesigma.com/file/pix-treb/X10440832/b9cab_6.jpg?66706868",
+    "https://cache16.housesigma.com/file/pix-treb/X10440832/b9cab_7.jpg?66706868",
+    "https://cache17.housesigma.com/file/pix-treb/X10440832/b9cab_8.jpg?66706868",
+    "https://cache18.housesigma.com/file/pix-treb/X10440832/b9cab_9.jpg?66706868",
+    "https://cache19.housesigma.com/file/pix-treb/X10440832/b9cab_10.jpg?66706868",
+    "https://cache-e11.housesigma.com/file/pix-treb/X10440832/b9cab_11.jpg?66706868",
+    "https://cache-e12.housesigma.com/file/pix-treb/X10440832/b9cab_12.jpg?66706868",
+    "https://cache-e13.housesigma.com/file/pix-treb/X10440832/b9cab_13.jpg?66706868",
+    "https://cache-e14.housesigma.com/file/pix-treb/X10440832/b9cab_14.jpg?66706868",
+    "https://cache05.housesigma.com/file/pix-treb/X10440832/b9cab_15.jpg?66706868",
+    "https://cache06.housesigma.com/file/pix-treb/X10440832/b9cab_16.jpg?66706868",
+    "https://cache08.housesigma.com/file/pix-treb/X10440832/b9cab_17.jpg?66706868",
+    "https://cache09.housesigma.com/file/pix-treb/X10440832/b9cab_18.jpg?66706868",
+    "https://cache16.housesigma.com/file/pix-treb/X10440832/b9cab_19.jpg?66706868",
+    "https://cache17.housesigma.com/file/pix-treb/X10440832/b9cab_20.jpg?66706868",
+    "https://cache18.housesigma.com/file/pix-treb/X10440832/b9cab_21.jpg?66706868",
+    "https://cache19.housesigma.com/file/pix-treb/X10440832/b9cab_22.jpg?66706868",
+    "https://cache-e11.housesigma.com/file/pix-treb/X10440832/b9cab_23.jpg?66706868",
+    "https://cache-e12.housesigma.com/file/pix-treb/X10440832/b9cab_24.jpg?66706868",
+    "https://cache-e13.housesigma.com/file/pix-treb/X10440832/b9cab_25.jpg?66706868",
+    "https://cache-e14.housesigma.com/file/pix-treb/X10440832/b9cab_26.jpg?66706868",
+    "https://cache05.housesigma.com/file/pix-treb/X10440832/b9cab_27.jpg?66706868",
+    "https://cache06.housesigma.com/file/pix-treb/X10440832/b9cab_28.jpg?66706868",
+    "https://cache08.housesigma.com/file/pix-treb/X10440832/b9cab_29.jpg?66706868",
+    "https://cache09.housesigma.com/file/pix-treb/X10440832/b9cab_30.jpg?66706868"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "4372 Ontario St",
+      "municipality": "Lincoln",
+      "postalCode": "L0R1B0",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": null,
+    "coordinates": {
+      "latitude": 43.16977,
+      "longitude": -79.477
+    },
+    "propertyTax": 4972,
+    "lotSize": 10890,
+    "squareFootage": 1750,
+    "askingPrice": 899999,
+    "daysOnMarket": 75,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2024-11-19T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "xLkv3V6e2qR3DBNr",
+        "event": "For Sale"
+      },
+      {
+        "startDate": "2024-08-13T00:00:00.000Z",
+        "endDate": "2024-11-13T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "LzQ1y5pjjw4YqdeK",
+        "event": "Expired"
+      }
+    ],
+    "estimatePrice": 877200,
+    "estimatePriceConfident": 0.69,
+    "estimateRent": 2815,
+    "estimateRentDays": 36,
+    "estimateRentYearReturn": 2.9,
+    "scores": {
+      "school": 7,
+      "growth": 1,
+      "rent": 3
+    },
+    "communityValue": {
+      "value": 762000,
+      "growth": -0.129,
+      "growth5YearAverage": 0.4,
+      "growth10YearAverage": null
+    }
+  }
+}

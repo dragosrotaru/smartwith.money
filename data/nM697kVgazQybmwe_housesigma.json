@@ -1,0 +1,4684 @@
+{
+  "https://housesigma.com/bkv2/api/init/app": {
+    "url": "https://housesigma.com/bkv2/api/init/app",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-06T04:47:13.557Z",
+    "data": {
+      "status": true,
+      "data": {
+        "message": "",
+        "timeout_explain": {
+          "explain_title": "View Listing Details",
+          "button_text": "Confirm Login",
+          "explain_text": "Local real estate board’s rules require you to validate login to see this property. <a href=\"https://housesigma.com/blog-en/feature-changes-for-trreb/\" target=\"_blank\" class=\"explain_link\">(Full Details Here)</a>",
+          "explain_subtext": "Please log in again to continue"
+        },
+        "revalidate_explain": {
+          "explain_text": "Your password has expired due to Real Estate Board requirements. Please re-confirm your password. <a href=\"https://housesigma.com/blog-en/faq/other/re-validate-password/\" target=\"_blank\" class=\"explain_link\">(Full Details Here)</a>",
+          "explain_subtext": ""
+        },
+        "apiUrl": "https://housesigma.com/bkv2//api/",
+        "siteUrl": "https://housesigma.com/app",
+        "update": false,
+        "force_update": false,
+        "update_message": "",
+        "update_url": "https://housesigma.com/bkv2//landing/download?c=in_app_update",
+        "qr_code": {
+          "app_download_android": "https://housesigma.com/bkv2//img/qrcode/landingpage_noborder_290.png",
+          "app_download_ios": "https://housesigma.com/bkv2//img/qrcode/landingpage_noborder_290.png",
+          "wechat_public": "https://housesigma.com/bkv2//img/qrcode/qrcode_wechat_noborder_296.png"
+        },
+        "provinces": [
+          {
+            "id": "ON",
+            "name": "Ontario",
+            "proximity": "-79.39296079049416,43.67037569297358",
+            "location": {
+              "lat": 43.6532,
+              "lon": -79.3832
+            },
+            "default_tos": "TREB"
+          },
+          {
+            "id": "BC",
+            "name": "British Columbia",
+            "proximity": "-123.10927972868984,49.22982666354977",
+            "location": {
+              "lat": 49.246292,
+              "lon": -123.116226
+            },
+            "default_tos": "REBGV"
+          },
+          {
+            "id": "AB",
+            "name": "Alberta",
+            "proximity": "-114.07212858564964,51.045004829856964",
+            "location": {
+              "lat": 51.045004829856964,
+              "lon": -114.07212858564964
+            },
+            "default_tos": "PILLAR9"
+          }
+        ],
+        "ua_detection": {
+          "client_type": "desktop_v7",
+          "is_wechat": false,
+          "is_oldWechat": false,
+          "is_robot": false,
+          "device_type": "Desktop",
+          "device_name": "Macintosh",
+          "platform": "macOS",
+          "platform_version": "10.15",
+          "browser": "Firefox",
+          "browser_version": "134.0"
+        },
+        "geoip": {
+          "province_iso": null,
+          "province": null,
+          "country_iso": "CA",
+          "country": "Canada",
+          "continent_iso": "NA",
+          "continent": "North America",
+          "lang": "en_US"
+        },
+        "meta": {
+          "title": "HouseSigma - Canada Real Estate Sold Price and Home Valuation",
+          "header": "Ontario Homes for sale with 16+ years of Nearby sold price history for real estate valuation",
+          "description": "Market trend, listing, price estimation",
+          "image": "https://housesigma.com/bkv2//img/logo/icon_green_400.png",
+          "type": "website",
+          "url": "https://housesigma.com/bkv2//landing/download?c=recommend",
+          "url_ios": "https://housesigma.com/bkv2//landing/download?c=recommend&utm_source=user-share&utm_medium=ios&ign=",
+          "url_android": "https://housesigma.com/bkv2//landing/download?c=recommend&utm_source=user-share&utm_medium=android&ign="
+        },
+        "native_config": {
+          "map_satellite": "https://satellite.housesigma.com/v1/style-special.json?ver=20230602",
+          "map_vector": "https://map.housesigma.com/styles/maptiler-street-v3/style.json?ver=20230602",
+          "map_parcel": "https://mapraster.housesigma.com/styles/map-properties/{z}/{x}/{y}.png?ver=20230602",
+          "map_static": "https://mapraster.housesigma.com/styles/maptiler-street-v3/static/",
+          "url_join_us": "https://team.housesigma.com/join-us/",
+          "url_google_map": "https://www.google.com/maps/dir/?api=1&origin=&destination="
+        },
+        "tos": {
+          "ORTIS": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "ITSO": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "TREB": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "DDF": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "OREB": {
+            "term_text": {
+              "header": "Ottawa Real Estate Board(OREB)",
+              "body": "You are agreeing to comply and be bound by the following terms of service and use.<br><br>The information provided herein shall only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose. The information is deemed reliable but is not guaranteed accurate by OREB."
+            }
+          },
+          "REBGV": {
+            "term_text": {
+              "header": "Real Estate Board of Greater Vancouver(REBGV)",
+              "body": "You are agreeing to comply and be bound by the following terms of service and use.<br><br>the Registrant has received, read and understood the brochure published by the British Columbia Real Estate Association entitled “Privacy Notice and Consent” ; <br><br>the Registrant acknowledges entering into a lawful REALTOR®/ consumer or REALTOR®/client relationship with the Member; <br><br>all data obtained from the MLS® VOW is intended for and may only be used for the Registrant’s personal, non-commercial use; <br><br>the Registrant has a bona fide interest in the purchase, sale or lease of real estate of the type being offered through the MLS® VOW; <br><br>the Registrant will not himself, and will not permit or assist others to, directly or indirectly: (i) copy, redistribute or retransmit any of the MLS® VOW Data or information provided; <br><br>copy, redistribute or retransmit any of the MLS® VOW Data or information provided; <br>display, post, disseminate, distribute, publish, broadcast, transfer, sell or sublicense any of the MLS® VOW Data to another person. <br>engage in Scraping (including “screen scraping” and “database scraping”), “data mining” or any other activity intended to collect, store, re-organize, summarize or manipulate any MLS® VOW Data or any related data; <br>the Registrant acknowledges the Board’s ownership of, and the validity of the Board’s proprietary rights and copyright in the MLS® VOW Data, and listing information; and <br><br>the Registrant expressly authorizes the Board or their duly authorized representatives, to access the MLS® VOW and Registrant’s information provided to the MLS® VOW Participant, for the purposes of verifying compliance with and pursuing enforcement of the Terms of Use and all applicable rules, regulations, bylaws, policies, and laws."
+            }
+          },
+          "RAHB": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "RAHB_2": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "PILLAR9": {
+            "term_text": {
+              "header": "Pillar 9™(Alberta One Realty Listing Services Inc.)",
+              "body": "You are agreeing to comply and be bound by the following terms of service and use.<br><br>Agree not copy, redistribute, or retransmit any of the VOW Content, except in connection with the VOW Customer’s consideration of the purchase or sale of an individual property.<br><br>Acknowledges the Association’s ownership of and the validity of the Association’s copyrights in the MLS® System data.<br><br>Despite the preceding provisions, the MLS®, Association and other Members and their duly authorized representatives may access the VOW for the purposes of verifying compliance with these Regional MLS® Rules and monitoring display of other Members’ listings by the VOW.<br><br>Information is deemed reliable but is not guaranteed accurate by Pillar 9™."
+            }
+          },
+          "RAE": {
+            "term_text": {
+              "header": "REALTORS® Association of Edmonton (RAE)",
+              "body": "By using this website, you agree to comply with and be bound by the following terms of service and use:<br><br>1. You acknowledge that these Terms of Use do not establish an agency relationship with the Participant.<br><br>2. All data obtained from the Virtual Office Website (VOW) is intended solely for your personal, non-commercial use.<br><br>3. You certify that you have a bona fide interest in the purchase, sale, or lease of real estate of the type being offered through the VOW.<br><br>4. You agree not to copy, redistribute, or retransmit any of the VOW Content, except in connection with your consideration of the purchase or sale of an individual property.<br><br>5. You acknowledge the Cooperative ownership of and the validity of the copyright in the MLS® System database."
+            }
+          },
+          "VREB": {
+            "term_text": {
+              "header": "Victoria Real Estate Board (VREB)",
+              "body": "You are agreeing to comply and be bound by the following terms of service and use.<br><br>i. That the registered user has received, read, and understands the brochure published  by the Real Estate Council of BC (RECBC) entitled \"Disclosure of Representation in Trading Services\";<br><br>ii. That all data obtained from the VOW is intended only for the registered user's personal, non-commercial use;<br><br>iii. That the registered user has a bona fide interest in the purchase, sale, or lease of real  estate of the type being offered through the VOW;<br><br>iv. That the registered user will not copy, redistribute, or retransmit any of the Licensed  Data or information provided; and<br><br>v. That the registered user acknowledges the Boards’ copyright in the Licensed Data.<br><br>vi. A Terms of Use (TOU) agreement may not impose a financial obligation on a client or create an agency agreement with a client.<br><br>Privacy Policy:<br><br>By using our services, you agree that we may collect and use your information for the purpose of enabling log-in access and to contact you for inquiries related to real estate. This usage complies with all applicable laws, including the requirements of the Personal Information Protection Act."
+            }
+          }
+        },
+        "copyright": {
+          "RAE": "Data is deemed reliable but is not guaranteed accurate by the REALTORS® Association of Edmonton. Copyright 2025 by the REALTORS® Association of Edmonton. All Rights Reserved."
+        },
+        "show_rae_map_tips": 1,
+        "collect_location": 1,
+        "location_collect_rate": 1,
+        "ddf_tos_banner": {
+          "enable": true,
+          "content": "By using our site, you agree to our <a href=\"https://housesigma.com/blog-en/terms-of-use/\" target=\"_blank\">Terms of Use</a>",
+          "button": "Dismiss"
+        }
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH14"
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/listing/info/disclaimer_v2": {
+    "url": "https://housesigma.com/bkv2/api/listing/info/disclaimer_v2",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-06T04:47:13.629Z",
+    "data": {
+      "status": true,
+      "data": {
+        "message": "",
+        "disclaimer": {
+          "ON": {
+            "default": "<p>The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</p><br/>",
+            "desktop_map_bottom": ""
+          },
+          "AB": {
+            "default": "<p>Data is supplied by Pillar 9™ MLS® System. Pillar 9™ is the owner of the copyright in its MLS® System. Data is deemed reliable but is not guaranteed accurate by Pillar 9™. The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by The Canadian Real Estate Association (CREA) and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.</p><br/><p>Data is deemed reliable but is not guaranteed accurate by the REALTORS® Association of Edmonton.</p><p>Copyright 2025 by the REALTORS® Association of Edmonton. All Rights Reserved.</p><br/><p>The trademarks REALTOR®, REALTORS®, and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by CREA and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.</p><p>Data is provided courtesy of Canadian Real Estate Association.</p><br/>",
+            "desktop_map_bottom": "<p>Data is deemed reliable but is not guaranteed accurate by the REALTORS® Association of Edmonton.</p><p>Copyright 2025 by the REALTORS® Association of Edmonton. All Rights Reserved.</p><br/>"
+          }
+        }
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH12"
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/listing/info/detail_v2": {
+    "url": "https://housesigma.com/bkv2/api/listing/info/detail_v2",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-06T04:47:13.639Z",
+    "data": {
+      "status": true,
+      "data": {
+        "show_consumer_questionnaire": 0,
+        "assessment": null,
+        "listing_price_change": [
+          {
+            "date": "2024-05-28",
+            "price": "$864,900",
+            "change": 3,
+            "tag": ""
+          },
+          {
+            "date": "2024-05-23",
+            "price": "$839,900",
+            "change": -4,
+            "tag": ""
+          },
+          {
+            "date": "2024-04-04",
+            "price": "$874,900",
+            "change": 0,
+            "tag": "Listed"
+          }
+        ],
+        "touring_activities": [],
+        "picture": {
+          "photo_url": "https://cache14.housesigma.com/file/pix-itso/148393372/7ed94_1.jpg?b309f470",
+          "photo_list": [
+            "https://cache14.housesigma.com/file/pix-itso/148393372/7ed94_1.jpg?b309f470",
+            "https://cache15.housesigma.com/file/pix-itso/148393372/7ed94_2.jpg?b309f470",
+            "https://cache08.housesigma.com/file/pix-itso/148393372/7ed94_3.jpg?b309f470",
+            "https://cache09.housesigma.com/file/pix-itso/148393372/7ed94_4.jpg?b309f470",
+            "https://cache-e14.housesigma.com/file/pix-itso/148393372/7ed94_5.jpg?b309f470",
+            "https://cache14.housesigma.com/file/pix-itso/148393372/7ed94_6.jpg?b309f470",
+            "https://cache15.housesigma.com/file/pix-itso/148393372/7ed94_7.jpg?b309f470",
+            "https://cache08.housesigma.com/file/pix-itso/148393372/7ed94_8.jpg?b309f470",
+            "https://cache09.housesigma.com/file/pix-itso/148393372/7ed94_9.jpg?b309f470",
+            "https://cache-e14.housesigma.com/file/pix-itso/148393372/7ed94_10.jpg?b309f470",
+            "https://cache14.housesigma.com/file/pix-itso/148393372/7ed94_11.jpg?b309f470",
+            "https://cache15.housesigma.com/file/pix-itso/148393372/7ed94_12.jpg?b309f470",
+            "https://cache08.housesigma.com/file/pix-itso/148393372/7ed94_13.jpg?b309f470",
+            "https://cache09.housesigma.com/file/pix-itso/148393372/7ed94_14.jpg?b309f470",
+            "https://cache-e14.housesigma.com/file/pix-itso/148393372/7ed94_15.jpg?b309f470",
+            "https://cache14.housesigma.com/file/pix-itso/148393372/7ed94_16.jpg?b309f470",
+            "https://cache15.housesigma.com/file/pix-itso/148393372/7ed94_17.jpg?b309f470",
+            "https://cache08.housesigma.com/file/pix-itso/148393372/7ed94_18.jpg?b309f470",
+            "https://cache09.housesigma.com/file/pix-itso/148393372/7ed94_19.jpg?b309f470",
+            "https://cache-e14.housesigma.com/file/pix-itso/148393372/7ed94_20.jpg?b309f470",
+            "https://cache14.housesigma.com/file/pix-itso/148393372/7ed94_21.jpg?b309f470",
+            "https://cache15.housesigma.com/file/pix-itso/148393372/7ed94_22.jpg?b309f470",
+            "https://cache08.housesigma.com/file/pix-itso/148393372/7ed94_23.jpg?b309f470",
+            "https://cache09.housesigma.com/file/pix-itso/148393372/7ed94_24.jpg?b309f470",
+            "https://cache-e14.housesigma.com/file/pix-itso/148393372/7ed94_25.jpg?b309f470",
+            "https://cache14.housesigma.com/file/pix-itso/148393372/7ed94_26.jpg?b309f470",
+            "https://cache15.housesigma.com/file/pix-itso/148393372/7ed94_27.jpg?b309f470",
+            "https://cache08.housesigma.com/file/pix-itso/148393372/7ed94_28.jpg?b309f470",
+            "https://cache09.housesigma.com/file/pix-itso/148393372/7ed94_29.jpg?b309f470",
+            "https://cache-e14.housesigma.com/file/pix-itso/148393372/7ed94_30.jpg?b309f470",
+            "https://cache14.housesigma.com/file/pix-itso/148393372/7ed94_31.jpg?b309f470",
+            "https://cache15.housesigma.com/file/pix-itso/148393372/7ed94_32.jpg?b309f470",
+            "https://cache08.housesigma.com/file/pix-itso/148393372/7ed94_33.jpg?b309f470",
+            "https://cache09.housesigma.com/file/pix-itso/148393372/7ed94_34.jpg?b309f470",
+            "https://cache-e14.housesigma.com/file/pix-itso/148393372/7ed94_35.jpg?b309f470",
+            "https://cache14.housesigma.com/file/pix-itso/148393372/7ed94_36.jpg?b309f470",
+            "https://cache15.housesigma.com/file/pix-itso/148393372/7ed94_37.jpg?b309f470",
+            "https://cache08.housesigma.com/file/pix-itso/148393372/7ed94_38.jpg?b309f470",
+            "https://cache09.housesigma.com/file/pix-itso/148393372/7ed94_39.jpg?b309f470",
+            "https://cache-e14.housesigma.com/file/pix-itso/148393372/7ed94_40.jpg?b309f470",
+            "https://cache14.housesigma.com/file/pix-itso/148393372/7ed94_41.jpg?b309f470",
+            "https://cache15.housesigma.com/file/pix-itso/148393372/7ed94_42.jpg?b309f470",
+            "https://cache08.housesigma.com/file/pix-itso/148393372/7ed94_43.jpg?b309f470",
+            "https://cache09.housesigma.com/file/pix-itso/148393372/7ed94_44.jpg?b309f470",
+            "https://cache-e14.housesigma.com/file/pix-itso/148393372/7ed94_45.jpg?b309f470",
+            "https://cache14.housesigma.com/file/pix-itso/148393372/7ed94_46.jpg?b309f470",
+            "https://cache15.housesigma.com/file/pix-itso/148393372/7ed94_47.jpg?b309f470",
+            "https://cache08.housesigma.com/file/pix-itso/148393372/7ed94_48.jpg?b309f470"
+          ]
+        },
+        "house": {
+          "id_listing": "nM697kVgazQybmwe",
+          "id_address": "wJKR7P82Lqv7XeLP",
+          "seo_municipality": "pelham-real-estate",
+          "seo_address": "316-canboro-road",
+          "ml_num": "40565261",
+          "ml_num_merge": "40565261",
+          "hash_id": "JZD7vrVtEo9P7qeR",
+          "seo_suffix": "316-Canboro-Road-Pelham-L0S1M0-40565261-X9403802",
+          "house_type_name": "Single Family Residence",
+          "house_type": "D.",
+          "address": "316 Canboro Road",
+          "address_seo": "316 Canboro Road",
+          "address_navigation": "316 Canboro Road, Pelham, ",
+          "list_status": {
+            "public": 1,
+            "live": 0,
+            "flg_idx": 1,
+            "sold": 0,
+            "s_r": "Sale",
+            "text": "Expired",
+            "status": "EXP",
+            "feature": null,
+            "precon": null,
+            "agent_available": true,
+            "premium": 1,
+            "archive": 0,
+            "watched": 0,
+            "watched_text": "Watch",
+            "community_watched": 0,
+            "community_watch_types": []
+          },
+          "list_dates": {
+            "date_added": "2024-04-04",
+            "date_added_days": 307,
+            "date_start": "2024-04-04",
+            "date_start_days": 307,
+            "date_start_month": 10,
+            "date_update": "2024-06-01",
+            "date_end": "2024-06-01",
+            "date_end_days": 249,
+            "date_list_days": 58,
+            "date_sold_report": null
+          },
+          "id_community": 5334,
+          "id_municipality": 10253,
+          "community_name": "Ridgeville",
+          "municipality_name": "Pelham",
+          "municipality_area": null,
+          "country": "CA",
+          "province": "ON",
+          "province_name": "Ontario",
+          "cross_street": "",
+          "bedroom": 2,
+          "bedroom_plus": null,
+          "bedroom_string": 2,
+          "washroom": 2,
+          "parking": {
+            "total": 0,
+            "garage_type": null,
+            "garage": 0,
+            "parking_type": null,
+            "parking": 4,
+            "text": " 0 garage,  4 parking"
+          },
+          "price": "864,900",
+          "price_int": 864900,
+          "price_abbr": "0.86M",
+          "price_sold": null,
+          "price_sold_int": null,
+          "price_origin": "874,900",
+          "price_tag": null,
+          "map": {
+            "lat": 43.037448,
+            "lon": -79.311967
+          },
+          "tax_int": 4162,
+          "maintenance_int": null,
+          "brokerage": "Listed by RE/MAX GARDEN CITY REALTY INC, BROKERAGE",
+          "text": {
+            "list_date_short": "Expired 2024-06-01",
+            "list_date_long": "Expired 2024-06-01, Dom: 58 days",
+            "dom_short": "Expired in Jun 2024",
+            "dom_short_v2": "in Jun 2024",
+            "dom_long": "Expired 249 days ago, Dom: 58 days",
+            "rooms_short": "2 bd 2 ba 0 gr",
+            "rooms_long": "2 Bedroom, 2 Bathroom, 0 Garage",
+            "status_chg_date": "8 months ago",
+            "hs_exclusive_tag": null
+          },
+          "house_area": {
+            "area": "1708",
+            "area_note": null,
+            "unit": "feet²",
+            "estimate": 1708
+          },
+          "land": {
+            "front": 111,
+            "depth": 181,
+            "unit": "feet",
+            "irregular": "Yes",
+            "text": "111 x 181 feet"
+          },
+          "open_house_date": [],
+          "tos_source": "ITSO",
+          "data_source_raw": "ITSO",
+          "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+          "copyright_text": {
+            "copyright": "<p>Copyright: © 2025 HouseSigma Inc. All rights reserved. HouseSigma Inc. is a registered real estate brokerage in the Province of Ontario.</p>",
+            "housesigmaInc": "HouseSigma Inc. Brokerage",
+            "disclaimer_img": null,
+            "disclaimer_url": null
+          },
+          "agent_user": {
+            "id": 1,
+            "name": "System API",
+            "phone": "2894695060",
+            "picture": "",
+            "created": "2018-06-29 13:58:10"
+          },
+          "bind_agent_user": null,
+          "contact_message": "I'd like to buy/sell something similar to: [40565261], 316 Canboro Road, Pelham",
+          "postal_code": "L0S1M0",
+          "postal_code_seo": "L0S1M0",
+          "pending_review_text": "",
+          "list_agent_name": null,
+          "brokerage_text": null,
+          "schedule_message": "I want to book an appointment to view: [40565261], 316 Canboro Road, Pelham",
+          "direct_contact_message": "I want to know more about your toured listing: [40565261], 316 Canboro Road, Pelham",
+          "direct_contact_trreb_questionnaire_message": ""
+        },
+        "key_facts": null,
+        "key_facts_v2": {
+          "tax": {
+            "name": "Tax",
+            "value": "$4,162 / 2023",
+            "public": 1
+          },
+          "property_type": {
+            "name": "Property Type",
+            "value": "Single Family Residence, Two Story",
+            "public": 1
+          },
+          "maintenance": {
+            "name": "Maintenance",
+            "value": null,
+            "public": 1
+          },
+          "included_utility": {
+            "name": "Included Utility",
+            "value": null,
+            "public": 1
+          },
+          "build_year": {
+            "name": "Year Built",
+            "value": "1925",
+            "public": 1
+          },
+          "size_without_area_note": {
+            "name": "Size",
+            "value": "1708 feet²",
+            "public": 1
+          },
+          "size_with_area_note": {
+            "name": "Size",
+            "value": null,
+            "public": 1
+          },
+          "lot_size": {
+            "name": "Lot Size",
+            "value": "111 x 181 feet",
+            "public": 1
+          },
+          "locker": {
+            "name": "Locker",
+            "value": null,
+            "public": 1
+          },
+          "irregular": {
+            "name": "Lot Irregularities",
+            "value": "Yes",
+            "public": 1
+          },
+          "condo_exposure": {
+            "name": "Exposure",
+            "value": null,
+            "public": 1
+          },
+          "parking": {
+            "name": "Parking",
+            "value": " 0 garage,  4 parking",
+            "public": 1
+          },
+          "basement": {
+            "name": "Basement",
+            "value": "Unfinished, Walk-Out Access",
+            "public": 1
+          },
+          "coop_commission": {
+            "name": "Coop Commission",
+            "value": null,
+            "public": 1
+          },
+          "ml_num_merge": {
+            "name": "Listing #",
+            "value": "40565261",
+            "public": 1
+          },
+          "data_source": {
+            "name": "Data Source",
+            "value": "ITSO",
+            "public": 1
+          },
+          "days_on_site_or_market": {
+            "name": "Days on Market",
+            "value": "58 days",
+            "public": 1
+          },
+          "status_chg_date": {
+            "name": "Status Change",
+            "value": "8 months ago",
+            "public": 1
+          },
+          "listed_on": {
+            "name": "Listed on",
+            "value": "2024-04-04",
+            "public": 1
+          },
+          "updated_on": {
+            "name": "Updated on",
+            "value": "2024-06-01",
+            "public": 1
+          },
+          "description1": {
+            "name": "Description",
+            "value": "Pre Inspected by Ameri Spec Inspection Services this stunning safe and sound classic 2 Bedroom, 2 Bathroom, home is a must see. Main floor presents a Front Foyer/Parlor, spacious Kitchen with eating peninsula, quartz counters, and heated\r\nfloors, with access to the backyard decks. Also on the Main floor a 3 pc Bathroom with Shower & Laundry\r\narea, Living Room with Gas Fireplace, large Dining Room, and Sunroom overlooking the yard with outside\r\naccess. Original pine floors in the main floor living area. Upper level features oversized 3 Pc. Bathroom with\r\njetted tub, Primary Bedroom, that could be easily divided and changed back to the homes original 3 bedroom\r\nformat, and a large secondary Bedroom. Lots of closet and storage space on all floors. The Basement,\r\ncompletely waterproofed professionally has a walk out. Oasis backyard with 2 tiered deck with direct gas BBQ\r\nhookup. Upper deck is 12 Ft x 20 Ft. stepping down to the second 15 Ft. x 20 Ft. level with Gazebo, leading\r\ndown to the 15 Ft. x 30 Ft. above ground Pool with wrap around deck. Fully fenced yard. 3 Storage Sheds.\r\nThis quiet home boasts newer windows and doors and low utility bills. Gutted to the studs from top to bottom\r\nthis home has had all major components updated or replaced preserving its charm. Lots of front space to\r\nexpand the driveway or build a garage if so desired. Don't miss out, homes like this rarely come on the market\r\nfor sale in such excellent condition.",
+            "public": 1
+          },
+          "description2": {
+            "name": "Description",
+            "value": null,
+            "public": 1
+          },
+          "summary": {
+            "name": "Summary",
+            "value": [
+              "Pre-inspected by Ameri Spec Inspection Services.",
+              "2 Bedroom, 2 Bathroom home with Front Foyer/Parlor, Kitchen with quartz counters and heated floors.",
+              "Main floor also includes 3 pc Bathroom, Living Room with Gas Fireplace, Dining Room, and Sunroom.",
+              "Upper level features oversized 3 pc Bathroom, Primary Bedroom, and large secondary Bedroom.",
+              "Basement is professionally waterproofed with walk-out access.",
+              "Oasis backyard with 2 tiered deck, gas BBQ hookup, Gazebo, above ground Pool with wrap around deck.",
+              "Newer windows and doors, low utility bills, fully fenced yard, 3 Storage Sheds, potential for expanding driveway or building a garage."
+            ],
+            "public": 1
+          },
+          "project_name": {
+            "name": "Project Name",
+            "value": null,
+            "public": 1
+          },
+          "builders": {
+            "name": "Builder(s)",
+            "value": null,
+            "public": 1
+          },
+          "occupancy_date": {
+            "name": "Occupancy Date",
+            "value": null,
+            "public": 1
+          },
+          "aggregated_dom": {
+            "name": "Property Days on Market",
+            "value": "240 days",
+            "public": 1
+          }
+        },
+        "school": [
+          {
+            "distance": 3714,
+            "programs": [
+              "English",
+              "JK-8"
+            ],
+            "id_school": 3316,
+            "display_score": 1,
+            "id": 3316,
+            "name": "Wellington Heights Public School",
+            "board": "DISTRICT SCHOOL BOARD OF NIAGARA",
+            "address": "9 Alsop Ave",
+            "phone": "(905) 892-6451",
+            "eqao_json": null,
+            "city": "Fenwick",
+            "region": "Ontario",
+            "web": "https://wellingtonheights.dsbn.org/",
+            "geo_latitude": 43.027908114823,
+            "geo_longitude": -79.3557627,
+            "school_type": "Elementary",
+            "board_type": "Public",
+            "score": 7.8,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 806,
+            "rank_total": 2975,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "806/2975",
+                "score_name": "Score",
+                "score_value": "7.56"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "308/3044",
+                "score_name": "Score",
+                "score_value": "9.09"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "1122/2979",
+                "score_name": "Score",
+                "score_value": "6.61"
+              }
+            ]
+          },
+          {
+            "distance": 644,
+            "programs": [
+              "English",
+              "9-12"
+            ],
+            "id_school": 3255,
+            "display_score": 1,
+            "id": 3255,
+            "name": "E.L. CROSSLEY Secondary School",
+            "board": "DISTRICT SCHOOL BOARD OF NIAGARA",
+            "address": "350 Hwy 20 W",
+            "phone": "(905) 892-2635",
+            "eqao_json": null,
+            "city": "Ridgeville",
+            "region": "Ontario",
+            "web": "https://elcrossley.dsbn.org/home",
+            "geo_latitude": 43.04151551483,
+            "geo_longitude": -79.31759985,
+            "school_type": "Secondary",
+            "board_type": "Public",
+            "score": 7.7,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 202,
+            "rank_total": 688,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "202/688",
+                "score_name": "Score",
+                "score_value": "7.36"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "203/728",
+                "score_name": "Score",
+                "score_value": "7.49"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "318/722",
+                "score_name": "Score",
+                "score_value": "6.04"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "44/722",
+                "score_name": "Score",
+                "score_value": "9.45"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "133/703",
+                "score_name": "Score",
+                "score_value": "8.3"
+              },
+              {
+                "year": 2015,
+                "rank_name": "Rank",
+                "rank_value": "156/633",
+                "score_name": "Score",
+                "score_value": "7.78"
+              }
+            ]
+          },
+          {
+            "distance": 4622,
+            "programs": [
+              "English",
+              "JK-8",
+              "Catholic"
+            ],
+            "id_school": 4156,
+            "display_score": 1,
+            "id": 4156,
+            "name": "St Ann Catholic Elementary School (Fenwick)",
+            "board": "Niagara Catholic District School Board",
+            "address": "832 Canboro Rd",
+            "phone": "905.892.3942",
+            "eqao_json": null,
+            "city": "Fenwick",
+            "region": "Ontario",
+            "web": "https://schools.niagaracatholic.ca/st-ann-pelham/",
+            "geo_latitude": 43.023274014821,
+            "geo_longitude": -79.365416,
+            "school_type": "Elementary",
+            "board_type": "Catholic",
+            "score": 7.4,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 31,
+            "rank_total": 2975,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "31/2975",
+                "score_name": "Score",
+                "score_value": "9.91"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "917/3044",
+                "score_name": "Score",
+                "score_value": "7.29"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "815/2979",
+                "score_name": "Score",
+                "score_value": "7.54"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "1629/2939",
+                "score_name": "Score",
+                "score_value": "5.01"
+              }
+            ]
+          },
+          {
+            "distance": 6685,
+            "programs": [
+              "English",
+              "9-12",
+              "Catholic"
+            ],
+            "id_school": 4160,
+            "display_score": 1,
+            "id": 4160,
+            "name": "Notre Dame College School",
+            "board": "Niagara Catholic District School Board",
+            "address": "64 Smith St",
+            "phone": "905-788-3060",
+            "eqao_json": null,
+            "city": "Welland",
+            "region": "Ontario",
+            "web": "https://notredamecollege.ca/",
+            "geo_latitude": 43.000433814809,
+            "geo_longitude": -79.2471661,
+            "school_type": "Secondary",
+            "board_type": "Catholic",
+            "score": 5,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 327,
+            "rank_total": 688,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "327/688",
+                "score_name": "Score",
+                "score_value": "5.72"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "450/728",
+                "score_name": "Score",
+                "score_value": "4.44"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "484/722",
+                "score_name": "Score",
+                "score_value": "3.97"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "444/722",
+                "score_name": "Score",
+                "score_value": "4.47"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "331/703",
+                "score_name": "Score",
+                "score_value": "5.76"
+              },
+              {
+                "year": 2015,
+                "rank_name": "Rank",
+                "rank_value": "322/633",
+                "score_name": "Score",
+                "score_value": "5.42"
+              }
+            ]
+          },
+          {
+            "distance": 4008,
+            "programs": [
+              "French Immersion",
+              "JK-8",
+              "Catholic"
+            ],
+            "id_school": 4152,
+            "display_score": 0,
+            "id": 4152,
+            "name": "Alexander Kuska Catholic Elementary School",
+            "board": "Niagara Catholic District School Board",
+            "address": "333 RICE RD",
+            "phone": "905.735.4471",
+            "eqao_json": null,
+            "city": "Welland",
+            "region": "Ontario",
+            "web": "https://schools.niagaracatholic.ca/alexanderkuska/",
+            "geo_latitude": 43.018396693798,
+            "geo_longitude": -79.270103350262,
+            "school_type": "Elementary",
+            "board_type": "Catholic",
+            "score": 0,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 1802,
+            "rank_total": 2975,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "1802/2975",
+                "score_name": "Score",
+                "score_value": "4.55"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "2210/3044",
+                "score_name": "Score",
+                "score_value": "3.47"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "822/2979",
+                "score_name": "Score",
+                "score_value": "7.52"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "1285/2939",
+                "score_name": "Score",
+                "score_value": "6.06"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "1961/2749",
+                "score_name": "Score",
+                "score_value": "3.58"
+              }
+            ]
+          },
+          {
+            "v3": 1,
+            "distance": 4518,
+            "programs": [
+              "French Immersion",
+              "1-8"
+            ],
+            "id_school": 3519,
+            "display_score": 0,
+            "id": 3519,
+            "name": "Gordon Public School",
+            "board": "DISTRICT SCHOOL BOARD OF NIAGARA",
+            "address": "468 Thorold Rd. W.",
+            "phone": "(905) 734-3730",
+            "eqao_json": null,
+            "city": "Welland",
+            "region": "Ontario",
+            "web": "https://gordon.dsbn.org/",
+            "geo_latitude": 43.004747714811,
+            "geo_longitude": -79.2789854,
+            "school_type": "Elementary",
+            "board_type": "Public",
+            "score": 0,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 769,
+            "rank_total": 2975,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "769/2975",
+                "score_name": "Score",
+                "score_value": "7.67"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "666/3044",
+                "score_name": "Score",
+                "score_value": "8.03"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "1412/2979",
+                "score_name": "Score",
+                "score_value": "5.73"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "1030/2939",
+                "score_name": "Score",
+                "score_value": "6.85"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "1549/2749",
+                "score_name": "Score",
+                "score_value": "4.93"
+              }
+            ]
+          },
+          {
+            "distance": 5156,
+            "programs": [
+              "French Immersion",
+              "9-12"
+            ],
+            "id_school": 3318,
+            "display_score": 0,
+            "id": 3318,
+            "name": "Welland Centennial",
+            "board": "DISTRICT SCHOOL BOARD OF NIAGARA",
+            "address": "240 Thorold Rd",
+            "phone": "(905) 735-0700",
+            "eqao_json": null,
+            "city": "Welland",
+            "region": "Ontario",
+            "web": "https://centennial.dsbn.org",
+            "geo_latitude": 43.004549914811,
+            "geo_longitude": -79.2672717,
+            "school_type": "Secondary",
+            "board_type": "Public",
+            "score": 0,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 402,
+            "rank_total": 688,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "402/688",
+                "score_name": "Score",
+                "score_value": "4.74"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "336/728",
+                "score_name": "Score",
+                "score_value": "5.85"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "301/722",
+                "score_name": "Score",
+                "score_value": "6.25"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "141/722",
+                "score_name": "Score",
+                "score_value": "8.24"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "131/703",
+                "score_name": "Score",
+                "score_value": "8.32"
+              },
+              {
+                "year": 2015,
+                "rank_name": "Rank",
+                "rank_value": "259/633",
+                "score_name": "Score",
+                "score_value": "6.32"
+              }
+            ]
+          },
+          {
+            "distance": 6685,
+            "programs": [
+              "French Immersion",
+              "9-12",
+              "Catholic"
+            ],
+            "id_school": 4160,
+            "display_score": 0,
+            "id": 4160,
+            "name": "Notre Dame College School",
+            "board": "Niagara Catholic District School Board",
+            "address": "64 Smith St",
+            "phone": "905-788-3060",
+            "eqao_json": null,
+            "city": "Welland",
+            "region": "Ontario",
+            "web": "https://notredamecollege.ca/",
+            "geo_latitude": 43.000433814809,
+            "geo_longitude": -79.2471661,
+            "school_type": "Secondary",
+            "board_type": "Catholic",
+            "score": 0,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 327,
+            "rank_total": 688,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "327/688",
+                "score_name": "Score",
+                "score_value": "5.72"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "450/728",
+                "score_name": "Score",
+                "score_value": "4.44"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "484/722",
+                "score_name": "Score",
+                "score_value": "3.97"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "444/722",
+                "score_name": "Score",
+                "score_value": "4.47"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "331/703",
+                "score_name": "Score",
+                "score_value": "5.76"
+              },
+              {
+                "year": 2015,
+                "rank_name": "Rank",
+                "rank_value": "322/633",
+                "score_name": "Score",
+                "score_value": "5.42"
+              }
+            ]
+          }
+        ],
+        "property_detail": {
+          "property": {
+            "name": "Property",
+            "value": [
+              {
+                "name": "Property Type",
+                "value": "Single Family Residence",
+                "public": 1
+              },
+              {
+                "name": "Style",
+                "value": "Two Story",
+                "public": 1
+              },
+              {
+                "name": "Frontage Type",
+                "value": "South",
+                "public": 1
+              },
+              {
+                "name": "Community",
+                "value": "Ridgeville",
+                "public": 1
+              },
+              {
+                "name": "Municipality",
+                "value": "Pelham",
+                "public": 1
+              }
+            ]
+          },
+          "building": {
+            "name": "Building",
+            "value": [
+              {
+                "name": "Size",
+                "value": "1708 feet²",
+                "public": 1
+              },
+              {
+                "name": "Building Age",
+                "value": "1925",
+                "public": 1
+              },
+              {
+                "name": "Architecture Style",
+                "value": "Two Story",
+                "public": 1
+              },
+              {
+                "name": "Direction",
+                "value": "Canboro Road ,  just west of Effingham Rd",
+                "public": 1
+              },
+              {
+                "name": "Roof",
+                "value": "Fiberglass",
+                "public": 1
+              },
+              {
+                "name": "Construction",
+                "value": "Stucco",
+                "public": 1
+              },
+              {
+                "name": "Exterior Feature",
+                "value": "Lighting,  Storage Buildings",
+                "public": 1
+              },
+              {
+                "name": "Foundation Type",
+                "value": "Block,  Poured Concrete",
+                "public": 1
+              },
+              {
+                "name": "Security",
+                "value": "Carbon Monoxide Detector(s),  Smoke Detector(s)",
+                "public": 1
+              },
+              {
+                "name": "Utilities",
+                "value": "Fibre Optics",
+                "public": 1
+              },
+              {
+                "name": "Pool",
+                "value": "Above Ground",
+                "public": 1
+              }
+            ]
+          },
+          "inside": {
+            "name": "Inside",
+            "value": [
+              {
+                "name": "Feature",
+                "value": "Central Vacuum,  Work Bench",
+                "public": 1
+              },
+              {
+                "name": "Appliances Included",
+                "value": "Dishwasher, Dryer, Microwave, Refrigerator, Stove, Washer, Window Coverings, Basement Storage Box/Shelves,  Workbench,  Microwave Cart,  All Pool Equipment,  Ceiling Fans,  Central\r\nvac/Attachments 4 Kitchen Stools,  Patio Gazebo,  Living Room Gas Fireplace Stove.",
+                "public": 1
+              },
+              {
+                "name": "Appliances Excluded",
+                "value": "Electric Fireplace /Sunroom,  Portable Dehumidifier,  Stand Up Basement Freezer,  Basement Bar Fridge,  Patio\r\nfurniture/Umbrella,  Gas Bbq.",
+                "public": 1
+              },
+              {
+                "name": "Rooms",
+                "value": "9",
+                "public": 1
+              },
+              {
+                "name": "Bedrooms",
+                "value": "2",
+                "public": 1
+              },
+              {
+                "name": "Bedrooms Above Ground",
+                "value": "2",
+                "public": 1
+              },
+              {
+                "name": "Bedrooms Below Ground",
+                "value": "0",
+                "public": 1
+              },
+              {
+                "name": "Beds on Level Second",
+                "value": "2",
+                "public": 1
+              },
+              {
+                "name": "Bathrooms",
+                "value": "2",
+                "public": 1
+              },
+              {
+                "name": "Full Bathrooms",
+                "value": "2",
+                "public": 1
+              },
+              {
+                "name": "Half Bathrooms",
+                "value": "0",
+                "public": 1
+              },
+              {
+                "name": "2 Piece Bathrooms",
+                "value": "0",
+                "public": 1
+              },
+              {
+                "name": "3 Piece Bathrooms",
+                "value": "0",
+                "public": 1
+              },
+              {
+                "name": "4 Piece Bathrooms",
+                "value": "0",
+                "public": 1
+              },
+              {
+                "name": "5 Plus Piece Bathrooms",
+                "value": "0",
+                "public": 1
+              },
+              {
+                "name": "Baths on Level Second",
+                "value": "1",
+                "public": 1
+              },
+              {
+                "name": "Kitchens",
+                "value": "1",
+                "public": 1
+              },
+              {
+                "name": "Kitchens Above Ground",
+                "value": "1",
+                "public": 1
+              },
+              {
+                "name": "Kitchens Below Ground",
+                "value": "0",
+                "public": 1
+              },
+              {
+                "name": "Fireplace",
+                "value": "Living Room",
+                "public": 1
+              },
+              {
+                "name": "Fireplace Total",
+                "value": "1",
+                "public": 1
+              },
+              {
+                "name": "Laundry",
+                "value": "0",
+                "public": 1
+              }
+            ]
+          },
+          "utilities": {
+            "name": "Utilities",
+            "value": [
+              {
+                "name": "Cooling",
+                "value": "Central Air",
+                "public": 1
+              },
+              {
+                "name": "Heating",
+                "value": "Forced Air,  Natural Gas",
+                "public": 1
+              },
+              {
+                "name": "Water",
+                "value": "Municipal",
+                "public": 1
+              }
+            ]
+          },
+          "parking": {
+            "name": "Parking",
+            "value": [
+              {
+                "name": "Driveway Parking",
+                "value": "Private Drive Double Wide",
+                "public": 1
+              },
+              {
+                "name": "Garage",
+                "value": "0",
+                "public": 1
+              },
+              {
+                "name": "Total Parking Space",
+                "value": "4",
+                "public": 1
+              },
+              {
+                "name": "Parking Features",
+                "value": "Interlock",
+                "public": 1
+              }
+            ]
+          },
+          "highlights": {
+            "name": "Highlights",
+            "value": [
+              {
+                "name": "Lot Features",
+                "value": "Rural,  Irregular Lot,  Dog Park,  Highway Access,  Library,  Place of Worship,  School Bus Route,  Schools,  Trails",
+                "public": 1
+              }
+            ]
+          },
+          "land": {
+            "name": "Land",
+            "value": [
+              {
+                "name": "Sewer",
+                "value": "Septic Tank",
+                "public": 1
+              },
+              {
+                "name": "Frontage Length",
+                "value": "111.06",
+                "public": 1
+              },
+              {
+                "name": "Depth",
+                "value": "181.8",
+                "public": 1
+              },
+              {
+                "name": "Lot Size",
+                "value": "111 x 181 feet",
+                "public": 1
+              },
+              {
+                "name": "Acreage",
+                "value": "< 0.5",
+                "public": 1
+              },
+              {
+                "name": "Zoning",
+                "value": "RR",
+                "public": 1
+              },
+              {
+                "name": "Topography",
+                "value": "Rolling, Wooded/Treed",
+                "public": 1
+              },
+              {
+                "name": "View",
+                "value": "Ridge,  Trees/Woods",
+                "public": 1
+              }
+            ]
+          },
+          "farm": {
+            "name": "Farm",
+            "value": [
+              {
+                "name": "Farm Land Area Units",
+                "value": "Square Feet",
+                "public": 1
+              }
+            ]
+          }
+        },
+        "listing_history": [
+          {
+            "id_listing": "nM697kVgazQybmwe",
+            "ml_num": "40565261",
+            "seo_suffix": "316-Canboro-Road-Pelham-L0S1M0-40565261-X9403802",
+            "price": "$864,900",
+            "price_note": null,
+            "price_sold": null,
+            "date_start": "2024-04-04",
+            "date_end": "2024-06-01",
+            "data_source": "ITSO",
+            "status": "Expired",
+            "public": 1,
+            "button": 0,
+            "show_contact_agent": false,
+            "blur_price": false
+          },
+          {
+            "id_listing": "XRla7gb4eBRyjEvL",
+            "ml_num": "40523692",
+            "seo_suffix": "316-Canboro-Road-Pelham-L0S1M0-40523692-X8494247",
+            "price": "$889,000",
+            "price_note": null,
+            "price_sold": null,
+            "date_start": "2024-01-11",
+            "date_end": "2024-04-02",
+            "data_source": "ITSO",
+            "status": "Terminated",
+            "public": 1,
+            "button": 1,
+            "show_contact_agent": false,
+            "blur_price": false
+          },
+          {
+            "id_listing": "GMnKYq0RrWj3w1Qr",
+            "ml_num": "40475291",
+            "seo_suffix": "316-Canboro-Road-Pelham-L0S1M0-40475291-X8496424",
+            "price": "$899,000",
+            "price_note": null,
+            "price_sold": null,
+            "date_start": "2023-09-07",
+            "date_end": "2023-12-16",
+            "data_source": "ITSO",
+            "status": "Expired",
+            "public": 1,
+            "button": 1,
+            "show_contact_agent": false,
+            "blur_price": false
+          }
+        ],
+        "rooms": [
+          {
+            "size": "3.3 x 3.7",
+            "size_feet": "10.8 x 12.1",
+            "dc": "Original Pine Parlor Floors",
+            "type": "Foyer",
+            "lv": "Level: Main"
+          },
+          {
+            "size": "4 x 2.2",
+            "size_feet": "13.1 x 7.2",
+            "dc": "Luxury Vinyl Plank, Quartzite Counters, Combined Laundry Room, 3-Piece, Laundry",
+            "type": "Bathroom",
+            "lv": "Level: Main"
+          },
+          {
+            "size": "3.2 x 5.4",
+            "size_feet": "10.5 x 17.7",
+            "dc": "Quartz Counters, Heated Tile Floors, Eating Peninsula 4 Stools, Door to Back Decks and Yard.",
+            "type": "Kitchen",
+            "lv": "Level: Main"
+          },
+          {
+            "size": "5.2 x 4.7",
+            "size_feet": "17.1 x 15.4",
+            "dc": "Original Pine Floors, Fireplace",
+            "type": "Living Room",
+            "lv": "Level: Main"
+          },
+          {
+            "size": "3.8 x 3.7",
+            "size_feet": "12.5 x 12.1",
+            "dc": "Original Pine Floors",
+            "type": "Dining Room",
+            "lv": "Level: Main"
+          },
+          {
+            "size": "2.8 x 4.7",
+            "size_feet": "9.2 x 15.4",
+            "dc": "Pine Floors under carpet",
+            "type": "Sunroom",
+            "lv": "Level: Main"
+          },
+          {
+            "size": "2.9 x 2.6",
+            "size_feet": "9.5 x 8.5",
+            "dc": "Quartzite Counters,, 3-Piece, Jetted Bathtub",
+            "type": "Bathroom",
+            "lv": "Level: Second"
+          },
+          {
+            "size": "3.8 x 6",
+            "size_feet": "12.5 x 19.7",
+            "dc": "",
+            "type": "Bedroom",
+            "lv": "Level: Second"
+          },
+          {
+            "size": "4.3 x 5.7",
+            "size_feet": "14.1 x 18.7",
+            "dc": "Pine Floors, Could be divided to covert the back to it's original 3 bedroom second level layout",
+            "type": "Bedroom Primary",
+            "lv": "Level: Second"
+          }
+        ],
+        "rooms_public": 1,
+        "community_stats": {
+          "type": "D.",
+          "period": null,
+          "price_sold_median": "-",
+          "price_sold_growth_yoy": "-",
+          "price_sold_growth_5y": "-",
+          "price_sold_growth_10y": "-",
+          "price_sold_growth_yoy_percentile": "-",
+          "sold_count": null,
+          "sold_count_30": null,
+          "absorption_rate": null,
+          "temperature_text": null,
+          "dom_avg": null,
+          "new_listing_count": null,
+          "rent_180_ratio": null,
+          "period_name": "February 2025",
+          "growth_year": "-"
+        },
+        "community_stats_all": {
+          "house_type": "all",
+          "period": "2025-01-01",
+          "price_sold_median": 916579,
+          "price_sold_growth_yoy": -0.331,
+          "price_sold_growth_yoy_percentile": 3,
+          "sold_count": 0,
+          "sold_count_30": 0,
+          "dom_avg": 32,
+          "new_listing_count": 2,
+          "rent_180_ratio": null,
+          "active_listing_count": 2,
+          "absorption_rate": "0.25",
+          "price_sold_growth_5y": "-",
+          "price_sold_growth_10y": "-",
+          "period_name": "January 2025",
+          "growth_year": -33.1
+        },
+        "analytics": {
+          "estimate_price": "932,700",
+          "estimate_price_int": 932700,
+          "estimate_price_confident": 74.45,
+          "estimate_price_display_directly": 0,
+          "estimate_price_display": 1,
+          "estimate_price_display_top": 1,
+          "estimate_price_date": "2025-01-27",
+          "estimate_price_age": 9,
+          "price_diff": null,
+          "rent_base": 0,
+          "estimate_price_range": null,
+          "estimate_dom": null,
+          "estimate_dom_bar": null,
+          "estimate_rent": "2,410",
+          "estimate_rent_int": 2410,
+          "estimate_rent_days": 24,
+          "estimate_rent_yearreturn": 2.72,
+          "school": {
+            "highschool_score": 7.8,
+            "belowhighschool_score": 7.9
+          },
+          "stars": {
+            "school": 4,
+            "growth": null,
+            "rent": 1
+          },
+          "scores": {
+            "school": 8,
+            "growth": null,
+            "rent": 3
+          }
+        },
+        "virtual_open_house": [],
+        "public_open_house": [],
+        "community_stats_public": 1,
+        "premium_stats_display": 0,
+        "premium_stats": null,
+        "deposit": null,
+        "province_abbr": "ON",
+        "meta": {
+          "title": "316 Canboro Road, Pelham, Ontario L0S1M0 Listing History | HouseSigma",
+          "title_share": "316 Canboro Road, Pelham, Ontario L0S1M0 Listing History | HouseSigma",
+          "description": "Discover the perfect starter home or investment opportunity at 316 Canboro Road, Pelham, Ontario L0S1M0 with HouseSigma today.",
+          "image": "https://cache14.housesigma.com/file/pix-itso/148393372/7ed94_1.jpg?b309f470",
+          "canonical_url": "https://housesigma.com/on/pelham-real-estate/316-canboro-road/home/wJKR7P82Lqv7XeLP/",
+          "robots": "all"
+        },
+        "component_display": {
+          "my_note": 1,
+          "agent_touring_activities": 1,
+          "not_interested": 1,
+          "community_popularity_index": 1
+        },
+        "show_agent_recruit": 0,
+        "show_trustpilot": false,
+        "banner_top": {
+          "src": "https://static.housesigma.com/images/banner/join_housesigma_v2_750_204.png",
+          "url": "https://team.housesigma.com/join-us/",
+          "inner": false
+        },
+        "banner_bottom": null,
+        "show_premium_unlock": 0,
+        "user_referral_code": "",
+        "premium_share_text": ""
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH11"
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/listing/info/popularity": {
+    "url": "https://housesigma.com/bkv2/api/listing/info/popularity",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-06T04:47:14.624Z",
+    "data": {
+      "status": true,
+      "data": {
+        "premium_stats_display": 0,
+        "premium_stats_data": null,
+        "all_stats_data": {
+          "stats_index": [
+            {
+              "day": 0,
+              "community_average": 0,
+              "current_listing": 5
+            },
+            {
+              "day": 1,
+              "community_average": 1,
+              "current_listing": 9
+            },
+            {
+              "day": 2,
+              "community_average": 2,
+              "current_listing": 13
+            },
+            {
+              "day": 3,
+              "community_average": 3,
+              "current_listing": 16
+            },
+            {
+              "day": 4,
+              "community_average": 3,
+              "current_listing": 17
+            },
+            {
+              "day": 5,
+              "community_average": 4,
+              "current_listing": 19
+            },
+            {
+              "day": 6,
+              "community_average": 5,
+              "current_listing": 21
+            },
+            {
+              "day": 7,
+              "community_average": 6,
+              "current_listing": 24
+            },
+            {
+              "day": 8,
+              "community_average": 7,
+              "current_listing": 26
+            },
+            {
+              "day": 9,
+              "community_average": 7,
+              "current_listing": 27
+            },
+            {
+              "day": 10,
+              "community_average": 8,
+              "current_listing": 29
+            },
+            {
+              "day": 11,
+              "community_average": 8,
+              "current_listing": 31
+            },
+            {
+              "day": 12,
+              "community_average": 9,
+              "current_listing": 33
+            },
+            {
+              "day": 13,
+              "community_average": 9,
+              "current_listing": 34
+            },
+            {
+              "day": 14,
+              "community_average": 10,
+              "current_listing": 34
+            },
+            {
+              "day": 15,
+              "community_average": 10,
+              "current_listing": 35
+            },
+            {
+              "day": 16,
+              "community_average": 11,
+              "current_listing": 37
+            },
+            {
+              "day": 17,
+              "community_average": 11,
+              "current_listing": 38
+            },
+            {
+              "day": 18,
+              "community_average": 12,
+              "current_listing": 40
+            },
+            {
+              "day": 19,
+              "community_average": 13,
+              "current_listing": 41
+            },
+            {
+              "day": 20,
+              "community_average": 13,
+              "current_listing": 42
+            },
+            {
+              "day": 21,
+              "community_average": 14,
+              "current_listing": 43
+            },
+            {
+              "day": 22,
+              "community_average": 14,
+              "current_listing": 44
+            },
+            {
+              "day": 23,
+              "community_average": 15,
+              "current_listing": 44
+            },
+            {
+              "day": 24,
+              "community_average": 15,
+              "current_listing": 46
+            },
+            {
+              "day": 25,
+              "community_average": 16,
+              "current_listing": 46
+            },
+            {
+              "day": 26,
+              "community_average": 17,
+              "current_listing": 48
+            },
+            {
+              "day": 27,
+              "community_average": 17,
+              "current_listing": 49
+            },
+            {
+              "day": 28,
+              "community_average": 18,
+              "current_listing": 49
+            },
+            {
+              "day": 29,
+              "community_average": 19,
+              "current_listing": 51
+            },
+            {
+              "day": 30,
+              "community_average": 19,
+              "current_listing": 52
+            }
+          ],
+          "community_popularity_index": [
+            {
+              "period": "2021-10",
+              "popularity_index_30": "85.95",
+              "sold_count": "0"
+            },
+            {
+              "period": "2021-11",
+              "popularity_index_30": "-",
+              "sold_count": "0"
+            },
+            {
+              "period": "2021-12",
+              "popularity_index_30": "86.89",
+              "sold_count": "0"
+            },
+            {
+              "period": "2022-01",
+              "popularity_index_30": "91.59",
+              "sold_count": "0"
+            },
+            {
+              "period": "2022-02",
+              "popularity_index_30": "67.99",
+              "sold_count": "0"
+            },
+            {
+              "period": "2022-03",
+              "popularity_index_30": "-",
+              "sold_count": "1"
+            },
+            {
+              "period": "2022-04",
+              "popularity_index_30": "-",
+              "sold_count": "0"
+            },
+            {
+              "period": "2022-05",
+              "popularity_index_30": "64.02",
+              "sold_count": "2"
+            },
+            {
+              "period": "2022-06",
+              "popularity_index_30": "76.66",
+              "sold_count": "0"
+            },
+            {
+              "period": "2022-07",
+              "popularity_index_30": "66.89",
+              "sold_count": "2"
+            },
+            {
+              "period": "2022-08",
+              "popularity_index_30": "51.76",
+              "sold_count": "0"
+            },
+            {
+              "period": "2022-09",
+              "popularity_index_30": "61.16",
+              "sold_count": "0"
+            },
+            {
+              "period": "2022-10",
+              "popularity_index_30": "47.86",
+              "sold_count": "1"
+            },
+            {
+              "period": "2022-11",
+              "popularity_index_30": "55.43",
+              "sold_count": "1"
+            },
+            {
+              "period": "2022-12",
+              "popularity_index_30": "-",
+              "sold_count": "0"
+            },
+            {
+              "period": "2023-01",
+              "popularity_index_30": "0.05",
+              "sold_count": "0"
+            },
+            {
+              "period": "2023-02",
+              "popularity_index_30": "68.41",
+              "sold_count": "1"
+            },
+            {
+              "period": "2023-03",
+              "popularity_index_30": "-",
+              "sold_count": "-"
+            },
+            {
+              "period": "2023-04",
+              "popularity_index_30": "55.33",
+              "sold_count": "1"
+            },
+            {
+              "period": "2023-05",
+              "popularity_index_30": "53.72",
+              "sold_count": "0"
+            },
+            {
+              "period": "2023-06",
+              "popularity_index_30": "26.71",
+              "sold_count": "1"
+            },
+            {
+              "period": "2023-07",
+              "popularity_index_30": "53.98",
+              "sold_count": "0"
+            },
+            {
+              "period": "2023-08",
+              "popularity_index_30": "20.84",
+              "sold_count": "1"
+            },
+            {
+              "period": "2023-09",
+              "popularity_index_30": "20.2",
+              "sold_count": "1"
+            },
+            {
+              "period": "2023-10",
+              "popularity_index_30": "34.57",
+              "sold_count": "2"
+            },
+            {
+              "period": "2023-11",
+              "popularity_index_30": "33.74",
+              "sold_count": "0"
+            },
+            {
+              "period": "2023-12",
+              "popularity_index_30": "24.55",
+              "sold_count": "0"
+            },
+            {
+              "period": "2024-01",
+              "popularity_index_30": "23.73",
+              "sold_count": "0"
+            },
+            {
+              "period": "2024-02",
+              "popularity_index_30": "58.84",
+              "sold_count": "0"
+            },
+            {
+              "period": "2024-03",
+              "popularity_index_30": "28.76",
+              "sold_count": "2"
+            },
+            {
+              "period": "2024-04",
+              "popularity_index_30": "22.14",
+              "sold_count": "0"
+            },
+            {
+              "period": "2024-05",
+              "popularity_index_30": "53.27",
+              "sold_count": "1"
+            },
+            {
+              "period": "2024-06",
+              "popularity_index_30": "44.57",
+              "sold_count": "2"
+            },
+            {
+              "period": "2024-07",
+              "popularity_index_30": "63.27",
+              "sold_count": "1"
+            },
+            {
+              "period": "2024-08",
+              "popularity_index_30": "51.86",
+              "sold_count": "0"
+            },
+            {
+              "period": "2024-09",
+              "popularity_index_30": "40.02",
+              "sold_count": "1"
+            },
+            {
+              "period": "2024-10",
+              "popularity_index_30": "51.78",
+              "sold_count": "2"
+            },
+            {
+              "period": "2024-11",
+              "popularity_index_30": "33.07",
+              "sold_count": "1"
+            },
+            {
+              "period": "2024-12",
+              "popularity_index_30": "43.9",
+              "sold_count": "0"
+            },
+            {
+              "period": "2025-01",
+              "popularity_index_30": "-",
+              "sold_count": "0"
+            },
+            {
+              "period": "2025-02",
+              "popularity_index_30": "-",
+              "sold_count": "-"
+            }
+          ]
+        },
+        "scores": {
+          "current": "52",
+          "similar": [
+            "38",
+            "76",
+            "6",
+            "54",
+            "53"
+          ],
+          "similar_listings": [
+            {
+              "ml_num": "X10430955",
+              "ml_num_merge": "X10430955",
+              "marker_label": "D 0.58M",
+              "id_listing": "eVbOYEklwjR7x2P0",
+              "id_address": "xLkv3V9aJKm7DBNr",
+              "seo_municipality": "pelham-real-estate",
+              "seo_address": "330-highway-20",
+              "seo_image_alt": "MLS Listing Sold Conditional at 330 Highway 20, Pelham, Ontario, L0S1C0, MLS# X10430955",
+              "seo_suffix": "330-Highway-20-Pelham-L0S1C0-X10430955-X10430955",
+              "photo_url": "https://cache19.housesigma.com/file/pix-treb/X10430955/c7230_1.jpg?70b8d975",
+              "photo_source": null,
+              "house_type_name": "Detached",
+              "house_type": "D.",
+              "house_style": "Bungalow",
+              "apt_num": null,
+              "address": "330 Highway 20",
+              "address_navigation": "330 Highway 20, Pelham, Ontario",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "Sold Conditional",
+                "text_full": "Sold Conditional",
+                "status": "SC",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "Fenwick",
+              "municipality_name": "Pelham",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 3,
+              "bedroom_plus": null,
+              "bedroom_string": 3,
+              "washroom": 2,
+              "parking": {
+                "total": 1,
+                "garage_type": "Attached",
+                "garage": 1,
+                "parking_type": null,
+                "parking": 7,
+                "text": "Attached 1 garage,  7 parking"
+              },
+              "price": "579,500",
+              "price_int": 579500,
+              "price_abbr": "0.58M",
+              "price_sold": null,
+              "price_origin": "599,000",
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.0432651,
+                "lon": -79.3127362
+              },
+              "house_area": {
+                "area": 1352,
+                "area_note": "(Est.)",
+                "unit": "feet²",
+                "estimate": 1352
+              },
+              "land": {
+                "front": 75,
+                "depth": 135,
+                "unit": "feet"
+              },
+              "date_added": "2024-11-19",
+              "date_added_days": 78,
+              "date_start": "2024-11-19",
+              "date_start_days": 78,
+              "date_start_month": 2,
+              "date_update": "2025-02-04",
+              "date_end": "2025-02-04",
+              "date_end_days": 1,
+              "list_days": 77,
+              "feature_header": null,
+              "data_source": "TRREB",
+              "data_source_raw": "TREB",
+              "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+              "tos_source": "TREB",
+              "analytics": {
+                "rent_yield": "4.4",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-05 13:23:32",
+                "estimate_price": "564,000",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "76"
+              },
+              "scores": {
+                "school": 8,
+                "rent": 8,
+                "growth": 9
+              },
+              "tags": [
+                "Sold Conditional"
+              ],
+              "text": {
+                "list_date_short": "List 2024-11-19",
+                "list_date_long": "List 2024-11-19, 77 days ago",
+                "dom_short": "Listed in Nov 2024",
+                "dom_short_v2": "in Nov 2024",
+                "dom_long": "Listed 77 days ago",
+                "rooms_short": "3 bd 2 ba 1 gr",
+                "rooms_long": "3 Bedroom, 2 Bathroom, 1 Garage",
+                "status_chg_date": "1 day ago",
+                "date_preview": "2024-11-19",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 76/100"
+              },
+              "open_house_date": [],
+              "brokerage_text": null,
+              "postal_code": "L0S1C0",
+              "date_sold_report": null,
+              "sold_month": "2025-02",
+              "popularity_score": "76",
+              "difference": {
+                "bedroom": 1,
+                "washroom": null,
+                "house_area": -356,
+                "parking": {
+                  "total": 1
+                },
+                "land": {
+                  "front": -36,
+                  "depth": -46
+                }
+              }
+            },
+            {
+              "ml_num": "X9412953",
+              "ml_num_merge": "X9412953",
+              "marker_label": "D 2.8M",
+              "id_listing": "aQmD7zVM1G17J9Bo",
+              "id_address": "NkKJ3JdXRoNyd4V6",
+              "seo_municipality": "pelham-real-estate",
+              "seo_address": "338-hwy-20-w",
+              "seo_image_alt": "MLS Listing For Sale at 338 HWY 20 W, Pelham, Ontario, L0S1C0, MLS# X9412953",
+              "seo_suffix": "338-HWY-20-W-Pelham-L0S1C0-X9412953-X9412953-X9412953-40618909",
+              "photo_url": "https://cache17.housesigma.com/file/pix-treb/X9412953/98758_1.jpg?e787d176",
+              "photo_source": null,
+              "house_type_name": "Detached",
+              "house_type": "D.",
+              "house_style": "2-Storey",
+              "apt_num": null,
+              "address": "338 HWY 20 W",
+              "address_navigation": "338 HWY 20 W, Pelham, Ontario",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "For Sale",
+                "text_full": "For Sale",
+                "status": "A",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "Fenwick",
+              "municipality_name": "Pelham",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 4,
+              "bedroom_plus": 0,
+              "bedroom_string": 4,
+              "washroom": 4,
+              "parking": {
+                "total": 2,
+                "garage_type": "Attached",
+                "garage": 2,
+                "parking_type": null,
+                "parking": 8,
+                "text": "Attached 2 garage,  8 parking"
+              },
+              "price": "2,799,900",
+              "price_int": 2799900,
+              "price_abbr": "2.8M",
+              "price_sold": null,
+              "price_origin": "3,199,900",
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.04306,
+                "lon": -79.31512
+              },
+              "house_area": {
+                "area": 3970,
+                "area_note": "(Est.)",
+                "unit": "feet²",
+                "estimate": 3970
+              },
+              "land": null,
+              "date_added": "2024-08-09",
+              "date_added_days": 180,
+              "date_start": "2024-08-09",
+              "date_start_days": 180,
+              "date_start_month": 5,
+              "date_update": "2025-02-03",
+              "date_end": null,
+              "date_end_days": null,
+              "list_days": 180,
+              "feature_header": null,
+              "data_source": "TRREB",
+              "data_source_raw": "TREB",
+              "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+              "tos_source": "TREB",
+              "analytics": {
+                "rent_yield": "1.0",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-05 12:10:34",
+                "estimate_price": "2,597,700",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "54"
+              },
+              "scores": {
+                "school": 8,
+                "rent": 0,
+                "growth": 9
+              },
+              "tags": [
+                "For Sale"
+              ],
+              "text": {
+                "list_date_short": "List 2024-08-09",
+                "list_date_long": "List 2024-08-09, 180 days ago",
+                "dom_short": "Listed in Aug 2024",
+                "dom_short_v2": "in Aug 2024",
+                "dom_long": "Listed 180 days ago",
+                "rooms_short": "4 bd 4 ba 2 gr",
+                "rooms_long": "4 Bedroom, 4 Bathroom, 2 Garage",
+                "status_chg_date": "5 months ago",
+                "date_preview": "2024-08-09",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 54/100"
+              },
+              "open_house_date": [],
+              "brokerage_text": null,
+              "postal_code": "L0S1C0",
+              "date_sold_report": null,
+              "popularity_score": "54",
+              "difference": {
+                "bedroom": 2,
+                "washroom": 2,
+                "house_area": 2262,
+                "parking": {
+                  "total": 2
+                },
+                "land": {
+                  "front": null,
+                  "depth": null
+                }
+              }
+            },
+            {
+              "ml_num": "X11928601",
+              "ml_num_merge": "X11928601",
+              "marker_label": "D 1M",
+              "id_listing": "B5bO3xxQBvv3kWVP",
+              "id_address": "NkKJ3Jd9dM1yd4V6",
+              "seo_municipality": "pelham-real-estate",
+              "seo_address": "18-swan-ave-e",
+              "seo_image_alt": "MLS Listing For Sale at 18 Swan Ave E, Pelham, Ontario, L0S1E5, MLS# X11928601",
+              "seo_suffix": "18-Swan-Ave-E-Pelham-L0S1E5-X11928601",
+              "photo_url": "https://cache06.housesigma.com/file/pix-treb/X11928601/2b81a_1.jpg?1f79c98b",
+              "photo_source": null,
+              "house_type_name": "Detached",
+              "house_type": "D.",
+              "house_style": "2 1/2 Storey",
+              "apt_num": null,
+              "address": "18 Swan Ave E",
+              "address_navigation": "18 Swan Ave E, Pelham, Ontario",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "For Sale",
+                "text_full": "For Sale",
+                "status": "A",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "Fonthill",
+              "municipality_name": "Pelham",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 4,
+              "bedroom_plus": 3,
+              "bedroom_string": "4+3",
+              "washroom": 4,
+              "parking": {
+                "total": 2,
+                "garage_type": "Built-In",
+                "garage": 2,
+                "parking_type": null,
+                "parking": 2,
+                "text": "Built-In 2 garage,  2 parking"
+              },
+              "price": "995,000",
+              "price_int": 995000,
+              "price_abbr": "1M",
+              "price_sold": null,
+              "price_origin": null,
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.04198,
+                "lon": -79.30108
+              },
+              "house_area": {
+                "area": "2500-3000",
+                "area_note": null,
+                "unit": "feet²",
+                "estimate": 2750
+              },
+              "land": {
+                "front": 43,
+                "depth": 108,
+                "unit": "feet"
+              },
+              "date_added": "2025-01-17",
+              "date_added_days": 19,
+              "date_start": "2025-01-17",
+              "date_start_days": 19,
+              "date_start_month": 0,
+              "date_update": "2025-01-23",
+              "date_end": null,
+              "date_end_days": null,
+              "list_days": 19,
+              "feature_header": null,
+              "data_source": "TRREB",
+              "data_source_raw": "TREB",
+              "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+              "tos_source": "TREB",
+              "analytics": {
+                "rent_yield": "3.6",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-05 15:32:27",
+                "estimate_price": "972,100",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "53"
+              },
+              "scores": {
+                "school": 8,
+                "rent": 6,
+                "growth": 5
+              },
+              "tags": [
+                "For Sale"
+              ],
+              "text": {
+                "list_date_short": "List 2025-01-17",
+                "list_date_long": "List 2025-01-17, 19 days ago",
+                "dom_short": "Listed 19 days ago",
+                "dom_short_v2": "19 days ago",
+                "dom_long": "Listed 19 days ago",
+                "rooms_short": "4+3 bd 4 ba 2 gr",
+                "rooms_long": "4+3 Bedroom, 4 Bathroom, 2 Garage",
+                "status_chg_date": "2 weeks ago",
+                "date_preview": "19 days ago",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 53/100"
+              },
+              "open_house_date": [],
+              "brokerage_text": null,
+              "postal_code": "L0S1E5",
+              "date_sold_report": null,
+              "popularity_score": "53",
+              "difference": {
+                "bedroom": 2,
+                "washroom": 2,
+                "house_area": 1042,
+                "parking": {
+                  "total": 2
+                },
+                "land": {
+                  "front": -68,
+                  "depth": -73
+                }
+              }
+            },
+            {
+              "ml_num": "40689316",
+              "ml_num_merge": "40689316",
+              "marker_label": "D 1.3M",
+              "id_listing": "Zaw5YoVz89m3n961",
+              "id_address": "nbq6y10lQejYo9DA",
+              "seo_municipality": "pelham-real-estate",
+              "seo_address": "406-410-canboro-road",
+              "seo_image_alt": "MLS Listing For Sale at 406-410 Canboro Road, Pelham, Ontario, L0S1M0, MLS# 40689316",
+              "seo_suffix": "406-410-Canboro-Road-Pelham-L0S1M0-40689316",
+              "photo_url": "https://cache14.housesigma.com/file/pix-itso/156153010/021d4_1.jpg?274c1667",
+              "photo_source": null,
+              "house_type_name": "Single Family Residence",
+              "house_type": "D.",
+              "house_style": "Two Story",
+              "apt_num": null,
+              "address": "406-410 Canboro Road",
+              "address_navigation": "406-410 Canboro Road, Pelham, ",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "For Sale",
+                "text_full": "For Sale",
+                "status": "A",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "Ridgeville",
+              "municipality_name": "Pelham",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 6,
+              "bedroom_plus": null,
+              "bedroom_string": 6,
+              "washroom": 1,
+              "parking": {
+                "total": 0,
+                "garage_type": null,
+                "garage": 0,
+                "parking_type": null,
+                "parking": 8,
+                "text": " 0 garage,  8 parking"
+              },
+              "price": "1,299,000",
+              "price_int": 1299000,
+              "price_abbr": "1.3M",
+              "price_sold": null,
+              "price_origin": null,
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.035871,
+                "lon": -79.321297
+              },
+              "house_area": {
+                "area": "1492",
+                "area_note": null,
+                "unit": "feet²",
+                "estimate": 1492
+              },
+              "land": null,
+              "date_added": "2025-01-09",
+              "date_added_days": 27,
+              "date_start": "2025-01-09",
+              "date_start_days": 27,
+              "date_start_month": 0,
+              "date_update": "2025-01-10",
+              "date_end": null,
+              "date_end_days": null,
+              "list_days": 27,
+              "feature_header": null,
+              "data_source": "ITSO",
+              "data_source_raw": "ITSO",
+              "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+              "tos_source": "ITSO",
+              "analytics": {
+                "rent_yield": "1.9",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-05 15:01:50",
+                "estimate_price": "1,226,200",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "38"
+              },
+              "scores": {
+                "school": 8,
+                "rent": 1,
+                "growth": null
+              },
+              "tags": [
+                "For Sale"
+              ],
+              "text": {
+                "list_date_short": "List 2025-01-09",
+                "list_date_long": "List 2025-01-09, 27 days ago",
+                "dom_short": "Listed 27 days ago",
+                "dom_short_v2": "27 days ago",
+                "dom_long": "Listed 27 days ago",
+                "rooms_short": "6 bd 1 ba 0 gr",
+                "rooms_long": "6 Bedroom, 1 Bathroom, 0 Garage",
+                "status_chg_date": "3 weeks ago",
+                "date_preview": "27 days ago",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 38/100"
+              },
+              "open_house_date": [],
+              "brokerage_text": null,
+              "postal_code": "L0S1M0",
+              "date_sold_report": null,
+              "popularity_score": "38",
+              "difference": {
+                "bedroom": 4,
+                "washroom": -1,
+                "house_area": -216,
+                "parking": {
+                  "total": null
+                },
+                "land": {
+                  "front": null,
+                  "depth": null
+                }
+              }
+            },
+            {
+              "ml_num": "X9391100",
+              "ml_num_merge": "X9391100",
+              "marker_label": "D 1.3M",
+              "id_listing": "JRv53KpveeXYVPW4",
+              "id_address": "nbq6y10lQejYo9DA",
+              "seo_municipality": "pelham-real-estate",
+              "seo_address": "406-410-canboro-road",
+              "seo_image_alt": "MLS Listing For Sale at 406-410 Canboro Rd, Pelham, Ontario, L0S1M0, MLS# X9391100",
+              "seo_suffix": "406-410-Canboro-Rd-Pelham-L0S1M0-X9391100-40661289-X9391100",
+              "photo_url": "https://cache18.housesigma.com/file/pix-treb/X9391100/064a3_1.jpg?050f9cc5",
+              "photo_source": null,
+              "house_type_name": "Detached",
+              "house_type": "D.",
+              "house_style": "2-Storey",
+              "apt_num": null,
+              "address": "406-410 Canboro Rd",
+              "address_navigation": "406-410 Canboro Rd, Pelham, Ontario",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "For Sale",
+                "text_full": "For Sale",
+                "status": "A",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "Fonthill",
+              "municipality_name": "Pelham",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 3,
+              "bedroom_plus": 0,
+              "bedroom_string": 3,
+              "washroom": 1,
+              "parking": {
+                "total": 0,
+                "garage_type": "None",
+                "garage": 0,
+                "parking_type": null,
+                "parking": 8,
+                "text": " 0 garage,  8 parking"
+              },
+              "price": "1,299,000",
+              "price_int": 1299000,
+              "price_abbr": "1.3M",
+              "price_sold": null,
+              "price_origin": null,
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.0355703,
+                "lon": -79.3216572
+              },
+              "house_area": {
+                "area": "1100-1500",
+                "area_note": null,
+                "unit": "feet²",
+                "estimate": 1300
+              },
+              "land": {
+                "front": 263,
+                "depth": null,
+                "unit": "feet"
+              },
+              "date_added": "2024-11-26",
+              "date_added_days": 71,
+              "date_start": "2024-10-10",
+              "date_start_days": 118,
+              "date_start_month": 3,
+              "date_update": "2025-01-16",
+              "date_end": null,
+              "date_end_days": null,
+              "list_days": 118,
+              "feature_header": null,
+              "data_source": "TRREB",
+              "data_source_raw": "TREB",
+              "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+              "tos_source": "TREB",
+              "analytics": {
+                "rent_yield": "1.6",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-05 13:35:15",
+                "estimate_price": "1,229,400",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "6"
+              },
+              "scores": {
+                "school": 8,
+                "rent": 0,
+                "growth": 5
+              },
+              "tags": [
+                "For Sale"
+              ],
+              "text": {
+                "list_date_short": "List 2024-10-10",
+                "list_date_long": "List 2024-10-10, 118 days ago",
+                "dom_short": "Listed in Oct 2024",
+                "dom_short_v2": "in Oct 2024",
+                "dom_long": "Listed 118 days ago",
+                "rooms_short": "3 bd 1 ba 0 gr",
+                "rooms_long": "3 Bedroom, 1 Bathroom, 0 Garage",
+                "status_chg_date": "1 month ago",
+                "date_preview": "2024-10-10",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 6/100"
+              },
+              "open_house_date": [],
+              "brokerage_text": null,
+              "postal_code": "L0S1M0",
+              "date_sold_report": null,
+              "popularity_score": "6",
+              "difference": {
+                "bedroom": 1,
+                "washroom": -1,
+                "house_area": -408,
+                "parking": {
+                  "total": null
+                },
+                "land": {
+                  "front": null,
+                  "depth": null
+                }
+              }
+            }
+          ]
+        }
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH11",
+        "ml_server": null,
+        "ml_from_cache": true
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/user/watch/myNote": {
+    "url": "https://housesigma.com/bkv2/api/user/watch/myNote",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-06T04:47:14.631Z",
+    "data": {
+      "status": true,
+      "data": {
+        "note": "",
+        "updated_on": null
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH14"
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/listing/info/localagents ": {
+    "url": "https://housesigma.com/bkv2/api/listing/info/localagents ",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-06T04:47:14.658Z",
+    "data": {
+      "status": true,
+      "data": {
+        "show_section": true,
+        "transactions": 5,
+        "title": "Transactions in Pelham by HouseSigma Agents",
+        "listings": [
+          {
+            "label": "TF 0.72M",
+            "location": {
+              "lon": -79.27061,
+              "lat": 43.03681
+            },
+            "marker": "sold",
+            "ids": [
+              "DO1w3Wq5NMjy8Jg0"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "S 0.65M",
+            "location": {
+              "lon": -79.282324,
+              "lat": 43.024121
+            },
+            "marker": "sold",
+            "ids": [
+              "eQp5yOpgVrg7d0ZE"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "D 0.73M",
+            "location": {
+              "lon": -79.27354,
+              "lat": 43.04469
+            },
+            "marker": "sold",
+            "ids": [
+              "6zqW7dGz6nPy5eZE"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "D 0.6M",
+            "location": {
+              "lon": -79.307108,
+              "lat": 43.006131
+            },
+            "marker": "sold",
+            "ids": [
+              "amgL7AV8rKV3Z1MW"
+            ],
+            "count": 1,
+            "type": "marker"
+          },
+          {
+            "label": "D 0.71M",
+            "location": {
+              "lon": -79.283381,
+              "lat": 43.050284
+            },
+            "marker": "sold",
+            "ids": [
+              "eQp5yOpgQVw7d0ZE"
+            ],
+            "count": 1,
+            "type": "marker"
+          }
+        ],
+        "agent_title": "Top HouseSigma Agents in Pelham",
+        "contact_message": "I’d like to know more about 316 Canboro Road or similar properties in Pelham. Please contact me.",
+        "agents": [
+          {
+            "id": 364,
+            "name": "Aman Galhotra",
+            "first_name": "Aman",
+            "slug": "aman-galhotra",
+            "avatar": "https://cache17.housesigma.com/hs-teams/2023/07/Headshots-2023-07-31T105557.505-300x300.png",
+            "province": "ON",
+            "description": "18 deals, 277 tours"
+          },
+          {
+            "id": 402,
+            "name": "Tanesse Chang-Gyles",
+            "first_name": "Tanesse",
+            "slug": "tanesse-chang-gyles",
+            "avatar": "https://cache17.housesigma.com/hs-teams/2024/04/Headshots-300x300.png",
+            "province": "ON",
+            "description": "27 deals, 146 tours"
+          },
+          {
+            "id": 205,
+            "name": "Greg Hutton",
+            "first_name": "Greg",
+            "slug": "greg-hutton",
+            "avatar": "https://cache17.housesigma.com/hs-teams/2022/01/Screenshot-2022-01-21-093235-260x300.png",
+            "province": "ON",
+            "description": "43 deals, 311 tours"
+          }
+        ],
+        "boundary": null
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH12"
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/community/soldpricestats": {
+    "url": "https://housesigma.com/bkv2/api/community/soldpricestats",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-06T04:47:14.711Z",
+    "data": {
+      "status": true,
+      "data": {
+        "rowCount": 25,
+        "list": [
+          {
+            "price_sold_median_all_type": 940015,
+            "price_sold_median_all_community": 940015,
+            "period": "2020-08-01",
+            "price_sold_median": 940015,
+            "sold_count": 5
+          },
+          {
+            "price_sold_median_all_type": 912870,
+            "price_sold_median_all_community": 912870,
+            "period": "2020-09-01",
+            "price_sold_median": 912870,
+            "sold_count": 6
+          },
+          {
+            "price_sold_median_all_type": 976262,
+            "price_sold_median_all_community": 976262,
+            "period": "2020-10-01",
+            "price_sold_median": 976262,
+            "sold_count": 7
+          },
+          {
+            "price_sold_median_all_type": 960556,
+            "price_sold_median_all_community": 960556,
+            "period": "2020-11-01",
+            "price_sold_median": 960556,
+            "sold_count": 7
+          },
+          {
+            "price_sold_median_all_type": 960556,
+            "price_sold_median_all_community": 960556,
+            "period": "2020-12-01",
+            "price_sold_median": 960556,
+            "sold_count": 4
+          },
+          {
+            "price_sold_median_all_type": 885000,
+            "price_sold_median_all_community": 885000,
+            "period": "2021-01-01",
+            "price_sold_median": 885000,
+            "sold_count": 4
+          },
+          {
+            "price_sold_median_all_type": 852500,
+            "price_sold_median_all_community": 852500,
+            "period": "2021-02-01",
+            "price_sold_median": 852500,
+            "sold_count": 5
+          },
+          {
+            "price_sold_median_all_type": 955938,
+            "price_sold_median_all_community": 955938,
+            "period": "2021-03-01",
+            "price_sold_median": 955938,
+            "sold_count": 4
+          },
+          {
+            "price_sold_median_all_type": 928889,
+            "price_sold_median_all_community": 928889,
+            "period": "2021-04-01",
+            "price_sold_median": 928889,
+            "sold_count": 6
+          },
+          {
+            "price_sold_median_all_type": 919861,
+            "price_sold_median_all_community": 919861,
+            "period": "2021-05-01",
+            "price_sold_median": 919861,
+            "sold_count": 6
+          },
+          {
+            "price_sold_median_all_type": 998594,
+            "price_sold_median_all_community": 998594,
+            "period": "2021-06-01",
+            "price_sold_median": 998594,
+            "sold_count": 5
+          },
+          {
+            "price_sold_median_all_type": 998594,
+            "price_sold_median_all_community": 998594,
+            "period": "2021-07-01",
+            "price_sold_median": 998594,
+            "sold_count": 4
+          },
+          {
+            "price_sold_median_all_type": 1043036,
+            "price_sold_median_all_community": 1043036,
+            "period": "2021-08-01",
+            "price_sold_median": 1043036,
+            "sold_count": 2
+          },
+          {
+            "price_sold_median_all_type": 1238334,
+            "price_sold_median_all_community": 1238334,
+            "period": "2021-09-01",
+            "price_sold_median": 1238334,
+            "sold_count": 2
+          },
+          {
+            "price_sold_median_all_type": 1427500,
+            "price_sold_median_all_community": 1427500,
+            "period": "2021-10-01",
+            "price_sold_median": 1427500,
+            "sold_count": 1
+          },
+          {
+            "price_sold_median_all_type": 1443334,
+            "price_sold_median_all_community": 1443334,
+            "period": "2023-10-01",
+            "price_sold_median": 1443334,
+            "sold_count": 4
+          },
+          {
+            "price_sold_median_all_type": 1428000,
+            "price_sold_median_all_community": 1428000,
+            "period": "2023-11-01"
+          },
+          {
+            "price_sold_median_all_type": 1428000,
+            "price_sold_median_all_community": 1428000,
+            "period": "2023-12-01",
+            "price_sold_median": 1428000,
+            "sold_count": 3
+          },
+          {
+            "price_sold_median_all_type": 1601000,
+            "price_sold_median_all_community": 1601000,
+            "period": "2024-03-01",
+            "price_sold_median": 1601000,
+            "sold_count": 2
+          },
+          {
+            "price_sold_median_all_type": 2913850,
+            "price_sold_median_all_community": 2913850,
+            "period": "2024-06-01",
+            "price_sold_median": 2913850,
+            "sold_count": 5
+          },
+          {
+            "price_sold_median_all_type": 2517917,
+            "price_sold_median_all_community": 2517917,
+            "period": "2024-07-01",
+            "price_sold_median": 2517917,
+            "sold_count": 4
+          },
+          {
+            "price_sold_median_all_type": 2517917,
+            "price_sold_median_all_community": 2517917,
+            "period": "2024-08-01",
+            "price_sold_median": 2517917,
+            "sold_count": 4
+          },
+          {
+            "price_sold_median_all_type": 2311322,
+            "price_sold_median_all_community": 2311322,
+            "period": "2024-09-01",
+            "price_sold_median": 2311322,
+            "sold_count": 4
+          },
+          {
+            "price_sold_median_all_type": 1650307,
+            "price_sold_median_all_community": 1650307,
+            "period": "2024-10-01",
+            "price_sold_median": 1804408,
+            "sold_count": 3
+          },
+          {
+            "price_sold_median_all_type": 1340394,
+            "price_sold_median_all_community": 1340394,
+            "period": "2024-11-01",
+            "price_sold_median": 1661886,
+            "sold_count": 3
+          },
+          {
+            "price_sold_median_all_type": 951807,
+            "price_sold_median_all_community": 951807,
+            "period": "2024-12-01",
+            "price_sold_median": 1262117,
+            "sold_count": 3
+          },
+          {
+            "price_sold_median_all_type": 916579,
+            "price_sold_median_all_community": 916579,
+            "period": "2025-01-01"
+          }
+        ],
+        "list_house_type": [
+          {
+            "house_type": "D.",
+            "listing_count": 59,
+            "listing_percent": 0.88,
+            "house_type_name": "Detached"
+          },
+          {
+            "house_type": "L.",
+            "listing_count": 2,
+            "listing_percent": 0.03,
+            "house_type_name": "Link"
+          },
+          {
+            "house_type": "Other",
+            "house_type_name": "Other",
+            "listing_count": 6,
+            "listing_percent": 0.09
+          }
+        ],
+        "chart_sold_price": [
+          {
+            "price100k": 6,
+            "sold_count": 1
+          },
+          {
+            "price100k": 7,
+            "sold_count": 1
+          },
+          {
+            "price100k": 8,
+            "sold_count": 0
+          },
+          {
+            "price100k": 9,
+            "sold_count": 1
+          },
+          {
+            "price100k": 10,
+            "sold_count": 0
+          },
+          {
+            "price100k": 11,
+            "sold_count": 0
+          },
+          {
+            "price100k": 12,
+            "sold_count": 0
+          },
+          {
+            "price100k": 13,
+            "sold_count": 0
+          },
+          {
+            "price100k": 14,
+            "sold_count": 0
+          },
+          {
+            "price100k": 15,
+            "sold_count": 0
+          },
+          {
+            "price100k": 16,
+            "sold_count": 0
+          },
+          {
+            "price100k": 17,
+            "sold_count": 0
+          },
+          {
+            "price100k": 18,
+            "sold_count": 0
+          },
+          {
+            "price100k": 19,
+            "sold_count": 0
+          },
+          {
+            "price100k": 20,
+            "sold_count": 0
+          },
+          {
+            "price100k": 21,
+            "sold_count": 0
+          },
+          {
+            "price100k": 22,
+            "sold_count": 0
+          },
+          {
+            "price100k": 23,
+            "sold_count": 1
+          }
+        ]
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH11"
+      },
+      "chart_sold_price_cached": false,
+      "list_cached": false,
+      "list_house_type_cached": false
+    }
+  },
+  "https://housesigma.com/bkv2/api/listing/nearby/sold": {
+    "url": "https://housesigma.com/bkv2/api/listing/nearby/sold",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-06T04:47:14.746Z",
+    "data": {
+      "status": true,
+      "data": {
+        "message": "",
+        "house": {
+          "id_listing": "nM697kVgazQybmwe",
+          "ml_num": "40565261",
+          "hash_id": "JZD7vrVtEo9P7qeR",
+          "seo_suffix": "316-Canboro-Road-Pelham-L0S1M0-40565261-X9403802",
+          "photo_url": "https://cache14.housesigma.com/file/pix-itso/148393372/7ed94_1.jpg?b309f470",
+          "house_type_name": "Single Family Residence",
+          "address": "316 Canboro Road",
+          "community_name": "Ridgeville",
+          "municipality_name": "Pelham",
+          "bedroom": 2,
+          "bedroom_plus": null,
+          "bedroom_string": 2,
+          "washroom": 2,
+          "parking": {
+            "total": 0,
+            "garage_type": null,
+            "garage": 0,
+            "parking_type": null,
+            "parking": 4,
+            "text": " 0 garage,  4 parking"
+          },
+          "house_area": {
+            "area": "1708",
+            "area_note": null,
+            "unit": "feet²",
+            "estimate": 1708
+          },
+          "land": {
+            "front": 111,
+            "depth": 181,
+            "unit": "feet",
+            "irregular": "Yes",
+            "text": "111 x 181 feet"
+          },
+          "price": "864,900",
+          "estimate_price": "932,700",
+          "estimate_rent": "2,410",
+          "list_days": 58,
+          "map": {
+            "lat": 43.037448,
+            "lon": -79.311967
+          },
+          "text": {
+            "list_date_short": "Expired 2024-06-01",
+            "list_date_long": "Expired 2024-06-01, Dom: 58 days",
+            "dom_short": "Expired in Jun 2024",
+            "dom_short_v2": "in Jun 2024",
+            "dom_long": "Expired 249 days ago, Dom: 58 days",
+            "rooms_short": "2 bd 2 ba 0 gr",
+            "rooms_long": "2 Bedroom, 2 Bathroom, 0 Garage",
+            "status_chg_date": "8 months ago",
+            "date_preview": "2024-06-01",
+            "hs_exclusive_tag": null
+          },
+          "list_status": {
+            "public": 1,
+            "live": 0,
+            "sold": 0,
+            "s_r": "Sale",
+            "text": "Expired",
+            "text_full": "Expired",
+            "status": "EXP",
+            "feature": null,
+            "precon": null,
+            "agent_available": true,
+            "premium": 1,
+            "archive": 0
+          },
+          "tos_source": "ITSO",
+          "data_source": "ITSO",
+          "data_source_raw": "ITSO",
+          "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+          "photo_source": null,
+          "schedule_message": "I want to book an appointment to view: [40565261], 316 Canboro Road, Pelham"
+        },
+        "chart": [],
+        "nearby": [
+          {
+            "ml_num_merge": "*********",
+            "marker_label": "D 0.85M",
+            "id_listing": "J6Em7b2E9Oj7XBeq",
+            "id_address": "AKv53DDWo4j3MnxB",
+            "seo_municipality": "pelham-real-estate",
+            "seo_address": "",
+            "seo_image_alt": "",
+            "seo_suffix": "",
+            "photo_url": "https://cache-e12.housesigma.com/file/pix-treb/X11885520/c32a7_1.jpg?270339e8",
+            "photo_source": null,
+            "house_type_name": "********",
+            "house_type": "D.",
+            "house_style": "Bungalow",
+            "apt_num": null,
+            "address": "(Address display requires sign-in)",
+            "address_navigation": null,
+            "list_status": {
+              "public": -1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "-",
+            "municipality_name": "Pelham",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 0,
+            "bedroom_plus": 0,
+            "bedroom_string": "***",
+            "washroom": 0,
+            "parking": {
+              "total": 0,
+              "garage_type": null,
+              "garage": 0,
+              "parking_type": null,
+              "parking": 0,
+              "text": ""
+            },
+            "price": "(Sign-in required)",
+            "price_int": null,
+            "price_abbr": "??",
+            "price_sold": "(Sign-in required)",
+            "price_origin": null,
+            "price_sold_int": null,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.03952,
+              "lon": -79.29763
+            },
+            "house_area": {
+              "area": "*********",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 0
+            },
+            "land": null,
+            "date_added": "",
+            "date_added_days": 0,
+            "date_start": "2024-12-07",
+            "date_start_days": 60,
+            "date_start_month": 0,
+            "date_update": "",
+            "date_end": "",
+            "date_end_days": 0,
+            "list_days": 6,
+            "feature_header": null,
+            "data_source": "TRREB",
+            "data_source_raw": "TREB",
+            "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+            "tos_source": "TREB",
+            "analytics": {
+              "rent_yield": "3.6",
+              "rent_base": "3174120",
+              "estimate_price_age": 0,
+              "estimate_price_date": "",
+              "estimate_price": "",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "56"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 6,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-12-13",
+              "list_date_long": "Sold 2024-12-13, Dom: 6 days",
+              "dom_short": "Sold in Dec 2024",
+              "dom_short_v2": "in Dec 2024",
+              "dom_long": "Sold 54 days ago, Dom: 6 days",
+              "rooms_short": "",
+              "rooms_long": "",
+              "status_chg_date": "1 month ago",
+              "date_preview": "2024-12-13",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "******",
+            "date_sold_report": "",
+            "sold_month": "",
+            "distance": 1.19,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": -2,
+              "washroom": -2,
+              "house_area": null,
+              "parking": {
+                "total": null
+              },
+              "land": {
+                "front": null,
+                "depth": null
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 1
+          },
+          {
+            "ml_num_merge": "*********",
+            "marker_label": "D 0.68M",
+            "id_listing": "K8OgYBpbj447JmG2",
+            "id_address": "bqB176Wl0En3ZajD",
+            "seo_municipality": "pelham-real-estate",
+            "seo_address": "",
+            "seo_image_alt": "",
+            "seo_suffix": "",
+            "photo_url": "https://cache08.housesigma.com/file/pix-treb/X10433525/aae4b_1.jpg?e3f11651",
+            "photo_source": null,
+            "house_type_name": "********",
+            "house_type": "D.",
+            "house_style": "Bungalow",
+            "apt_num": null,
+            "address": "(Address display requires sign-in)",
+            "address_navigation": null,
+            "list_status": {
+              "public": -1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "-",
+            "municipality_name": "Pelham",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 0,
+            "bedroom_plus": null,
+            "bedroom_string": 0,
+            "washroom": 0,
+            "parking": {
+              "total": 0,
+              "garage_type": null,
+              "garage": 0,
+              "parking_type": null,
+              "parking": 0,
+              "text": ""
+            },
+            "price": "(Sign-in required)",
+            "price_int": null,
+            "price_abbr": "??",
+            "price_sold": "(Sign-in required)",
+            "price_origin": null,
+            "price_sold_int": null,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.04274,
+              "lon": -79.29184
+            },
+            "house_area": {
+              "area": "*********",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 0
+            },
+            "land": null,
+            "date_added": "",
+            "date_added_days": 0,
+            "date_start": "2024-11-21",
+            "date_start_days": 76,
+            "date_start_month": 0,
+            "date_update": "",
+            "date_end": "",
+            "date_end_days": 0,
+            "list_days": 21,
+            "feature_header": null,
+            "data_source": "TRREB",
+            "data_source_raw": "TREB",
+            "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+            "tos_source": "TREB",
+            "analytics": {
+              "rent_yield": "3.8",
+              "rent_base": "2457734",
+              "estimate_price_age": 0,
+              "estimate_price_date": "",
+              "estimate_price": "",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "74"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 6,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-12-12",
+              "list_date_long": "Sold 2024-12-12, Dom: 21 days",
+              "dom_short": "Sold in Dec 2024",
+              "dom_short_v2": "in Dec 2024",
+              "dom_long": "Sold 55 days ago, Dom: 21 days",
+              "rooms_short": "",
+              "rooms_long": "",
+              "status_chg_date": "1 month ago",
+              "date_preview": "2024-12-12",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "******",
+            "date_sold_report": "",
+            "sold_month": "",
+            "distance": 1.74,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": -2,
+              "washroom": -2,
+              "house_area": null,
+              "parking": {
+                "total": null
+              },
+              "land": {
+                "front": null,
+                "depth": null
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 2
+          },
+          {
+            "ml_num_merge": "40662570",
+            "marker_label": "D 0.73M",
+            "id_listing": "MWBVyZEGMlkYKemj",
+            "id_address": "LzQ1y5Eob54yqdeK",
+            "seo_municipality": "pelham-real-estate",
+            "seo_address": "20-strathcona-drive",
+            "seo_image_alt": "MLS Listing Sold at 20 Strathcona Drive, Pelham, Ontario, L0S1E0, MLS# 40662570",
+            "seo_suffix": "20-Strathcona-Drive-Pelham-L0S1E0-40662570-X9420128",
+            "photo_url": "https://cache-e14.housesigma.com/file/pix-itso/154799423/97d11_1.jpg?fd8989c2",
+            "photo_source": null,
+            "house_type_name": "Single Family Residence",
+            "house_type": "D.",
+            "house_style": "Bungalow",
+            "apt_num": null,
+            "address": "20 Strathcona Drive",
+            "address_navigation": "20 Strathcona Drive, Pelham, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Fonthill",
+            "municipality_name": "Pelham",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 3,
+            "bedroom_plus": 1,
+            "bedroom_string": "3+1",
+            "washroom": 2,
+            "parking": {
+              "total": 1,
+              "garage_type": null,
+              "garage": 1,
+              "parking_type": null,
+              "parking": 4,
+              "text": " 1 garage,  4 parking"
+            },
+            "price": "729,900",
+            "price_int": 729900,
+            "price_abbr": "0.73M",
+            "price_sold": "725,000",
+            "price_origin": null,
+            "price_sold_int": 725000,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.039528,
+              "lon": -79.292278
+            },
+            "house_area": {
+              "area": "1100",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1100
+            },
+            "land": {
+              "front": 63,
+              "depth": 95,
+              "unit": "feet"
+            },
+            "date_added": "2024-10-21",
+            "date_added_days": 107,
+            "date_start": "2024-10-21",
+            "date_start_days": 107,
+            "date_start_month": 3,
+            "date_update": "2024-11-22",
+            "date_end": "2024-11-03",
+            "date_end_days": 94,
+            "list_days": 13,
+            "feature_header": null,
+            "data_source": "ITSO",
+            "data_source_raw": "ITSO",
+            "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+            "tos_source": "ITSO",
+            "analytics": {
+              "rent_yield": "3.9",
+              "rent_base": "2610010",
+              "estimate_price_age": 50,
+              "estimate_price_date": "2024-12-17 19:45:57",
+              "estimate_price": "711,000",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "89"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 7,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-11-03",
+              "list_date_long": "Sold 2024-11-03, Dom: 13 days",
+              "dom_short": "Sold in Nov 2024",
+              "dom_short_v2": "in Nov 2024",
+              "dom_long": "Sold 94 days ago, Dom: 13 days",
+              "rooms_short": "3+1 bd 2 ba 1 gr",
+              "rooms_long": "3+1 Bedroom, 2 Bathroom, 1 Garage",
+              "status_chg_date": "2 months ago",
+              "date_preview": "2024-11-03",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L0S1E0",
+            "date_sold_report": null,
+            "sold_month": "2024-11",
+            "distance": 1.62,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": 1,
+              "washroom": null,
+              "house_area": -608,
+              "parking": {
+                "total": 1
+              },
+              "land": {
+                "front": -48,
+                "depth": -86
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 3
+          },
+          {
+            "ml_num_merge": "********",
+            "marker_label": "D 1.2M",
+            "id_listing": "B5bO3xxbEM63kWVP",
+            "id_address": "DO1w3WqVR0Ky8Jg0",
+            "seo_municipality": "pelham-real-estate",
+            "seo_address": "",
+            "seo_image_alt": "",
+            "seo_suffix": "",
+            "photo_url": "https://cache08.housesigma.com/file/pix-treb/X9255487/1758c_1.jpg?be335f92",
+            "photo_source": null,
+            "house_type_name": "********",
+            "house_type": "D.",
+            "house_style": "2-Storey",
+            "apt_num": null,
+            "address": "(Address display requires sign-in)",
+            "address_navigation": null,
+            "list_status": {
+              "public": -1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "-",
+            "municipality_name": "Pelham",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 0,
+            "bedroom_plus": null,
+            "bedroom_string": 0,
+            "washroom": 0,
+            "parking": {
+              "total": 0,
+              "garage_type": null,
+              "garage": 0,
+              "parking_type": null,
+              "parking": 0,
+              "text": ""
+            },
+            "price": "(Sign-in required)",
+            "price_int": null,
+            "price_abbr": "??",
+            "price_sold": "(Sign-in required)",
+            "price_origin": null,
+            "price_sold_int": null,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.03579,
+              "lon": -79.29818
+            },
+            "house_area": {
+              "area": 0,
+              "area_note": "(Est.)",
+              "unit": "feet²",
+              "estimate": 0
+            },
+            "land": null,
+            "date_added": "",
+            "date_added_days": 0,
+            "date_start": "2024-08-10",
+            "date_start_days": 179,
+            "date_start_month": 0,
+            "date_update": "",
+            "date_end": "",
+            "date_end_days": 0,
+            "list_days": 95,
+            "feature_header": null,
+            "data_source": "TRREB",
+            "data_source_raw": "TREB",
+            "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+            "tos_source": "TREB",
+            "analytics": {
+              "rent_yield": "3.8",
+              "rent_base": "4355120",
+              "estimate_price_age": 0,
+              "estimate_price_date": "",
+              "estimate_price": "",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "57"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 7,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-11-13",
+              "list_date_long": "Sold 2024-11-13, Dom: 95 days",
+              "dom_short": "Sold in Nov 2024",
+              "dom_short_v2": "in Nov 2024",
+              "dom_long": "Sold 84 days ago, Dom: 95 days",
+              "rooms_short": "",
+              "rooms_long": "",
+              "status_chg_date": "2 months ago",
+              "date_preview": "2024-11-13",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "******",
+            "date_sold_report": "",
+            "sold_month": "",
+            "distance": 1.14,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": -2,
+              "washroom": -2,
+              "house_area": null,
+              "parking": {
+                "total": null
+              },
+              "land": {
+                "front": null,
+                "depth": null
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 4
+          },
+          {
+            "ml_num_merge": "40671178",
+            "marker_label": "D 1.1M",
+            "id_listing": "Z5BX321ZPXb7Dar0",
+            "id_address": "a6zqW7dD2Wk75eZE",
+            "seo_municipality": "pelham-real-estate",
+            "seo_address": "5-abbott-place",
+            "seo_image_alt": "MLS Listing Sold at 5 Abbott Place, Pelham, Ontario, L0S1E5, MLS# 40671178",
+            "seo_suffix": "5-Abbott-Place-Pelham-L0S1E5-40671178-X9769452-X10413863-40671178",
+            "photo_url": "https://cache09.housesigma.com/file/pix-itso/155206444/8f0d9_1.jpg?29c45501",
+            "photo_source": null,
+            "house_type_name": "Single Family Residence",
+            "house_type": "D.",
+            "house_style": "Two Story",
+            "apt_num": null,
+            "address": "5 Abbott Place",
+            "address_navigation": "5 Abbott Place, Pelham, Ontario",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Fonthill",
+            "municipality_name": "Pelham",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 3,
+            "bedroom_plus": 1,
+            "bedroom_string": "3+1",
+            "washroom": 4,
+            "parking": {
+              "total": 2,
+              "garage_type": "Attached",
+              "garage": 2,
+              "parking_type": null,
+              "parking": 4,
+              "text": "Attached 2 garage,  4 parking"
+            },
+            "price": "1,099,900",
+            "price_int": 1099900,
+            "price_abbr": "1.1M",
+            "price_sold": "1,050,000",
+            "price_origin": "945,000",
+            "price_sold_int": 1050000,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.046428,
+              "lon": -79.29683
+            },
+            "house_area": {
+              "area": "2340",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 2340
+            },
+            "land": {
+              "front": 45,
+              "depth": 114,
+              "unit": "feet"
+            },
+            "date_added": "2024-10-30",
+            "date_added_days": 98,
+            "date_start": "2024-10-30",
+            "date_start_days": 98,
+            "date_start_month": 3,
+            "date_update": "2024-12-25",
+            "date_end": "2024-11-19",
+            "date_end_days": 78,
+            "list_days": 20,
+            "feature_header": null,
+            "data_source": "ITSO",
+            "data_source_raw": "ITSO",
+            "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+            "tos_source": "ITSO",
+            "analytics": {
+              "rent_yield": "3.2",
+              "rent_base": "4002620",
+              "estimate_price_age": 42,
+              "estimate_price_date": "2024-12-25 00:51:44",
+              "estimate_price": "1,064,900",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "60"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 5,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-11-19",
+              "list_date_long": "Sold 2024-11-19, Dom: 20 days",
+              "dom_short": "Sold in Nov 2024",
+              "dom_short_v2": "in Nov 2024",
+              "dom_long": "Sold 78 days ago, Dom: 20 days",
+              "rooms_short": "3+1 bd 4 ba 2 gr",
+              "rooms_long": "3+1 Bedroom, 4 Bathroom, 2 Garage",
+              "status_chg_date": "1 month ago",
+              "date_preview": "2024-11-19",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L0S1E5",
+            "date_sold_report": null,
+            "sold_month": "2024-11",
+            "distance": 1.58,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": 1,
+              "washroom": 2,
+              "house_area": 632,
+              "parking": {
+                "total": 2
+              },
+              "land": {
+                "front": -66,
+                "depth": -67
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 5
+          },
+          {
+            "ml_num_merge": "********",
+            "marker_label": "D 0.94M",
+            "id_listing": "amgL7AVdMDV3Z1MW",
+            "id_address": "obqB1761exvyZajD",
+            "seo_municipality": "pelham-real-estate",
+            "seo_address": "",
+            "seo_image_alt": "",
+            "seo_suffix": "",
+            "photo_url": "https://cache05.housesigma.com/file/pix-treb/X9403927/e73a2_1.jpg?0021ee1f",
+            "photo_source": null,
+            "house_type_name": "********",
+            "house_type": "D.",
+            "house_style": "2-Storey",
+            "apt_num": null,
+            "address": "(Address display requires sign-in)",
+            "address_navigation": null,
+            "list_status": {
+              "public": -1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "-",
+            "municipality_name": "Pelham",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 0,
+            "bedroom_plus": 0,
+            "bedroom_string": 0,
+            "washroom": 0,
+            "parking": {
+              "total": 0,
+              "garage_type": null,
+              "garage": 0,
+              "parking_type": null,
+              "parking": 0,
+              "text": ""
+            },
+            "price": "(Sign-in required)",
+            "price_int": null,
+            "price_abbr": "??",
+            "price_sold": "(Sign-in required)",
+            "price_origin": null,
+            "price_sold_int": null,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.04572,
+              "lon": -79.29599
+            },
+            "house_area": {
+              "area": 0,
+              "area_note": "(Est.)",
+              "unit": "feet²",
+              "estimate": 0
+            },
+            "land": null,
+            "date_added": "",
+            "date_added_days": 0,
+            "date_start": "2024-04-04",
+            "date_start_days": 307,
+            "date_start_month": 0,
+            "date_update": "",
+            "date_end": "",
+            "date_end_days": 0,
+            "list_days": 122,
+            "feature_header": null,
+            "data_source": "TRREB",
+            "data_source_raw": "TREB",
+            "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+            "tos_source": "TREB",
+            "analytics": {
+              "rent_yield": "2.7",
+              "rent_base": "3457660",
+              "estimate_price_age": 0,
+              "estimate_price_date": "",
+              "estimate_price": "",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": null
+            },
+            "scores": {
+              "school": 8,
+              "rent": 3,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-08-04",
+              "list_date_long": "Sold 2024-08-04, Dom: 122 days",
+              "dom_short": "Sold in Aug 2024",
+              "dom_short_v2": "in Aug 2024",
+              "dom_long": "Sold 185 days ago, Dom: 122 days",
+              "rooms_short": "",
+              "rooms_long": "",
+              "status_chg_date": "6 months ago",
+              "date_preview": "2024-08-04",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "******",
+            "date_sold_report": "",
+            "sold_month": "",
+            "distance": 1.59,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": -2,
+              "washroom": -2,
+              "house_area": null,
+              "parking": {
+                "total": null
+              },
+              "land": {
+                "front": null,
+                "depth": null
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 6
+          },
+          {
+            "ml_num_merge": "********",
+            "marker_label": "D 0.94M",
+            "id_listing": "LzQ1y5pz64jYqdeK",
+            "id_address": "obqB1761exvyZajD",
+            "seo_municipality": "pelham-real-estate",
+            "seo_address": "",
+            "seo_image_alt": "",
+            "seo_suffix": "",
+            "photo_url": "https://cache-e11.housesigma.com/file/pix-treb/X8202898/79508_1.jpg?f8cb5819",
+            "photo_source": null,
+            "house_type_name": "********",
+            "house_type": "D.",
+            "house_style": "2-Storey",
+            "apt_num": null,
+            "address": "(Address display requires sign-in)",
+            "address_navigation": null,
+            "list_status": {
+              "public": -1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "-",
+            "municipality_name": "Pelham",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 0,
+            "bedroom_plus": null,
+            "bedroom_string": 0,
+            "washroom": 0,
+            "parking": {
+              "total": 0,
+              "garage_type": null,
+              "garage": 0,
+              "parking_type": null,
+              "parking": 0,
+              "text": ""
+            },
+            "price": "(Sign-in required)",
+            "price_int": null,
+            "price_abbr": "??",
+            "price_sold": "(Sign-in required)",
+            "price_origin": null,
+            "price_sold_int": null,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.04572,
+              "lon": -79.29599
+            },
+            "house_area": {
+              "area": "*********",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 0
+            },
+            "land": null,
+            "date_added": "",
+            "date_added_days": 0,
+            "date_start": "2024-04-04",
+            "date_start_days": 307,
+            "date_start_month": 0,
+            "date_update": "",
+            "date_end": "",
+            "date_end_days": 0,
+            "list_days": 122,
+            "feature_header": null,
+            "data_source": "TRREB",
+            "data_source_raw": "TREB",
+            "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+            "tos_source": "TREB",
+            "analytics": {
+              "rent_yield": "2.9",
+              "rent_base": "3457660",
+              "estimate_price_age": 0,
+              "estimate_price_date": "",
+              "estimate_price": "",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "50"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 3,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-08-04",
+              "list_date_long": "Sold 2024-08-04, Dom: 122 days",
+              "dom_short": "Sold in Aug 2024",
+              "dom_short_v2": "in Aug 2024",
+              "dom_long": "Sold 185 days ago, Dom: 122 days",
+              "rooms_short": "",
+              "rooms_long": "",
+              "status_chg_date": "5 months ago",
+              "date_preview": "2024-08-04",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "******",
+            "date_sold_report": "",
+            "sold_month": "",
+            "distance": 1.59,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": -2,
+              "washroom": -2,
+              "house_area": null,
+              "parking": {
+                "total": null
+              },
+              "land": {
+                "front": null,
+                "depth": null
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 7
+          },
+          {
+            "ml_num_merge": "********",
+            "marker_label": "D 0.87M",
+            "id_listing": "Z5BX321Qen17Dar0",
+            "id_address": "eQp5yO8xzRv7d0ZE",
+            "seo_municipality": "pelham-real-estate",
+            "seo_address": "",
+            "seo_image_alt": "",
+            "seo_suffix": "",
+            "photo_url": "https://cache18.housesigma.com/file/pix-treb/X8358114/a2954_1.jpg?e1b6ded7",
+            "photo_source": null,
+            "house_type_name": "********",
+            "house_type": "D.",
+            "house_style": "2 1/2 Storey",
+            "apt_num": null,
+            "address": "(Address display requires sign-in)",
+            "address_navigation": null,
+            "list_status": {
+              "public": -1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "-",
+            "municipality_name": "Pelham",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 0,
+            "bedroom_plus": null,
+            "bedroom_string": 0,
+            "washroom": 0,
+            "parking": {
+              "total": 0,
+              "garage_type": null,
+              "garage": 0,
+              "parking_type": null,
+              "parking": 0,
+              "text": ""
+            },
+            "price": "(Sign-in required)",
+            "price_int": null,
+            "price_abbr": "??",
+            "price_sold": "(Sign-in required)",
+            "price_origin": null,
+            "price_sold_int": null,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.04405,
+              "lon": -79.28972
+            },
+            "house_area": {
+              "area": 0,
+              "area_note": "(Est.)",
+              "unit": "feet²",
+              "estimate": 0
+            },
+            "land": null,
+            "date_added": "",
+            "date_added_days": 0,
+            "date_start": "2024-05-17",
+            "date_start_days": 264,
+            "date_start_month": 0,
+            "date_update": "",
+            "date_end": "",
+            "date_end_days": 0,
+            "list_days": 94,
+            "feature_header": null,
+            "data_source": "TRREB",
+            "data_source_raw": "TREB",
+            "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+            "tos_source": "TREB",
+            "analytics": {
+              "rent_yield": "3.0",
+              "rent_base": "3231350",
+              "estimate_price_age": 0,
+              "estimate_price_date": "",
+              "estimate_price": "",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "5"
+            },
+            "scores": {
+              "school": 9,
+              "rent": 4,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-08-19",
+              "list_date_long": "Sold 2024-08-19, Dom: 94 days",
+              "dom_short": "Sold in Aug 2024",
+              "dom_short_v2": "in Aug 2024",
+              "dom_long": "Sold 170 days ago, Dom: 94 days",
+              "rooms_short": "",
+              "rooms_long": "",
+              "status_chg_date": "5 months ago",
+              "date_preview": "2024-08-19",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "******",
+            "date_sold_report": "",
+            "sold_month": "",
+            "distance": 1.95,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": -2,
+              "washroom": -2,
+              "house_area": null,
+              "parking": {
+                "total": null
+              },
+              "land": {
+                "front": null,
+                "depth": null
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 8
+          },
+          {
+            "ml_num_merge": "40607601",
+            "marker_label": "D 0.83M",
+            "id_listing": "nM697kVL2M1ybmwe",
+            "id_address": "mZRW7naooGdyEBO9",
+            "seo_municipality": "pelham-real-estate",
+            "seo_address": "11-oakridge-boulevard",
+            "seo_image_alt": "MLS Listing Sold at 11 Oakridge Boulevard, Pelham, Ontario, L0S1E5, MLS# 40607601",
+            "seo_suffix": "11-Oakridge-Boulevard-Pelham-L0S1E5-40607601-X8463486",
+            "photo_url": "https://cache15.housesigma.com/file/pix-itso/151100001/aec99_1.jpg?74012ffd",
+            "photo_source": null,
+            "house_type_name": "Single Family Residence",
+            "house_type": "D.",
+            "house_style": "Bungalow",
+            "apt_num": null,
+            "address": "11 Oakridge Boulevard",
+            "address_navigation": "11 Oakridge Boulevard, Pelham, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Fonthill",
+            "municipality_name": "Pelham",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 3,
+            "bedroom_plus": 1,
+            "bedroom_string": "3+1",
+            "washroom": 2,
+            "parking": {
+              "total": 2,
+              "garage_type": null,
+              "garage": 2,
+              "parking_type": null,
+              "parking": 6,
+              "text": " 2 garage,  6 parking"
+            },
+            "price": "829,900",
+            "price_int": 829900,
+            "price_abbr": "0.83M",
+            "price_sold": "829,900",
+            "price_origin": null,
+            "price_sold_int": 829900,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.03833,
+              "lon": -79.297497
+            },
+            "house_area": {
+              "area": "1423",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1423
+            },
+            "land": {
+              "front": 62,
+              "depth": 115,
+              "unit": "feet"
+            },
+            "date_added": "2024-06-19",
+            "date_added_days": 231,
+            "date_start": "2024-06-18",
+            "date_start_days": 232,
+            "date_start_month": 7,
+            "date_update": "2024-08-28",
+            "date_end": "2024-07-09",
+            "date_end_days": 211,
+            "list_days": 21,
+            "feature_header": null,
+            "data_source": "ITSO",
+            "data_source_raw": "ITSO",
+            "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+            "tos_source": "ITSO",
+            "analytics": {
+              "rent_yield": "3.6",
+              "rent_base": "3124714",
+              "estimate_price_age": 18,
+              "estimate_price_date": "2025-01-18 06:26:29",
+              "estimate_price": "800,500",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "44"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 6,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-07-09",
+              "list_date_long": "Sold 2024-07-09, Dom: 21 days",
+              "dom_short": "Sold in Jul 2024",
+              "dom_short_v2": "in Jul 2024",
+              "dom_long": "Sold 211 days ago, Dom: 21 days",
+              "rooms_short": "3+1 bd 2 ba 2 gr",
+              "rooms_long": "3+1 Bedroom, 2 Bathroom, 2 Garage",
+              "status_chg_date": "5 months ago",
+              "date_preview": "2024-07-09",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L0S1E5",
+            "date_sold_report": null,
+            "sold_month": "2024-07",
+            "distance": 1.18,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": 1,
+              "washroom": null,
+              "house_area": -285,
+              "parking": {
+                "total": 2
+              },
+              "land": {
+                "front": -49,
+                "depth": -66
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 9
+          },
+          {
+            "ml_num_merge": "40614933",
+            "marker_label": "D 1.1M",
+            "id_listing": "nM697kV6BBmybmwe",
+            "id_address": "5VXv3lXKbmg3j2q8",
+            "seo_municipality": "pelham-real-estate",
+            "seo_address": "16-damude-drive",
+            "seo_image_alt": "MLS Listing Sold at 16 Damude Drive, Pelham, Ontario, L0S1E0, MLS# 40614933",
+            "seo_suffix": "16-Damude-Drive-Pelham-L0S1E0-40614933-X9034273-X9408429",
+            "photo_url": "https://cache15.housesigma.com/file/pix-itso/151681011/d19ec_1.jpg?ca39a89b",
+            "photo_source": null,
+            "house_type_name": "Single Family Residence",
+            "house_type": "D.",
+            "house_style": "Bungalow",
+            "apt_num": null,
+            "address": "16 Damude Drive",
+            "address_navigation": "16 Damude Drive, Pelham, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Fonthill",
+            "municipality_name": "Pelham",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 2,
+            "bedroom_plus": 1,
+            "bedroom_string": "2+1",
+            "washroom": 3,
+            "parking": {
+              "total": 2.5,
+              "garage_type": null,
+              "garage": 2.5,
+              "parking_type": null,
+              "parking": 7,
+              "text": " 2.5 garage,  7 parking"
+            },
+            "price": "1,150,000",
+            "price_int": 1150000,
+            "price_abbr": "1.2M",
+            "price_sold": "1,140,000",
+            "price_origin": null,
+            "price_sold_int": 1140000,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.036918,
+              "lon": -79.292002
+            },
+            "house_area": {
+              "area": "1822",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1822
+            },
+            "land": {
+              "front": 80,
+              "depth": 139,
+              "unit": "feet"
+            },
+            "date_added": "2024-07-04",
+            "date_added_days": 216,
+            "date_start": "2024-07-04",
+            "date_start_days": 216,
+            "date_start_month": 7,
+            "date_update": "2024-09-19",
+            "date_end": "2024-07-30",
+            "date_end_days": 190,
+            "list_days": 26,
+            "feature_header": null,
+            "data_source": "ITSO",
+            "data_source_raw": "ITSO",
+            "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+            "tos_source": "ITSO",
+            "analytics": {
+              "rent_yield": "3.0",
+              "rent_base": "4262440",
+              "estimate_price_age": 18,
+              "estimate_price_date": "2025-01-18 06:31:40",
+              "estimate_price": "1,083,000",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "79"
+            },
+            "scores": {
+              "school": 8,
+              "rent": 4,
+              "growth": 5
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-07-30",
+              "list_date_long": "Sold 2024-07-30, Dom: 26 days",
+              "dom_short": "Sold in Jul 2024",
+              "dom_short_v2": "in Jul 2024",
+              "dom_long": "Sold 190 days ago, Dom: 26 days",
+              "rooms_short": "2+1 bd 3 ba 2.5 gr",
+              "rooms_long": "2+1 Bedroom, 3 Bathroom, 2.5 Garage",
+              "status_chg_date": "4 months ago",
+              "date_preview": "2024-07-30",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L0S1E0",
+            "date_sold_report": null,
+            "sold_month": "2024-07",
+            "distance": 1.62,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": null,
+              "washroom": 1,
+              "house_area": 114,
+              "parking": {
+                "total": 2.5
+              },
+              "land": {
+                "front": -31,
+                "depth": -42
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 10
+          }
+        ],
+        "meta": {
+          "title": "Ontario, Similar Sold | HouseSigma"
+        }
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH14",
+        "ml_server": "ovh38",
+        "ml_from_cache": false
+      }
+    }
+  }
+}

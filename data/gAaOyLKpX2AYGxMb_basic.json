@@ -1,0 +1,89 @@
+{
+  "photos": [
+    "https://cache08.housesigma.com/file/pix-itso/156390980/5ef61_1.jpg?d362830e",
+    "https://cache09.housesigma.com/file/pix-itso/156390980/5ef61_2.jpg?d362830e",
+    "https://cache-e14.housesigma.com/file/pix-itso/156390980/5ef61_3.jpg?d362830e",
+    "https://cache14.housesigma.com/file/pix-itso/156390980/5ef61_4.jpg?d362830e",
+    "https://cache15.housesigma.com/file/pix-itso/156390980/5ef61_5.jpg?d362830e",
+    "https://cache08.housesigma.com/file/pix-itso/156390980/5ef61_6.jpg?d362830e",
+    "https://cache09.housesigma.com/file/pix-itso/156390980/5ef61_7.jpg?d362830e",
+    "https://cache-e14.housesigma.com/file/pix-itso/156390980/5ef61_8.jpg?d362830e",
+    "https://cache14.housesigma.com/file/pix-itso/156390980/5ef61_9.jpg?d362830e",
+    "https://cache15.housesigma.com/file/pix-itso/156390980/5ef61_10.jpg?d362830e",
+    "https://cache08.housesigma.com/file/pix-itso/156390980/5ef61_11.jpg?d362830e",
+    "https://cache09.housesigma.com/file/pix-itso/156390980/5ef61_12.jpg?d362830e",
+    "https://cache-e14.housesigma.com/file/pix-itso/156390980/5ef61_13.jpg?d362830e",
+    "https://cache14.housesigma.com/file/pix-itso/156390980/5ef61_14.jpg?d362830e",
+    "https://cache15.housesigma.com/file/pix-itso/156390980/5ef61_15.jpg?d362830e",
+    "https://cache08.housesigma.com/file/pix-itso/156390980/5ef61_16.jpg?d362830e",
+    "https://cache09.housesigma.com/file/pix-itso/156390980/5ef61_17.jpg?d362830e",
+    "https://cache-e14.housesigma.com/file/pix-itso/156390980/5ef61_18.jpg?d362830e",
+    "https://cache14.housesigma.com/file/pix-itso/156390980/5ef61_19.jpg?d362830e",
+    "https://cache15.housesigma.com/file/pix-itso/156390980/5ef61_20.jpg?d362830e",
+    "https://cache08.housesigma.com/file/pix-itso/156390980/5ef61_21.jpg?d362830e",
+    "https://cache09.housesigma.com/file/pix-itso/156390980/5ef61_22.jpg?d362830e",
+    "https://cache-e14.housesigma.com/file/pix-itso/156390980/5ef61_23.jpg?d362830e",
+    "https://cache14.housesigma.com/file/pix-itso/156390980/5ef61_24.jpg?d362830e",
+    "https://cache15.housesigma.com/file/pix-itso/156390980/5ef61_25.jpg?d362830e",
+    "https://cache08.housesigma.com/file/pix-itso/156390980/5ef61_26.jpg?d362830e",
+    "https://cache09.housesigma.com/file/pix-itso/156390980/5ef61_27.jpg?d362830e",
+    "https://cache-e14.housesigma.com/file/pix-itso/156390980/5ef61_28.jpg?d362830e",
+    "https://cache14.housesigma.com/file/pix-itso/156390980/5ef61_29.jpg?d362830e",
+    "https://cache15.housesigma.com/file/pix-itso/156390980/5ef61_30.jpg?d362830e",
+    "https://cache08.housesigma.com/file/pix-itso/156390980/5ef61_31.jpg?d362830e",
+    "https://cache09.housesigma.com/file/pix-itso/156390980/5ef61_32.jpg?d362830e",
+    "https://cache-e14.housesigma.com/file/pix-itso/156390980/5ef61_33.jpg?d362830e"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "131 Escarpment Drive",
+      "municipality": "Stoney Creek",
+      "postalCode": "L8E0G5",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": "R3-30",
+    "coordinates": {
+      "latitude": 43.213844,
+      "longitude": -79.652068
+    },
+    "propertyTax": 4871,
+    "lotSize": 4563,
+    "squareFootage": 1299,
+    "askingPrice": 849900,
+    "daysOnMarket": 5,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2025-01-28T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "gAaOyLKpX2AYGxMb",
+        "event": "For Sale"
+      },
+      {
+        "startDate": "2025-01-16T00:00:00.000Z",
+        "endDate": "2025-01-28T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "56k97wJRXZ1yKRjD",
+        "event": "Terminated"
+      }
+    ],
+    "estimatePrice": 831900,
+    "estimatePriceConfident": 0.15,
+    "estimateRent": 3155,
+    "estimateRentDays": 32,
+    "estimateRentYearReturn": 3.56,
+    "scores": {
+      "school": 7,
+      "growth": 7,
+      "rent": 6
+    },
+    "communityValue": {
+      "value": 870000,
+      "growth": 0.12,
+      "growth5YearAverage": 0.51,
+      "growth10YearAverage": 1.03
+    }
+  }
+}

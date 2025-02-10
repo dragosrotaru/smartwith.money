@@ -1,9 +1,14 @@
 # TODO
 
-- add onboarding
+- finish onboarding
 - add invite to account
+- add billing management
+- add account selection / account settings
+- add user settings
+- add referrals
 - add paid features
 - add privacy policy and tos
+- implement authjs error handling
 - enable Oauth
 - add landing page
 - add metadata for SEO

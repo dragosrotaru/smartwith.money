@@ -1,5 +1,5 @@
 'use client'
-
+import Link from 'next/link'
 import { useState } from 'react'
 import { signIn, useSession, signOut } from 'next-auth/react'
 import { Button } from '@/components/ui/button'
@@ -10,13 +10,16 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { User, LogOut, Settings, CreditCard, UserPlus } from 'lucide-react'
+import { User, LogOut, Settings, CreditCard, UserPlus, AlertCircle } from 'lucide-react'
+import { menu } from '@/lib/menu'
+import { useActiveAccount } from '@/contexts/ActiveAccountContext'
 
 export function Account() {
-  const { data: session, status } = useSession()
+  const { status } = useSession()
   const [isOpen, setIsOpen] = useState(false)
+  const { activeAccountId, isLoading } = useActiveAccount()
 
-  if (status === 'loading') {
+  if (status === 'loading' || isLoading) {
     return (
       <Button variant="ghost" className="w-[120px]">
         Loading...
@@ -33,56 +36,58 @@ export function Account() {
   }
 
   return (
-    <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="w-[120px]">
-          {session?.user?.name ?? 'Account'}
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-[200px]">
-        <DropdownMenuItem
-          onClick={() => {
-            /* Navigate to account page */
-          }}
-        >
-          <User className="mr-2 h-4 w-4" />
-          Account
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => {
-            /* Navigate to billing page */
-          }}
-        >
-          <CreditCard className="mr-2 h-4 w-4" />
-          Billing
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => {
-            /* Navigate to settings page */
-          }}
-        >
-          <Settings className="mr-2 h-4 w-4" />
-          Settings
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => {
-            /* Navigate to invite friends page */
-          }}
-        >
-          <UserPlus className="mr-2 h-4 w-4" />
-          Invite Friends
-        </DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem
-          onClick={async () => {
-            setIsOpen(false)
-            signOut()
-          }}
-        >
-          <LogOut className="mr-2 h-4 w-4" />
-          Sign out
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div className="flex items-center gap-2">
+      <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost">
+            <Settings className="h-5 w-5" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end" className="w-[200px] translate-y-4">
+          {!activeAccountId && (
+            <DropdownMenuItem>
+              <Link href={menu.onboarding.href} className="flex items-center">
+                <AlertCircle className="mr-2 h-4 w-4" />
+                Finish Onboarding
+              </Link>
+            </DropdownMenuItem>
+          )}
+          <DropdownMenuItem>
+            <Link href={menu.account.href} className="flex items-center">
+              <User className="mr-2 h-4 w-4" />
+              {menu.account.title}
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href={menu.billing.href} className="flex items-center">
+              <CreditCard className="mr-2 h-4 w-4" />
+              {menu.billing.title}
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href={menu.user.href} className="flex items-center">
+              <Settings className="mr-2 h-4 w-4" />
+              {menu.user.title}
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href={menu.referral.href} className="flex items-center">
+              <UserPlus className="mr-2 h-4 w-4" />
+              {menu.referral.title}
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem
+            onClick={async () => {
+              setIsOpen(false)
+              signOut()
+            }}
+          >
+            <LogOut className="mr-2 h-4 w-4" />
+            Sign out
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
   )
 }

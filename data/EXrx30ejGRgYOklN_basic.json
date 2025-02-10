@@ -1,0 +1,102 @@
+{
+  "photos": [
+    "https://cache05.housesigma.com/file/pix-treb/X10403456/3ae6f_1.jpg?2d9d129f",
+    "https://cache06.housesigma.com/file/pix-treb/X10403456/3ae6f_2.jpg?2d9d129f",
+    "https://cache08.housesigma.com/file/pix-treb/X10403456/3ae6f_3.jpg?2d9d129f",
+    "https://cache09.housesigma.com/file/pix-treb/X10403456/3ae6f_4.jpg?2d9d129f",
+    "https://cache16.housesigma.com/file/pix-treb/X10403456/3ae6f_5.jpg?2d9d129f",
+    "https://cache17.housesigma.com/file/pix-treb/X10403456/3ae6f_6.jpg?2d9d129f",
+    "https://cache18.housesigma.com/file/pix-treb/X10403456/3ae6f_7.jpg?2d9d129f",
+    "https://cache19.housesigma.com/file/pix-treb/X10403456/3ae6f_8.jpg?2d9d129f",
+    "https://cache-e11.housesigma.com/file/pix-treb/X10403456/3ae6f_9.jpg?2d9d129f",
+    "https://cache-e12.housesigma.com/file/pix-treb/X10403456/3ae6f_10.jpg?2d9d129f",
+    "https://cache-e13.housesigma.com/file/pix-treb/X10403456/3ae6f_11.jpg?2d9d129f",
+    "https://cache-e14.housesigma.com/file/pix-treb/X10403456/3ae6f_12.jpg?2d9d129f",
+    "https://cache05.housesigma.com/file/pix-treb/X10403456/3ae6f_13.jpg?2d9d129f",
+    "https://cache06.housesigma.com/file/pix-treb/X10403456/3ae6f_14.jpg?2d9d129f",
+    "https://cache08.housesigma.com/file/pix-treb/X10403456/3ae6f_15.jpg?2d9d129f",
+    "https://cache09.housesigma.com/file/pix-treb/X10403456/3ae6f_16.jpg?2d9d129f",
+    "https://cache16.housesigma.com/file/pix-treb/X10403456/3ae6f_17.jpg?2d9d129f",
+    "https://cache17.housesigma.com/file/pix-treb/X10403456/3ae6f_18.jpg?2d9d129f",
+    "https://cache18.housesigma.com/file/pix-treb/X10403456/3ae6f_19.jpg?2d9d129f",
+    "https://cache19.housesigma.com/file/pix-treb/X10403456/3ae6f_20.jpg?2d9d129f",
+    "https://cache-e11.housesigma.com/file/pix-treb/X10403456/3ae6f_21.jpg?2d9d129f",
+    "https://cache-e12.housesigma.com/file/pix-treb/X10403456/3ae6f_22.jpg?2d9d129f",
+    "https://cache-e13.housesigma.com/file/pix-treb/X10403456/3ae6f_23.jpg?2d9d129f",
+    "https://cache-e14.housesigma.com/file/pix-treb/X10403456/3ae6f_24.jpg?2d9d129f",
+    "https://cache05.housesigma.com/file/pix-treb/X10403456/3ae6f_25.jpg?2d9d129f"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "17 WOODSVIEW Ave",
+      "municipality": "Grimsby",
+      "postalCode": "L3M3S5",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": "R2",
+    "coordinates": {
+      "latitude": 43.20292,
+      "longitude": -79.56691
+    },
+    "propertyTax": 3983,
+    "lotSize": 6328,
+    "squareFootage": 1197,
+    "askingPrice": 925000,
+    "daysOnMarket": 169,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2024-08-17T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "EXrx30ejGRgYOklN",
+        "event": "For Sale"
+      },
+      {
+        "startDate": "2022-11-17T00:00:00.000Z",
+        "endDate": "2022-12-17T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "aD6p781zZPJ3wRQr",
+        "event": "Sold"
+      },
+      {
+        "startDate": "2022-10-26T00:00:00.000Z",
+        "endDate": "2022-11-17T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "bEDRYagEGGO71VaB",
+        "event": "Terminated"
+      },
+      {
+        "startDate": "2022-10-04T00:00:00.000Z",
+        "endDate": "2022-10-27T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "eVbOYEpdNnR3x2P0",
+        "event": "Terminated"
+      },
+      {
+        "startDate": "2022-09-15T00:00:00.000Z",
+        "endDate": "2022-10-05T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "JKdOYrGzLDly54lW",
+        "event": "Terminated"
+      }
+    ],
+    "estimatePrice": 899300,
+    "estimatePriceConfident": 0.46,
+    "estimateRent": 3375,
+    "estimateRentDays": 21,
+    "estimateRentYearReturn": 3.8,
+    "scores": {
+      "school": 7,
+      "growth": 3,
+      "rent": 6
+    },
+    "communityValue": {
+      "value": 785000,
+      "growth": -0.021,
+      "growth5YearAverage": 0.26,
+      "growth10YearAverage": 0.93
+    }
+  }
+}

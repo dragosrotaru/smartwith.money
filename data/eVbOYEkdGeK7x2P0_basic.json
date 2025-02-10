@@ -1,0 +1,81 @@
+{
+  "photos": [
+    "https://cache-e14.housesigma.com/file/pix-itso/156365270/aa30f_1.jpg?dbc44e97",
+    "https://cache14.housesigma.com/file/pix-itso/156365270/aa30f_2.jpg?dbc44e97",
+    "https://cache15.housesigma.com/file/pix-itso/156365270/aa30f_3.jpg?dbc44e97",
+    "https://cache08.housesigma.com/file/pix-itso/156365270/aa30f_4.jpg?dbc44e97",
+    "https://cache09.housesigma.com/file/pix-itso/156365270/aa30f_5.jpg?dbc44e97",
+    "https://cache-e14.housesigma.com/file/pix-itso/156365270/aa30f_6.jpg?dbc44e97",
+    "https://cache14.housesigma.com/file/pix-itso/156365270/aa30f_7.jpg?dbc44e97",
+    "https://cache15.housesigma.com/file/pix-itso/156365270/aa30f_8.jpg?dbc44e97",
+    "https://cache08.housesigma.com/file/pix-itso/156365270/aa30f_9.jpg?dbc44e97",
+    "https://cache09.housesigma.com/file/pix-itso/156365270/aa30f_10.jpg?dbc44e97",
+    "https://cache-e14.housesigma.com/file/pix-itso/156365270/aa30f_11.jpg?dbc44e97",
+    "https://cache14.housesigma.com/file/pix-itso/156365270/aa30f_12.jpg?dbc44e97",
+    "https://cache15.housesigma.com/file/pix-itso/156365270/aa30f_13.jpg?dbc44e97",
+    "https://cache08.housesigma.com/file/pix-itso/156365270/aa30f_14.jpg?dbc44e97",
+    "https://cache09.housesigma.com/file/pix-itso/156365270/aa30f_15.jpg?dbc44e97",
+    "https://cache-e14.housesigma.com/file/pix-itso/156365270/aa30f_16.jpg?dbc44e97",
+    "https://cache14.housesigma.com/file/pix-itso/156365270/aa30f_17.jpg?dbc44e97",
+    "https://cache15.housesigma.com/file/pix-itso/156365270/aa30f_18.jpg?dbc44e97",
+    "https://cache08.housesigma.com/file/pix-itso/156365270/aa30f_19.jpg?dbc44e97",
+    "https://cache09.housesigma.com/file/pix-itso/156365270/aa30f_20.jpg?dbc44e97",
+    "https://cache-e14.housesigma.com/file/pix-itso/156365270/aa30f_21.jpg?dbc44e97",
+    "https://cache14.housesigma.com/file/pix-itso/156365270/aa30f_22.jpg?dbc44e97",
+    "https://cache15.housesigma.com/file/pix-itso/156365270/aa30f_23.jpg?dbc44e97",
+    "https://cache08.housesigma.com/file/pix-itso/156365270/aa30f_24.jpg?dbc44e97",
+    "https://cache09.housesigma.com/file/pix-itso/156365270/aa30f_25.jpg?dbc44e97",
+    "https://cache-e14.housesigma.com/file/pix-itso/156365270/aa30f_26.jpg?dbc44e97",
+    "https://cache14.housesigma.com/file/pix-itso/156365270/aa30f_27.jpg?dbc44e97",
+    "https://cache15.housesigma.com/file/pix-itso/156365270/aa30f_28.jpg?dbc44e97",
+    "https://cache08.housesigma.com/file/pix-itso/156365270/aa30f_29.jpg?dbc44e97",
+    "https://cache09.housesigma.com/file/pix-itso/156365270/aa30f_30.jpg?dbc44e97",
+    "https://cache-e14.housesigma.com/file/pix-itso/156365270/aa30f_31.jpg?dbc44e97",
+    "https://cache14.housesigma.com/file/pix-itso/156365270/aa30f_32.jpg?dbc44e97"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "9 Rodney Avenue",
+      "municipality": "Grimsby",
+      "postalCode": "L3M2K4",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": "R2",
+    "coordinates": {
+      "latitude": 43.205453,
+      "longitude": -79.561433
+    },
+    "propertyTax": 4301,
+    "lotSize": 6000,
+    "squareFootage": 1349,
+    "askingPrice": 779900,
+    "daysOnMarket": 6,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2025-01-27T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "eVbOYEkdGeK7x2P0",
+        "event": "For Sale"
+      }
+    ],
+    "estimatePrice": 758000,
+    "estimatePriceConfident": 0.36,
+    "estimateRent": 2652,
+    "estimateRentDays": 30,
+    "estimateRentYearReturn": 3.28,
+    "scores": {
+      "school": 7,
+      "growth": 6,
+      "rent": 5
+    },
+    "communityValue": {
+      "value": 935500,
+      "growth": 0.054000000000000006,
+      "growth5YearAverage": 0.45,
+      "growth10YearAverage": 0.85
+    }
+  }
+}

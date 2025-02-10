@@ -1,0 +1,97 @@
+{
+  "photos": [
+    "https://cache08.housesigma.com/file/pix-itso/155424359/affc6_1.jpg?eb77dd5c",
+    "https://cache09.housesigma.com/file/pix-itso/155424359/affc6_2.jpg?eb77dd5c",
+    "https://cache-e14.housesigma.com/file/pix-itso/155424359/affc6_3.jpg?eb77dd5c",
+    "https://cache14.housesigma.com/file/pix-itso/155424359/affc6_4.jpg?eb77dd5c",
+    "https://cache15.housesigma.com/file/pix-itso/155424359/affc6_5.jpg?eb77dd5c",
+    "https://cache08.housesigma.com/file/pix-itso/155424359/affc6_6.jpg?eb77dd5c",
+    "https://cache09.housesigma.com/file/pix-itso/155424359/affc6_7.jpg?eb77dd5c",
+    "https://cache-e14.housesigma.com/file/pix-itso/155424359/affc6_8.jpg?eb77dd5c",
+    "https://cache14.housesigma.com/file/pix-itso/155424359/affc6_9.jpg?eb77dd5c",
+    "https://cache15.housesigma.com/file/pix-itso/155424359/affc6_10.jpg?eb77dd5c",
+    "https://cache08.housesigma.com/file/pix-itso/155424359/affc6_11.jpg?eb77dd5c",
+    "https://cache09.housesigma.com/file/pix-itso/155424359/affc6_12.jpg?eb77dd5c",
+    "https://cache-e14.housesigma.com/file/pix-itso/155424359/affc6_13.jpg?eb77dd5c",
+    "https://cache14.housesigma.com/file/pix-itso/155424359/affc6_14.jpg?eb77dd5c",
+    "https://cache15.housesigma.com/file/pix-itso/155424359/affc6_15.jpg?eb77dd5c",
+    "https://cache08.housesigma.com/file/pix-itso/155424359/affc6_16.jpg?eb77dd5c",
+    "https://cache09.housesigma.com/file/pix-itso/155424359/affc6_17.jpg?eb77dd5c",
+    "https://cache-e14.housesigma.com/file/pix-itso/155424359/affc6_18.jpg?eb77dd5c",
+    "https://cache14.housesigma.com/file/pix-itso/155424359/affc6_19.jpg?eb77dd5c",
+    "https://cache15.housesigma.com/file/pix-itso/155424359/affc6_20.jpg?eb77dd5c",
+    "https://cache08.housesigma.com/file/pix-itso/155424359/affc6_21.jpg?eb77dd5c",
+    "https://cache09.housesigma.com/file/pix-itso/155424359/affc6_22.jpg?eb77dd5c",
+    "https://cache-e14.housesigma.com/file/pix-itso/155424359/affc6_23.jpg?eb77dd5c",
+    "https://cache14.housesigma.com/file/pix-itso/155424359/affc6_24.jpg?eb77dd5c",
+    "https://cache15.housesigma.com/file/pix-itso/155424359/affc6_25.jpg?eb77dd5c",
+    "https://cache08.housesigma.com/file/pix-itso/155424359/affc6_26.jpg?eb77dd5c",
+    "https://cache09.housesigma.com/file/pix-itso/155424359/affc6_27.jpg?eb77dd5c",
+    "https://cache-e14.housesigma.com/file/pix-itso/155424359/affc6_28.jpg?eb77dd5c",
+    "https://cache14.housesigma.com/file/pix-itso/155424359/affc6_29.jpg?eb77dd5c",
+    "https://cache15.housesigma.com/file/pix-itso/155424359/affc6_30.jpg?eb77dd5c",
+    "https://cache08.housesigma.com/file/pix-itso/155424359/affc6_31.jpg?eb77dd5c",
+    "https://cache09.housesigma.com/file/pix-itso/155424359/affc6_32.jpg?eb77dd5c",
+    "https://cache-e14.housesigma.com/file/pix-itso/155424359/affc6_33.jpg?eb77dd5c",
+    "https://cache14.housesigma.com/file/pix-itso/155424359/affc6_34.jpg?eb77dd5c"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "2 Kidd Avenue",
+      "municipality": "Grimsby",
+      "postalCode": "L3M3S3",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": "R2",
+    "coordinates": {
+      "latitude": 43.195737,
+      "longitude": -79.570082
+    },
+    "propertyTax": 5234,
+    "lotSize": 8618,
+    "squareFootage": 2049,
+    "askingPrice": 949999,
+    "daysOnMarket": 87,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2024-11-07T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "1DBW7RnVVJQ7qlAp",
+        "event": "For Sale"
+      },
+      {
+        "startDate": "2024-10-09T00:00:00.000Z",
+        "endDate": "2024-11-07T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "bqB176ZqQan7ZajD",
+        "event": "Terminated"
+      },
+      {
+        "startDate": "2021-02-24T00:00:00.000Z",
+        "endDate": "2021-03-01T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "gAaOyL8pDAmyGxMb",
+        "event": "Sold"
+      }
+    ],
+    "estimatePrice": 925300,
+    "estimatePriceConfident": 0.48,
+    "estimateRent": 2911,
+    "estimateRentDays": 36,
+    "estimateRentYearReturn": 2.83,
+    "scores": {
+      "school": 7,
+      "growth": 6,
+      "rent": 3
+    },
+    "communityValue": {
+      "value": 935500,
+      "growth": 0.054000000000000006,
+      "growth5YearAverage": 0.45,
+      "growth10YearAverage": 0.85
+    }
+  }
+}

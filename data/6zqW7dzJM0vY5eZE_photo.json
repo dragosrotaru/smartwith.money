@@ -1,0 +1,313 @@
+{
+  "outside": {
+    "treeCoverage": 10,
+    "proximityToRoad": 30,
+    "proximityToNeighbors": 50,
+    "cookieCutterScore": 70,
+    "architecture": "Ranch",
+    "numberofBuildings": 1,
+    "overallCondition": "85",
+    "tinyHousePotential": 60,
+    "hasRearAccess": true,
+    "estimatedAge": 50,
+    "estimatedLotSize": 0.5,
+    "hobbyFarmPotential": 40
+  },
+  "workshop": null,
+  "features": {
+    "sauna": false,
+    "jacuzzi": false,
+    "pool": false,
+    "river": false,
+    "pond": false,
+    "gym": false,
+    "terrain": true
+  },
+  "renovations": {
+    "exterior": [
+      {
+        "materialCost": 5000,
+        "laborCost": 3000,
+        "totalCost": 8000,
+        "diyTime": 40,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 85,
+        "title": "Landscaping and Garden Enhancement",
+        "description": "Enhance the curb appeal by adding flower beds, shrubs, and a small garden. Consider adding a stone pathway and lighting to highlight the landscape."
+      },
+      {
+        "materialCost": 7000,
+        "laborCost": 5000,
+        "totalCost": 12000,
+        "diyTime": 60,
+        "difficulty": "hard",
+        "roi": 75,
+        "priorityScore": 90,
+        "title": "Patio Installation",
+        "description": "Install a patio in the backyard using durable materials like stone or concrete. This will create an outdoor living space for relaxation and entertainment."
+      },
+      {
+        "materialCost": 3000,
+        "laborCost": 2000,
+        "totalCost": 5000,
+        "diyTime": 20,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 70,
+        "title": "Exterior Painting",
+        "description": "Repaint the exterior of the house to give it a fresh and modern look. Choose colors that complement the surroundings and enhance the overall appearance."
+      },
+      {
+        "materialCost": 2000,
+        "laborCost": 1500,
+        "totalCost": 3500,
+        "diyTime": 15,
+        "difficulty": "easy",
+        "roi": 50,
+        "priorityScore": 60,
+        "title": "Fence Staining and Repair",
+        "description": "Stain and repair the existing fence to improve its appearance and longevity. This will enhance the property's privacy and aesthetic appeal."
+      },
+      {
+        "materialCost": 4000,
+        "laborCost": 3000,
+        "totalCost": 7000,
+        "diyTime": 30,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 75,
+        "title": "Driveway Resurfacing",
+        "description": "Resurface the driveway to improve its appearance and functionality. Consider using materials that are durable and visually appealing."
+      }
+    ],
+    "living area": [
+      {
+        "materialCost": 3000,
+        "laborCost": 2000,
+        "totalCost": 5000,
+        "diyTime": 40,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 85,
+        "title": "Flooring Upgrade",
+        "description": "Replace the carpet in the living and dining areas with hardwood or high-quality laminate flooring. This will modernize the space and increase its appeal to potential buyers."
+      },
+      {
+        "materialCost": 1500,
+        "laborCost": 1000,
+        "totalCost": 2500,
+        "diyTime": 20,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 70,
+        "title": "Lighting Update",
+        "description": "Replace outdated light fixtures with modern, energy-efficient options. Consider adding recessed lighting to enhance the ambiance and functionality of the space."
+      },
+      {
+        "materialCost": 2000,
+        "laborCost": 1500,
+        "totalCost": 3500,
+        "diyTime": 30,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 75,
+        "title": "Fireplace Refresh",
+        "description": "Update the fireplace with a new mantel and surround. Consider painting or whitewashing the brick to give it a contemporary look."
+      },
+      {
+        "materialCost": 1000,
+        "laborCost": 800,
+        "totalCost": 1800,
+        "diyTime": 15,
+        "difficulty": "easy",
+        "roi": 50,
+        "priorityScore": 60,
+        "title": "Paint Refresh",
+        "description": "Repaint the living and dining areas with neutral, modern colors to brighten the space and make it more appealing to a wide range of buyers."
+      },
+      {
+        "materialCost": 2500,
+        "laborCost": 2000,
+        "totalCost": 4500,
+        "diyTime": 35,
+        "difficulty": "medium",
+        "roi": 55,
+        "priorityScore": 65,
+        "title": "Window Treatment Upgrade",
+        "description": "Replace the existing window treatments with modern, energy-efficient options such as cellular shades or plantation shutters to enhance the aesthetic and energy efficiency of the home."
+      }
+    ],
+    "bedroom": [
+      {
+        "materialCost": 1500,
+        "laborCost": 1000,
+        "totalCost": 2500,
+        "diyTime": 20,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 80,
+        "title": "Upgrade Lighting Fixtures",
+        "description": "Replace outdated ceiling fans and light fixtures with modern, energy-efficient LED lighting. This will enhance the room's ambiance and appeal to potential buyers."
+      },
+      {
+        "materialCost": 2000,
+        "laborCost": 1500,
+        "totalCost": 3500,
+        "diyTime": 30,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 75,
+        "title": "Install Hardwood Flooring",
+        "description": "Replace the carpet with hardwood flooring to increase the room's aesthetic appeal and value. Hardwood is a desirable feature for many buyers and can significantly enhance the room's look."
+      },
+      {
+        "materialCost": 800,
+        "laborCost": 500,
+        "totalCost": 1300,
+        "diyTime": 15,
+        "difficulty": "easy",
+        "roi": 50,
+        "priorityScore": 60,
+        "title": "Paint and Refresh Walls",
+        "description": "Apply a fresh coat of neutral paint to the walls to give the room a clean and updated look. This is a cost-effective way to refresh the space and make it more appealing."
+      },
+      {
+        "materialCost": 1200,
+        "laborCost": 800,
+        "totalCost": 2000,
+        "diyTime": 25,
+        "difficulty": "medium",
+        "roi": 60,
+        "priorityScore": 70,
+        "title": "Add Built-in Closet Organizers",
+        "description": "Install built-in closet organizers to maximize storage space and improve functionality. This is a practical upgrade that can attract buyers looking for efficient storage solutions."
+      },
+      {
+        "materialCost": 500,
+        "laborCost": 300,
+        "totalCost": 800,
+        "diyTime": 10,
+        "difficulty": "easy",
+        "roi": 40,
+        "priorityScore": 50,
+        "title": "Upgrade Window Treatments",
+        "description": "Replace old blinds with modern window treatments like shutters or shades. This can enhance the room's appearance and provide better light control and privacy."
+      }
+    ],
+    "kitchen": [
+      {
+        "materialCost": 1500,
+        "laborCost": 1000,
+        "totalCost": 2500,
+        "diyTime": 10,
+        "difficulty": "easy",
+        "roi": 80,
+        "priorityScore": 70,
+        "title": "Cabinet Refinishing",
+        "description": "Refinish the existing cabinets to give them a modern look. This involves sanding, painting, or staining the cabinets to update their appearance without replacing them."
+      },
+      {
+        "materialCost": 800,
+        "laborCost": 500,
+        "totalCost": 1300,
+        "diyTime": 8,
+        "difficulty": "easy",
+        "roi": 75,
+        "priorityScore": 65,
+        "title": "Lighting Upgrade",
+        "description": "Replace the existing lighting fixtures with modern, energy-efficient LED lights. Consider adding under-cabinet lighting to enhance the workspace and ambiance."
+      },
+      {
+        "materialCost": 1200,
+        "laborCost": 800,
+        "totalCost": 2000,
+        "diyTime": 12,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 60,
+        "title": "Backsplash Update",
+        "description": "Install a new backsplash with contemporary tiles to add visual interest and modernize the kitchen. This can be a DIY project or done by a professional."
+      },
+      {
+        "materialCost": 2000,
+        "laborCost": 1500,
+        "totalCost": 3500,
+        "diyTime": 15,
+        "difficulty": "medium",
+        "roi": 85,
+        "priorityScore": 75,
+        "title": "Countertop Replacement",
+        "description": "Replace the existing countertops with quartz or granite to enhance the kitchen's appeal and durability. This is a high-impact change that can significantly increase the kitchen's value."
+      },
+      {
+        "materialCost": 500,
+        "laborCost": 300,
+        "totalCost": 800,
+        "diyTime": 5,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 50,
+        "title": "Hardware Update",
+        "description": "Replace cabinet handles and drawer pulls with modern hardware to give the kitchen a fresh look. This is a simple and cost-effective way to update the kitchen's appearance."
+      }
+    ],
+    "unfinished basement": [
+      {
+        "materialCost": 5000,
+        "laborCost": 7000,
+        "totalCost": 12000,
+        "diyTime": 80,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 85,
+        "title": "Basement Finishing",
+        "description": "Transform the unfinished basement into a livable space by adding drywall, flooring, and lighting. This will increase the usable square footage of the home, making it more attractive to potential buyers."
+      },
+      {
+        "materialCost": 3000,
+        "laborCost": 4000,
+        "totalCost": 7000,
+        "diyTime": 60,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 75,
+        "title": "Home Office Conversion",
+        "description": "Convert a section of the basement into a home office. With more people working from home, this is a desirable feature that can add value to the property."
+      },
+      {
+        "materialCost": 2000,
+        "laborCost": 3000,
+        "totalCost": 5000,
+        "diyTime": 40,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 70,
+        "title": "Basement Bathroom Addition",
+        "description": "Add a small bathroom in the basement. This can be a significant selling point, especially for larger families or those looking to rent out the space."
+      },
+      {
+        "materialCost": 1500,
+        "laborCost": 2500,
+        "totalCost": 4000,
+        "diyTime": 30,
+        "difficulty": "easy",
+        "roi": 55,
+        "priorityScore": 65,
+        "title": "Storage Solutions",
+        "description": "Install built-in shelving and storage units to maximize space and organization. This is a cost-effective way to add functionality to the basement."
+      },
+      {
+        "materialCost": 2500,
+        "laborCost": 3500,
+        "totalCost": 6000,
+        "diyTime": 50,
+        "difficulty": "medium",
+        "roi": 60,
+        "priorityScore": 70,
+        "title": "Recreational Room",
+        "description": "Create a recreational area with a small bar, seating, and entertainment options. This can appeal to families and young buyers looking for a space to relax and entertain."
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "photos": [
+    "https://cache-e14.housesigma.com/file/pix-itso/156378327/6d358_1.jpg?739ac9cc",
+    "https://cache14.housesigma.com/file/pix-itso/156378327/6d358_2.jpg?739ac9cc",
+    "https://cache15.housesigma.com/file/pix-itso/156378327/6d358_3.jpg?739ac9cc",
+    "https://cache08.housesigma.com/file/pix-itso/156378327/6d358_4.jpg?739ac9cc",
+    "https://cache09.housesigma.com/file/pix-itso/156378327/6d358_5.jpg?739ac9cc",
+    "https://cache-e14.housesigma.com/file/pix-itso/156378327/6d358_6.jpg?739ac9cc",
+    "https://cache14.housesigma.com/file/pix-itso/156378327/6d358_7.jpg?739ac9cc",
+    "https://cache15.housesigma.com/file/pix-itso/156378327/6d358_8.jpg?739ac9cc",
+    "https://cache08.housesigma.com/file/pix-itso/156378327/6d358_9.jpg?739ac9cc",
+    "https://cache09.housesigma.com/file/pix-itso/156378327/6d358_10.jpg?739ac9cc",
+    "https://cache-e14.housesigma.com/file/pix-itso/156378327/6d358_11.jpg?739ac9cc",
+    "https://cache14.housesigma.com/file/pix-itso/156378327/6d358_12.jpg?739ac9cc",
+    "https://cache15.housesigma.com/file/pix-itso/156378327/6d358_13.jpg?739ac9cc",
+    "https://cache08.housesigma.com/file/pix-itso/156378327/6d358_14.jpg?739ac9cc",
+    "https://cache09.housesigma.com/file/pix-itso/156378327/6d358_15.jpg?739ac9cc",
+    "https://cache-e14.housesigma.com/file/pix-itso/156378327/6d358_16.jpg?739ac9cc",
+    "https://cache14.housesigma.com/file/pix-itso/156378327/6d358_17.jpg?739ac9cc",
+    "https://cache15.housesigma.com/file/pix-itso/156378327/6d358_18.jpg?739ac9cc",
+    "https://cache08.housesigma.com/file/pix-itso/156378327/6d358_19.jpg?739ac9cc",
+    "https://cache09.housesigma.com/file/pix-itso/156378327/6d358_20.jpg?739ac9cc",
+    "https://cache-e14.housesigma.com/file/pix-itso/156378327/6d358_21.jpg?739ac9cc",
+    "https://cache14.housesigma.com/file/pix-itso/156378327/6d358_22.jpg?739ac9cc",
+    "https://cache15.housesigma.com/file/pix-itso/156378327/6d358_23.jpg?739ac9cc",
+    "https://cache08.housesigma.com/file/pix-itso/156378327/6d358_24.jpg?739ac9cc",
+    "https://cache09.housesigma.com/file/pix-itso/156378327/6d358_25.jpg?739ac9cc"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "6 Carnegie Lane",
+      "municipality": "Grimsby",
+      "postalCode": "L3M3G9",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": "TRM",
+    "coordinates": {
+      "latitude": 43.195987,
+      "longitude": -79.56013
+    },
+    "propertyTax": 4975,
+    "lotSize": 10790,
+    "squareFootage": 1667,
+    "askingPrice": 899900,
+    "daysOnMarket": 5,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2025-01-28T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "AKv53DlJomr3MnxB",
+        "event": "For Sale"
+      },
+      {
+        "startDate": "2011-02-14T00:00:00.000Z",
+        "endDate": "2011-04-11T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "10QqypND9pD3LGlV",
+        "event": "Sold"
+      }
+    ],
+    "estimatePrice": 881800,
+    "estimatePriceConfident": 0.37,
+    "estimateRent": 2873,
+    "estimateRentDays": 32,
+    "estimateRentYearReturn": 3,
+    "scores": {
+      "school": 7,
+      "growth": 6,
+      "rent": 4
+    },
+    "communityValue": {
+      "value": 935500,
+      "growth": 0.054000000000000006,
+      "growth5YearAverage": 0.45,
+      "growth10YearAverage": 0.85
+    }
+  }
+}

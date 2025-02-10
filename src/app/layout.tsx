@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/Header'
 import { SessionProvider } from 'next-auth/react'
+import { ActiveAccountProvider } from '@/contexts/ActiveAccountContext'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   description: 'Your personal finance companion',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
@@ -27,12 +28,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <SessionProvider>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col  bg-gray-50`}
-        >
-          <Header />
-          <main className="flex-1">{children}</main>
-        </body>
+        <ActiveAccountProvider>
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col  bg-gray-50`}
+          >
+            <Header />
+            <main className="container mx-auto px-4 py-8">{children}</main>
+          </body>
+        </ActiveAccountProvider>
       </SessionProvider>
     </html>
   )

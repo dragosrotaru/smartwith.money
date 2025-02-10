@@ -1,0 +1,1602 @@
+{
+  "avg": {
+    "12": {
+      "month": 12,
+      "cashFlow": -5162.451256999982,
+      "equity": 120176.93271499914,
+      "opportunityCost": 108035.20303599969,
+      "netWorth": 120176.93271499914,
+      "difference": 39150.53047400001
+    },
+    "24": {
+      "month": 24,
+      "cashFlow": -5198.2093089999635,
+      "equity": 219961.4322549995,
+      "opportunityCost": 123656.3031120003,
+      "netWorth": 219961.4322549995,
+      "difference": 127219.20507599978
+    },
+    "36": {
+      "month": 36,
+      "cashFlow": -5235.81551400001,
+      "equity": 327377.2237170038,
+      "opportunityCost": 141615.0234239995,
+      "netWorth": 327377.2237170038,
+      "difference": 221165.95608399977
+    },
+    "60": {
+      "month": 60,
+      "cashFlow": -5316.989407000022,
+      "equity": 567616.1150739955,
+      "opportunityCost": 181714.06956899964,
+      "netWorth": 567616.1150739955,
+      "difference": 431330.56311500055
+    },
+    "120": {
+      "month": 120,
+      "cashFlow": -5560.226847999941,
+      "equity": 1351675.3153079913,
+      "opportunityCost": 334794.7680879995,
+      "netWorth": 1351675.3153079913,
+      "difference": 1100579.2388450033
+    }
+  },
+  "min": {
+    "12": {
+      "month": 12,
+      "cashFlow": -7009.87,
+      "equity": 67496.37,
+      "opportunityCost": 67584.49,
+      "netWorth": 67496.37,
+      "difference": 8753.6
+    },
+    "24": {
+      "month": 24,
+      "cashFlow": -7100.2,
+      "equity": 150531.07,
+      "opportunityCost": 71874.21,
+      "netWorth": 150531.07,
+      "difference": 78192.94
+    },
+    "36": {
+      "month": 36,
+      "cashFlow": -7195.75,
+      "equity": 240118.99,
+      "opportunityCost": 76340,
+      "netWorth": 240118.99,
+      "difference": 151209.77
+    },
+    "60": {
+      "month": 60,
+      "cashFlow": -7403.79,
+      "equity": 441134.09,
+      "opportunityCost": 84933.73,
+      "netWorth": 441134.09,
+      "difference": 312434.34
+    },
+    "120": {
+      "month": 120,
+      "cashFlow": -8039.57,
+      "equity": 1101645.24,
+      "opportunityCost": 108706.13,
+      "netWorth": 1101645.24,
+      "difference": 777603.79
+    }
+  },
+  "max": {
+    "12": {
+      "month": 12,
+      "cashFlow": -3458.95,
+      "equity": 182003.51,
+      "opportunityCost": 158478.6,
+      "netWorth": 182003.51,
+      "difference": 77924.04
+    },
+    "24": {
+      "month": 24,
+      "cashFlow": -3452.4,
+      "equity": 299945.44,
+      "opportunityCost": 193233.84,
+      "netWorth": 299945.44,
+      "difference": 188772.34
+    },
+    "36": {
+      "month": 36,
+      "cashFlow": -3445.56,
+      "equity": 426617.03,
+      "opportunityCost": 235415.36,
+      "netWorth": 426617.03,
+      "difference": 307919.26
+    },
+    "60": {
+      "month": 60,
+      "cashFlow": -3430.96,
+      "equity": 709001.59,
+      "opportunityCost": 338259.46,
+      "netWorth": 709001.59,
+      "difference": 576004.2
+    },
+    "120": {
+      "month": 120,
+      "cashFlow": -3388.55,
+      "equity": 1624381.82,
+      "opportunityCost": 799184.11,
+      "netWorth": 1624381.82,
+      "difference": 1451973.58
+    }
+  },
+  "maxParams": {
+    "12": {
+      "cashFlow": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 1840.2,
+          "rentedSquareFootage": 918,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.12,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 29400,
+          "roi": 0.65
+        }
+      },
+      "equity": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.08,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      },
+      "opportunityCost": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 0,
+          "rentedSquareFootage": 0,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      },
+      "netWorth": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.08,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      },
+      "difference": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 1840.2,
+          "rentedSquareFootage": 918,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.05,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      }
+    },
+    "24": {
+      "cashFlow": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 1840.2,
+          "rentedSquareFootage": 918,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.12,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 29400,
+          "roi": 0.65
+        }
+      },
+      "equity": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.08,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      },
+      "opportunityCost": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 0,
+          "rentedSquareFootage": 0,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      },
+      "netWorth": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.08,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      },
+      "difference": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 1840.2,
+          "rentedSquareFootage": 918,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.05,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      }
+    },
+    "36": {
+      "cashFlow": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 1840.2,
+          "rentedSquareFootage": 918,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.12,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 29400,
+          "roi": 0.65
+        }
+      },
+      "equity": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.08,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      },
+      "opportunityCost": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 0,
+          "rentedSquareFootage": 0,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      },
+      "netWorth": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.08,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      },
+      "difference": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 1840.2,
+          "rentedSquareFootage": 918,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.05,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      }
+    },
+    "60": {
+      "cashFlow": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 1840.2,
+          "rentedSquareFootage": 918,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.12,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 29400,
+          "roi": 0.65
+        }
+      },
+      "equity": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.08,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      },
+      "opportunityCost": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 0,
+          "rentedSquareFootage": 0,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      },
+      "netWorth": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.08,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      },
+      "difference": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 1840.2,
+          "rentedSquareFootage": 918,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.05,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      }
+    },
+    "120": {
+      "cashFlow": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 1840.2,
+          "rentedSquareFootage": 918,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.12,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 29400,
+          "roi": 0.65
+        }
+      },
+      "equity": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.08,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      },
+      "opportunityCost": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 0,
+          "rentedSquareFootage": 0,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      },
+      "netWorth": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.08,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      },
+      "difference": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 1840.2,
+          "rentedSquareFootage": 918,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.05,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      }
+    }
+  },
+  "minParams": {
+    "12": {
+      "cashFlow": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 0,
+          "rentedSquareFootage": 0,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.05,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "equity": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "opportunityCost": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 1840.2,
+          "rentedSquareFootage": 918,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.05,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "netWorth": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "difference": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 0,
+          "rentedSquareFootage": 0,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.04,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      }
+    },
+    "24": {
+      "cashFlow": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 0,
+          "rentedSquareFootage": 0,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.05,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "equity": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "opportunityCost": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 1840.2,
+          "rentedSquareFootage": 918,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.05,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "netWorth": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "difference": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 0,
+          "rentedSquareFootage": 0,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.04,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      }
+    },
+    "36": {
+      "cashFlow": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 0,
+          "rentedSquareFootage": 0,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.05,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "equity": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "opportunityCost": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 1840.2,
+          "rentedSquareFootage": 918,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.05,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "netWorth": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "difference": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 0,
+          "rentedSquareFootage": 0,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.04,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      }
+    },
+    "60": {
+      "cashFlow": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 0,
+          "rentedSquareFootage": 0,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.05,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "equity": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "opportunityCost": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 1840.2,
+          "rentedSquareFootage": 918,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.05,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "netWorth": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "difference": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 0,
+          "rentedSquareFootage": 0,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.04,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      }
+    },
+    "120": {
+      "cashFlow": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 25,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 967890.0000000001,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 0,
+          "rentedSquareFootage": 0,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.05,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "equity": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "opportunityCost": {
+        "mortgage": {
+          "interestRate": 3.3,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 1840.2,
+          "rentedSquareFootage": 918,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.05,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "netWorth": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 920.1,
+          "rentedSquareFootage": 459,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.02,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 0,
+          "roi": 0
+        }
+      },
+      "difference": {
+        "mortgage": {
+          "interestRate": 4.5,
+          "amortizationYears": 30,
+          "paymentFrequency": "monthly"
+        },
+        "house": {
+          "purchasePrice": 791910,
+          "annualPropertyTax": 4625,
+          "squareFootage": 1530,
+          "annualAppreciationRate": 0.08499999999999999,
+          "annualPropertyTaxIncreaseRate": 0.01,
+          "annualUpkeepPercentage": 0.015
+        },
+        "rental": {
+          "monthlyIncome": 0,
+          "rentedSquareFootage": 0,
+          "vacancyRate": 0.04
+        },
+        "economic": {
+          "annualIndexFundReturn": 0.18,
+          "inflationRate": 0.06,
+          "monthlyRentPlusUtilities": 2500
+        },
+        "rennovation": {
+          "cost": 48400,
+          "roi": 0.6553571428571429
+        }
+      }
+    }
+  }
+}

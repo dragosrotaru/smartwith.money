@@ -1,0 +1,74 @@
+{
+  "photos": [
+    "https://cache14.housesigma.com/file/pix-itso/156309094/39ba0_1.jpg?28bb6c9e",
+    "https://cache15.housesigma.com/file/pix-itso/156309094/39ba0_2.jpg?28bb6c9e",
+    "https://cache08.housesigma.com/file/pix-itso/156309094/39ba0_3.jpg?28bb6c9e",
+    "https://cache09.housesigma.com/file/pix-itso/156309094/39ba0_4.jpg?28bb6c9e",
+    "https://cache-e14.housesigma.com/file/pix-itso/156309094/39ba0_5.jpg?28bb6c9e",
+    "https://cache14.housesigma.com/file/pix-itso/156309094/39ba0_6.jpg?28bb6c9e",
+    "https://cache15.housesigma.com/file/pix-itso/156309094/39ba0_7.jpg?28bb6c9e",
+    "https://cache08.housesigma.com/file/pix-itso/156309094/39ba0_8.jpg?28bb6c9e",
+    "https://cache09.housesigma.com/file/pix-itso/156309094/39ba0_9.jpg?28bb6c9e",
+    "https://cache-e14.housesigma.com/file/pix-itso/156309094/39ba0_10.jpg?28bb6c9e",
+    "https://cache14.housesigma.com/file/pix-itso/156309094/39ba0_11.jpg?28bb6c9e",
+    "https://cache15.housesigma.com/file/pix-itso/156309094/39ba0_12.jpg?28bb6c9e",
+    "https://cache08.housesigma.com/file/pix-itso/156309094/39ba0_13.jpg?28bb6c9e",
+    "https://cache09.housesigma.com/file/pix-itso/156309094/39ba0_14.jpg?28bb6c9e",
+    "https://cache-e14.housesigma.com/file/pix-itso/156309094/39ba0_15.jpg?28bb6c9e",
+    "https://cache14.housesigma.com/file/pix-itso/156309094/39ba0_16.jpg?28bb6c9e",
+    "https://cache15.housesigma.com/file/pix-itso/156309094/39ba0_17.jpg?28bb6c9e",
+    "https://cache08.housesigma.com/file/pix-itso/156309094/39ba0_18.jpg?28bb6c9e",
+    "https://cache09.housesigma.com/file/pix-itso/156309094/39ba0_19.jpg?28bb6c9e",
+    "https://cache-e14.housesigma.com/file/pix-itso/156309094/39ba0_20.jpg?28bb6c9e",
+    "https://cache14.housesigma.com/file/pix-itso/156309094/39ba0_21.jpg?28bb6c9e",
+    "https://cache15.housesigma.com/file/pix-itso/156309094/39ba0_22.jpg?28bb6c9e",
+    "https://cache08.housesigma.com/file/pix-itso/156309094/39ba0_23.jpg?28bb6c9e",
+    "https://cache09.housesigma.com/file/pix-itso/156309094/39ba0_24.jpg?28bb6c9e",
+    "https://cache-e14.housesigma.com/file/pix-itso/156309094/39ba0_25.jpg?28bb6c9e"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "14 Tunbridge Crescent",
+      "municipality": "Grimsby",
+      "postalCode": "L3M2V9",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": "R1",
+    "coordinates": {
+      "latitude": 43.183398,
+      "longitude": -79.538617
+    },
+    "propertyTax": 5454,
+    "lotSize": 11800,
+    "squareFootage": 1161,
+    "askingPrice": 799900,
+    "daysOnMarket": 6,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2025-01-27T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "2Zpj399X8403DrK8",
+        "event": "For Sale"
+      }
+    ],
+    "estimatePrice": 785800,
+    "estimatePriceConfident": 0.36,
+    "estimateRent": 3258,
+    "estimateRentDays": 29,
+    "estimateRentYearReturn": 3.88,
+    "scores": {
+      "school": 8,
+      "growth": 6,
+      "rent": 7
+    },
+    "communityValue": {
+      "value": 935500,
+      "growth": 0.054000000000000006,
+      "growth5YearAverage": 0.45,
+      "growth10YearAverage": 0.85
+    }
+  }
+}

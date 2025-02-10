@@ -1,0 +1,416 @@
+{
+  "outside": {
+    "treeCoverage": 20,
+    "proximityToRoad": 30,
+    "proximityToNeighbors": 15,
+    "cookieCutterScore": 60,
+    "architecture": "Ranch",
+    "numberofBuildings": 2,
+    "overallCondition": "Good",
+    "tinyHousePotential": 40,
+    "hasRearAccess": true,
+    "estimatedAge": 50,
+    "estimatedLotSize": 0.2,
+    "hobbyFarmPotential": 20
+  },
+  "workshop": null,
+  "features": {
+    "sauna": false,
+    "jacuzzi": false,
+    "pool": false,
+    "river": false,
+    "pond": false,
+    "gym": true,
+    "terrain": false
+  },
+  "renovations": {
+    "exterior": [
+      {
+        "materialCost": 5000,
+        "laborCost": 3000,
+        "totalCost": 8000,
+        "diyTime": 40,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 85,
+        "title": "Driveway Resurfacing",
+        "description": "Resurface the driveway to improve curb appeal and functionality. This includes repairing any cracks and applying a new layer of asphalt or concrete."
+      },
+      {
+        "materialCost": 3000,
+        "laborCost": 2000,
+        "totalCost": 5000,
+        "diyTime": 30,
+        "difficulty": "medium",
+        "roi": 60,
+        "priorityScore": 75,
+        "title": "Landscaping and Garden Enhancement",
+        "description": "Enhance the front yard with new plants, shrubs, and a small garden. Add mulch and decorative stones to improve aesthetics."
+      },
+      {
+        "materialCost": 7000,
+        "laborCost": 5000,
+        "totalCost": 12000,
+        "diyTime": 60,
+        "difficulty": "hard",
+        "roi": 80,
+        "priorityScore": 90,
+        "title": "Backyard Patio Installation",
+        "description": "Install a new patio in the backyard using pavers or stone. This creates an outdoor living space that is attractive to potential buyers."
+      },
+      {
+        "materialCost": 2000,
+        "laborCost": 1500,
+        "totalCost": 3500,
+        "diyTime": 20,
+        "difficulty": "easy",
+        "roi": 50,
+        "priorityScore": 65,
+        "title": "Exterior Painting",
+        "description": "Repaint the exterior of the house to freshen up its appearance. Choose neutral colors to appeal to a wide range of buyers."
+      },
+      {
+        "materialCost": 4000,
+        "laborCost": 2500,
+        "totalCost": 6500,
+        "diyTime": 35,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 80,
+        "title": "Fence Replacement",
+        "description": "Replace the existing fence with a new one to enhance privacy and security. Choose materials that complement the house's exterior."
+      }
+    ],
+    "living area": [
+      {
+        "materialCost": 1500,
+        "laborCost": 2000,
+        "totalCost": 3500,
+        "diyTime": 20,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 85,
+        "title": "Open Concept Living Area",
+        "description": "Remove the non-load-bearing wall between the living room and the hallway to create an open-concept space. This will enhance the flow and make the area feel larger and more modern."
+      },
+      {
+        "materialCost": 800,
+        "laborCost": 1200,
+        "totalCost": 2000,
+        "diyTime": 15,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 75,
+        "title": "Update Lighting Fixtures",
+        "description": "Replace outdated lighting fixtures with modern, energy-efficient LED lights. Consider adding dimmable options to create ambiance."
+      },
+      {
+        "materialCost": 1200,
+        "laborCost": 1800,
+        "totalCost": 3000,
+        "diyTime": 25,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 80,
+        "title": "Refinish Hardwood Floors",
+        "description": "Sand and refinish the existing hardwood floors to restore their original luster. This will enhance the overall appearance and value of the home."
+      },
+      {
+        "materialCost": 500,
+        "laborCost": 1000,
+        "totalCost": 1500,
+        "diyTime": 10,
+        "difficulty": "easy",
+        "roi": 50,
+        "priorityScore": 70,
+        "title": "Accent Wall with Paint or Wallpaper",
+        "description": "Create an accent wall in the living room using a bold paint color or stylish wallpaper. This adds character and can be a focal point in the room."
+      },
+      {
+        "materialCost": 2000,
+        "laborCost": 2500,
+        "totalCost": 4500,
+        "diyTime": 30,
+        "difficulty": "hard",
+        "roi": 75,
+        "priorityScore": 90,
+        "title": "Basement Renovation",
+        "description": "Transform the basement into a functional living space or entertainment area. This could include adding a home theater, gym, or additional bedroom."
+      }
+    ],
+    "kitchen": [
+      {
+        "materialCost": 1500,
+        "laborCost": 1000,
+        "totalCost": 2500,
+        "diyTime": 10,
+        "difficulty": "easy",
+        "roi": 80,
+        "priorityScore": 70,
+        "title": "Cabinet Refinishing",
+        "description": "Refinish the existing cabinets with a modern color to update the look without replacing them. This can significantly enhance the kitchen's appeal at a lower cost."
+      },
+      {
+        "materialCost": 2000,
+        "laborCost": 1500,
+        "totalCost": 3500,
+        "diyTime": 15,
+        "difficulty": "medium",
+        "roi": 75,
+        "priorityScore": 65,
+        "title": "Countertop Replacement",
+        "description": "Replace the countertops with quartz or granite to add a luxurious touch. This can modernize the kitchen and increase its value."
+      },
+      {
+        "materialCost": 800,
+        "laborCost": 500,
+        "totalCost": 1300,
+        "diyTime": 8,
+        "difficulty": "easy",
+        "roi": 70,
+        "priorityScore": 60,
+        "title": "Lighting Upgrade",
+        "description": "Install modern LED lighting fixtures to improve the kitchen's ambiance and energy efficiency. This is a cost-effective way to enhance the space."
+      },
+      {
+        "materialCost": 1200,
+        "laborCost": 800,
+        "totalCost": 2000,
+        "diyTime": 12,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 55,
+        "title": "Backsplash Update",
+        "description": "Add or update the backsplash with contemporary tiles to give the kitchen a fresh look. This can be a DIY project for those with some experience."
+      },
+      {
+        "materialCost": 500,
+        "laborCost": 300,
+        "totalCost": 800,
+        "diyTime": 5,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 50,
+        "title": "Hardware Replacement",
+        "description": "Replace cabinet handles and knobs with modern designs to give the kitchen a quick and affordable facelift."
+      }
+    ],
+    "bedroom": [
+      {
+        "materialCost": 500,
+        "laborCost": 800,
+        "totalCost": 1300,
+        "diyTime": 10,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 80,
+        "title": "Upgrade Lighting Fixtures",
+        "description": "Replace existing ceiling fans with modern, energy-efficient lighting fixtures to enhance the room's ambiance and appeal."
+      },
+      {
+        "materialCost": 1000,
+        "laborCost": 1500,
+        "totalCost": 2500,
+        "diyTime": 15,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 75,
+        "title": "Install Built-in Wardrobes",
+        "description": "Add built-in wardrobes to maximize storage space and improve the room's functionality and aesthetics."
+      },
+      {
+        "materialCost": 300,
+        "laborCost": 500,
+        "totalCost": 800,
+        "diyTime": 8,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 70,
+        "title": "Paint and Refresh Walls",
+        "description": "Apply a fresh coat of paint in neutral tones to modernize the space and make it more appealing to potential buyers."
+      },
+      {
+        "materialCost": 1200,
+        "laborCost": 1800,
+        "totalCost": 3000,
+        "diyTime": 20,
+        "difficulty": "hard",
+        "roi": 75,
+        "priorityScore": 85,
+        "title": "Add Hardwood Flooring",
+        "description": "Replace existing flooring with high-quality hardwood to increase the room's value and appeal."
+      },
+      {
+        "materialCost": 400,
+        "laborCost": 600,
+        "totalCost": 1000,
+        "diyTime": 12,
+        "difficulty": "medium",
+        "roi": 55,
+        "priorityScore": 65,
+        "title": "Upgrade Window Treatments",
+        "description": "Install new blinds or curtains to enhance privacy and control natural light, adding to the room's comfort and style."
+      }
+    ],
+    "bath": [
+      {
+        "materialCost": 500,
+        "laborCost": 800,
+        "totalCost": 1300,
+        "diyTime": 8,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 80,
+        "title": "Update Bathroom Fixtures",
+        "description": "Replace outdated faucets, showerheads, and cabinet handles with modern, water-efficient fixtures to enhance the bathroom's appearance and functionality."
+      },
+      {
+        "materialCost": 1000,
+        "laborCost": 1500,
+        "totalCost": 2500,
+        "diyTime": 12,
+        "difficulty": "medium",
+        "roi": 75,
+        "priorityScore": 85,
+        "title": "Install New Vanity and Countertop",
+        "description": "Replace the existing vanity with a modern design that includes a new countertop, providing more storage and a fresh look."
+      },
+      {
+        "materialCost": 300,
+        "laborCost": 500,
+        "totalCost": 800,
+        "diyTime": 6,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 70,
+        "title": "Repaint and Refresh",
+        "description": "Apply a fresh coat of paint in a neutral color to brighten the space and make it more appealing to potential buyers."
+      },
+      {
+        "materialCost": 1200,
+        "laborCost": 1800,
+        "totalCost": 3000,
+        "diyTime": 15,
+        "difficulty": "hard",
+        "roi": 80,
+        "priorityScore": 90,
+        "title": "Upgrade to a Walk-In Shower",
+        "description": "Convert the existing bathtub into a walk-in shower with glass doors, which is a popular feature in modern homes."
+      },
+      {
+        "materialCost": 400,
+        "laborCost": 600,
+        "totalCost": 1000,
+        "diyTime": 5,
+        "difficulty": "easy",
+        "roi": 65,
+        "priorityScore": 75,
+        "title": "Improve Lighting",
+        "description": "Install new, energy-efficient lighting fixtures to enhance the bathroom's ambiance and functionality."
+      }
+    ],
+    "unfinished basement": [
+      {
+        "materialCost": 5000,
+        "laborCost": 4000,
+        "totalCost": 9000,
+        "diyTime": 60,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 85,
+        "title": "Basement Finishing",
+        "description": "Finish the basement to create a livable space. This includes drywall installation, flooring, and painting. It can be used as a family room or additional bedroom."
+      },
+      {
+        "materialCost": 3000,
+        "laborCost": 2500,
+        "totalCost": 5500,
+        "diyTime": 40,
+        "difficulty": "medium",
+        "roi": 60,
+        "priorityScore": 75,
+        "title": "Bathroom Addition",
+        "description": "Add a small bathroom in the basement. This will increase the functionality of the space and add value to the property."
+      },
+      {
+        "materialCost": 2000,
+        "laborCost": 1500,
+        "totalCost": 3500,
+        "diyTime": 30,
+        "difficulty": "easy",
+        "roi": 50,
+        "priorityScore": 65,
+        "title": "Lighting Upgrade",
+        "description": "Install modern lighting fixtures to brighten up the basement. This will make the space more inviting and functional."
+      },
+      {
+        "materialCost": 1500,
+        "laborCost": 1000,
+        "totalCost": 2500,
+        "diyTime": 20,
+        "difficulty": "easy",
+        "roi": 40,
+        "priorityScore": 60,
+        "title": "Carpet Replacement",
+        "description": "Replace the existing carpet with new, durable flooring. This will improve the aesthetics and appeal of the basement."
+      },
+      {
+        "materialCost": 4000,
+        "laborCost": 3500,
+        "totalCost": 7500,
+        "diyTime": 50,
+        "difficulty": "hard",
+        "roi": 75,
+        "priorityScore": 90,
+        "title": "Basement Apartment Conversion",
+        "description": "Convert the basement into a legal apartment. This includes adding a kitchen, bathroom, and separate entrance. It can provide rental income and significantly increase property value."
+      }
+    ],
+    "other": [
+      {
+        "materialCost": 1500,
+        "laborCost": 2000,
+        "totalCost": 3500,
+        "diyTime": 20,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 80,
+        "title": "Laundry Room Upgrade",
+        "description": "Upgrade the laundry room with new cabinetry, countertops, and energy-efficient appliances. Add a fresh coat of paint and improve lighting to make the space more functional and appealing."
+      },
+      {
+        "materialCost": 1000,
+        "laborCost": 1500,
+        "totalCost": 2500,
+        "diyTime": 15,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 75,
+        "title": "Basement Bathroom Refresh",
+        "description": "Update the basement bathroom with new fixtures, a modern vanity, and fresh tiles. This will enhance the overall appeal and functionality of the space."
+      },
+      {
+        "materialCost": 2000,
+        "laborCost": 3000,
+        "totalCost": 5000,
+        "diyTime": 30,
+        "difficulty": "hard",
+        "roi": 75,
+        "priorityScore": 85,
+        "title": "Basement Rec Room Renovation",
+        "description": "Transform the basement rec room into a versatile living space with new flooring, paint, and lighting. Consider adding built-in storage or a small bar area to increase usability."
+      },
+      {
+        "materialCost": 800,
+        "laborCost": 1200,
+        "totalCost": 2000,
+        "diyTime": 10,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 70,
+        "title": "Storage Room Organization",
+        "description": "Install shelving and organizational systems in the storage room to maximize space and improve functionality. This simple upgrade can make the area more appealing to potential buyers."
+      }
+    ]
+  }
+}

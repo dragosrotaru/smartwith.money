@@ -20,6 +20,7 @@ import {
   VACANCY_RATE,
 } from '@/modules/house/domain/constants'
 import ImageCarousel from '../_components/ImageCarousel'
+import { menu } from '@/lib/menu'
 
 export default function PropertyDetailContainer(props: { property: HouseSigma }) {
   const { property } = props
@@ -57,11 +58,11 @@ export default function PropertyDetailContainer(props: { property: HouseSigma })
   if (!property) return <div>Loading...</div>
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div>
       <div className="flex flex-row justify-between items-center">
         <h1 className="text-3xl font-bold mb-8">{property.basicInfo.address.street}</h1>
         <div className="flex flex-row gap-2">
-          <Link href="/real-estate/properties">
+          <Link href={menu.properties.href}>
             <Button variant="outline">
               <ChevronLeftIcon />
             </Button>

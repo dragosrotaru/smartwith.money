@@ -1,0 +1,86 @@
+{
+  "photos": [
+    "https://cache17.housesigma.com/file/pix-treb/X11914867/6c25d_1.jpg?80f9150a",
+    "https://cache18.housesigma.com/file/pix-treb/X11914867/6c25d_2.jpg?80f9150a",
+    "https://cache19.housesigma.com/file/pix-treb/X11914867/6c25d_3.jpg?80f9150a",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11914867/6c25d_4.jpg?80f9150a",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11914867/6c25d_5.jpg?80f9150a",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11914867/6c25d_6.jpg?80f9150a",
+    "https://cache-e14.housesigma.com/file/pix-treb/X11914867/6c25d_7.jpg?80f9150a",
+    "https://cache05.housesigma.com/file/pix-treb/X11914867/6c25d_8.jpg?80f9150a",
+    "https://cache06.housesigma.com/file/pix-treb/X11914867/6c25d_9.jpg?80f9150a",
+    "https://cache08.housesigma.com/file/pix-treb/X11914867/6c25d_10.jpg?80f9150a",
+    "https://cache09.housesigma.com/file/pix-treb/X11914867/6c25d_11.jpg?80f9150a",
+    "https://cache16.housesigma.com/file/pix-treb/X11914867/6c25d_12.jpg?80f9150a",
+    "https://cache17.housesigma.com/file/pix-treb/X11914867/6c25d_13.jpg?80f9150a",
+    "https://cache18.housesigma.com/file/pix-treb/X11914867/6c25d_14.jpg?80f9150a",
+    "https://cache19.housesigma.com/file/pix-treb/X11914867/6c25d_15.jpg?80f9150a",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11914867/6c25d_16.jpg?80f9150a",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11914867/6c25d_17.jpg?80f9150a",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11914867/6c25d_18.jpg?80f9150a",
+    "https://cache-e14.housesigma.com/file/pix-treb/X11914867/6c25d_19.jpg?80f9150a",
+    "https://cache05.housesigma.com/file/pix-treb/X11914867/6c25d_20.jpg?80f9150a",
+    "https://cache06.housesigma.com/file/pix-treb/X11914867/6c25d_21.jpg?80f9150a",
+    "https://cache08.housesigma.com/file/pix-treb/X11914867/6c25d_22.jpg?80f9150a",
+    "https://cache09.housesigma.com/file/pix-treb/X11914867/6c25d_23.jpg?80f9150a",
+    "https://cache16.housesigma.com/file/pix-treb/X11914867/6c25d_24.jpg?80f9150a",
+    "https://cache17.housesigma.com/file/pix-treb/X11914867/6c25d_25.jpg?80f9150a",
+    "https://cache18.housesigma.com/file/pix-treb/X11914867/6c25d_26.jpg?80f9150a",
+    "https://cache19.housesigma.com/file/pix-treb/X11914867/6c25d_27.jpg?80f9150a",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11914867/6c25d_28.jpg?80f9150a",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11914867/6c25d_29.jpg?80f9150a",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11914867/6c25d_30.jpg?80f9150a",
+    "https://cache-e14.housesigma.com/file/pix-treb/X11914867/6c25d_31.jpg?80f9150a",
+    "https://cache05.housesigma.com/file/pix-treb/X11914867/6c25d_32.jpg?80f9150a",
+    "https://cache06.housesigma.com/file/pix-treb/X11914867/6c25d_33.jpg?80f9150a",
+    "https://cache08.housesigma.com/file/pix-treb/X11914867/6c25d_34.jpg?80f9150a",
+    "https://cache09.housesigma.com/file/pix-treb/X11914867/6c25d_35.jpg?80f9150a",
+    "https://cache16.housesigma.com/file/pix-treb/X11914867/6c25d_36.jpg?80f9150a",
+    "https://cache17.housesigma.com/file/pix-treb/X11914867/6c25d_37.jpg?80f9150a"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "4549 Green Meadow Blvd",
+      "municipality": "Lincoln",
+      "postalCode": "L3J0B2",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": "Residential",
+    "coordinates": {
+      "latitude": 43.1766,
+      "longitude": -79.47995
+    },
+    "propertyTax": 5967,
+    "lotSize": 6084,
+    "squareFootage": 2250,
+    "askingPrice": 984999,
+    "daysOnMarket": 18,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2025-01-09T00:00:00.000Z",
+        "endDate": "2025-01-27T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "NkKJ3J1RMRZ7d4V6",
+        "event": "Sold Conditional"
+      }
+    ],
+    "estimatePrice": 965500,
+    "estimatePriceConfident": 0.17,
+    "estimateRent": 3233,
+    "estimateRentDays": 34,
+    "estimateRentYearReturn": 3.02,
+    "scores": {
+      "school": 7,
+      "growth": 1,
+      "rent": 4
+    },
+    "communityValue": {
+      "value": 762000,
+      "growth": -0.129,
+      "growth5YearAverage": 0.4,
+      "growth10YearAverage": null
+    }
+  }
+}

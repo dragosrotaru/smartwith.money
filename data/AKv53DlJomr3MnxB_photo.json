@@ -1,0 +1,337 @@
+{
+  "outside": {
+    "treeCoverage": 10,
+    "proximityToRoad": 20,
+    "proximityToNeighbors": 15,
+    "cookieCutterScore": 60,
+    "architecture": "Traditional",
+    "numberofBuildings": 2,
+    "overallCondition": "Good",
+    "tinyHousePotential": 70,
+    "hasRearAccess": true,
+    "estimatedAge": 50,
+    "estimatedLotSize": 0.5,
+    "hobbyFarmPotential": 50
+  },
+  "workshop": null,
+  "features": {
+    "sauna": false,
+    "jacuzzi": false,
+    "pool": false,
+    "river": false,
+    "pond": false,
+    "gym": false,
+    "terrain": false
+  },
+  "renovations": {
+    "exterior": [
+      {
+        "materialCost": 5000,
+        "laborCost": 3000,
+        "totalCost": 8000,
+        "diyTime": 40,
+        "difficulty": "medium",
+        "roi": 75,
+        "priorityScore": 85,
+        "title": "Landscaping and Curb Appeal Enhancement",
+        "description": "Improve the front yard with new sod, flower beds, and shrubs. Add a stone pathway leading to the entrance and install outdoor lighting to enhance curb appeal."
+      },
+      {
+        "materialCost": 7000,
+        "laborCost": 5000,
+        "totalCost": 12000,
+        "diyTime": 60,
+        "difficulty": "hard",
+        "roi": 70,
+        "priorityScore": 80,
+        "title": "Deck and Pergola Upgrade",
+        "description": "Refinish the existing deck and pergola. Add weather-resistant furniture and outdoor lighting to create a more inviting outdoor space."
+      },
+      {
+        "materialCost": 3000,
+        "laborCost": 2000,
+        "totalCost": 5000,
+        "diyTime": 30,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 70,
+        "title": "Driveway Resurfacing",
+        "description": "Resurface the driveway to improve its appearance and functionality. This will enhance the overall look of the property."
+      },
+      {
+        "materialCost": 4000,
+        "laborCost": 2500,
+        "totalCost": 6500,
+        "diyTime": 35,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 75,
+        "title": "Fence Repair and Painting",
+        "description": "Repair any damaged sections of the fence and apply a fresh coat of paint to improve the backyard's appearance and privacy."
+      },
+      {
+        "materialCost": 2000,
+        "laborCost": 1500,
+        "totalCost": 3500,
+        "diyTime": 20,
+        "difficulty": "easy",
+        "roi": 55,
+        "priorityScore": 65,
+        "title": "Exterior Paint Touch-Up",
+        "description": "Touch up the exterior paint where needed to maintain the house's appearance and protect it from the elements."
+      }
+    ],
+    "bath": [
+      {
+        "materialCost": 500,
+        "laborCost": 300,
+        "totalCost": 800,
+        "diyTime": 5,
+        "difficulty": "easy",
+        "roi": 70,
+        "priorityScore": 60,
+        "title": "Update Half Bath Fixtures",
+        "description": "Replace the sink and faucet in the half bath with modern fixtures to enhance the aesthetic appeal. This is a cost-effective way to update the space without a full renovation."
+      },
+      {
+        "materialCost": 1500,
+        "laborCost": 1000,
+        "totalCost": 2500,
+        "diyTime": 15,
+        "difficulty": "medium",
+        "roi": 75,
+        "priorityScore": 80,
+        "title": "Upgrade Master Bath Shower",
+        "description": "Replace the existing shower with a frameless glass shower enclosure. This modernizes the bathroom and increases the perceived value of the home."
+      },
+      {
+        "materialCost": 2000,
+        "laborCost": 1500,
+        "totalCost": 3500,
+        "diyTime": 20,
+        "difficulty": "medium",
+        "roi": 80,
+        "priorityScore": 85,
+        "title": "Install Heated Flooring",
+        "description": "Add heated flooring to the master bath for a luxurious touch. This feature is highly desirable in colder climates and can significantly increase the home's value."
+      },
+      {
+        "materialCost": 1000,
+        "laborCost": 800,
+        "totalCost": 1800,
+        "diyTime": 10,
+        "difficulty": "easy",
+        "roi": 65,
+        "priorityScore": 70,
+        "title": "Replace Bathroom Lighting",
+        "description": "Update the lighting fixtures in both bathrooms to modern, energy-efficient options. Improved lighting can enhance the overall ambiance and functionality of the space."
+      }
+    ],
+    "bedroom": [
+      {
+        "materialCost": 500,
+        "laborCost": 800,
+        "totalCost": 1300,
+        "diyTime": 10,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 80,
+        "title": "Add Built-in Wardrobes",
+        "description": "Install built-in wardrobes to maximize storage space and enhance the room's functionality. This is especially beneficial in smaller bedrooms where space is limited."
+      },
+      {
+        "materialCost": 300,
+        "laborCost": 500,
+        "totalCost": 800,
+        "diyTime": 8,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 70,
+        "title": "Upgrade Lighting Fixtures",
+        "description": "Replace outdated lighting fixtures with modern, energy-efficient options. Consider adding dimmable lights to create a versatile ambiance."
+      },
+      {
+        "materialCost": 200,
+        "laborCost": 400,
+        "totalCost": 600,
+        "diyTime": 6,
+        "difficulty": "easy",
+        "roi": 50,
+        "priorityScore": 60,
+        "title": "Paint and Accent Walls",
+        "description": "Refresh the bedrooms with a new coat of paint. Consider adding an accent wall with a bold color or wallpaper to add character and style."
+      },
+      {
+        "materialCost": 1000,
+        "laborCost": 1500,
+        "totalCost": 2500,
+        "diyTime": 20,
+        "difficulty": "hard",
+        "roi": 75,
+        "priorityScore": 85,
+        "title": "Install Hardwood Flooring",
+        "description": "Replace existing flooring with hardwood to increase the property's value and appeal. Hardwood is durable and attractive to potential buyers."
+      },
+      {
+        "materialCost": 400,
+        "laborCost": 600,
+        "totalCost": 1000,
+        "diyTime": 12,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 75,
+        "title": "Add Crown Molding",
+        "description": "Install crown molding to add elegance and a finished look to the bedrooms. This detail can significantly enhance the aesthetic appeal."
+      }
+    ],
+    "kitchen": [
+      {
+        "materialCost": 1500,
+        "laborCost": 1000,
+        "totalCost": 2500,
+        "diyTime": 10,
+        "difficulty": "medium",
+        "roi": 80,
+        "priorityScore": 85,
+        "title": "Upgrade Kitchen Lighting",
+        "description": "Install modern, energy-efficient LED lighting fixtures to enhance the kitchen's ambiance and functionality. Consider under-cabinet lighting and pendant lights over the island."
+      },
+      {
+        "materialCost": 2000,
+        "laborCost": 1500,
+        "totalCost": 3500,
+        "diyTime": 15,
+        "difficulty": "medium",
+        "roi": 75,
+        "priorityScore": 80,
+        "title": "Replace Countertops",
+        "description": "Upgrade the countertops to quartz or granite for a more modern and durable surface. This can significantly enhance the kitchen's appeal and value."
+      },
+      {
+        "materialCost": 800,
+        "laborCost": 500,
+        "totalCost": 1300,
+        "diyTime": 8,
+        "difficulty": "easy",
+        "roi": 70,
+        "priorityScore": 75,
+        "title": "Cabinet Hardware Update",
+        "description": "Replace the cabinet handles and knobs with modern, stylish options to give the kitchen a fresh look without a full remodel."
+      },
+      {
+        "materialCost": 1200,
+        "laborCost": 800,
+        "totalCost": 2000,
+        "diyTime": 12,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 70,
+        "title": "Backsplash Refresh",
+        "description": "Install a new backsplash with modern tiles to add character and style to the kitchen. Consider subway tiles or mosaic patterns."
+      },
+      {
+        "materialCost": 500,
+        "laborCost": 300,
+        "totalCost": 800,
+        "diyTime": 5,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 65,
+        "title": "Paint Touch-Up",
+        "description": "Repaint the kitchen walls and cabinets with a fresh, neutral color to brighten the space and make it more appealing to potential buyers."
+      }
+    ],
+    "living area": [
+      {
+        "materialCost": 1500,
+        "laborCost": 2000,
+        "totalCost": 3500,
+        "diyTime": 20,
+        "difficulty": "medium",
+        "roi": 70,
+        "priorityScore": 85,
+        "title": "Fireplace Upgrade",
+        "description": "Upgrade the existing fireplace to a modern, energy-efficient model. This can enhance the aesthetic appeal and improve energy efficiency, making the living area more attractive to potential buyers."
+      },
+      {
+        "materialCost": 800,
+        "laborCost": 1200,
+        "totalCost": 2000,
+        "diyTime": 15,
+        "difficulty": "easy",
+        "roi": 60,
+        "priorityScore": 75,
+        "title": "Lighting Enhancement",
+        "description": "Install modern, energy-efficient LED lighting fixtures and add dimmer switches. This will improve the ambiance and energy efficiency of the living space."
+      },
+      {
+        "materialCost": 1000,
+        "laborCost": 1500,
+        "totalCost": 2500,
+        "diyTime": 25,
+        "difficulty": "medium",
+        "roi": 65,
+        "priorityScore": 80,
+        "title": "Flooring Refinishing",
+        "description": "Refinish the existing hardwood floors to restore their original shine and beauty. This can significantly enhance the overall look of the living area."
+      },
+      {
+        "materialCost": 500,
+        "laborCost": 1000,
+        "totalCost": 1500,
+        "diyTime": 10,
+        "difficulty": "easy",
+        "roi": 50,
+        "priorityScore": 70,
+        "title": "Accent Wall Addition",
+        "description": "Add an accent wall using paint or wallpaper to create a focal point in the living area. This is a cost-effective way to add character and style."
+      },
+      {
+        "materialCost": 1200,
+        "laborCost": 1800,
+        "totalCost": 3000,
+        "diyTime": 30,
+        "difficulty": "hard",
+        "roi": 75,
+        "priorityScore": 90,
+        "title": "Open Concept Conversion",
+        "description": "Remove non-load-bearing walls to create an open-concept living and dining area. This modern layout is highly desirable and can increase the property's value."
+      }
+    ],
+    "other": [
+      {
+        "materialCost": 500,
+        "laborCost": 700,
+        "totalCost": 1200,
+        "diyTime": 10,
+        "difficulty": "medium",
+        "roi": 50,
+        "priorityScore": 70,
+        "title": "Home Office Upgrade",
+        "description": "Transform the space into a modern home office with updated shelving, a fresh coat of paint, and improved lighting. This appeals to remote workers and adds value to the property."
+      },
+      {
+        "materialCost": 300,
+        "laborCost": 500,
+        "totalCost": 800,
+        "diyTime": 8,
+        "difficulty": "easy",
+        "roi": 40,
+        "priorityScore": 60,
+        "title": "Reading Nook Creation",
+        "description": "Convert the area into a cozy reading nook with comfortable seating, new shelving for books, and soft lighting. This adds charm and functionality to the space."
+      },
+      {
+        "materialCost": 1000,
+        "laborCost": 1500,
+        "totalCost": 2500,
+        "diyTime": 15,
+        "difficulty": "hard",
+        "roi": 60,
+        "priorityScore": 80,
+        "title": "Multi-Functional Space Conversion",
+        "description": "Redesign the room to serve multiple purposes, such as a guest room and office. Install a Murphy bed, add storage solutions, and update the decor to maximize utility and appeal."
+      }
+    ]
+  }
+}

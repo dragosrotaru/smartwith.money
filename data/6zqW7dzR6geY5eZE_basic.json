@@ -1,0 +1,102 @@
+{
+  "photos": [
+    "https://cache-e14.housesigma.com/file/pix-itso/154777139/1c9f2_1.jpg?e190202d",
+    "https://cache14.housesigma.com/file/pix-itso/154777139/1c9f2_2.jpg?e190202d",
+    "https://cache15.housesigma.com/file/pix-itso/154777139/1c9f2_3.jpg?e190202d",
+    "https://cache08.housesigma.com/file/pix-itso/154777139/1c9f2_4.jpg?e190202d",
+    "https://cache09.housesigma.com/file/pix-itso/154777139/1c9f2_5.jpg?e190202d",
+    "https://cache-e14.housesigma.com/file/pix-itso/154777139/1c9f2_6.jpg?e190202d",
+    "https://cache14.housesigma.com/file/pix-itso/154777139/1c9f2_7.jpg?e190202d",
+    "https://cache15.housesigma.com/file/pix-itso/154777139/1c9f2_8.jpg?e190202d",
+    "https://cache08.housesigma.com/file/pix-itso/154777139/1c9f2_9.jpg?e190202d",
+    "https://cache09.housesigma.com/file/pix-itso/154777139/1c9f2_10.jpg?e190202d",
+    "https://cache-e14.housesigma.com/file/pix-itso/154777139/1c9f2_11.jpg?e190202d",
+    "https://cache14.housesigma.com/file/pix-itso/154777139/1c9f2_12.jpg?e190202d",
+    "https://cache15.housesigma.com/file/pix-itso/154777139/1c9f2_13.jpg?e190202d",
+    "https://cache08.housesigma.com/file/pix-itso/154777139/1c9f2_14.jpg?e190202d",
+    "https://cache09.housesigma.com/file/pix-itso/154777139/1c9f2_15.jpg?e190202d",
+    "https://cache-e14.housesigma.com/file/pix-itso/154777139/1c9f2_16.jpg?e190202d",
+    "https://cache14.housesigma.com/file/pix-itso/154777139/1c9f2_17.jpg?e190202d",
+    "https://cache15.housesigma.com/file/pix-itso/154777139/1c9f2_18.jpg?e190202d",
+    "https://cache08.housesigma.com/file/pix-itso/154777139/1c9f2_19.jpg?e190202d",
+    "https://cache09.housesigma.com/file/pix-itso/154777139/1c9f2_20.jpg?e190202d",
+    "https://cache-e14.housesigma.com/file/pix-itso/154777139/1c9f2_21.jpg?e190202d",
+    "https://cache14.housesigma.com/file/pix-itso/154777139/1c9f2_22.jpg?e190202d",
+    "https://cache15.housesigma.com/file/pix-itso/154777139/1c9f2_23.jpg?e190202d",
+    "https://cache08.housesigma.com/file/pix-itso/154777139/1c9f2_24.jpg?e190202d",
+    "https://cache09.housesigma.com/file/pix-itso/154777139/1c9f2_25.jpg?e190202d",
+    "https://cache-e14.housesigma.com/file/pix-itso/154777139/1c9f2_26.jpg?e190202d",
+    "https://cache14.housesigma.com/file/pix-itso/154777139/1c9f2_27.jpg?e190202d",
+    "https://cache15.housesigma.com/file/pix-itso/154777139/1c9f2_28.jpg?e190202d",
+    "https://cache08.housesigma.com/file/pix-itso/154777139/1c9f2_29.jpg?e190202d",
+    "https://cache09.housesigma.com/file/pix-itso/154777139/1c9f2_30.jpg?e190202d",
+    "https://cache-e14.housesigma.com/file/pix-itso/154777139/1c9f2_31.jpg?e190202d",
+    "https://cache14.housesigma.com/file/pix-itso/154777139/1c9f2_32.jpg?e190202d"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "4206 Stadelbauer Drive",
+      "municipality": "Lincoln",
+      "postalCode": "L0R1B8",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": "R3-8",
+    "coordinates": {
+      "latitude": 43.162428,
+      "longitude": -79.48507
+    },
+    "propertyTax": 5413,
+    "lotSize": 10569,
+    "squareFootage": 1616,
+    "askingPrice": 950000,
+    "daysOnMarket": 76,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2024-11-18T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "6zqW7dzR6geY5eZE",
+        "event": "For Sale"
+      },
+      {
+        "startDate": "2023-06-27T00:00:00.000Z",
+        "endDate": "2023-10-27T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "gAaOyLKdnreYGxMb",
+        "event": "Expired"
+      },
+      {
+        "startDate": "2023-05-26T00:00:00.000Z",
+        "endDate": "2023-06-27T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "GMnKYq05L1B3w1Qr",
+        "event": "Terminated"
+      },
+      {
+        "startDate": "2007-05-03T00:00:00.000Z",
+        "endDate": "2007-08-31T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "gaQmD7zj0ZM7J9Bo",
+        "event": "Expired"
+      }
+    ],
+    "estimatePrice": 923700,
+    "estimatePriceConfident": 0.29,
+    "estimateRent": 3535,
+    "estimateRentDays": 36,
+    "estimateRentYearReturn": 3.55,
+    "scores": {
+      "school": 7,
+      "growth": 8,
+      "rent": 6
+    },
+    "communityValue": {
+      "value": 919900,
+      "growth": 0.129,
+      "growth5YearAverage": 0.33,
+      "growth10YearAverage": 1.65
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "photos": [
+    "https://cache18.housesigma.com/file/pix-treb/X11821930/11fc4_1.jpg?b35ee37d",
+    "https://cache19.housesigma.com/file/pix-treb/X11821930/11fc4_2.jpg?b35ee37d",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11821930/11fc4_3.jpg?b35ee37d",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11821930/11fc4_4.jpg?b35ee37d",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11821930/11fc4_5.jpg?b35ee37d",
+    "https://cache-e14.housesigma.com/file/pix-treb/X11821930/11fc4_6.jpg?b35ee37d",
+    "https://cache05.housesigma.com/file/pix-treb/X11821930/11fc4_7.jpg?b35ee37d",
+    "https://cache06.housesigma.com/file/pix-treb/X11821930/11fc4_8.jpg?b35ee37d",
+    "https://cache08.housesigma.com/file/pix-treb/X11821930/11fc4_9.jpg?b35ee37d",
+    "https://cache09.housesigma.com/file/pix-treb/X11821930/11fc4_10.jpg?b35ee37d",
+    "https://cache16.housesigma.com/file/pix-treb/X11821930/11fc4_11.jpg?b35ee37d",
+    "https://cache17.housesigma.com/file/pix-treb/X11821930/11fc4_12.jpg?b35ee37d",
+    "https://cache18.housesigma.com/file/pix-treb/X11821930/11fc4_13.jpg?b35ee37d",
+    "https://cache19.housesigma.com/file/pix-treb/X11821930/11fc4_14.jpg?b35ee37d",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11821930/11fc4_15.jpg?b35ee37d",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11821930/11fc4_16.jpg?b35ee37d",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11821930/11fc4_17.jpg?b35ee37d",
+    "https://cache-e14.housesigma.com/file/pix-treb/X11821930/11fc4_18.jpg?b35ee37d",
+    "https://cache05.housesigma.com/file/pix-treb/X11821930/11fc4_19.jpg?b35ee37d",
+    "https://cache06.housesigma.com/file/pix-treb/X11821930/11fc4_20.jpg?b35ee37d",
+    "https://cache08.housesigma.com/file/pix-treb/X11821930/11fc4_21.jpg?b35ee37d",
+    "https://cache09.housesigma.com/file/pix-treb/X11821930/11fc4_22.jpg?b35ee37d",
+    "https://cache16.housesigma.com/file/pix-treb/X11821930/11fc4_23.jpg?b35ee37d",
+    "https://cache17.housesigma.com/file/pix-treb/X11821930/11fc4_24.jpg?b35ee37d",
+    "https://cache18.housesigma.com/file/pix-treb/X11821930/11fc4_25.jpg?b35ee37d",
+    "https://cache19.housesigma.com/file/pix-treb/X11821930/11fc4_26.jpg?b35ee37d",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11821930/11fc4_27.jpg?b35ee37d",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11821930/11fc4_28.jpg?b35ee37d",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11821930/11fc4_29.jpg?b35ee37d",
+    "https://cache-e14.housesigma.com/file/pix-treb/X11821930/11fc4_30.jpg?b35ee37d",
+    "https://cache05.housesigma.com/file/pix-treb/X11821930/11fc4_31.jpg?b35ee37d",
+    "https://cache06.housesigma.com/file/pix-treb/X11821930/11fc4_32.jpg?b35ee37d",
+    "https://cache08.housesigma.com/file/pix-treb/X11821930/11fc4_33.jpg?b35ee37d",
+    "https://cache09.housesigma.com/file/pix-treb/X11821930/11fc4_34.jpg?b35ee37d",
+    "https://cache16.housesigma.com/file/pix-treb/X11821930/11fc4_35.jpg?b35ee37d"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "2 AUDITORIUM Circ",
+      "municipality": "Grimsby",
+      "postalCode": "L3M2R5",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": "R3",
+    "coordinates": {
+      "latitude": 43.19426,
+      "longitude": -79.525
+    },
+    "propertyTax": 2864,
+    "lotSize": 1400,
+    "squareFootage": 1078,
+    "askingPrice": 688888,
+    "daysOnMarket": 63,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2024-12-01T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "gAaOyLKvxaAYGxMb",
+        "event": "For Sale"
+      },
+      {
+        "startDate": "2024-08-14T00:00:00.000Z",
+        "endDate": "2024-12-01T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "5VXv3l2MxZGyj2q8",
+        "event": "Expired"
+      }
+    ],
+    "estimatePrice": 673200,
+    "estimatePriceConfident": 0.46,
+    "estimateRent": 1888,
+    "estimateRentDays": 33,
+    "estimateRentYearReturn": 2.63,
+    "scores": {
+      "school": 7,
+      "growth": 3,
+      "rent": 2
+    },
+    "communityValue": {
+      "value": 785000,
+      "growth": -0.021,
+      "growth5YearAverage": 0.26,
+      "growth10YearAverage": 0.93
+    }
+  }
+}

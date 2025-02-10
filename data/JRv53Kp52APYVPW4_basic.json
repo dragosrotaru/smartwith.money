@@ -1,0 +1,132 @@
+{
+  "photos": [
+    "https://cache19.housesigma.com/file/pix-treb/X11889491/73536_1.jpg?60e9beec",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11889491/73536_2.jpg?60e9beec",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11889491/73536_3.jpg?60e9beec",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11889491/73536_4.jpg?60e9beec",
+    "https://cache-e14.housesigma.com/file/pix-treb/X11889491/73536_5.jpg?60e9beec",
+    "https://cache05.housesigma.com/file/pix-treb/X11889491/73536_6.jpg?60e9beec",
+    "https://cache06.housesigma.com/file/pix-treb/X11889491/73536_7.jpg?60e9beec",
+    "https://cache08.housesigma.com/file/pix-treb/X11889491/73536_8.jpg?60e9beec",
+    "https://cache09.housesigma.com/file/pix-treb/X11889491/73536_9.jpg?60e9beec",
+    "https://cache16.housesigma.com/file/pix-treb/X11889491/73536_10.jpg?60e9beec",
+    "https://cache17.housesigma.com/file/pix-treb/X11889491/73536_11.jpg?60e9beec",
+    "https://cache18.housesigma.com/file/pix-treb/X11889491/73536_12.jpg?60e9beec",
+    "https://cache19.housesigma.com/file/pix-treb/X11889491/73536_13.jpg?60e9beec",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11889491/73536_14.jpg?60e9beec",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11889491/73536_15.jpg?60e9beec",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11889491/73536_16.jpg?60e9beec",
+    "https://cache-e14.housesigma.com/file/pix-treb/X11889491/73536_17.jpg?60e9beec",
+    "https://cache05.housesigma.com/file/pix-treb/X11889491/73536_18.jpg?60e9beec",
+    "https://cache06.housesigma.com/file/pix-treb/X11889491/73536_19.jpg?60e9beec",
+    "https://cache08.housesigma.com/file/pix-treb/X11889491/73536_20.jpg?60e9beec",
+    "https://cache09.housesigma.com/file/pix-treb/X11889491/73536_21.jpg?60e9beec",
+    "https://cache16.housesigma.com/file/pix-treb/X11889491/73536_22.jpg?60e9beec",
+    "https://cache17.housesigma.com/file/pix-treb/X11889491/73536_23.jpg?60e9beec",
+    "https://cache18.housesigma.com/file/pix-treb/X11889491/73536_24.jpg?60e9beec",
+    "https://cache19.housesigma.com/file/pix-treb/X11889491/73536_25.jpg?60e9beec",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11889491/73536_26.jpg?60e9beec",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11889491/73536_27.jpg?60e9beec"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "398 Kerman Ave",
+      "municipality": "Grimsby",
+      "postalCode": "L3M3X1",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": null,
+    "coordinates": {
+      "latitude": 43.20461,
+      "longitude": -79.5725
+    },
+    "propertyTax": 4587,
+    "lotSize": 6000,
+    "squareFootage": 1227,
+    "askingPrice": 860000,
+    "daysOnMarket": 53,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2024-12-11T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "JRv53Kp52APYVPW4",
+        "event": "For Sale"
+      },
+      {
+        "startDate": "2023-11-01T00:00:00.000Z",
+        "endDate": "2024-02-02T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "nM697kV0jgbybmwe",
+        "event": "Expired"
+      },
+      {
+        "startDate": "2023-08-15T00:00:00.000Z",
+        "endDate": "2023-10-21T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "AKv53DlamqW3MnxB",
+        "event": "Terminated"
+      },
+      {
+        "startDate": "1970-01-01T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "56k97wqrVdRYKRjD",
+        "event": "Expired"
+      },
+      {
+        "startDate": "1970-01-01T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "1DBW7RD0lQxYqlAp",
+        "event": "Expired"
+      },
+      {
+        "startDate": "2022-05-10T00:00:00.000Z",
+        "endDate": "2022-06-13T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "GMnKYqpdjZe3w1Qr",
+        "event": "Sold"
+      },
+      {
+        "startDate": "2022-04-20T00:00:00.000Z",
+        "endDate": "2022-05-09T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "eQp5yO8BknV7d0ZE",
+        "event": "Terminated"
+      },
+      {
+        "startDate": "2022-04-12T00:00:00.000Z",
+        "endDate": "2022-04-19T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "XeEn7X6v2bKYrPo8",
+        "event": "Terminated"
+      },
+      {
+        "startDate": "1997-03-14T00:00:00.000Z",
+        "endDate": "1997-04-15T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "B5bO3xXn4ql3kWVP",
+        "event": "Sold"
+      }
+    ],
+    "estimatePrice": 842500,
+    "estimatePriceConfident": 0.31,
+    "estimateRent": 3206,
+    "estimateRentDays": 36,
+    "estimateRentYearReturn": 3.57,
+    "scores": {
+      "school": 7,
+      "growth": 3,
+      "rent": 6
+    },
+    "communityValue": {
+      "value": 785000,
+      "growth": -0.021,
+      "growth5YearAverage": 0.26,
+      "growth10YearAverage": 0.93
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "photos": [
+    "https://cache19.housesigma.com/file/pix-treb/X11912453/df20e_1.jpg?28c66675",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11912453/df20e_2.jpg?28c66675",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11912453/df20e_3.jpg?28c66675",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11912453/df20e_4.jpg?28c66675",
+    "https://cache-e14.housesigma.com/file/pix-treb/X11912453/df20e_5.jpg?28c66675",
+    "https://cache05.housesigma.com/file/pix-treb/X11912453/df20e_6.jpg?28c66675",
+    "https://cache06.housesigma.com/file/pix-treb/X11912453/df20e_7.jpg?28c66675",
+    "https://cache08.housesigma.com/file/pix-treb/X11912453/df20e_8.jpg?28c66675",
+    "https://cache09.housesigma.com/file/pix-treb/X11912453/df20e_9.jpg?28c66675",
+    "https://cache16.housesigma.com/file/pix-treb/X11912453/df20e_10.jpg?28c66675",
+    "https://cache17.housesigma.com/file/pix-treb/X11912453/df20e_11.jpg?28c66675",
+    "https://cache18.housesigma.com/file/pix-treb/X11912453/df20e_12.jpg?28c66675",
+    "https://cache19.housesigma.com/file/pix-treb/X11912453/df20e_13.jpg?28c66675",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11912453/df20e_14.jpg?28c66675",
+    "https://cache-e12.housesigma.com/file/pix-treb/X11912453/df20e_15.jpg?28c66675",
+    "https://cache-e13.housesigma.com/file/pix-treb/X11912453/df20e_16.jpg?28c66675",
+    "https://cache-e14.housesigma.com/file/pix-treb/X11912453/df20e_17.jpg?28c66675",
+    "https://cache05.housesigma.com/file/pix-treb/X11912453/df20e_18.jpg?28c66675",
+    "https://cache06.housesigma.com/file/pix-treb/X11912453/df20e_19.jpg?28c66675",
+    "https://cache08.housesigma.com/file/pix-treb/X11912453/df20e_20.jpg?28c66675",
+    "https://cache09.housesigma.com/file/pix-treb/X11912453/df20e_21.jpg?28c66675",
+    "https://cache16.housesigma.com/file/pix-treb/X11912453/df20e_22.jpg?28c66675",
+    "https://cache17.housesigma.com/file/pix-treb/X11912453/df20e_23.jpg?28c66675",
+    "https://cache18.housesigma.com/file/pix-treb/X11912453/df20e_24.jpg?28c66675",
+    "https://cache19.housesigma.com/file/pix-treb/X11912453/df20e_25.jpg?28c66675",
+    "https://cache-e11.housesigma.com/file/pix-treb/X11912453/df20e_26.jpg?28c66675"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "45 Lorne Ave",
+      "municipality": "Grimsby",
+      "postalCode": "L3M2H9",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": null,
+    "coordinates": {
+      "latitude": 43.20201,
+      "longitude": -79.56512
+    },
+    "propertyTax": 4146,
+    "lotSize": 6200,
+    "squareFootage": 1300,
+    "askingPrice": 799900,
+    "daysOnMarket": 25,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2025-01-08T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "xLkv3V6Kwgp3DBNr",
+        "event": "For Sale"
+      },
+      {
+        "startDate": "1970-01-01T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "nM697kVO0AGybmwe",
+        "event": "Terminated"
+      },
+      {
+        "startDate": "2021-03-22T00:00:00.000Z",
+        "endDate": "2021-03-29T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "GMnKYqpNLoe3w1Qr",
+        "event": "Leased"
+      },
+      {
+        "startDate": "2021-02-02T00:00:00.000Z",
+        "endDate": "2021-02-06T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "NkKJ3JdN2M6yd4V6",
+        "event": "Sold"
+      }
+    ],
+    "estimatePrice": 784400,
+    "estimatePriceConfident": 0.2,
+    "estimateRent": 2990,
+    "estimateRentDays": 29,
+    "estimateRentYearReturn": 3.68,
+    "scores": {
+      "school": 7,
+      "growth": 6,
+      "rent": 6
+    },
+    "communityValue": {
+      "value": 935500,
+      "growth": 0.054000000000000006,
+      "growth5YearAverage": 0.45,
+      "growth10YearAverage": 0.85
+    }
+  }
+}

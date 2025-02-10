@@ -1,0 +1,4980 @@
+{
+  "https://housesigma.com/bkv2/api/init/app": {
+    "url": "https://housesigma.com/bkv2/api/init/app",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:04:42.187Z",
+    "data": {
+      "status": true,
+      "data": {
+        "message": "",
+        "timeout_explain": {
+          "explain_title": "View Listing Details",
+          "button_text": "Confirm Login",
+          "explain_text": "Local real estate board’s rules require you to validate login to see this property. <a href=\"https://housesigma.com/blog-en/feature-changes-for-trreb/\" target=\"_blank\" class=\"explain_link\">(Full Details Here)</a>",
+          "explain_subtext": "Please log in again to continue"
+        },
+        "revalidate_explain": {
+          "explain_text": "Your password has expired due to Real Estate Board requirements. Please re-confirm your password. <a href=\"https://housesigma.com/blog-en/faq/other/re-validate-password/\" target=\"_blank\" class=\"explain_link\">(Full Details Here)</a>",
+          "explain_subtext": ""
+        },
+        "apiUrl": "https://housesigma.com/bkv2//api/",
+        "siteUrl": "https://housesigma.com/app",
+        "update": false,
+        "force_update": false,
+        "update_message": "",
+        "update_url": "https://housesigma.com/bkv2//landing/download?c=in_app_update",
+        "qr_code": {
+          "app_download_android": "https://housesigma.com/bkv2//img/qrcode/landingpage_noborder_290.png",
+          "app_download_ios": "https://housesigma.com/bkv2//img/qrcode/landingpage_noborder_290.png",
+          "wechat_public": "https://housesigma.com/bkv2//img/qrcode/qrcode_wechat_noborder_296.png"
+        },
+        "provinces": [
+          {
+            "id": "ON",
+            "name": "Ontario",
+            "proximity": "-79.39296079049416,43.67037569297358",
+            "location": {
+              "lat": 43.6532,
+              "lon": -79.3832
+            },
+            "default_tos": "TREB"
+          },
+          {
+            "id": "BC",
+            "name": "British Columbia",
+            "proximity": "-123.10927972868984,49.22982666354977",
+            "location": {
+              "lat": 49.246292,
+              "lon": -123.116226
+            },
+            "default_tos": "REBGV"
+          },
+          {
+            "id": "AB",
+            "name": "Alberta",
+            "proximity": "-114.07212858564964,51.045004829856964",
+            "location": {
+              "lat": 51.045004829856964,
+              "lon": -114.07212858564964
+            },
+            "default_tos": "PILLAR9"
+          }
+        ],
+        "ua_detection": {
+          "client_type": "desktop_v7",
+          "is_wechat": false,
+          "is_oldWechat": false,
+          "is_robot": false,
+          "device_type": "Desktop",
+          "device_name": "Macintosh",
+          "platform": "macOS",
+          "platform_version": "10.15",
+          "browser": "Firefox",
+          "browser_version": "134.0"
+        },
+        "geoip": {
+          "province_iso": null,
+          "province": null,
+          "country_iso": "CA",
+          "country": "Canada",
+          "continent_iso": "NA",
+          "continent": "North America",
+          "lang": "en_US"
+        },
+        "meta": {
+          "title": "HouseSigma - Canada Real Estate Sold Price and Home Valuation",
+          "header": "Ontario Homes for sale with 16+ years of Nearby sold price history for real estate valuation",
+          "description": "Market trend, listing, price estimation",
+          "image": "https://housesigma.com/bkv2//img/logo/icon_green_400.png",
+          "type": "website",
+          "url": "https://housesigma.com/bkv2//landing/download?c=recommend",
+          "url_ios": "https://housesigma.com/bkv2//landing/download?c=recommend&utm_source=user-share&utm_medium=ios&ign=",
+          "url_android": "https://housesigma.com/bkv2//landing/download?c=recommend&utm_source=user-share&utm_medium=android&ign="
+        },
+        "native_config": {
+          "map_satellite": "https://satellite.housesigma.com/v1/style-special.json?ver=20230602",
+          "map_vector": "https://map.housesigma.com/styles/maptiler-street-v3/style.json?ver=20230602",
+          "map_parcel": "https://mapraster.housesigma.com/styles/map-properties/{z}/{x}/{y}.png?ver=20230602",
+          "map_static": "https://mapraster.housesigma.com/styles/maptiler-street-v3/static/",
+          "url_join_us": "https://team.housesigma.com/join-us/",
+          "url_google_map": "https://www.google.com/maps/dir/?api=1&origin=&destination="
+        },
+        "tos": {
+          "ORTIS": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "ITSO": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "TREB": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "DDF": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "OREB": {
+            "term_text": {
+              "header": "Ottawa Real Estate Board(OREB)",
+              "body": "You are agreeing to comply and be bound by the following terms of service and use.<br><br>The information provided herein shall only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose. The information is deemed reliable but is not guaranteed accurate by OREB."
+            }
+          },
+          "REBGV": {
+            "term_text": {
+              "header": "Real Estate Board of Greater Vancouver(REBGV)",
+              "body": "You are agreeing to comply and be bound by the following terms of service and use.<br><br>the Registrant has received, read and understood the brochure published by the British Columbia Real Estate Association entitled “Privacy Notice and Consent” ; <br><br>the Registrant acknowledges entering into a lawful REALTOR®/ consumer or REALTOR®/client relationship with the Member; <br><br>all data obtained from the MLS® VOW is intended for and may only be used for the Registrant’s personal, non-commercial use; <br><br>the Registrant has a bona fide interest in the purchase, sale or lease of real estate of the type being offered through the MLS® VOW; <br><br>the Registrant will not himself, and will not permit or assist others to, directly or indirectly: (i) copy, redistribute or retransmit any of the MLS® VOW Data or information provided; <br><br>copy, redistribute or retransmit any of the MLS® VOW Data or information provided; <br>display, post, disseminate, distribute, publish, broadcast, transfer, sell or sublicense any of the MLS® VOW Data to another person. <br>engage in Scraping (including “screen scraping” and “database scraping”), “data mining” or any other activity intended to collect, store, re-organize, summarize or manipulate any MLS® VOW Data or any related data; <br>the Registrant acknowledges the Board’s ownership of, and the validity of the Board’s proprietary rights and copyright in the MLS® VOW Data, and listing information; and <br><br>the Registrant expressly authorizes the Board or their duly authorized representatives, to access the MLS® VOW and Registrant’s information provided to the MLS® VOW Participant, for the purposes of verifying compliance with and pursuing enforcement of the Terms of Use and all applicable rules, regulations, bylaws, policies, and laws."
+            }
+          },
+          "RAHB": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "RAHB_2": {
+            "term_text": {
+              "header": "",
+              "body": ""
+            }
+          },
+          "PILLAR9": {
+            "term_text": {
+              "header": "Pillar 9™(Alberta One Realty Listing Services Inc.)",
+              "body": "You are agreeing to comply and be bound by the following terms of service and use.<br><br>Agree not copy, redistribute, or retransmit any of the VOW Content, except in connection with the VOW Customer’s consideration of the purchase or sale of an individual property.<br><br>Acknowledges the Association’s ownership of and the validity of the Association’s copyrights in the MLS® System data.<br><br>Despite the preceding provisions, the MLS®, Association and other Members and their duly authorized representatives may access the VOW for the purposes of verifying compliance with these Regional MLS® Rules and monitoring display of other Members’ listings by the VOW.<br><br>Information is deemed reliable but is not guaranteed accurate by Pillar 9™."
+            }
+          },
+          "RAE": {
+            "term_text": {
+              "header": "REALTORS® Association of Edmonton (RAE)",
+              "body": "By using this website, you agree to comply with and be bound by the following terms of service and use:<br><br>1. You acknowledge that these Terms of Use do not establish an agency relationship with the Participant.<br><br>2. All data obtained from the Virtual Office Website (VOW) is intended solely for your personal, non-commercial use.<br><br>3. You certify that you have a bona fide interest in the purchase, sale, or lease of real estate of the type being offered through the VOW.<br><br>4. You agree not to copy, redistribute, or retransmit any of the VOW Content, except in connection with your consideration of the purchase or sale of an individual property.<br><br>5. You acknowledge the Cooperative ownership of and the validity of the copyright in the MLS® System database."
+            }
+          },
+          "VREB": {
+            "term_text": {
+              "header": "Victoria Real Estate Board (VREB)",
+              "body": "You are agreeing to comply and be bound by the following terms of service and use.<br><br>i. That the registered user has received, read, and understands the brochure published  by the Real Estate Council of BC (RECBC) entitled \"Disclosure of Representation in Trading Services\";<br><br>ii. That all data obtained from the VOW is intended only for the registered user's personal, non-commercial use;<br><br>iii. That the registered user has a bona fide interest in the purchase, sale, or lease of real  estate of the type being offered through the VOW;<br><br>iv. That the registered user will not copy, redistribute, or retransmit any of the Licensed  Data or information provided; and<br><br>v. That the registered user acknowledges the Boards’ copyright in the Licensed Data.<br><br>vi. A Terms of Use (TOU) agreement may not impose a financial obligation on a client or create an agency agreement with a client.<br><br>Privacy Policy:<br><br>By using our services, you agree that we may collect and use your information for the purpose of enabling log-in access and to contact you for inquiries related to real estate. This usage complies with all applicable laws, including the requirements of the Personal Information Protection Act."
+            }
+          }
+        },
+        "copyright": {
+          "RAE": "Data is deemed reliable but is not guaranteed accurate by the REALTORS® Association of Edmonton. Copyright 2025 by the REALTORS® Association of Edmonton. All Rights Reserved."
+        },
+        "show_rae_map_tips": 1,
+        "collect_location": 1,
+        "location_collect_rate": 1,
+        "ddf_tos_banner": {
+          "enable": true,
+          "content": "By using our site, you agree to our <a href=\"https://housesigma.com/blog-en/terms-of-use/\" target=\"_blank\">Terms of Use</a>",
+          "button": "Dismiss"
+        }
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH11"
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/listing/info/disclaimer_v2": {
+    "url": "https://housesigma.com/bkv2/api/listing/info/disclaimer_v2",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:04:42.239Z",
+    "data": {
+      "status": true,
+      "data": {
+        "message": "",
+        "disclaimer": {
+          "ON": {
+            "default": "<p>The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</p><br/>",
+            "desktop_map_bottom": ""
+          },
+          "AB": {
+            "default": "<p>Data is supplied by Pillar 9™ MLS® System. Pillar 9™ is the owner of the copyright in its MLS® System. Data is deemed reliable but is not guaranteed accurate by Pillar 9™. The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by The Canadian Real Estate Association (CREA) and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.</p><br/><p>Data is deemed reliable but is not guaranteed accurate by the REALTORS® Association of Edmonton.</p><p>Copyright 2025 by the REALTORS® Association of Edmonton. All Rights Reserved.</p><br/><p>The trademarks REALTOR®, REALTORS®, and the REALTOR® logo are controlled by The Canadian Real Estate Association (CREA) and identify real estate professionals who are members of CREA. The trademarks MLS®, Multiple Listing Service® and the associated logos are owned by CREA and identify the quality of services provided by real estate professionals who are members of CREA. Used under license.</p><p>Data is provided courtesy of Canadian Real Estate Association.</p><br/>",
+            "desktop_map_bottom": "<p>Data is deemed reliable but is not guaranteed accurate by the REALTORS® Association of Edmonton.</p><p>Copyright 2025 by the REALTORS® Association of Edmonton. All Rights Reserved.</p><br/>"
+          }
+        }
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH11"
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/listing/info/detail_v2": {
+    "url": "https://housesigma.com/bkv2/api/listing/info/detail_v2",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:04:42.261Z",
+    "data": {
+      "status": true,
+      "data": {
+        "show_consumer_questionnaire": 0,
+        "assessment": null,
+        "listing_price_change": [],
+        "touring_activities": [],
+        "picture": {
+          "photo_url": "https://cache09.housesigma.com/file/pix-itso/156128565/c160d_1.jpg?b92f1466",
+          "photo_list": [
+            "https://cache09.housesigma.com/file/pix-itso/156128565/c160d_1.jpg?b92f1466",
+            "https://cache-e14.housesigma.com/file/pix-itso/156128565/c160d_2.jpg?b92f1466",
+            "https://cache14.housesigma.com/file/pix-itso/156128565/c160d_3.jpg?b92f1466",
+            "https://cache15.housesigma.com/file/pix-itso/156128565/c160d_4.jpg?b92f1466",
+            "https://cache08.housesigma.com/file/pix-itso/156128565/c160d_5.jpg?b92f1466",
+            "https://cache09.housesigma.com/file/pix-itso/156128565/c160d_6.jpg?b92f1466",
+            "https://cache-e14.housesigma.com/file/pix-itso/156128565/c160d_7.jpg?b92f1466",
+            "https://cache14.housesigma.com/file/pix-itso/156128565/c160d_8.jpg?b92f1466",
+            "https://cache15.housesigma.com/file/pix-itso/156128565/c160d_9.jpg?b92f1466",
+            "https://cache08.housesigma.com/file/pix-itso/156128565/c160d_10.jpg?b92f1466",
+            "https://cache09.housesigma.com/file/pix-itso/156128565/c160d_11.jpg?b92f1466",
+            "https://cache-e14.housesigma.com/file/pix-itso/156128565/c160d_12.jpg?b92f1466",
+            "https://cache14.housesigma.com/file/pix-itso/156128565/c160d_13.jpg?b92f1466",
+            "https://cache15.housesigma.com/file/pix-itso/156128565/c160d_14.jpg?b92f1466",
+            "https://cache08.housesigma.com/file/pix-itso/156128565/c160d_15.jpg?b92f1466",
+            "https://cache09.housesigma.com/file/pix-itso/156128565/c160d_16.jpg?b92f1466",
+            "https://cache-e14.housesigma.com/file/pix-itso/156128565/c160d_17.jpg?b92f1466",
+            "https://cache14.housesigma.com/file/pix-itso/156128565/c160d_18.jpg?b92f1466",
+            "https://cache15.housesigma.com/file/pix-itso/156128565/c160d_19.jpg?b92f1466",
+            "https://cache08.housesigma.com/file/pix-itso/156128565/c160d_20.jpg?b92f1466",
+            "https://cache09.housesigma.com/file/pix-itso/156128565/c160d_21.jpg?b92f1466",
+            "https://cache-e14.housesigma.com/file/pix-itso/156128565/c160d_22.jpg?b92f1466",
+            "https://cache14.housesigma.com/file/pix-itso/156128565/c160d_23.jpg?b92f1466",
+            "https://cache15.housesigma.com/file/pix-itso/156128565/c160d_24.jpg?b92f1466",
+            "https://cache08.housesigma.com/file/pix-itso/156128565/c160d_25.jpg?b92f1466",
+            "https://cache09.housesigma.com/file/pix-itso/156128565/c160d_26.jpg?b92f1466",
+            "https://cache-e14.housesigma.com/file/pix-itso/156128565/c160d_27.jpg?b92f1466",
+            "https://cache14.housesigma.com/file/pix-itso/156128565/c160d_28.jpg?b92f1466",
+            "https://cache15.housesigma.com/file/pix-itso/156128565/c160d_29.jpg?b92f1466",
+            "https://cache08.housesigma.com/file/pix-itso/156128565/c160d_30.jpg?b92f1466",
+            "https://cache09.housesigma.com/file/pix-itso/156128565/c160d_31.jpg?b92f1466",
+            "https://cache-e14.housesigma.com/file/pix-itso/156128565/c160d_32.jpg?b92f1466",
+            "https://cache14.housesigma.com/file/pix-itso/156128565/c160d_33.jpg?b92f1466",
+            "https://cache15.housesigma.com/file/pix-itso/156128565/c160d_34.jpg?b92f1466",
+            "https://cache08.housesigma.com/file/pix-itso/156128565/c160d_35.jpg?b92f1466",
+            "https://cache09.housesigma.com/file/pix-itso/156128565/c160d_36.jpg?b92f1466",
+            "https://cache-e14.housesigma.com/file/pix-itso/156128565/c160d_37.jpg?b92f1466",
+            "https://cache14.housesigma.com/file/pix-itso/156128565/c160d_38.jpg?b92f1466",
+            "https://cache15.housesigma.com/file/pix-itso/156128565/c160d_39.jpg?b92f1466",
+            "https://cache08.housesigma.com/file/pix-itso/156128565/c160d_40.jpg?b92f1466",
+            "https://cache09.housesigma.com/file/pix-itso/156128565/c160d_41.jpg?b92f1466",
+            "https://cache-e14.housesigma.com/file/pix-itso/156128565/c160d_42.jpg?b92f1466"
+          ],
+          "virtual_tour": "https://book.allisonmediaco.com/sites/bemlwqn/unbranded"
+        },
+        "house": {
+          "id_listing": "VLaGyGkvqAKyW1ZD",
+          "id_address": "JRv53KDNVl4YVPW4",
+          "seo_municipality": "west-lincoln-real-estate",
+          "seo_address": "7580-regional-20-road",
+          "ml_num": "40688799",
+          "ml_num_merge": "40688799",
+          "hash_id": "zW4YEpBtDMPQ3xEa",
+          "seo_suffix": "7580-Regional-20-Road-West-Lincoln-L0R2A0-40688799-X11918200",
+          "house_type_name": "Single Family Residence",
+          "house_type": "D.",
+          "address": "7580 Regional 20 Road",
+          "address_seo": "7580 Regional 20 Road",
+          "address_navigation": "7580 Regional 20 Road, West Lincoln, ",
+          "list_status": {
+            "public": 1,
+            "live": 1,
+            "flg_idx": 1,
+            "sold": 0,
+            "s_r": "Sale",
+            "text": "For Sale",
+            "status": "A",
+            "feature": null,
+            "precon": null,
+            "agent_available": true,
+            "premium": 1,
+            "archive": 0,
+            "watched": 0,
+            "watched_text": "Sold Watch",
+            "community_watched": 0,
+            "community_watch_types": []
+          },
+          "list_dates": {
+            "date_added": "2025-01-10",
+            "date_added_days": 23,
+            "date_start": "2025-01-10",
+            "date_start_days": 23,
+            "date_start_month": 0,
+            "date_update": "2025-02-01",
+            "date_end": null,
+            "date_end_days": null,
+            "date_list_days": 23,
+            "date_sold_report": null
+          },
+          "id_community": 5183,
+          "id_municipality": 10361,
+          "community_name": "Smithville",
+          "municipality_name": "West Lincoln",
+          "municipality_area": null,
+          "country": "CA",
+          "province": "ON",
+          "province_name": "Ontario",
+          "cross_street": "",
+          "bedroom": 4,
+          "bedroom_plus": null,
+          "bedroom_string": 4,
+          "washroom": 3,
+          "parking": {
+            "total": 4,
+            "garage_type": null,
+            "garage": 4,
+            "parking_type": null,
+            "parking": 14,
+            "text": " 4 garage,  14 parking"
+          },
+          "price": "999,900",
+          "price_int": 999900,
+          "price_abbr": "1M",
+          "price_sold": null,
+          "price_sold_int": null,
+          "price_origin": null,
+          "price_tag": "For Sale",
+          "map": {
+            "lat": 43.122874,
+            "lon": -79.607257
+          },
+          "tax_int": 6254,
+          "maintenance_int": null,
+          "brokerage": "Listed by RE/MAX Escarpment Realty Inc.",
+          "text": {
+            "list_date_short": "List 2025-01-10",
+            "list_date_long": "List 2025-01-10, 23 days ago",
+            "dom_short": "Listed 23 days ago",
+            "dom_short_v2": "23 days ago",
+            "dom_long": "Listed 23 days ago",
+            "rooms_short": "4 bd 3 ba 4 gr",
+            "rooms_long": "4 Bedroom, 3 Bathroom, 4 Garage",
+            "status_chg_date": "3 weeks ago",
+            "hs_exclusive_tag": null
+          },
+          "house_area": {
+            "area": "2228",
+            "area_note": null,
+            "unit": "feet²",
+            "estimate": 2228
+          },
+          "land": {
+            "front": 169,
+            "depth": 288,
+            "unit": "feet",
+            "irregular": null,
+            "text": "169 x 288 feet"
+          },
+          "open_house_date": [],
+          "tos_source": "ITSO",
+          "data_source_raw": "ITSO",
+          "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+          "copyright_text": {
+            "copyright": "<p>Copyright: © 2025 HouseSigma Inc. All rights reserved. HouseSigma Inc. is a registered real estate brokerage in the Province of Ontario.</p>",
+            "housesigmaInc": "HouseSigma Inc. Brokerage",
+            "disclaimer_img": null,
+            "disclaimer_url": null
+          },
+          "agent_user": {
+            "id": 1,
+            "name": "System API",
+            "phone": "2894695060",
+            "picture": "",
+            "created": "2018-06-29 13:58:10"
+          },
+          "bind_agent_user": null,
+          "contact_message": "I'd like to buy/sell something similar to: [40688799], 7580 Regional 20 Road, West Lincoln",
+          "postal_code": "L0R2A0",
+          "postal_code_seo": "L0R2A0",
+          "pending_review_text": "",
+          "list_agent_name": null,
+          "brokerage_text": null,
+          "schedule_message": "I want to book an appointment to view: [40688799], 7580 Regional 20 Road, West Lincoln",
+          "direct_contact_message": "I want to know more about your toured listing: [40688799], 7580 Regional 20 Road, West Lincoln",
+          "direct_contact_trreb_questionnaire_message": ""
+        },
+        "key_facts": null,
+        "key_facts_v2": {
+          "tax": {
+            "name": "Tax",
+            "value": "$6,253 / 2024",
+            "public": 1
+          },
+          "property_type": {
+            "name": "Property Type",
+            "value": "Single Family Residence, Two Story",
+            "public": 1
+          },
+          "maintenance": {
+            "name": "Maintenance",
+            "value": null,
+            "public": 1
+          },
+          "included_utility": {
+            "name": "Included Utility",
+            "value": null,
+            "public": 1
+          },
+          "build_year": {
+            "name": "Year Built",
+            "value": "1993",
+            "public": 1
+          },
+          "size_without_area_note": {
+            "name": "Size",
+            "value": "2228 feet²",
+            "public": 1
+          },
+          "size_with_area_note": {
+            "name": "Size",
+            "value": null,
+            "public": 1
+          },
+          "lot_size": {
+            "name": "Lot Size",
+            "value": "169 x 288 feet",
+            "public": 1
+          },
+          "locker": {
+            "name": "Locker",
+            "value": null,
+            "public": 1
+          },
+          "irregular": {
+            "name": "Lot Irregularities",
+            "value": null,
+            "public": 1
+          },
+          "condo_exposure": {
+            "name": "Exposure",
+            "value": null,
+            "public": 1
+          },
+          "parking": {
+            "name": "Parking",
+            "value": " 4 garage,  14 parking",
+            "public": 1
+          },
+          "basement": {
+            "name": "Basement",
+            "value": "Unfinished",
+            "public": 1
+          },
+          "coop_commission": {
+            "name": "Coop Commission",
+            "value": null,
+            "public": 1
+          },
+          "ml_num_merge": {
+            "name": "Listing #",
+            "value": "40688799",
+            "public": 1
+          },
+          "data_source": {
+            "name": "Data Source",
+            "value": "ITSO",
+            "public": 1
+          },
+          "days_on_site_or_market": {
+            "name": "Days on Market",
+            "value": "23 days",
+            "public": 1
+          },
+          "status_chg_date": {
+            "name": "Status Change",
+            "value": "3 weeks ago",
+            "public": 1
+          },
+          "listed_on": {
+            "name": "Listed on",
+            "value": "2025-01-10",
+            "public": 1
+          },
+          "updated_on": {
+            "name": "Updated on",
+            "value": "2025-02-01",
+            "public": 1
+          },
+          "description1": {
+            "name": "Description",
+            "value": "A huge 2,228 square foot family home on 1.1 acres with 4 bedrooms and a 36’ x 36’ shop! This home has been renovated from top to bottom and is ready to just move in. The shop includes a concrete floor and two brand new 14’ x 11’6” insulated roll doors. Two more additional outbuildings measured at 24’ x 18’ and 28’ x 19’. The brand new eat-in kitchen includes white cabinetry, quartz countertops, stainless steel appliances, ceramic tile backsplash and a patio door to the rear deck. The sprawling main floor also includes a mud/laundry room, living room, separate dining room and a family room with a gas fireplace. Upstairs boasts 4 generous sized bedrooms, 2 full bathrooms and a linen closet. The primary bedroom has two double closets and a 3-piece ensuite with a walk-in shower, tile flooring and a decorative mirror. The second and third bedrooms include double closets.The fourth bedroom has a single closet. The 4-piece bathroom has a tub/shower combination, tile flooring and a decorative mirror. 2024 updates include: all new flooring throughout the home, home exterior siding and entire interior of the home repainted, outbuilding exteriors painted, entire kitchen (and appliances), all bathrooms, new casings, baseboard throughout the home, patio door and living room window, light fixtures, door hardware, cistern pump, central A/C. Shingles were updated in 2018. Water treatment includes a water softener and UV filtration system.",
+            "public": 1
+          },
+          "description2": {
+            "name": "Description",
+            "value": null,
+            "public": 1
+          },
+          "summary": {
+            "name": "Summary",
+            "value": [
+              "The home is 2,228 square feet and sits on 1.1 acres of land.",
+              "It has 4 bedrooms and a 36' x 36' shop with a concrete floor and two new insulated roll doors.",
+              "The shop also includes two additional outbuildings: 24' x 18' and 28' x 19'.",
+              "The main floor features a mud/laundry room, living room, separate dining room, and a family room with a gas fireplace.",
+              "The home has 2 full bathrooms and a linen closet upstairs, with the primary bedroom having a 3-piece ensuite and two double closets.",
+              "The home has undergone 2024 updates, including new flooring, exterior siding, interior painting, kitchen and bathroom renovations, and new fixtures and hardware.",
+              "The home also features a water treatment system with a water softener and UV filtration system."
+            ],
+            "public": 1
+          },
+          "project_name": {
+            "name": "Project Name",
+            "value": null,
+            "public": 1
+          },
+          "builders": {
+            "name": "Builder(s)",
+            "value": null,
+            "public": 1
+          },
+          "occupancy_date": {
+            "name": "Occupancy Date",
+            "value": null,
+            "public": 1
+          },
+          "aggregated_dom": {
+            "name": "Property Days on Market",
+            "value": "116 days",
+            "public": 1
+          }
+        },
+        "school": [
+          {
+            "distance": 6467,
+            "programs": [
+              "English",
+              "JK-8"
+            ],
+            "id_school": 3520,
+            "display_score": 1,
+            "id": 3520,
+            "name": "Caistor Central Public School",
+            "board": "DISTRICT SCHOOL BOARD OF NIAGARA",
+            "address": "1794 Caistor Centre Rd",
+            "phone": "(905) 957-7473",
+            "eqao_json": null,
+            "city": "Caistor Centre",
+            "region": "Ontario",
+            "web": "https://caistor.dsbn.org/index.html",
+            "geo_latitude": 43.075083114848,
+            "geo_longitude": -79.65264215,
+            "school_type": "Elementary",
+            "board_type": "Public",
+            "score": 7.7,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 784,
+            "rank_total": 2975,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "784/2975",
+                "score_name": "Score",
+                "score_value": "7.63"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "648/3044",
+                "score_name": "Score",
+                "score_value": "8.08"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "493/2979",
+                "score_name": "Score",
+                "score_value": "8.51"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "936/2939",
+                "score_name": "Score",
+                "score_value": "7.13"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "818/2749",
+                "score_name": "Score",
+                "score_value": "7.32"
+              }
+            ]
+          },
+          {
+            "distance": 8533,
+            "programs": [
+              "English",
+              "9-12",
+              "Catholic"
+            ],
+            "id_school": 4110,
+            "display_score": 1,
+            "id": 4110,
+            "name": "Blessed Trinity Catholic Secondary School",
+            "board": "Niagara Catholic District School Board",
+            "address": "145 Livingston Ave",
+            "phone": "(905) 945-6706",
+            "eqao_json": null,
+            "city": "Grimsby",
+            "region": "Ontario",
+            "web": "https://www.blessedtrinitycatholic.com/",
+            "geo_latitude": 43.197094114911,
+            "geo_longitude": -79.5805213,
+            "school_type": "Secondary",
+            "board_type": "Catholic",
+            "score": 7.2,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 88,
+            "rank_total": 688,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "88/688",
+                "score_name": "Score",
+                "score_value": "8.85"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "253/728",
+                "score_name": "Score",
+                "score_value": "6.87"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "456/722",
+                "score_name": "Score",
+                "score_value": "4.32"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "252/722",
+                "score_name": "Score",
+                "score_value": "6.86"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "156/703",
+                "score_name": "Score",
+                "score_value": "8"
+              },
+              {
+                "year": 2015,
+                "rank_name": "Rank",
+                "rank_value": "113/633",
+                "score_name": "Score",
+                "score_value": "8.39"
+              }
+            ]
+          },
+          {
+            "distance": 10224,
+            "programs": [
+              "English",
+              "9-12"
+            ],
+            "id_school": 3463,
+            "display_score": 1,
+            "id": 3463,
+            "name": "WEST NIAGARA Secondary School",
+            "board": "DISTRICT SCHOOL BOARD OF NIAGARA",
+            "address": "5699 King Street",
+            "phone": "(905) 945-5416",
+            "eqao_json": null,
+            "city": "Lincoln",
+            "region": "Ontario",
+            "web": "https://westniagara.dsbn.org/",
+            "geo_latitude": 43.1836239,
+            "geo_longitude": -79.51265,
+            "school_type": "Secondary",
+            "board_type": "Public",
+            "score": 7.1,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 206,
+            "rank_total": 688,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "206/688",
+                "score_name": "Score",
+                "score_value": "7.31"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "100/728",
+                "score_name": "Score",
+                "score_value": "8.76"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "286/722",
+                "score_name": "Score",
+                "score_value": "6.43"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "167/722",
+                "score_name": "Score",
+                "score_value": "7.92"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "344/703",
+                "score_name": "Score",
+                "score_value": "5.6"
+              },
+              {
+                "year": 2015,
+                "rank_name": "Rank",
+                "rank_value": "241/633",
+                "score_name": "Score",
+                "score_value": "6.57"
+              }
+            ]
+          },
+          {
+            "distance": 4216,
+            "programs": [
+              "English",
+              "JK-8",
+              "Catholic"
+            ],
+            "id_school": 3527,
+            "display_score": 1,
+            "id": 3527,
+            "name": "St Martin Catholic Elementary School",
+            "board": "Niagara Catholic District School Board",
+            "address": "18 Streamside Dr",
+            "phone": "905.957.3032",
+            "eqao_json": null,
+            "city": "Smithville",
+            "region": "Ontario",
+            "web": "https://schools.niagaracatholic.ca/stmartin/",
+            "geo_latitude": 43.107989314865,
+            "geo_longitude": -79.5594863,
+            "school_type": "Elementary",
+            "board_type": "Catholic",
+            "score": 4.4,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 1429,
+            "rank_total": 2975,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "1429/2975",
+                "score_name": "Score",
+                "score_value": "5.68"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "2290/3044",
+                "score_name": "Score",
+                "score_value": "3.23"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "1836/2979",
+                "score_name": "Score",
+                "score_value": "4.45"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "1712/2939",
+                "score_name": "Score",
+                "score_value": "4.76"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "1861/2749",
+                "score_name": "Score",
+                "score_value": "3.91"
+              }
+            ]
+          },
+          {
+            "v3": 1,
+            "distance": 8533,
+            "programs": [
+              "French Immersion",
+              "9-12",
+              "Catholic"
+            ],
+            "id_school": 4110,
+            "display_score": 0,
+            "id": 4110,
+            "name": "Blessed Trinity Catholic Secondary School",
+            "board": "Niagara Catholic District School Board",
+            "address": "145 Livingston Ave",
+            "phone": "(905) 945-6706",
+            "eqao_json": null,
+            "city": "Grimsby",
+            "region": "Ontario",
+            "web": "https://www.blessedtrinitycatholic.com/",
+            "geo_latitude": 43.197094114911,
+            "geo_longitude": -79.5805213,
+            "school_type": "Secondary",
+            "board_type": "Catholic",
+            "score": 0,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 88,
+            "rank_total": 688,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "88/688",
+                "score_name": "Score",
+                "score_value": "8.85"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "253/728",
+                "score_name": "Score",
+                "score_value": "6.87"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "456/722",
+                "score_name": "Score",
+                "score_value": "4.32"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "252/722",
+                "score_name": "Score",
+                "score_value": "6.86"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "156/703",
+                "score_name": "Score",
+                "score_value": "8"
+              },
+              {
+                "year": 2015,
+                "rank_name": "Rank",
+                "rank_value": "113/633",
+                "score_name": "Score",
+                "score_value": "8.39"
+              }
+            ]
+          },
+          {
+            "distance": 8795,
+            "programs": [
+              "French Immersion",
+              "1-8"
+            ],
+            "id_school": 3511,
+            "display_score": 0,
+            "id": 3511,
+            "name": "Central French Immersion Public School",
+            "board": "DISTRICT SCHOOL BOARD OF NIAGARA",
+            "address": "10 Livingston Ave",
+            "phone": "(905) 945-5459",
+            "eqao_json": null,
+            "city": "Grimsby",
+            "region": "Ontario",
+            "web": "https://central.dsbn.org/index.html",
+            "geo_latitude": 43.196136414911,
+            "geo_longitude": -79.56638035,
+            "school_type": "Elementary",
+            "board_type": "Public",
+            "score": 0,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 253,
+            "rank_total": 2975,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "253/2975",
+                "score_name": "Score",
+                "score_value": "9.23"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "415/3044",
+                "score_name": "Score",
+                "score_value": "8.77"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "241/2979",
+                "score_name": "Score",
+                "score_value": "9.27"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "263/2939",
+                "score_name": "Score",
+                "score_value": "9.19"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "223/2749",
+                "score_name": "Score",
+                "score_value": "9.27"
+              }
+            ]
+          },
+          {
+            "distance": 10200,
+            "programs": [
+              "French Immersion",
+              "JK-8",
+              "Catholic"
+            ],
+            "id_school": 3525,
+            "display_score": 0,
+            "id": 3525,
+            "name": "St John Catholic Elementary School",
+            "board": "Niagara Catholic District School Board",
+            "address": "5684 King Street",
+            "phone": "905.945.5331",
+            "eqao_json": null,
+            "city": "LINCOLN",
+            "region": "Ontario",
+            "web": "https://schools.niagaracatholic.ca/stjohn/",
+            "geo_latitude": 43.1823673,
+            "geo_longitude": -79.511542,
+            "school_type": "Elementary",
+            "board_type": "Catholic",
+            "score": 0,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 900,
+            "rank_total": 2975,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "900/2975",
+                "score_name": "Score",
+                "score_value": "7.28"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "1421/3044",
+                "score_name": "Score",
+                "score_value": "5.8"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "1728/2979",
+                "score_name": "Score",
+                "score_value": "4.78"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "1139/2939",
+                "score_name": "Score",
+                "score_value": "6.51"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "470/2749",
+                "score_name": "Score",
+                "score_value": "8.46"
+              }
+            ]
+          },
+          {
+            "distance": 10224,
+            "programs": [
+              "French Immersion",
+              "9-12"
+            ],
+            "id_school": 3463,
+            "display_score": 0,
+            "id": 3463,
+            "name": "WEST NIAGARA Secondary School",
+            "board": "DISTRICT SCHOOL BOARD OF NIAGARA",
+            "address": "5699 King Street",
+            "phone": "(905) 945-5416",
+            "eqao_json": null,
+            "city": "Lincoln",
+            "region": "Ontario",
+            "web": "https://westniagara.dsbn.org/",
+            "geo_latitude": 43.1836239,
+            "geo_longitude": -79.51265,
+            "school_type": "Secondary",
+            "board_type": "Public",
+            "score": 0,
+            "score_year": 2022,
+            "score_average": null,
+            "rank": 206,
+            "rank_total": 688,
+            "rank_year": 2022,
+            "score_json": null,
+            "geo_json": null,
+            "geo_json_v2": null,
+            "rank_year_label": "2021-22",
+            "score_year_label": "2021-22",
+            "score_json_v2": [
+              {
+                "year": 2022,
+                "rank_name": "Rank",
+                "rank_value": "206/688",
+                "score_name": "Score",
+                "score_value": "7.31"
+              },
+              {
+                "year": 2019,
+                "rank_name": "Rank",
+                "rank_value": "100/728",
+                "score_name": "Score",
+                "score_value": "8.76"
+              },
+              {
+                "year": 2018,
+                "rank_name": "Rank",
+                "rank_value": "286/722",
+                "score_name": "Score",
+                "score_value": "6.43"
+              },
+              {
+                "year": 2017,
+                "rank_name": "Rank",
+                "rank_value": "167/722",
+                "score_name": "Score",
+                "score_value": "7.92"
+              },
+              {
+                "year": 2016,
+                "rank_name": "Rank",
+                "rank_value": "344/703",
+                "score_name": "Score",
+                "score_value": "5.6"
+              },
+              {
+                "year": 2015,
+                "rank_name": "Rank",
+                "rank_value": "241/633",
+                "score_name": "Score",
+                "score_value": "6.57"
+              }
+            ]
+          }
+        ],
+        "property_detail": {
+          "property": {
+            "name": "Property",
+            "value": [
+              {
+                "name": "Property Type",
+                "value": "Single Family Residence",
+                "public": 1
+              },
+              {
+                "name": "Style",
+                "value": "Two Story",
+                "public": 1
+              },
+              {
+                "name": "Frontage Type",
+                "value": "South",
+                "public": 1
+              },
+              {
+                "name": "Community",
+                "value": "Smithville",
+                "public": 1
+              },
+              {
+                "name": "Municipality",
+                "value": "West Lincoln",
+                "public": 1
+              }
+            ]
+          },
+          "building": {
+            "name": "Building",
+            "value": [
+              {
+                "name": "Size",
+                "value": "2228 feet²",
+                "public": 1
+              },
+              {
+                "name": "Building Age",
+                "value": "1993",
+                "public": 1
+              },
+              {
+                "name": "Architecture Style",
+                "value": "Two Story",
+                "public": 1
+              },
+              {
+                "name": "Direction",
+                "value": ".",
+                "public": 1
+              },
+              {
+                "name": "Roof",
+                "value": "Asphalt Shing",
+                "public": 1
+              },
+              {
+                "name": "Construction",
+                "value": "Vinyl Siding",
+                "public": 1
+              },
+              {
+                "name": "Exterior Feature",
+                "value": "Storage Buildings",
+                "public": 1
+              },
+              {
+                "name": "Foundation Type",
+                "value": "Poured Concrete",
+                "public": 1
+              }
+            ]
+          },
+          "inside": {
+            "name": "Inside",
+            "value": [
+              {
+                "name": "Appliances Included",
+                "value": "Dishwasher, Dryer, Gas Stove, Hot Water Tank Owned, Refrigerator, Washer, Decorative Bathroom Mirrors",
+                "public": 1
+              },
+              {
+                "name": "Rooms",
+                "value": "14",
+                "public": 1
+              },
+              {
+                "name": "Bedrooms",
+                "value": "4",
+                "public": 1
+              },
+              {
+                "name": "Bedrooms Above Ground",
+                "value": "4",
+                "public": 1
+              },
+              {
+                "name": "Bedrooms Below Ground",
+                "value": "0",
+                "public": 1
+              },
+              {
+                "name": "Beds on Level Second",
+                "value": "4",
+                "public": 1
+              },
+              {
+                "name": "Bathrooms",
+                "value": "3",
+                "public": 1
+              },
+              {
+                "name": "Full Bathrooms",
+                "value": "2",
+                "public": 1
+              },
+              {
+                "name": "Half Bathrooms",
+                "value": "1",
+                "public": 1
+              },
+              {
+                "name": "2 Piece Bathrooms",
+                "value": "1",
+                "public": 1
+              },
+              {
+                "name": "3 Piece Bathrooms",
+                "value": "0",
+                "public": 1
+              },
+              {
+                "name": "4 Piece Bathrooms",
+                "value": "1",
+                "public": 1
+              },
+              {
+                "name": "5 Plus Piece Bathrooms",
+                "value": "0",
+                "public": 1
+              },
+              {
+                "name": "Baths on Level Second",
+                "value": "2",
+                "public": 1
+              },
+              {
+                "name": "Kitchens",
+                "value": "1",
+                "public": 1
+              },
+              {
+                "name": "Kitchens Above Ground",
+                "value": "1",
+                "public": 1
+              },
+              {
+                "name": "Kitchens Below Ground",
+                "value": "0",
+                "public": 1
+              },
+              {
+                "name": "Fireplace",
+                "value": "Living Room,  Gas",
+                "public": 1
+              },
+              {
+                "name": "Laundry",
+                "value": "1",
+                "public": 1
+              },
+              {
+                "name": "Laundry Features",
+                "value": "Main Level",
+                "public": 1
+              },
+              {
+                "name": "Laundries on Level Main",
+                "value": "1",
+                "public": 1
+              }
+            ]
+          },
+          "utilities": {
+            "name": "Utilities",
+            "value": [
+              {
+                "name": "Cooling",
+                "value": "Central Air",
+                "public": 1
+              },
+              {
+                "name": "Heating",
+                "value": "Forced Air,  Natural Gas",
+                "public": 1
+              },
+              {
+                "name": "Water",
+                "value": "Cistern",
+                "public": 1
+              }
+            ]
+          },
+          "parking": {
+            "name": "Parking",
+            "value": [
+              {
+                "name": "Driveway Parking",
+                "value": "Private Drive Single Wide",
+                "public": 1
+              },
+              {
+                "name": "Garage",
+                "value": "4",
+                "public": 1
+              },
+              {
+                "name": "Total Parking Space",
+                "value": "14",
+                "public": 1
+              },
+              {
+                "name": "Parking Features",
+                "value": "Detached Garage,  Gravel,  Unassigned",
+                "public": 1
+              }
+            ]
+          },
+          "highlights": {
+            "name": "Highlights",
+            "value": [
+              {
+                "name": "Lot Features",
+                "value": "Rural,  Ample Parking,  Near Golf Course,  Hospital,  Park,  Place of Worship,  School Bus Route,  Schools",
+                "public": 1
+              }
+            ]
+          },
+          "land": {
+            "name": "Land",
+            "value": [
+              {
+                "name": "Sewer",
+                "value": "Septic Tank",
+                "public": 1
+              },
+              {
+                "name": "Frontage Length",
+                "value": "169.00",
+                "public": 1
+              },
+              {
+                "name": "Depth",
+                "value": "288",
+                "public": 1
+              },
+              {
+                "name": "Lot Size",
+                "value": "169 x 288 feet",
+                "public": 1
+              },
+              {
+                "name": "Acreage",
+                "value": "0.50–1.99",
+                "public": 1
+              },
+              {
+                "name": "Zoning",
+                "value": "EC, RUR",
+                "public": 1
+              }
+            ]
+          },
+          "farm": {
+            "name": "Farm",
+            "value": [
+              {
+                "name": "Farm Land Area Units",
+                "value": "Square Feet",
+                "public": 1
+              }
+            ]
+          }
+        },
+        "listing_history": [
+          {
+            "id_listing": "VLaGyGkvqAKyW1ZD",
+            "ml_num": "40688799",
+            "seo_suffix": "7580-Regional-20-Road-West-Lincoln-L0R2A0-40688799-X11918200",
+            "price": "$999,900",
+            "price_note": null,
+            "price_sold": null,
+            "date_start": "2025-01-10",
+            "date_end": null,
+            "data_source": "ITSO",
+            "status": "For Sale",
+            "public": 1,
+            "button": 0,
+            "show_contact_agent": false,
+            "blur_price": false
+          },
+          {
+            "id_listing": "NkKJ3J1j6gN7d4V6",
+            "ml_num": "40659192",
+            "seo_suffix": "7580-Regional-20-Road-West-Lincoln-L0R2A0-40659192-40659192-X9390051",
+            "price": "$1,049,900",
+            "price_note": null,
+            "price_sold": null,
+            "date_start": "2024-10-09",
+            "date_end": "2025-01-10",
+            "data_source": "ITSO",
+            "status": "Expired",
+            "public": 1,
+            "button": 1,
+            "show_contact_agent": false,
+            "blur_price": false
+          }
+        ],
+        "rooms": [
+          {
+            "size": "5.5 x 4",
+            "size_feet": "18 x 13.1",
+            "dc": "",
+            "type": "Eat-in Kitchen",
+            "lv": "Level: Main"
+          },
+          {
+            "size": "2.5 x 4",
+            "size_feet": "8.2 x 13.1",
+            "dc": "",
+            "type": "Breakfast Room",
+            "lv": "Level: Main"
+          },
+          {
+            "size": "3.7 x 3.4",
+            "size_feet": "12.1 x 11.2",
+            "dc": "",
+            "type": "Dining Room",
+            "lv": "Level: Main"
+          },
+          {
+            "size": "4.5 x 3.9",
+            "size_feet": "14.8 x 12.8",
+            "dc": "",
+            "type": "Living Room",
+            "lv": "Level: Main"
+          },
+          {
+            "size": "4.4 x 4",
+            "size_feet": "14.4 x 13.1",
+            "dc": "",
+            "type": "Family Room",
+            "lv": "Level: Main"
+          },
+          {
+            "size": "4.2 x 3.4",
+            "size_feet": "13.8 x 11.2",
+            "dc": "",
+            "type": "Foyer",
+            "lv": "Level: Main"
+          },
+          {
+            "size": "2.3 x 3",
+            "size_feet": "7.5 x 9.8",
+            "dc": "",
+            "type": "Laundry",
+            "lv": "Level: Main"
+          },
+          {
+            "size": null,
+            "size_feet": null,
+            "dc": "2-Piece",
+            "type": "Bathroom",
+            "lv": "Level: Main"
+          },
+          {
+            "size": "4.5 x 4",
+            "size_feet": "14.8 x 13.1",
+            "dc": "",
+            "type": "Bedroom Primary",
+            "lv": "Level: Second"
+          },
+          {
+            "size": "4.5 x 3.9",
+            "size_feet": "14.8 x 12.8",
+            "dc": "",
+            "type": "Bedroom",
+            "lv": "Level: Second"
+          },
+          {
+            "size": "4.6 x 3.2",
+            "size_feet": "15.1 x 10.5",
+            "dc": "",
+            "type": "Bedroom",
+            "lv": "Level: Second"
+          },
+          {
+            "size": "3.7 x 3.4",
+            "size_feet": "12.1 x 11.2",
+            "dc": "",
+            "type": "Bedroom",
+            "lv": "Level: Second"
+          },
+          {
+            "size": null,
+            "size_feet": null,
+            "dc": "3-Piece",
+            "type": "-",
+            "lv": "Level: Second"
+          },
+          {
+            "size": null,
+            "size_feet": null,
+            "dc": "4-Piece",
+            "type": "Bathroom",
+            "lv": "Level: Second"
+          },
+          {
+            "size": "12.2 x 7.8",
+            "size_feet": "40 x 25.6",
+            "dc": "",
+            "type": "Basement",
+            "lv": "Level: Basement"
+          }
+        ],
+        "rooms_public": 1,
+        "community_stats": {
+          "house_type": "D.",
+          "period": "2025-01-01",
+          "price_sold_median": 810000,
+          "price_sold_growth_yoy": -0.1,
+          "price_sold_growth_yoy_percentile": 14,
+          "sold_count": 3,
+          "sold_count_30": 3,
+          "dom_avg": 47,
+          "new_listing_count": 7,
+          "rent_180_ratio": 5.3,
+          "active_listing_count": 7,
+          "absorption_rate": 0.32,
+          "price_sold_growth_5y": 39,
+          "price_sold_growth_10y": 93,
+          "temperature_text": "Warm",
+          "period_name": "January 2025",
+          "growth_year": -10
+        },
+        "community_stats_all": {
+          "house_type": "all",
+          "period": "2025-01-01",
+          "price_sold_median": 690000,
+          "price_sold_growth_yoy": -0.213,
+          "price_sold_growth_yoy_percentile": 5,
+          "sold_count": 3,
+          "sold_count_30": 3,
+          "dom_avg": 47,
+          "new_listing_count": 11,
+          "rent_180_ratio": 3,
+          "active_listing_count": 20,
+          "absorption_rate": "0.30",
+          "price_sold_growth_5y": 43,
+          "price_sold_growth_10y": 64,
+          "period_name": "January 2025",
+          "growth_year": -21.3
+        },
+        "analytics": {
+          "estimate_price": "980,000",
+          "estimate_price_int": 980000,
+          "estimate_price_confident": 0.62,
+          "estimate_price_display_directly": 1,
+          "estimate_price_display": 1,
+          "estimate_price_display_top": 1,
+          "estimate_price_date": "2025-02-02",
+          "estimate_price_age": 0,
+          "price_diff": -2,
+          "rent_base": 0,
+          "estimate_price_range": null,
+          "estimate_dom": 51,
+          "estimate_dom_bar": [
+            {
+              "text": "Fast",
+              "dom": 5
+            },
+            {
+              "text": "20 days",
+              "dom": 20
+            },
+            {
+              "text": "60 days",
+              "dom": 60
+            },
+            {
+              "text": "Very Slow",
+              "dom": 100
+            }
+          ],
+          "estimate_rent": "4,020",
+          "estimate_rent_int": 4020,
+          "estimate_rent_days": 34,
+          "estimate_rent_yearreturn": 3.82,
+          "school": {
+            "highschool_score": 7.2,
+            "belowhighschool_score": 7.7
+          },
+          "stars": {
+            "school": 3.5,
+            "growth": 0.5,
+            "rent": 3
+          },
+          "scores": {
+            "school": 7,
+            "growth": 1,
+            "rent": 7
+          }
+        },
+        "virtual_open_house": [],
+        "public_open_house": [],
+        "community_stats_public": 1,
+        "premium_stats_display": 0,
+        "premium_stats": null,
+        "deposit": null,
+        "province_abbr": "ON",
+        "meta": {
+          "title": "7580 Regional 20 Road, West Lincoln, Ontario L0R2A0 For Sale | HouseSigma",
+          "title_share": "7580 Regional 20 Road, West Lincoln, Ontario L0R2A0 For Sale | HouseSigma",
+          "description": "Discover the perfect starter home or investment opportunity at 7580 Regional 20 Road, West Lincoln, Ontario L0R2A0 with HouseSigma today.",
+          "image": "https://cache09.housesigma.com/file/pix-itso/156128565/c160d_1.jpg?b92f1466",
+          "canonical_url": "https://housesigma.com/on/west-lincoln-real-estate/7580-regional-20-road/home/JRv53KDNVl4YVPW4/",
+          "robots": "all"
+        },
+        "component_display": {
+          "my_note": 1,
+          "agent_touring_activities": 1,
+          "not_interested": 1,
+          "community_popularity_index": 1
+        },
+        "show_agent_recruit": 0,
+        "show_trustpilot": false,
+        "banner_top": {
+          "src": "https://static.housesigma.com/images/banner/join_housesigma_v2_750_204.png",
+          "url": "https://team.housesigma.com/join-us/",
+          "inner": false
+        },
+        "banner_bottom": null,
+        "show_premium_unlock": 0,
+        "user_referral_code": "",
+        "premium_share_text": ""
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH12"
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/listing/info/popularity": {
+    "url": "https://housesigma.com/bkv2/api/listing/info/popularity",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:04:43.286Z",
+    "data": {
+      "status": true,
+      "data": {
+        "premium_stats_display": 0,
+        "premium_stats_data": null,
+        "all_stats_data": {
+          "stats_index": [
+            {
+              "day": 0,
+              "community_average": 20,
+              "current_listing": 26
+            },
+            {
+              "day": 1,
+              "community_average": 44,
+              "current_listing": 45
+            },
+            {
+              "day": 2,
+              "community_average": 53,
+              "current_listing": 51
+            },
+            {
+              "day": 3,
+              "community_average": 58,
+              "current_listing": 58
+            },
+            {
+              "day": 4,
+              "community_average": 62,
+              "current_listing": 62
+            },
+            {
+              "day": 5,
+              "community_average": 67,
+              "current_listing": 64
+            },
+            {
+              "day": 6,
+              "community_average": 70,
+              "current_listing": 67
+            },
+            {
+              "day": 7,
+              "community_average": 74,
+              "current_listing": 69
+            },
+            {
+              "day": 8,
+              "community_average": 76,
+              "current_listing": 71
+            },
+            {
+              "day": 9,
+              "community_average": 78,
+              "current_listing": 73
+            },
+            {
+              "day": 10,
+              "community_average": 79,
+              "current_listing": 76
+            },
+            {
+              "day": 11,
+              "community_average": 80,
+              "current_listing": 77
+            },
+            {
+              "day": 12,
+              "community_average": 81,
+              "current_listing": 79
+            },
+            {
+              "day": 13,
+              "community_average": 82,
+              "current_listing": 79
+            },
+            {
+              "day": 14,
+              "community_average": 83,
+              "current_listing": 80
+            },
+            {
+              "day": 15,
+              "community_average": 84,
+              "current_listing": 81
+            },
+            {
+              "day": 16,
+              "community_average": 84,
+              "current_listing": 82
+            },
+            {
+              "day": 17,
+              "community_average": 85,
+              "current_listing": 83
+            },
+            {
+              "day": 18,
+              "community_average": 86,
+              "current_listing": 84
+            },
+            {
+              "day": 19,
+              "community_average": 86,
+              "current_listing": 84
+            },
+            {
+              "day": 20,
+              "community_average": 87,
+              "current_listing": 85
+            },
+            {
+              "day": 21,
+              "community_average": 88,
+              "current_listing": 86
+            },
+            {
+              "day": 22,
+              "community_average": 88,
+              "current_listing": 86
+            },
+            {
+              "day": 23,
+              "community_average": 89,
+              "current_listing": 86
+            },
+            {
+              "day": 24,
+              "community_average": 89,
+              "current_listing": "-"
+            },
+            {
+              "day": 25,
+              "community_average": 89,
+              "current_listing": "-"
+            },
+            {
+              "day": 26,
+              "community_average": 89,
+              "current_listing": "-"
+            },
+            {
+              "day": 27,
+              "community_average": 89,
+              "current_listing": "-"
+            },
+            {
+              "day": 28,
+              "community_average": 90,
+              "current_listing": "-"
+            },
+            {
+              "day": 29,
+              "community_average": 90,
+              "current_listing": "-"
+            },
+            {
+              "day": 30,
+              "community_average": 90,
+              "current_listing": "-"
+            }
+          ],
+          "community_popularity_index": [
+            {
+              "period": "2021-10",
+              "popularity_index_30": "96.52",
+              "sold_count": "4"
+            },
+            {
+              "period": "2021-11",
+              "popularity_index_30": "89.81",
+              "sold_count": "1"
+            },
+            {
+              "period": "2021-12",
+              "popularity_index_30": "95.29",
+              "sold_count": "2"
+            },
+            {
+              "period": "2022-01",
+              "popularity_index_30": "72.25",
+              "sold_count": "1"
+            },
+            {
+              "period": "2022-02",
+              "popularity_index_30": "93.77",
+              "sold_count": "6"
+            },
+            {
+              "period": "2022-03",
+              "popularity_index_30": "93.84",
+              "sold_count": "5"
+            },
+            {
+              "period": "2022-04",
+              "popularity_index_30": "72.35",
+              "sold_count": "9"
+            },
+            {
+              "period": "2022-05",
+              "popularity_index_30": "71.87",
+              "sold_count": "3"
+            },
+            {
+              "period": "2022-06",
+              "popularity_index_30": "58.56",
+              "sold_count": "2"
+            },
+            {
+              "period": "2022-07",
+              "popularity_index_30": "65.76",
+              "sold_count": "5"
+            },
+            {
+              "period": "2022-08",
+              "popularity_index_30": "61.26",
+              "sold_count": "6"
+            },
+            {
+              "period": "2022-09",
+              "popularity_index_30": "69.1",
+              "sold_count": "2"
+            },
+            {
+              "period": "2022-10",
+              "popularity_index_30": "51.9",
+              "sold_count": "3"
+            },
+            {
+              "period": "2022-11",
+              "popularity_index_30": "17.58",
+              "sold_count": "1"
+            },
+            {
+              "period": "2022-12",
+              "popularity_index_30": "43.71",
+              "sold_count": "1"
+            },
+            {
+              "period": "2023-01",
+              "popularity_index_30": "52.32",
+              "sold_count": "3"
+            },
+            {
+              "period": "2023-02",
+              "popularity_index_30": "61.53",
+              "sold_count": "4"
+            },
+            {
+              "period": "2023-03",
+              "popularity_index_30": "39.85",
+              "sold_count": "6"
+            },
+            {
+              "period": "2023-04",
+              "popularity_index_30": "53.4",
+              "sold_count": "4"
+            },
+            {
+              "period": "2023-05",
+              "popularity_index_30": "51.55",
+              "sold_count": "3"
+            },
+            {
+              "period": "2023-06",
+              "popularity_index_30": "73.09",
+              "sold_count": "2"
+            },
+            {
+              "period": "2023-07",
+              "popularity_index_30": "51.29",
+              "sold_count": "2"
+            },
+            {
+              "period": "2023-08",
+              "popularity_index_30": "66.57",
+              "sold_count": "3"
+            },
+            {
+              "period": "2023-09",
+              "popularity_index_30": "63.16",
+              "sold_count": "0"
+            },
+            {
+              "period": "2023-10",
+              "popularity_index_30": "42.98",
+              "sold_count": "4"
+            },
+            {
+              "period": "2023-11",
+              "popularity_index_30": "22.99",
+              "sold_count": "1"
+            },
+            {
+              "period": "2023-12",
+              "popularity_index_30": "40.48",
+              "sold_count": "1"
+            },
+            {
+              "period": "2024-01",
+              "popularity_index_30": "77.1",
+              "sold_count": "3"
+            },
+            {
+              "period": "2024-02",
+              "popularity_index_30": "42.26",
+              "sold_count": "2"
+            },
+            {
+              "period": "2024-03",
+              "popularity_index_30": "55.8",
+              "sold_count": "2"
+            },
+            {
+              "period": "2024-04",
+              "popularity_index_30": "78.54",
+              "sold_count": "0"
+            },
+            {
+              "period": "2024-05",
+              "popularity_index_30": "54.85",
+              "sold_count": "3"
+            },
+            {
+              "period": "2024-06",
+              "popularity_index_30": "46.76",
+              "sold_count": "0"
+            },
+            {
+              "period": "2024-07",
+              "popularity_index_30": "44.93",
+              "sold_count": "6"
+            },
+            {
+              "period": "2024-08",
+              "popularity_index_30": "41.66",
+              "sold_count": "2"
+            },
+            {
+              "period": "2024-09",
+              "popularity_index_30": "57.28",
+              "sold_count": "10"
+            },
+            {
+              "period": "2024-10",
+              "popularity_index_30": "38.29",
+              "sold_count": "14"
+            },
+            {
+              "period": "2024-11",
+              "popularity_index_30": "51.5",
+              "sold_count": "8"
+            },
+            {
+              "period": "2024-12",
+              "popularity_index_30": "45.49",
+              "sold_count": "12"
+            },
+            {
+              "period": "2025-01",
+              "popularity_index_30": "82.01",
+              "sold_count": "3"
+            },
+            {
+              "period": "2025-02",
+              "popularity_index_30": "-",
+              "sold_count": "-"
+            }
+          ]
+        },
+        "scores": {
+          "current": "92",
+          "similar": [
+            "66",
+            "74",
+            "61",
+            "40",
+            "51",
+            "48"
+          ],
+          "similar_listings": [
+            {
+              "ml_num": "40687301",
+              "ml_num_merge": "40687301",
+              "marker_label": "D 1.1M",
+              "id_listing": "NkKJ3J1Rbb67d4V6",
+              "id_address": "5VXv3lXoVvp3j2q8",
+              "seo_municipality": "west-lincoln-real-estate",
+              "seo_address": "70-oakdale-boulevard",
+              "seo_image_alt": "MLS Listing For Sale at 70 Oakdale Boulevard, West Lincoln, Ontario, L0R2A0, MLS# 40687301",
+              "seo_suffix": "70-Oakdale-Boulevard-West-Lincoln-L0R2A0-40687301",
+              "photo_url": "https://cache14.housesigma.com/file/pix-itso/156061133/d902d_1.jpg?78dedcd7",
+              "photo_source": null,
+              "house_type_name": "Single Family Residence",
+              "house_type": "D.",
+              "house_style": "Two Story",
+              "apt_num": null,
+              "address": "70 Oakdale Boulevard",
+              "address_navigation": "70 Oakdale Boulevard, West Lincoln, ",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "For Sale",
+                "text_full": "For Sale",
+                "status": "A",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "Smithville",
+              "municipality_name": "West Lincoln",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 4,
+              "bedroom_plus": 1,
+              "bedroom_string": "4+1",
+              "washroom": 3,
+              "parking": {
+                "total": 2,
+                "garage_type": null,
+                "garage": 2,
+                "parking_type": null,
+                "parking": 5,
+                "text": " 2 garage,  5 parking"
+              },
+              "price": "1,055,000",
+              "price_int": 1055000,
+              "price_abbr": "1.1M",
+              "price_sold": null,
+              "price_origin": "1,064,900",
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.093399,
+                "lon": -79.556156
+              },
+              "house_area": {
+                "area": "2327",
+                "area_note": null,
+                "unit": "feet²",
+                "estimate": 2327
+              },
+              "land": {
+                "front": 59,
+                "depth": 115,
+                "unit": "feet"
+              },
+              "date_added": "2025-01-03",
+              "date_added_days": 30,
+              "date_start": "2025-01-03",
+              "date_start_days": 30,
+              "date_start_month": 0,
+              "date_update": "2025-02-02",
+              "date_end": null,
+              "date_end_days": null,
+              "list_days": 30,
+              "feature_header": null,
+              "data_source": "ITSO",
+              "data_source_raw": "ITSO",
+              "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+              "tos_source": "ITSO",
+              "analytics": {
+                "rent_yield": "3.3",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-02 16:58:02",
+                "estimate_price": "1,022,100",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "74"
+              },
+              "scores": {
+                "school": 7,
+                "rent": 5,
+                "growth": 1
+              },
+              "tags": [
+                "For Sale"
+              ],
+              "text": {
+                "list_date_short": "List 2025-01-03",
+                "list_date_long": "List 2025-01-03, 30 days ago",
+                "dom_short": "Listed 30 days ago",
+                "dom_short_v2": "30 days ago",
+                "dom_long": "Listed 30 days ago",
+                "rooms_short": "4+1 bd 3 ba 2 gr",
+                "rooms_long": "4+1 Bedroom, 3 Bathroom, 2 Garage",
+                "status_chg_date": "4 weeks ago",
+                "date_preview": "30 days ago",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 74/100"
+              },
+              "open_house_date": [
+                {
+                  "start_date": "2025-02-02T14:00",
+                  "end_date": "2025-02-02T16:00",
+                  "text": "Sun, Feb 02 2:00 PM-4:00 PM"
+                }
+              ],
+              "brokerage_text": null,
+              "postal_code": "L0R2A0",
+              "date_sold_report": null,
+              "popularity_score": "74",
+              "difference": {
+                "bedroom": null,
+                "washroom": null,
+                "house_area": 99,
+                "parking": {
+                  "total": -2
+                },
+                "land": {
+                  "front": -110,
+                  "depth": -173
+                }
+              }
+            },
+            {
+              "ml_num": "40694573",
+              "ml_num_merge": "40694573",
+              "marker_label": "D 0.98M",
+              "id_listing": "EXrx30e44xpYOklN",
+              "id_address": "amgL7A42lbEyZ1MW",
+              "seo_municipality": "west-lincoln-real-estate",
+              "seo_address": "54-harvest-gate",
+              "seo_image_alt": "MLS Listing For Sale at 54 Harvest Gate, West Lincoln, Ontario, L0R2A0, MLS# 40694573",
+              "seo_suffix": "54-Harvest-Gate-West-Lincoln-L0R2A0-40694573-X11947552",
+              "photo_url": "https://cache09.housesigma.com/file/pix-itso/156406157/e8a1a_1.jpg?c0a64249",
+              "photo_source": null,
+              "house_type_name": "Single Family Residence",
+              "house_type": "D.",
+              "house_style": "Two Story",
+              "apt_num": null,
+              "address": "54 Harvest Gate",
+              "address_navigation": "54 Harvest Gate, West Lincoln, ",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "For Sale",
+                "text_full": "For Sale",
+                "status": "A",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "Smithville",
+              "municipality_name": "West Lincoln",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 3,
+              "bedroom_plus": null,
+              "bedroom_string": 3,
+              "washroom": 3,
+              "parking": {
+                "total": 2,
+                "garage_type": null,
+                "garage": 2,
+                "parking_type": null,
+                "parking": 6,
+                "text": " 2 garage,  6 parking"
+              },
+              "price": "977,900",
+              "price_int": 977900,
+              "price_abbr": "0.98M",
+              "price_sold": null,
+              "price_origin": null,
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.092239,
+                "lon": -79.55957
+              },
+              "house_area": {
+                "area": "1700",
+                "area_note": null,
+                "unit": "feet²",
+                "estimate": 1700
+              },
+              "land": {
+                "front": 49,
+                "depth": 114,
+                "unit": "feet"
+              },
+              "date_added": "2025-01-30",
+              "date_added_days": 3,
+              "date_start": "2025-01-30",
+              "date_start_days": 3,
+              "date_start_month": 0,
+              "date_update": "2025-02-02",
+              "date_end": null,
+              "date_end_days": null,
+              "list_days": 3,
+              "feature_header": null,
+              "data_source": "ITSO",
+              "data_source_raw": "ITSO",
+              "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+              "tos_source": "ITSO",
+              "analytics": {
+                "rent_yield": "2.8",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-02 16:58:50",
+                "estimate_price": "958,900",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "66"
+              },
+              "scores": {
+                "school": 7,
+                "rent": 3,
+                "growth": 1
+              },
+              "tags": [
+                "For Sale"
+              ],
+              "text": {
+                "list_date_short": "List 2025-01-30",
+                "list_date_long": "List 2025-01-30, 3 days ago",
+                "dom_short": "Listed 3 days ago",
+                "dom_short_v2": "3 days ago",
+                "dom_long": "Listed 3 days ago",
+                "rooms_short": "3 bd 3 ba 2 gr",
+                "rooms_long": "3 Bedroom, 3 Bathroom, 2 Garage",
+                "status_chg_date": "3 days ago",
+                "date_preview": "3 days ago",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 66/100"
+              },
+              "open_house_date": [
+                {
+                  "start_date": "2025-02-02T14:00",
+                  "end_date": "2025-02-02T16:00",
+                  "text": "Sun, Feb 02 2:00 PM-4:00 PM"
+                }
+              ],
+              "brokerage_text": null,
+              "postal_code": "L0R2A0",
+              "date_sold_report": null,
+              "popularity_score": "66",
+              "difference": {
+                "bedroom": -1,
+                "washroom": null,
+                "house_area": -528,
+                "parking": {
+                  "total": -2
+                },
+                "land": {
+                  "front": -120,
+                  "depth": -174
+                }
+              }
+            },
+            {
+              "ml_num": "X11940599",
+              "ml_num_merge": "X11940599",
+              "marker_label": "D 1.3M",
+              "id_listing": "xLkv3V6Bv6x3DBNr",
+              "id_address": "K8OgYBVzlMdYJmG2",
+              "seo_municipality": "west-lincoln-real-estate",
+              "seo_address": "121-west-street",
+              "seo_image_alt": "MLS Listing For Sale at 121 West St, West Lincoln, Ontario, L0R2A0, MLS# X11940599",
+              "seo_suffix": "121-West-St-West-Lincoln-L0R2A0-X11940599",
+              "photo_url": "https://cache-e12.housesigma.com/file/pix-treb/X11940599/4a27d_1.jpg?3d1ab9c4",
+              "photo_source": null,
+              "house_type_name": "Detached",
+              "house_type": "D.",
+              "house_style": "2 1/2 Storey",
+              "apt_num": null,
+              "address": "121 West St",
+              "address_navigation": "121 West St, West Lincoln, Ontario",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "For Sale",
+                "text_full": "For Sale",
+                "status": "A",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "Smithville",
+              "municipality_name": "West Lincoln",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 3,
+              "bedroom_plus": 1,
+              "bedroom_string": "3+1",
+              "washroom": 2,
+              "parking": {
+                "total": 1.5,
+                "garage_type": "Detached",
+                "garage": 1.5,
+                "parking_type": null,
+                "parking": 4,
+                "text": "Detached 1.5 garage,  4 parking"
+              },
+              "price": "1,250,000",
+              "price_int": 1250000,
+              "price_abbr": "1.3M",
+              "price_sold": null,
+              "price_origin": null,
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.10045,
+                "lon": -79.5478
+              },
+              "house_area": {
+                "area": 1512,
+                "area_note": "(Est.)",
+                "unit": "feet²",
+                "estimate": 1512
+              },
+              "land": {
+                "front": 67,
+                "depth": 203,
+                "unit": "feet"
+              },
+              "date_added": "2025-01-25",
+              "date_added_days": 8,
+              "date_start": "2025-01-25",
+              "date_start_days": 8,
+              "date_start_month": 0,
+              "date_update": "2025-01-25",
+              "date_end": null,
+              "date_end_days": null,
+              "list_days": 8,
+              "feature_header": null,
+              "data_source": "TRREB",
+              "data_source_raw": "TREB",
+              "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+              "tos_source": "TREB",
+              "analytics": {
+                "rent_yield": "2.4",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-02 16:00:27",
+                "estimate_price": "1,195,900",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "61"
+              },
+              "scores": {
+                "school": 7,
+                "rent": 2,
+                "growth": 1
+              },
+              "tags": [
+                "For Sale"
+              ],
+              "text": {
+                "list_date_short": "List 2025-01-25",
+                "list_date_long": "List 2025-01-25, 8 days ago",
+                "dom_short": "Listed 8 days ago",
+                "dom_short_v2": "8 days ago",
+                "dom_long": "Listed 8 days ago",
+                "rooms_short": "3+1 bd 2 ba 1.5 gr",
+                "rooms_long": "3+1 Bedroom, 2 Bathroom, 1.5 Garage",
+                "status_chg_date": "1 week ago",
+                "date_preview": "8 days ago",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 61/100"
+              },
+              "open_house_date": [
+                {
+                  "start_date": "2025-02-02T14:00",
+                  "end_date": "2025-02-02T16:00",
+                  "text": "Sun, Feb 02 2:00 PM-4:00 PM"
+                }
+              ],
+              "brokerage_text": null,
+              "postal_code": "L0R2A0",
+              "date_sold_report": null,
+              "popularity_score": "61",
+              "difference": {
+                "bedroom": -1,
+                "washroom": -1,
+                "house_area": -716,
+                "parking": {
+                  "total": -2.5
+                },
+                "land": {
+                  "front": -102,
+                  "depth": -85
+                }
+              }
+            },
+            {
+              "ml_num": "X10423487",
+              "ml_num_merge": "X10423487",
+              "marker_label": "D 0.85M",
+              "id_listing": "wJKR7PNqOw1YXeLP",
+              "id_address": "XRla7gxeQEX3jEvL",
+              "seo_municipality": "west-lincoln-real-estate",
+              "seo_address": "33-ellis-st",
+              "seo_image_alt": "MLS Listing For Sale at 33 Ellis St, West Lincoln, Ontario, L0R2A0, MLS# X10423487",
+              "seo_suffix": "33-Ellis-St-West-Lincoln-L0R2A0-X10423487-X10423487",
+              "photo_url": "https://cache-e14.housesigma.com/file/pix-treb/X10423487/398d4_1.jpg?d5e75243",
+              "photo_source": null,
+              "house_type_name": "Detached",
+              "house_type": "D.",
+              "house_style": "Bungalow-Raised",
+              "apt_num": null,
+              "address": "33 Ellis St",
+              "address_navigation": "33 Ellis St, West Lincoln, Ontario",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "For Sale",
+                "text_full": "For Sale",
+                "status": "A",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "Smithville",
+              "municipality_name": "West Lincoln",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 3,
+              "bedroom_plus": 1,
+              "bedroom_string": "3+1",
+              "washroom": 2,
+              "parking": {
+                "total": 1,
+                "garage_type": "Attached",
+                "garage": 1,
+                "parking_type": null,
+                "parking": 6,
+                "text": "Attached 1 garage,  6 parking"
+              },
+              "price": "849,900",
+              "price_int": 849900,
+              "price_abbr": "0.85M",
+              "price_sold": null,
+              "price_origin": "899,900",
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.09385,
+                "lon": -79.54385
+              },
+              "house_area": {
+                "area": "1100-1500",
+                "area_note": null,
+                "unit": "feet²",
+                "estimate": 1300
+              },
+              "land": {
+                "front": 54,
+                "depth": 150,
+                "unit": "feet"
+              },
+              "date_added": "2024-11-14",
+              "date_added_days": 80,
+              "date_start": "2024-11-14",
+              "date_start_days": 80,
+              "date_start_month": 2,
+              "date_update": "2025-01-07",
+              "date_end": null,
+              "date_end_days": null,
+              "list_days": 80,
+              "feature_header": null,
+              "data_source": "TRREB",
+              "data_source_raw": "TREB",
+              "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+              "tos_source": "TREB",
+              "analytics": {
+                "rent_yield": "3.1",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-02 13:18:37",
+                "estimate_price": "827,900",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "51"
+              },
+              "scores": {
+                "school": 7,
+                "rent": 4,
+                "growth": 1
+              },
+              "tags": [
+                "For Sale"
+              ],
+              "text": {
+                "list_date_short": "List 2024-11-14",
+                "list_date_long": "List 2024-11-14, 80 days ago",
+                "dom_short": "Listed in Nov 2024",
+                "dom_short_v2": "in Nov 2024",
+                "dom_long": "Listed 80 days ago",
+                "rooms_short": "3+1 bd 2 ba 1 gr",
+                "rooms_long": "3+1 Bedroom, 2 Bathroom, 1 Garage",
+                "status_chg_date": "3 weeks ago",
+                "date_preview": "2024-11-14",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 51/100"
+              },
+              "open_house_date": [],
+              "brokerage_text": null,
+              "postal_code": "L0R2A0",
+              "date_sold_report": null,
+              "popularity_score": "51",
+              "difference": {
+                "bedroom": -1,
+                "washroom": -1,
+                "house_area": -928,
+                "parking": {
+                  "total": -3
+                },
+                "land": {
+                  "front": -115,
+                  "depth": -138
+                }
+              }
+            },
+            {
+              "ml_num": "X11914319",
+              "ml_num_merge": "X11914319",
+              "marker_label": "D 1.6M",
+              "id_listing": "9w8o3m4zVQo7GKjm",
+              "id_address": "eVbOYEp1R1V3x2P0",
+              "seo_municipality": "west-lincoln-real-estate",
+              "seo_address": "226-st-catharines-st",
+              "seo_image_alt": "MLS Listing For Sale at 226 St. Catharines St, West Lincoln, Ontario, L0R2A0, MLS# X11914319",
+              "seo_suffix": "226-St-Catharines-St-West-Lincoln-L0R2A0-X11914319",
+              "photo_url": "https://cache19.housesigma.com/file/pix-treb/X11914319/6c56b_1.jpg?e62af298",
+              "photo_source": null,
+              "house_type_name": "Detached",
+              "house_type": "D.",
+              "house_style": "2-Storey",
+              "apt_num": null,
+              "address": "226 St. Catharines St",
+              "address_navigation": "226 St. Catharines St, West Lincoln, Ontario",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "For Sale",
+                "text_full": "For Sale",
+                "status": "A",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "Smithville",
+              "municipality_name": "West Lincoln",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 4,
+              "bedroom_plus": null,
+              "bedroom_string": 4,
+              "washroom": 3,
+              "parking": {
+                "total": 1,
+                "garage_type": "Built-In",
+                "garage": 1,
+                "parking_type": null,
+                "parking": 3,
+                "text": "Built-In 1 garage,  3 parking"
+              },
+              "price": "1,599,000",
+              "price_int": 1599000,
+              "price_abbr": "1.6M",
+              "price_sold": null,
+              "price_origin": null,
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.0944,
+                "lon": -79.54065
+              },
+              "house_area": {
+                "area": 2113,
+                "area_note": "(Est.)",
+                "unit": "feet²",
+                "estimate": 2113
+              },
+              "land": {
+                "front": 62,
+                "depth": 612,
+                "unit": "feet"
+              },
+              "date_added": "2025-01-08",
+              "date_added_days": 25,
+              "date_start": "2025-01-07",
+              "date_start_days": 26,
+              "date_start_month": 0,
+              "date_update": "2025-01-30",
+              "date_end": null,
+              "date_end_days": null,
+              "list_days": 26,
+              "feature_header": null,
+              "data_source": "TRREB",
+              "data_source_raw": "TREB",
+              "data_source_text": "* Data is provided courtesy of Toronto Regional Real-estate Board",
+              "tos_source": "TREB",
+              "analytics": {
+                "rent_yield": "2.0",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-02 14:49:05",
+                "estimate_price": "1,531,600",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "48"
+              },
+              "scores": {
+                "school": 7,
+                "rent": 1,
+                "growth": 1
+              },
+              "tags": [
+                "For Sale"
+              ],
+              "text": {
+                "list_date_short": "List 2025-01-07",
+                "list_date_long": "List 2025-01-07, 26 days ago",
+                "dom_short": "Listed 26 days ago",
+                "dom_short_v2": "26 days ago",
+                "dom_long": "Listed 26 days ago",
+                "rooms_short": "4 bd 3 ba 1 gr",
+                "rooms_long": "4 Bedroom, 3 Bathroom, 1 Garage",
+                "status_chg_date": "2 weeks ago",
+                "date_preview": "26 days ago",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 48/100"
+              },
+              "open_house_date": [],
+              "brokerage_text": null,
+              "postal_code": "L0R2A0",
+              "date_sold_report": null,
+              "popularity_score": "48",
+              "difference": {
+                "bedroom": null,
+                "washroom": null,
+                "house_area": -115,
+                "parking": {
+                  "total": -3
+                },
+                "land": {
+                  "front": -107,
+                  "depth": 324
+                }
+              }
+            },
+            {
+              "ml_num": "XH4205627",
+              "ml_num_merge": "XH4205627",
+              "marker_label": "D 1.2M",
+              "id_listing": "EXrx30eRn9NYOklN",
+              "id_address": "nM697k55GM6Ybmwe",
+              "seo_municipality": "west-lincoln-real-estate",
+              "seo_address": "114-colver-st-w",
+              "seo_image_alt": "MLS Listing Sold Conditional at 114 Colver Street W, West Lincoln, Ontario, L0R2A0, MLS# XH4205627",
+              "seo_suffix": "114-Colver-Street-W-West-Lincoln-L0R2A0-XH4205627-H4205627-X9299499-XH4205627",
+              "photo_url": "https://cache-e14.housesigma.com/file/pix-itso/153487432/71526_1.jpg?aae65267",
+              "photo_source": null,
+              "house_type_name": "Detached, Single Family Residence",
+              "house_type": "D.",
+              "house_style": "Two Story",
+              "apt_num": null,
+              "address": "114 Colver Street W",
+              "address_navigation": "114 Colver Street W, West Lincoln, Ontario",
+              "list_status": {
+                "public": 1,
+                "live": 1,
+                "sold": 0,
+                "s_r": "Sale",
+                "text": "Sold Conditional",
+                "text_full": "Sold Conditional",
+                "status": "SC",
+                "feature": null,
+                "precon": null,
+                "agent_available": true,
+                "premium": 0,
+                "archive": 0
+              },
+              "community_name": "Smithville",
+              "municipality_name": "West Lincoln",
+              "province": "ON",
+              "province_name": "Ontario",
+              "bedroom": 4,
+              "bedroom_plus": null,
+              "bedroom_string": 4,
+              "washroom": 4,
+              "parking": {
+                "total": 2,
+                "garage_type": "Attached",
+                "garage": 2,
+                "parking_type": null,
+                "parking": 6,
+                "text": "Attached 2 garage,  6 parking"
+              },
+              "price": "1,239,900",
+              "price_int": 1239900,
+              "price_abbr": "1.2M",
+              "price_sold": null,
+              "price_origin": "1,250,000",
+              "price_sold_int": null,
+              "price_change_yearly": null,
+              "price_change_yearly_text": "Annual return 0%",
+              "sold_diff_percent": null,
+              "map": {
+                "lat": 43.094412,
+                "lon": -79.549435
+              },
+              "house_area": {
+                "area": "2883",
+                "area_note": null,
+                "unit": "feet²",
+                "estimate": 2883
+              },
+              "land": {
+                "front": 54,
+                "depth": 123,
+                "unit": "feet"
+              },
+              "date_added": "2024-09-04",
+              "date_added_days": 151,
+              "date_start": "2024-09-04",
+              "date_start_days": 151,
+              "date_start_month": 4,
+              "date_update": "2025-01-27",
+              "date_end": "2025-01-27",
+              "date_end_days": 6,
+              "list_days": 145,
+              "feature_header": null,
+              "data_source": "ITSO",
+              "data_source_raw": "ITSO",
+              "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+              "tos_source": "ITSO",
+              "analytics": {
+                "rent_yield": "3.0",
+                "rent_base": 0,
+                "estimate_price_age": 0,
+                "estimate_price_date": "2025-02-02 12:15:22",
+                "estimate_price": "1,195,600",
+                "estimate_price_confident": null,
+                "estimate_price_display_directly": 1,
+                "estimate_last_popularity_score": "40"
+              },
+              "scores": {
+                "school": 7,
+                "rent": 4,
+                "growth": 1
+              },
+              "tags": [
+                "Sold Conditional"
+              ],
+              "text": {
+                "list_date_short": "List 2024-09-04",
+                "list_date_long": "List 2024-09-04, 145 days ago",
+                "dom_short": "Listed in Sep 2024",
+                "dom_short_v2": "in Sep 2024",
+                "dom_long": "Listed 145 days ago",
+                "rooms_short": "4 bd 4 ba 2 gr",
+                "rooms_long": "4 Bedroom, 4 Bathroom, 2 Garage",
+                "status_chg_date": "6 days ago",
+                "date_preview": "2024-09-04",
+                "hs_exclusive_tag": null,
+                "highlight": "Popularity: 40/100"
+              },
+              "open_house_date": [],
+              "brokerage_text": null,
+              "postal_code": "L0R2A0",
+              "date_sold_report": null,
+              "sold_month": "2025-01",
+              "popularity_score": "40",
+              "difference": {
+                "bedroom": null,
+                "washroom": 1,
+                "house_area": 655,
+                "parking": {
+                  "total": -2
+                },
+                "land": {
+                  "front": -115,
+                  "depth": -165
+                }
+              }
+            }
+          ]
+        }
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH14",
+        "ml_server": null,
+        "ml_from_cache": true
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/listing/info/localagents ": {
+    "url": "https://housesigma.com/bkv2/api/listing/info/localagents ",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:04:43.273Z",
+    "data": {
+      "status": true,
+      "data": {
+        "show_section": false
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH12"
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/user/watch/myNote": {
+    "url": "https://housesigma.com/bkv2/api/user/watch/myNote",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:04:43.275Z",
+    "data": {
+      "status": true,
+      "data": {
+        "note": "",
+        "updated_on": null
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH11"
+      }
+    }
+  },
+  "https://housesigma.com/bkv2/api/community/soldpricestats": {
+    "url": "https://housesigma.com/bkv2/api/community/soldpricestats",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:04:43.333Z",
+    "data": {
+      "status": true,
+      "data": {
+        "rowCount": 58,
+        "list": [
+          {
+            "price_sold_median_all_type": 465000,
+            "price_sold_median_all_community": 465000,
+            "period": "2020-03-01",
+            "price_sold_median": 483334,
+            "sold_count": 3
+          },
+          {
+            "price_sold_median_all_type": 460000,
+            "price_sold_median_all_community": 460000,
+            "period": "2020-04-01"
+          },
+          {
+            "price_sold_median_all_type": 460000,
+            "price_sold_median_all_community": 460000,
+            "period": "2020-05-01",
+            "price_sold_median": 530993,
+            "sold_count": 6
+          },
+          {
+            "price_sold_median_all_type": 549900,
+            "price_sold_median_all_community": 549900,
+            "period": "2020-06-01",
+            "price_sold_median": 597555,
+            "sold_count": 10
+          },
+          {
+            "price_sold_median_all_type": 597555,
+            "price_sold_median_all_community": 597555,
+            "period": "2020-07-01",
+            "price_sold_median": 598728,
+            "sold_count": 13
+          },
+          {
+            "price_sold_median_all_type": 623000,
+            "price_sold_median_all_community": 623000,
+            "period": "2020-08-01",
+            "price_sold_median": 670000,
+            "sold_count": 20
+          },
+          {
+            "price_sold_median_all_type": 670000,
+            "price_sold_median_all_community": 670000,
+            "period": "2020-09-01",
+            "price_sold_median": 695000,
+            "sold_count": 19
+          },
+          {
+            "price_sold_median_all_type": 644000,
+            "price_sold_median_all_community": 644000,
+            "period": "2020-10-01",
+            "price_sold_median": 705000,
+            "sold_count": 19
+          },
+          {
+            "price_sold_median_all_type": 705000,
+            "price_sold_median_all_community": 705000,
+            "period": "2020-11-01",
+            "price_sold_median": 710275,
+            "sold_count": 16
+          },
+          {
+            "price_sold_median_all_type": 635000,
+            "price_sold_median_all_community": 635000,
+            "period": "2020-12-01",
+            "price_sold_median": 677500,
+            "sold_count": 13
+          },
+          {
+            "price_sold_median_all_type": 638000,
+            "price_sold_median_all_community": 638000,
+            "period": "2021-01-01",
+            "price_sold_median": 690000,
+            "sold_count": 13
+          },
+          {
+            "price_sold_median_all_type": 687500,
+            "price_sold_median_all_community": 687500,
+            "period": "2021-02-01",
+            "price_sold_median": 705000,
+            "sold_count": 9
+          },
+          {
+            "price_sold_median_all_type": 725000,
+            "price_sold_median_all_community": 725000,
+            "period": "2021-03-01",
+            "price_sold_median": 702775,
+            "sold_count": 13
+          },
+          {
+            "price_sold_median_all_type": 775500,
+            "price_sold_median_all_community": 775500,
+            "period": "2021-04-01",
+            "price_sold_median": 750000,
+            "sold_count": 14
+          },
+          {
+            "price_sold_median_all_type": 750000,
+            "price_sold_median_all_community": 750000,
+            "period": "2021-05-01",
+            "price_sold_median": 790000,
+            "sold_count": 13
+          },
+          {
+            "price_sold_median_all_type": 750000,
+            "price_sold_median_all_community": 750000,
+            "period": "2021-06-01",
+            "price_sold_median": 790000,
+            "sold_count": 14
+          },
+          {
+            "price_sold_median_all_type": 749950,
+            "price_sold_median_all_community": 749950,
+            "period": "2021-07-01",
+            "price_sold_median": 930008,
+            "sold_count": 13
+          },
+          {
+            "price_sold_median_all_type": 801000,
+            "price_sold_median_all_community": 801000,
+            "period": "2021-08-01",
+            "price_sold_median": 930016,
+            "sold_count": 9
+          },
+          {
+            "price_sold_median_all_type": 950000,
+            "price_sold_median_all_community": 950000,
+            "period": "2021-09-01",
+            "price_sold_median": 1000000,
+            "sold_count": 15
+          },
+          {
+            "price_sold_median_all_type": 1010000,
+            "price_sold_median_all_community": 1010000,
+            "period": "2021-10-01",
+            "price_sold_median": 965000,
+            "sold_count": 14
+          },
+          {
+            "price_sold_median_all_type": 857500,
+            "price_sold_median_all_community": 857500,
+            "period": "2021-11-01",
+            "price_sold_median": 1010000,
+            "sold_count": 11
+          },
+          {
+            "price_sold_median_all_type": 890000,
+            "price_sold_median_all_community": 890000,
+            "period": "2021-12-01",
+            "price_sold_median": 1010000,
+            "sold_count": 11
+          },
+          {
+            "price_sold_median_all_type": 950000,
+            "price_sold_median_all_community": 950000,
+            "period": "2022-01-01",
+            "price_sold_median": 980000,
+            "sold_count": 6
+          },
+          {
+            "price_sold_median_all_type": 1065000,
+            "price_sold_median_all_community": 1065000,
+            "period": "2022-02-01",
+            "price_sold_median": 1100000,
+            "sold_count": 8
+          },
+          {
+            "price_sold_median_all_type": 1200000,
+            "price_sold_median_all_community": 1200000,
+            "period": "2022-03-01",
+            "price_sold_median": 1090000,
+            "sold_count": 12
+          },
+          {
+            "price_sold_median_all_type": 1100000,
+            "price_sold_median_all_community": 1100000,
+            "period": "2022-04-01",
+            "price_sold_median": 1150000,
+            "sold_count": 11
+          },
+          {
+            "price_sold_median_all_type": 1150000,
+            "price_sold_median_all_community": 1150000,
+            "period": "2022-05-01",
+            "price_sold_median": 1080000,
+            "sold_count": 13
+          },
+          {
+            "price_sold_median_all_type": 1061000,
+            "price_sold_median_all_community": 1061000,
+            "period": "2022-06-01",
+            "price_sold_median": 1070500,
+            "sold_count": 10
+          },
+          {
+            "price_sold_median_all_type": 1068000,
+            "price_sold_median_all_community": 1068000,
+            "period": "2022-07-01",
+            "price_sold_median": 1075000,
+            "sold_count": 10
+          },
+          {
+            "price_sold_median_all_type": 760000,
+            "price_sold_median_all_community": 760000,
+            "period": "2022-08-01",
+            "price_sold_median": 1075000,
+            "sold_count": 13
+          },
+          {
+            "price_sold_median_all_type": 749998,
+            "price_sold_median_all_community": 749998,
+            "period": "2022-09-01",
+            "price_sold_median": 882500,
+            "sold_count": 12
+          },
+          {
+            "price_sold_median_all_type": 760000,
+            "price_sold_median_all_community": 760000,
+            "period": "2022-10-01",
+            "price_sold_median": 775000,
+            "sold_count": 14
+          },
+          {
+            "price_sold_median_all_type": 755000,
+            "price_sold_median_all_community": 755000,
+            "period": "2022-11-01",
+            "price_sold_median": 787000,
+            "sold_count": 8
+          },
+          {
+            "price_sold_median_all_type": 749995,
+            "price_sold_median_all_community": 749995,
+            "period": "2022-12-01",
+            "price_sold_median": 767500,
+            "sold_count": 6
+          },
+          {
+            "price_sold_median_all_type": 760000,
+            "price_sold_median_all_community": 760000,
+            "period": "2023-01-01",
+            "price_sold_median": 835000,
+            "sold_count": 7
+          },
+          {
+            "price_sold_median_all_type": 760000,
+            "price_sold_median_all_community": 760000,
+            "period": "2023-02-01",
+            "price_sold_median": 805000,
+            "sold_count": 8
+          },
+          {
+            "price_sold_median_all_type": 751500,
+            "price_sold_median_all_community": 751500,
+            "period": "2023-03-01",
+            "price_sold_median": 771000,
+            "sold_count": 13
+          },
+          {
+            "price_sold_median_all_type": 910000,
+            "price_sold_median_all_community": 910000,
+            "period": "2023-04-01",
+            "price_sold_median": 952500,
+            "sold_count": 16
+          },
+          {
+            "price_sold_median_all_type": 870000,
+            "price_sold_median_all_community": 870000,
+            "period": "2023-05-01",
+            "price_sold_median": 965000,
+            "sold_count": 16
+          },
+          {
+            "price_sold_median_all_type": 795000,
+            "price_sold_median_all_community": 795000,
+            "period": "2023-06-01",
+            "price_sold_median": 910000,
+            "sold_count": 14
+          },
+          {
+            "price_sold_median_all_type": 870000,
+            "price_sold_median_all_community": 870000,
+            "period": "2023-07-01",
+            "price_sold_median": 950000,
+            "sold_count": 11
+          },
+          {
+            "price_sold_median_all_type": 903500,
+            "price_sold_median_all_community": 903500,
+            "period": "2023-08-01",
+            "price_sold_median": 925000,
+            "sold_count": 10
+          },
+          {
+            "price_sold_median_all_type": 860000,
+            "price_sold_median_all_community": 860000,
+            "period": "2023-09-01",
+            "price_sold_median": 903500,
+            "sold_count": 8
+          },
+          {
+            "price_sold_median_all_type": 860000,
+            "price_sold_median_all_community": 860000,
+            "period": "2023-10-01",
+            "price_sold_median": 890000,
+            "sold_count": 10
+          },
+          {
+            "price_sold_median_all_type": 775000,
+            "price_sold_median_all_community": 775000,
+            "period": "2023-11-01",
+            "price_sold_median": 842500,
+            "sold_count": 9
+          },
+          {
+            "price_sold_median_all_type": 775000,
+            "price_sold_median_all_community": 775000,
+            "period": "2023-12-01",
+            "price_sold_median": 836000,
+            "sold_count": 6
+          },
+          {
+            "price_sold_median_all_type": 877000,
+            "price_sold_median_all_community": 877000,
+            "period": "2024-01-01",
+            "price_sold_median": 900000,
+            "sold_count": 9
+          },
+          {
+            "price_sold_median_all_type": 760000,
+            "price_sold_median_all_community": 760000,
+            "period": "2024-02-01",
+            "price_sold_median": 877000,
+            "sold_count": 7
+          },
+          {
+            "price_sold_median_all_type": 700000,
+            "price_sold_median_all_community": 700000,
+            "period": "2024-03-01",
+            "price_sold_median": 775000,
+            "sold_count": 8
+          },
+          {
+            "price_sold_median_all_type": 700000,
+            "price_sold_median_all_community": 700000,
+            "period": "2024-04-01",
+            "price_sold_median": 775000,
+            "sold_count": 7
+          },
+          {
+            "price_sold_median_all_type": 730000,
+            "price_sold_median_all_community": 730000,
+            "period": "2024-05-01",
+            "price_sold_median": 881000,
+            "sold_count": 7
+          },
+          {
+            "price_sold_median_all_type": 745000,
+            "price_sold_median_all_community": 745000,
+            "period": "2024-06-01",
+            "price_sold_median": 885000,
+            "sold_count": 5
+          },
+          {
+            "price_sold_median_all_type": 730000,
+            "price_sold_median_all_community": 730000,
+            "period": "2024-07-01",
+            "price_sold_median": 887000,
+            "sold_count": 5
+          },
+          {
+            "price_sold_median_all_type": 775000,
+            "price_sold_median_all_community": 775000,
+            "period": "2024-08-01",
+            "price_sold_median": 885000,
+            "sold_count": 7
+          },
+          {
+            "price_sold_median_all_type": 710000,
+            "price_sold_median_all_community": 710000,
+            "period": "2024-09-01",
+            "price_sold_median": 882500,
+            "sold_count": 9
+          },
+          {
+            "price_sold_median_all_type": 704950,
+            "price_sold_median_all_community": 704950,
+            "period": "2024-10-01",
+            "price_sold_median": 850000,
+            "sold_count": 16
+          },
+          {
+            "price_sold_median_all_type": 710000,
+            "price_sold_median_all_community": 710000,
+            "period": "2024-11-01",
+            "price_sold_median": 850000,
+            "sold_count": 18
+          },
+          {
+            "price_sold_median_all_type": 704950,
+            "price_sold_median_all_community": 704950,
+            "period": "2024-12-01",
+            "price_sold_median": 800000,
+            "sold_count": 23
+          },
+          {
+            "price_sold_median_all_type": 690000,
+            "price_sold_median_all_community": 690000,
+            "period": "2025-01-01",
+            "price_sold_median": 810000,
+            "sold_count": 18
+          }
+        ],
+        "list_house_type": [
+          {
+            "house_type": "A.",
+            "listing_count": 53,
+            "listing_percent": 0.15,
+            "house_type_name": "Att/Row/Twnhouse"
+          },
+          {
+            "house_type": "C.",
+            "listing_count": 1,
+            "listing_percent": 0,
+            "house_type_name": "Condo Apt"
+          },
+          {
+            "house_type": "D.",
+            "listing_count": 229,
+            "listing_percent": 0.67,
+            "house_type_name": "Detached"
+          },
+          {
+            "house_type": "S.",
+            "listing_count": 21,
+            "listing_percent": 0.06,
+            "house_type_name": "Semi-Detached"
+          },
+          {
+            "house_type": "T.",
+            "listing_count": 13,
+            "listing_percent": 0.04,
+            "house_type_name": "Condo Townhouse"
+          },
+          {
+            "house_type": "Other",
+            "house_type_name": "Other",
+            "listing_count": 27,
+            "listing_percent": 0.08
+          }
+        ],
+        "chart_sold_price": [
+          {
+            "price100k": 6,
+            "sold_count": 2
+          },
+          {
+            "price100k": 7,
+            "sold_count": 3
+          },
+          {
+            "price100k": 8,
+            "sold_count": 7
+          },
+          {
+            "price100k": 9,
+            "sold_count": 4
+          },
+          {
+            "price100k": 10,
+            "sold_count": 5
+          },
+          {
+            "price100k": 11,
+            "sold_count": 2
+          },
+          {
+            "price100k": 12,
+            "sold_count": 1
+          },
+          {
+            "price100k": 13,
+            "sold_count": 1
+          }
+        ]
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH12"
+      },
+      "chart_sold_price_cached": true,
+      "list_cached": true,
+      "list_house_type_cached": true
+    }
+  },
+  "https://housesigma.com/bkv2/api/listing/nearby/sold": {
+    "url": "https://housesigma.com/bkv2/api/listing/nearby/sold",
+    "status": 200,
+    "method": "POST",
+    "timestamp": "2025-02-02T22:04:43.380Z",
+    "data": {
+      "status": true,
+      "data": {
+        "message": "",
+        "house": {
+          "id_listing": "VLaGyGkvqAKyW1ZD",
+          "ml_num": "40688799",
+          "hash_id": "zW4YEpBtDMPQ3xEa",
+          "seo_suffix": "7580-Regional-20-Road-West-Lincoln-L0R2A0-40688799-X11918200",
+          "photo_url": "https://cache09.housesigma.com/file/pix-itso/156128565/c160d_1.jpg?b92f1466",
+          "house_type_name": "Single Family Residence",
+          "address": "7580 Regional 20 Road",
+          "community_name": "Smithville",
+          "municipality_name": "West Lincoln",
+          "bedroom": 4,
+          "bedroom_plus": null,
+          "bedroom_string": 4,
+          "washroom": 3,
+          "parking": {
+            "total": 4,
+            "garage_type": null,
+            "garage": 4,
+            "parking_type": null,
+            "parking": 14,
+            "text": " 4 garage,  14 parking"
+          },
+          "house_area": {
+            "area": "2228",
+            "area_note": null,
+            "unit": "feet²",
+            "estimate": 2228
+          },
+          "land": {
+            "front": 169,
+            "depth": 288,
+            "unit": "feet",
+            "irregular": null,
+            "text": "169 x 288 feet"
+          },
+          "price": "999,900",
+          "estimate_price": "980,000",
+          "estimate_rent": "4,020",
+          "list_days": 23,
+          "map": {
+            "lat": 43.122874,
+            "lon": -79.607257
+          },
+          "text": {
+            "list_date_short": "List 2025-01-10",
+            "list_date_long": "List 2025-01-10, 23 days ago",
+            "dom_short": "Listed 23 days ago",
+            "dom_short_v2": "23 days ago",
+            "dom_long": "Listed 23 days ago",
+            "rooms_short": "4 bd 3 ba 4 gr",
+            "rooms_long": "4 Bedroom, 3 Bathroom, 4 Garage",
+            "status_chg_date": "3 weeks ago",
+            "date_preview": "23 days ago",
+            "hs_exclusive_tag": null
+          },
+          "list_status": {
+            "public": 1,
+            "live": 1,
+            "sold": 0,
+            "s_r": "Sale",
+            "text": "For Sale",
+            "text_full": "For Sale",
+            "status": "A",
+            "feature": null,
+            "precon": null,
+            "agent_available": true,
+            "premium": 1,
+            "archive": 0
+          },
+          "tos_source": "ITSO",
+          "data_source": "ITSO",
+          "data_source_raw": "ITSO",
+          "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+          "photo_source": null,
+          "schedule_message": "I want to book an appointment to view: [40688799], 7580 Regional 20 Road, West Lincoln"
+        },
+        "chart": [],
+        "nearby": [
+          {
+            "ml_num_merge": "40681046",
+            "marker_label": "D 0.65M",
+            "id_listing": "AKv53DlvNG63MnxB",
+            "id_address": "0A9X3jPGxjayvgxV",
+            "seo_municipality": "west-lincoln-real-estate",
+            "seo_address": "18-killins-street",
+            "seo_image_alt": "MLS Listing Sold at 18 Killins Street, West Lincoln, Ontario, L0R2A0, MLS# 40681046",
+            "seo_suffix": "18-Killins-Street-West-Lincoln-L0R2A0-40681046",
+            "photo_url": "https://cache-e14.housesigma.com/file/pix-itso/155728116/920a3_1.jpg?28f737ba",
+            "photo_source": null,
+            "house_type_name": "Single Family Residence",
+            "house_type": "D.",
+            "house_style": "Bungalow Raised",
+            "apt_num": null,
+            "address": "18 Killins Street",
+            "address_navigation": "18 Killins Street, West Lincoln, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Smithville",
+            "municipality_name": "West Lincoln",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 3,
+            "bedroom_plus": 1,
+            "bedroom_string": "3+1",
+            "washroom": 2,
+            "parking": {
+              "total": 1,
+              "garage_type": null,
+              "garage": 1,
+              "parking_type": null,
+              "parking": 2,
+              "text": " 1 garage,  2 parking"
+            },
+            "price": "599,900",
+            "price_int": 599900,
+            "price_abbr": "0.6M",
+            "price_sold": "650,600",
+            "price_origin": null,
+            "price_sold_int": 650600,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.092428,
+              "lon": -79.553062
+            },
+            "house_area": {
+              "area": "1100",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1100
+            },
+            "land": {
+              "front": 60,
+              "depth": 119,
+              "unit": "feet"
+            },
+            "date_added": "2024-12-04",
+            "date_added_days": 60,
+            "date_start": "2024-12-03",
+            "date_start_days": 61,
+            "date_start_month": 1,
+            "date_update": "2024-12-16",
+            "date_end": "2024-12-16",
+            "date_end_days": 48,
+            "list_days": 13,
+            "feature_header": null,
+            "data_source": "ITSO",
+            "data_source_raw": "ITSO",
+            "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+            "tos_source": "ITSO",
+            "analytics": {
+              "rent_yield": "4.5",
+              "rent_base": "2366550",
+              "estimate_price_age": 46,
+              "estimate_price_date": "2024-12-18 20:00:18",
+              "estimate_price": "590,500",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "90"
+            },
+            "scores": {
+              "school": 7,
+              "rent": 8,
+              "growth": 1
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-12-16",
+              "list_date_long": "Sold 2024-12-16, Dom: 13 days",
+              "dom_short": "Sold in Dec 2024",
+              "dom_short_v2": "in Dec 2024",
+              "dom_long": "Sold 48 days ago, Dom: 13 days",
+              "rooms_short": "3+1 bd 2 ba 1 gr",
+              "rooms_long": "3+1 Bedroom, 2 Bathroom, 1 Garage",
+              "status_chg_date": "1 month ago",
+              "date_preview": "2024-12-16",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L0R2A0",
+            "date_sold_report": null,
+            "sold_month": "2024-12",
+            "distance": 5.55,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": -1,
+              "washroom": -1,
+              "house_area": -1128,
+              "parking": {
+                "total": -3
+              },
+              "land": {
+                "front": -109,
+                "depth": -169
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 1
+          },
+          {
+            "ml_num_merge": "40680185",
+            "marker_label": "D 0.69M",
+            "id_listing": "ZxwR7MVvpXe3KabB",
+            "id_address": "AKv53DD2odk3MnxB",
+            "seo_municipality": "west-lincoln-real-estate",
+            "seo_address": "252-west-street",
+            "seo_image_alt": "MLS Listing Sold at 252 West Street, West Lincoln, Ontario, L0R2A0, MLS# 40680185",
+            "seo_suffix": "252-West-Street-West-Lincoln-L0R2A0-40680185-X10442589",
+            "photo_url": "https://cache-e14.housesigma.com/file/pix-itso/155685425/bd76e_1.jpg?2ad2734d",
+            "photo_source": null,
+            "house_type_name": "Single Family Residence",
+            "house_type": "D.",
+            "house_style": "Bungalow",
+            "apt_num": null,
+            "address": "252 West Street",
+            "address_navigation": "252 West Street, West Lincoln, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Smithville",
+            "municipality_name": "West Lincoln",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 2,
+            "bedroom_plus": 1,
+            "bedroom_string": "2+1",
+            "washroom": 2,
+            "parking": {
+              "total": 1,
+              "garage_type": null,
+              "garage": 1,
+              "parking_type": null,
+              "parking": 5,
+              "text": " 1 garage,  5 parking"
+            },
+            "price": "710,000",
+            "price_int": 710000,
+            "price_abbr": "0.71M",
+            "price_sold": "690,000",
+            "price_origin": null,
+            "price_sold_int": 690000,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.1027,
+              "lon": -79.553278
+            },
+            "house_area": {
+              "area": "1265",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1265
+            },
+            "land": {
+              "front": 87,
+              "depth": 296,
+              "unit": "feet"
+            },
+            "date_added": "2024-11-22",
+            "date_added_days": 72,
+            "date_start": "2024-11-22",
+            "date_start_days": 72,
+            "date_start_month": 2,
+            "date_update": "2024-12-20",
+            "date_end": "2024-12-05",
+            "date_end_days": 59,
+            "list_days": 13,
+            "feature_header": null,
+            "data_source": "ITSO",
+            "data_source_raw": "ITSO",
+            "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+            "tos_source": "ITSO",
+            "analytics": {
+              "rent_yield": "3.8",
+              "rent_base": "2503520",
+              "estimate_price_age": 44,
+              "estimate_price_date": "2024-12-20 02:01:11",
+              "estimate_price": "693,900",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "69"
+            },
+            "scores": {
+              "school": 7,
+              "rent": 6,
+              "growth": 1
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-12-05",
+              "list_date_long": "Sold 2024-12-05, Dom: 13 days",
+              "dom_short": "Sold in Dec 2024",
+              "dom_short_v2": "in Dec 2024",
+              "dom_long": "Sold 59 days ago, Dom: 13 days",
+              "rooms_short": "2+1 bd 2 ba 1 gr",
+              "rooms_long": "2+1 Bedroom, 2 Bathroom, 1 Garage",
+              "status_chg_date": "1 month ago",
+              "date_preview": "2024-12-05",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L0R2A0",
+            "date_sold_report": null,
+            "sold_month": "2024-12",
+            "distance": 4.92,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": -2,
+              "washroom": -1,
+              "house_area": -963,
+              "parking": {
+                "total": -3
+              },
+              "land": {
+                "front": -82,
+                "depth": 8
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 2
+          },
+          {
+            "ml_num_merge": "XH4196242",
+            "marker_label": "D 0.75M",
+            "id_listing": "xLkv3V6Q8xQ3DBNr",
+            "id_address": "B5bO3xXdMOL3kWVP",
+            "seo_municipality": "west-lincoln-real-estate",
+            "seo_address": "368-station-street",
+            "seo_image_alt": "MLS Listing Sold at 368 Station Street, West Lincoln, Ontario, L0R2A0, MLS# XH4196242",
+            "seo_suffix": "368-Station-Street-West-Lincoln-L0R2A0-XH4196242-X8416890-XH4196242-H4196242",
+            "photo_url": "https://cache-e14.housesigma.com/file/pix-itso/150660313/3031e_1.jpg?bb1704a7",
+            "photo_source": null,
+            "house_type_name": "Detached, Single Family Residence",
+            "house_type": "D.",
+            "house_style": "Bungalow Raised",
+            "apt_num": null,
+            "address": "368 Station Street",
+            "address_navigation": "368 Station Street, West Lincoln, Ontario",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Smithville",
+            "municipality_name": "West Lincoln",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 3,
+            "bedroom_plus": 1,
+            "bedroom_string": "3+1",
+            "washroom": 2,
+            "parking": {
+              "total": 1,
+              "garage_type": "Attached",
+              "garage": 1,
+              "parking_type": null,
+              "parking": 6,
+              "text": "Attached 1 garage,  6 parking"
+            },
+            "price": "784,000",
+            "price_int": 784000,
+            "price_abbr": "0.78M",
+            "price_sold": "745,000",
+            "price_origin": "789,000",
+            "price_sold_int": 745000,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.108141,
+              "lon": -79.542615
+            },
+            "house_area": {
+              "area": "1056",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1056
+            },
+            "land": {
+              "front": 59,
+              "depth": 132,
+              "unit": "feet"
+            },
+            "date_added": "2024-06-07",
+            "date_added_days": 240,
+            "date_start": "2024-06-07",
+            "date_start_days": 240,
+            "date_start_month": 7,
+            "date_update": "2024-12-10",
+            "date_end": "2024-12-06",
+            "date_end_days": 58,
+            "list_days": 182,
+            "feature_header": null,
+            "data_source": "ITSO",
+            "data_source_raw": "ITSO",
+            "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+            "tos_source": "ITSO",
+            "analytics": {
+              "rent_yield": "4.0",
+              "rent_base": "2657050",
+              "estimate_price_age": 47,
+              "estimate_price_date": "2024-12-17 20:50:51",
+              "estimate_price": "774,000",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "51"
+            },
+            "scores": {
+              "school": 7,
+              "rent": 7,
+              "growth": 1
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-12-06",
+              "list_date_long": "Sold 2024-12-06, Dom: 182 days",
+              "dom_short": "Sold in Dec 2024",
+              "dom_short_v2": "in Dec 2024",
+              "dom_long": "Sold 58 days ago, Dom: 182 days",
+              "rooms_short": "3+1 bd 2 ba 1 gr",
+              "rooms_long": "3+1 Bedroom, 2 Bathroom, 1 Garage",
+              "status_chg_date": "1 month ago",
+              "date_preview": "2024-12-06",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L0R2A0",
+            "date_sold_report": null,
+            "sold_month": "2024-12",
+            "distance": 5.5,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": -1,
+              "washroom": -1,
+              "house_area": -1172,
+              "parking": {
+                "total": -3
+              },
+              "land": {
+                "front": -110,
+                "depth": -156
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 3
+          },
+          {
+            "ml_num_merge": "40662120",
+            "marker_label": "D 0.54M",
+            "id_listing": "JKdOYr0jmjb754lW",
+            "id_address": "eQp5yO8aXD17d0ZE",
+            "seo_municipality": "west-lincoln-real-estate",
+            "seo_address": "136-south-street",
+            "seo_image_alt": "MLS Listing Sold at 136 South Street, West Lincoln, Ontario, L0R2A0, MLS# 40662120",
+            "seo_suffix": "136-South-Street-West-Lincoln-L0R2A0-40662120-40662120-X9398404",
+            "photo_url": "https://cache-e14.housesigma.com/file/pix-itso/154775478/5e08e_1.jpg?aea69055",
+            "photo_source": null,
+            "house_type_name": "Single Family Residence",
+            "house_type": "D.",
+            "house_style": "1.5 Storey",
+            "apt_num": null,
+            "address": "136 South Street",
+            "address_navigation": "136 South Street, West Lincoln, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Smithville",
+            "municipality_name": "West Lincoln",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 2,
+            "bedroom_plus": 0,
+            "bedroom_string": 2,
+            "washroom": 1,
+            "parking": {
+              "total": 1.5,
+              "garage_type": null,
+              "garage": 1.5,
+              "parking_type": "Total",
+              "parking": 3,
+              "text": " 1.5 garage, Total 3 parking"
+            },
+            "price": "549,000",
+            "price_int": 549000,
+            "price_abbr": "0.55M",
+            "price_sold": "539,000",
+            "price_origin": "575,000",
+            "price_sold_int": 539000,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.096498,
+              "lon": -79.544938
+            },
+            "house_area": {
+              "area": "1396",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1396
+            },
+            "land": {
+              "front": 53,
+              "depth": 112,
+              "unit": "feet"
+            },
+            "date_added": "2024-10-16",
+            "date_added_days": 109,
+            "date_start": "2024-10-16",
+            "date_start_days": 109,
+            "date_start_month": 3,
+            "date_update": "2025-01-15",
+            "date_end": "2024-11-12",
+            "date_end_days": 82,
+            "list_days": 27,
+            "feature_header": null,
+            "data_source": "ITSO",
+            "data_source_raw": "ITSO",
+            "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+            "tos_source": "ITSO",
+            "analytics": {
+              "rent_yield": "4.1",
+              "rent_base": "2034570",
+              "estimate_price_age": 18,
+              "estimate_price_date": "2025-01-15 01:28:21",
+              "estimate_price": "530,200",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "74"
+            },
+            "scores": {
+              "school": 7,
+              "rent": 7,
+              "growth": 1
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-11-12",
+              "list_date_long": "Sold 2024-11-12, Dom: 27 days",
+              "dom_short": "Sold in Nov 2024",
+              "dom_short_v2": "in Nov 2024",
+              "dom_long": "Sold 82 days ago, Dom: 27 days",
+              "rooms_short": "2 bd 1 ba 1.5 gr",
+              "rooms_long": "2 Bedroom, 1 Bathroom, 1.5 Garage",
+              "status_chg_date": "2 weeks ago",
+              "date_preview": "2024-11-12",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L0R2A0",
+            "date_sold_report": null,
+            "sold_month": "2024-11",
+            "distance": 5.85,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": -2,
+              "washroom": -2,
+              "house_area": -832,
+              "parking": {
+                "total": -2.5
+              },
+              "land": {
+                "front": -116,
+                "depth": -176
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 4
+          },
+          {
+            "ml_num_merge": "40648503",
+            "marker_label": "D 0.73M",
+            "id_listing": "bqB176ZO1OM7ZajD",
+            "id_address": "VLaGyG2DxjJYW1ZD",
+            "seo_municipality": "west-lincoln-real-estate",
+            "seo_address": "68-northridge-drive",
+            "seo_image_alt": "MLS Listing Sold at 68 Northridge Drive, West Lincoln, Ontario, L0R2A0, MLS# 40648503",
+            "seo_suffix": "68-Northridge-Drive-West-Lincoln-L0R2A0-40648503-40648503-X9359818",
+            "photo_url": "https://cache-e14.housesigma.com/file/pix-itso/154043697/265f3_1.jpg?89a9f41c",
+            "photo_source": null,
+            "house_type_name": "Single Family Residence",
+            "house_type": "D.",
+            "house_style": "Backsplit",
+            "apt_num": null,
+            "address": "68 Northridge Drive",
+            "address_navigation": "68 Northridge Drive, West Lincoln, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Smithville",
+            "municipality_name": "West Lincoln",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 3,
+            "bedroom_plus": 0,
+            "bedroom_string": 3,
+            "washroom": 2,
+            "parking": {
+              "total": 1,
+              "garage_type": null,
+              "garage": 1,
+              "parking_type": "Total",
+              "parking": 5,
+              "text": " 1 garage, Total 5 parking"
+            },
+            "price": "725,000",
+            "price_int": 725000,
+            "price_abbr": "0.73M",
+            "price_sold": "725,000",
+            "price_origin": null,
+            "price_sold_int": 725000,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.104892,
+              "lon": -79.550026
+            },
+            "house_area": {
+              "area": "1221",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1221
+            },
+            "land": {
+              "front": 26,
+              "depth": 140,
+              "unit": "feet"
+            },
+            "date_added": "2024-09-18",
+            "date_added_days": 137,
+            "date_start": "2024-09-16",
+            "date_start_days": 139,
+            "date_start_month": 4,
+            "date_update": "2024-11-28",
+            "date_end": "2024-10-01",
+            "date_end_days": 124,
+            "list_days": 15,
+            "feature_header": null,
+            "data_source": "ITSO",
+            "data_source_raw": "ITSO",
+            "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+            "tos_source": "ITSO",
+            "analytics": {
+              "rent_yield": "3.7",
+              "rent_base": "2610010",
+              "estimate_price_age": 47,
+              "estimate_price_date": "2024-12-17 20:05:07",
+              "estimate_price": "707,000",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "41"
+            },
+            "scores": {
+              "school": 7,
+              "rent": 6,
+              "growth": 1
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-10-01",
+              "list_date_long": "Sold 2024-10-01, Dom: 15 days",
+              "dom_short": "Sold in Oct 2024",
+              "dom_short_v2": "in Oct 2024",
+              "dom_long": "Sold 124 days ago, Dom: 15 days",
+              "rooms_short": "3 bd 2 ba 1 gr",
+              "rooms_long": "3 Bedroom, 2 Bathroom, 1 Garage",
+              "status_chg_date": "2 months ago",
+              "date_preview": "2024-10-01",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L0R2A0",
+            "date_sold_report": null,
+            "sold_month": "2024-10",
+            "distance": 5.06,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": -1,
+              "washroom": -1,
+              "house_area": -1007,
+              "parking": {
+                "total": -3
+              },
+              "land": {
+                "front": -143,
+                "depth": -148
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 5
+          },
+          {
+            "ml_num_merge": "40655020",
+            "marker_label": "D 0.92M",
+            "id_listing": "NkKJ3J1j2kW7d4V6",
+            "id_address": "xLkv3V9pQlR7DBNr",
+            "seo_municipality": "west-lincoln-real-estate",
+            "seo_address": "34-killins-street",
+            "seo_image_alt": "MLS Listing Sold at 34 Killins Street, West Lincoln, Ontario, L0R2A0, MLS# 40655020",
+            "seo_suffix": "34-Killins-Street-West-Lincoln-L0R2A0-40655020-40655020-X9379110",
+            "photo_url": "https://cache-e14.housesigma.com/file/pix-itso/154405520/f369f_1.jpg?26d0c4a3",
+            "photo_source": null,
+            "house_type_name": "Single Family Residence",
+            "house_type": "D.",
+            "house_style": "Sidesplit",
+            "apt_num": null,
+            "address": "34 Killins Street",
+            "address_navigation": "34 Killins Street, West Lincoln, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Smithville",
+            "municipality_name": "West Lincoln",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 3,
+            "bedroom_plus": 1,
+            "bedroom_string": "3+1",
+            "washroom": 2,
+            "parking": {
+              "total": 2,
+              "garage_type": null,
+              "garage": 2,
+              "parking_type": "Total",
+              "parking": 6,
+              "text": " 2 garage, Total 6 parking"
+            },
+            "price": "899,900",
+            "price_int": 899900,
+            "price_abbr": "0.9M",
+            "price_sold": "920,000",
+            "price_origin": null,
+            "price_sold_int": 920000,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.092011,
+              "lon": -79.551044
+            },
+            "house_area": {
+              "area": "1309",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1309
+            },
+            "land": {
+              "front": 51,
+              "depth": 151,
+              "unit": "feet"
+            },
+            "date_added": "2024-10-02",
+            "date_added_days": 123,
+            "date_start": "2024-10-02",
+            "date_start_days": 123,
+            "date_start_month": 4,
+            "date_update": "2024-12-20",
+            "date_end": "2024-10-16",
+            "date_end_days": 109,
+            "list_days": 14,
+            "feature_header": null,
+            "data_source": "ITSO",
+            "data_source_raw": "ITSO",
+            "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+            "tos_source": "ITSO",
+            "analytics": {
+              "rent_yield": "3.3",
+              "rent_base": "3404700",
+              "estimate_price_age": 44,
+              "estimate_price_date": "2024-12-20 02:00:39",
+              "estimate_price": "875,800",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "82"
+            },
+            "scores": {
+              "school": 7,
+              "rent": 5,
+              "growth": 1
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-10-16",
+              "list_date_long": "Sold 2024-10-16, Dom: 14 days",
+              "dom_short": "Sold in Oct 2024",
+              "dom_short_v2": "in Oct 2024",
+              "dom_long": "Sold 109 days ago, Dom: 14 days",
+              "rooms_short": "3+1 bd 2 ba 2 gr",
+              "rooms_long": "3+1 Bedroom, 2 Bathroom, 2 Garage",
+              "status_chg_date": "1 month ago",
+              "date_preview": "2024-10-16",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L0R2A0",
+            "date_sold_report": null,
+            "sold_month": "2024-10",
+            "distance": 5.71,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": -1,
+              "washroom": -1,
+              "house_area": -919,
+              "parking": {
+                "total": -2
+              },
+              "land": {
+                "front": -118,
+                "depth": -137
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 6
+          },
+          {
+            "ml_num_merge": "XH4203488",
+            "marker_label": "D 0.68M",
+            "id_listing": "bqB176Zj4EW7ZajD",
+            "id_address": "aD6p781ml5n3wRQr",
+            "seo_municipality": "west-lincoln-real-estate",
+            "seo_address": "77-northridge-dr",
+            "seo_image_alt": "MLS Listing Sold at 77 Northridge Drive, West Lincoln, Ontario, L0R2A0, MLS# XH4203488",
+            "seo_suffix": "77-Northridge-Drive-West-Lincoln-L0R2A0-XH4203488-X9282347-XH4203488-H4203488",
+            "photo_url": "https://cache14.housesigma.com/file/pix-itso/153107723/754e8_1.jpg?4a4586f1",
+            "photo_source": null,
+            "house_type_name": "Detached, Single Family Residence",
+            "house_type": "D.",
+            "house_style": "Two Story",
+            "apt_num": null,
+            "address": "77 Northridge Drive",
+            "address_navigation": "77 Northridge Drive, West Lincoln, Ontario",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Smithville",
+            "municipality_name": "West Lincoln",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 4,
+            "bedroom_plus": null,
+            "bedroom_string": 4,
+            "washroom": 2,
+            "parking": {
+              "total": 1,
+              "garage_type": "Attached",
+              "garage": 1,
+              "parking_type": null,
+              "parking": 5,
+              "text": "Attached 1 garage,  5 parking"
+            },
+            "price": "679,900",
+            "price_int": 679900,
+            "price_abbr": "0.68M",
+            "price_sold": "679,900",
+            "price_origin": "724,900",
+            "price_sold_int": 679900,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.105148,
+              "lon": -79.549886
+            },
+            "house_area": {
+              "area": "1638",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1638
+            },
+            "land": {
+              "front": 26,
+              "depth": 111,
+              "unit": "feet"
+            },
+            "date_added": "2024-08-28",
+            "date_added_days": 158,
+            "date_start": "2024-08-28",
+            "date_start_days": 158,
+            "date_start_month": 5,
+            "date_update": "2024-12-06",
+            "date_end": "2024-10-09",
+            "date_end_days": 116,
+            "list_days": 42,
+            "feature_header": null,
+            "data_source": "ITSO",
+            "data_source_raw": "ITSO",
+            "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+            "tos_source": "ITSO",
+            "analytics": {
+              "rent_yield": "4.3",
+              "rent_base": "2457734",
+              "estimate_price_age": 47,
+              "estimate_price_date": "2024-12-17 20:40:30",
+              "estimate_price": "662,400",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "75"
+            },
+            "scores": {
+              "school": 7,
+              "rent": 8,
+              "growth": 1
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-10-09",
+              "list_date_long": "Sold 2024-10-09, Dom: 42 days",
+              "dom_short": "Sold in Oct 2024",
+              "dom_short_v2": "in Oct 2024",
+              "dom_long": "Sold 116 days ago, Dom: 42 days",
+              "rooms_short": "4 bd 2 ba 1 gr",
+              "rooms_long": "4 Bedroom, 2 Bathroom, 1 Garage",
+              "status_chg_date": "1 month ago",
+              "date_preview": "2024-10-09",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L0R2A0",
+            "date_sold_report": null,
+            "sold_month": "2024-10",
+            "distance": 5.06,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": null,
+              "washroom": -1,
+              "house_area": -590,
+              "parking": {
+                "total": -3
+              },
+              "land": {
+                "front": -143,
+                "depth": -177
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 7
+          },
+          {
+            "ml_num_merge": "40651194",
+            "marker_label": "D 0.52M",
+            "id_listing": "wJKR7PNPmzMYXeLP",
+            "id_address": "xLkv3V9pVOx7DBNr",
+            "seo_municipality": "west-lincoln-real-estate",
+            "seo_address": "6354-townline-rd",
+            "seo_image_alt": "MLS Listing Sold at 6354 Townline Road, West Lincoln, Ontario, L0R2A0, MLS# 40651194",
+            "seo_suffix": "6354-Townline-Road-West-Lincoln-L0R2A0-40651194-X9362549",
+            "photo_url": "https://cache14.housesigma.com/file/pix-itso/154199606/088db_1.jpg?85cde0a2",
+            "photo_source": null,
+            "house_type_name": "Single Family Residence",
+            "house_type": "D.",
+            "house_style": "Bungalow",
+            "apt_num": null,
+            "address": "6354 Townline Road",
+            "address_navigation": "6354 Townline Road, West Lincoln, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Smithville",
+            "municipality_name": "West Lincoln",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 2,
+            "bedroom_plus": null,
+            "bedroom_string": 2,
+            "washroom": 1,
+            "parking": {
+              "total": 1,
+              "garage_type": null,
+              "garage": 1,
+              "parking_type": null,
+              "parking": 2,
+              "text": " 1 garage,  2 parking"
+            },
+            "price": "539,000",
+            "price_int": 539000,
+            "price_abbr": "0.54M",
+            "price_sold": "515,000",
+            "price_origin": "545,900",
+            "price_sold_int": 515000,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.091314,
+              "lon": -79.548801
+            },
+            "house_area": {
+              "area": "1029",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1029
+            },
+            "land": null,
+            "date_added": "2024-09-22",
+            "date_added_days": 133,
+            "date_start": "2024-09-22",
+            "date_start_days": 133,
+            "date_start_month": 4,
+            "date_update": "2024-11-14",
+            "date_end": "2024-10-31",
+            "date_end_days": 94,
+            "list_days": 39,
+            "feature_header": null,
+            "data_source": "ITSO",
+            "data_source_raw": "ITSO",
+            "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+            "tos_source": "ITSO",
+            "analytics": {
+              "rent_yield": "3.8",
+              "rent_base": "1755670",
+              "estimate_price_age": 47,
+              "estimate_price_date": "2024-12-17 19:23:23",
+              "estimate_price": "523,000",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "72"
+            },
+            "scores": {
+              "school": 7,
+              "rent": 7,
+              "growth": 1
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-10-31",
+              "list_date_long": "Sold 2024-10-31, Dom: 39 days",
+              "dom_short": "Sold in Oct 2024",
+              "dom_short_v2": "in Oct 2024",
+              "dom_long": "Sold 94 days ago, Dom: 39 days",
+              "rooms_short": "2 bd 1 ba 1 gr",
+              "rooms_long": "2 Bedroom, 1 Bathroom, 1 Garage",
+              "status_chg_date": "2 months ago",
+              "date_preview": "2024-10-31",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L0R2A0",
+            "date_sold_report": null,
+            "sold_month": "2024-10",
+            "distance": 5.9,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": -2,
+              "washroom": -2,
+              "house_area": -1199,
+              "parking": {
+                "total": -3
+              },
+              "land": {
+                "front": null,
+                "depth": null
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 8
+          },
+          {
+            "ml_num_merge": "XH4205155",
+            "marker_label": "D 0.71M",
+            "id_listing": "eVbOYEk64gG7x2P0",
+            "id_address": "N0A9X3jnBm43vgxV",
+            "seo_municipality": "west-lincoln-real-estate",
+            "seo_address": "2487-shurie-road",
+            "seo_image_alt": "MLS Listing Sold at 2487 Shurie Road, West Lincoln, Ontario, L0R2A0, MLS# XH4205155",
+            "seo_suffix": "2487-Shurie-Road-West-Lincoln-L0R2A0-XH4205155-X9284099-XH4205155-H4205155",
+            "photo_url": "https://cache08.housesigma.com/file/pix-itso/153329665/39bd1_1.jpg?1b45a595",
+            "photo_source": null,
+            "house_type_name": "Detached, Single Family Residence",
+            "house_type": "D.",
+            "house_style": "Bungalow Raised",
+            "apt_num": null,
+            "address": "2487 Shurie Road",
+            "address_navigation": "2487 Shurie Road, West Lincoln, ",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Smithville",
+            "municipality_name": "West Lincoln",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 3,
+            "bedroom_plus": 1,
+            "bedroom_string": "3+1",
+            "washroom": 2,
+            "parking": {
+              "total": 2,
+              "garage_type": null,
+              "garage": 2,
+              "parking_type": "Total",
+              "parking": 4,
+              "text": " 2 garage, Total 4 parking"
+            },
+            "price": "699,900",
+            "price_int": 699900,
+            "price_abbr": "0.7M",
+            "price_sold": "710,000",
+            "price_origin": "0",
+            "price_sold_int": 710000,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.090665,
+              "lon": -79.541862
+            },
+            "house_area": {
+              "area": "1150",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1150
+            },
+            "land": {
+              "front": 81,
+              "depth": 97,
+              "unit": "feet"
+            },
+            "date_added": "2024-08-29",
+            "date_added_days": 157,
+            "date_start": "2024-08-29",
+            "date_start_days": 157,
+            "date_start_month": 5,
+            "date_update": "2024-11-07",
+            "date_end": "2024-09-09",
+            "date_end_days": 146,
+            "list_days": 11,
+            "feature_header": null,
+            "data_source": "ITSO",
+            "data_source_raw": "ITSO",
+            "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+            "tos_source": "ITSO",
+            "analytics": {
+              "rent_yield": "4.3",
+              "rent_base": "2552560",
+              "estimate_price_age": 47,
+              "estimate_price_date": "2024-12-17 19:05:42",
+              "estimate_price": "683,100",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "56"
+            },
+            "scores": {
+              "school": 7,
+              "rent": 8,
+              "growth": 1
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-09-09",
+              "list_date_long": "Sold 2024-09-09, Dom: 11 days",
+              "dom_short": "Sold in Sep 2024",
+              "dom_short_v2": "in Sep 2024",
+              "dom_long": "Sold 146 days ago, Dom: 11 days",
+              "rooms_short": "3+1 bd 2 ba 2 gr",
+              "rooms_long": "3+1 Bedroom, 2 Bathroom, 2 Garage",
+              "status_chg_date": "2 months ago",
+              "date_preview": "2024-09-09",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L0R2A0",
+            "date_sold_report": null,
+            "sold_month": "2024-09",
+            "distance": 6.4,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": -1,
+              "washroom": -1,
+              "house_area": -1078,
+              "parking": {
+                "total": -2
+              },
+              "land": {
+                "front": -88,
+                "depth": -191
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 9
+          },
+          {
+            "ml_num_merge": "XH4202532",
+            "marker_label": "D 0.71M",
+            "id_listing": "NkKJ3J1AQk97d4V6",
+            "id_address": "VgAaOyLOqrbYGxMb",
+            "seo_municipality": "west-lincoln-real-estate",
+            "seo_address": "32-northridge-drive",
+            "seo_image_alt": "MLS Listing Sold at 32 Northridge Drive, West Lincoln, Ontario, L0R2A0, MLS# XH4202532",
+            "seo_suffix": "32-Northridge-Drive-West-Lincoln-L0R2A0-XH4202532-X9247409-XH4202532-H4202532",
+            "photo_url": "https://cache14.housesigma.com/file/pix-itso/152831246/7a503_1.jpg?b2507893",
+            "photo_source": null,
+            "house_type_name": "Detached, Single Family Residence",
+            "house_type": "D.",
+            "house_style": "Bungalow",
+            "apt_num": null,
+            "address": "32 Northridge Drive",
+            "address_navigation": "32 Northridge Drive, West Lincoln, Ontario",
+            "list_status": {
+              "public": 1,
+              "live": 0,
+              "sold": 1,
+              "s_r": "Sale",
+              "text": "Sold",
+              "text_full": "Sold",
+              "status": "SLD",
+              "feature": null,
+              "precon": null,
+              "agent_available": true,
+              "premium": 1,
+              "archive": 0
+            },
+            "community_name": "Smithville",
+            "municipality_name": "West Lincoln",
+            "province": "ON",
+            "province_name": "Ontario",
+            "bedroom": 3,
+            "bedroom_plus": 1,
+            "bedroom_string": "3+1",
+            "washroom": 2,
+            "parking": {
+              "total": 1,
+              "garage_type": "Attached",
+              "garage": 1,
+              "parking_type": null,
+              "parking": 5,
+              "text": "Attached 1 garage,  5 parking"
+            },
+            "price": "699,900",
+            "price_int": 699900,
+            "price_abbr": "0.7M",
+            "price_sold": "710,000",
+            "price_origin": null,
+            "price_sold_int": 710000,
+            "price_change_yearly": null,
+            "price_change_yearly_text": "Annual return 0%",
+            "sold_diff_percent": null,
+            "map": {
+              "lat": 43.106199,
+              "lon": -79.552061
+            },
+            "house_area": {
+              "area": "1252",
+              "area_note": null,
+              "unit": "feet²",
+              "estimate": 1252
+            },
+            "land": {
+              "front": 35,
+              "depth": 120,
+              "unit": "feet"
+            },
+            "date_added": "2024-08-09",
+            "date_added_days": 177,
+            "date_start": "2024-08-09",
+            "date_start_days": 177,
+            "date_start_month": 5,
+            "date_update": "2024-11-12",
+            "date_end": "2024-09-24",
+            "date_end_days": 131,
+            "list_days": 46,
+            "feature_header": null,
+            "data_source": "ITSO",
+            "data_source_raw": "ITSO",
+            "data_source_text": "<style>\n   ul.data_source_ul{\n        line-height: 20px;\n   }\n    ul.data_source_ul li{\n        list-style-type: '*';\n        padding-left: 10px;\n    }\n</style>\n<ul class=\"data_source_ul\">\n    <li> Data is provided courtesy of ITSO</li>\n    <li> © 2021 ITSO (https://www.itsosystems.ca/)</li>\n    <li> The information provided herein must only be used by consumers that have a bona fide interest in the purchase, sale, or lease of real estate and may not be used for any commercial purpose or any other purpose.</li> \n    <li> Information deemed reliable but not guaranteed.</li>\n</ul>",
+            "tos_source": "ITSO",
+            "analytics": {
+              "rent_yield": "4.3",
+              "rent_base": "2552560",
+              "estimate_price_age": 47,
+              "estimate_price_date": "2024-12-17 19:17:06",
+              "estimate_price": "683,600",
+              "estimate_price_confident": null,
+              "estimate_price_display_directly": 1,
+              "estimate_last_popularity_score": "65"
+            },
+            "scores": {
+              "school": 7,
+              "rent": 7,
+              "growth": 1
+            },
+            "tags": [
+              "Sold"
+            ],
+            "text": {
+              "list_date_short": "Sold 2024-09-24",
+              "list_date_long": "Sold 2024-09-24, Dom: 46 days",
+              "dom_short": "Sold in Sep 2024",
+              "dom_short_v2": "in Sep 2024",
+              "dom_long": "Sold 131 days ago, Dom: 46 days",
+              "rooms_short": "3+1 bd 2 ba 1 gr",
+              "rooms_long": "3+1 Bedroom, 2 Bathroom, 1 Garage",
+              "status_chg_date": "2 months ago",
+              "date_preview": "2024-09-24",
+              "hs_exclusive_tag": null
+            },
+            "open_house_date": [],
+            "brokerage_text": null,
+            "postal_code": "L0R2A0",
+            "date_sold_report": null,
+            "sold_month": "2024-09",
+            "distance": 4.85,
+            "distance_unit": "KM",
+            "difference": {
+              "bedroom": -1,
+              "washroom": -1,
+              "house_area": -976,
+              "parking": {
+                "total": -3
+              },
+              "land": {
+                "front": -134,
+                "depth": -168
+              }
+            },
+            "difference_score": null,
+            "knn_distance": 10
+          }
+        ],
+        "meta": {
+          "title": "Ontario, Similar Sold | HouseSigma"
+        }
+      },
+      "error": {
+        "code": 0,
+        "message": ""
+      },
+      "debug": {
+        "API": "v5.38.26",
+        "environment": "production",
+        "server_group": "ovh_vpc",
+        "server": "OVH11",
+        "ml_server": "ovh38",
+        "ml_from_cache": false
+      }
+    }
+  }
+}

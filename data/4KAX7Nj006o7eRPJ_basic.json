@@ -1,0 +1,102 @@
+{
+  "photos": [
+    "https://cache08.housesigma.com/file/pix-itso/156340749/303c4_1.jpg?98122213",
+    "https://cache09.housesigma.com/file/pix-itso/156340749/303c4_2.jpg?98122213",
+    "https://cache-e14.housesigma.com/file/pix-itso/156340749/303c4_3.jpg?98122213",
+    "https://cache14.housesigma.com/file/pix-itso/156340749/303c4_4.jpg?98122213",
+    "https://cache15.housesigma.com/file/pix-itso/156340749/303c4_5.jpg?98122213",
+    "https://cache08.housesigma.com/file/pix-itso/156340749/303c4_6.jpg?98122213",
+    "https://cache09.housesigma.com/file/pix-itso/156340749/303c4_7.jpg?98122213",
+    "https://cache-e14.housesigma.com/file/pix-itso/156340749/303c4_8.jpg?98122213",
+    "https://cache14.housesigma.com/file/pix-itso/156340749/303c4_9.jpg?98122213",
+    "https://cache15.housesigma.com/file/pix-itso/156340749/303c4_10.jpg?98122213",
+    "https://cache08.housesigma.com/file/pix-itso/156340749/303c4_11.jpg?98122213",
+    "https://cache09.housesigma.com/file/pix-itso/156340749/303c4_12.jpg?98122213",
+    "https://cache-e14.housesigma.com/file/pix-itso/156340749/303c4_13.jpg?98122213",
+    "https://cache14.housesigma.com/file/pix-itso/156340749/303c4_14.jpg?98122213",
+    "https://cache15.housesigma.com/file/pix-itso/156340749/303c4_15.jpg?98122213",
+    "https://cache08.housesigma.com/file/pix-itso/156340749/303c4_16.jpg?98122213",
+    "https://cache09.housesigma.com/file/pix-itso/156340749/303c4_17.jpg?98122213",
+    "https://cache-e14.housesigma.com/file/pix-itso/156340749/303c4_18.jpg?98122213",
+    "https://cache14.housesigma.com/file/pix-itso/156340749/303c4_19.jpg?98122213",
+    "https://cache15.housesigma.com/file/pix-itso/156340749/303c4_20.jpg?98122213",
+    "https://cache08.housesigma.com/file/pix-itso/156340749/303c4_21.jpg?98122213",
+    "https://cache09.housesigma.com/file/pix-itso/156340749/303c4_22.jpg?98122213",
+    "https://cache-e14.housesigma.com/file/pix-itso/156340749/303c4_23.jpg?98122213",
+    "https://cache14.housesigma.com/file/pix-itso/156340749/303c4_24.jpg?98122213",
+    "https://cache15.housesigma.com/file/pix-itso/156340749/303c4_25.jpg?98122213",
+    "https://cache08.housesigma.com/file/pix-itso/156340749/303c4_26.jpg?98122213",
+    "https://cache09.housesigma.com/file/pix-itso/156340749/303c4_27.jpg?98122213",
+    "https://cache-e14.housesigma.com/file/pix-itso/156340749/303c4_28.jpg?98122213",
+    "https://cache14.housesigma.com/file/pix-itso/156340749/303c4_29.jpg?98122213",
+    "https://cache15.housesigma.com/file/pix-itso/156340749/303c4_30.jpg?98122213",
+    "https://cache08.housesigma.com/file/pix-itso/156340749/303c4_31.jpg?98122213",
+    "https://cache09.housesigma.com/file/pix-itso/156340749/303c4_32.jpg?98122213"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "8 Lakeview Avenue",
+      "municipality": "Grimsby",
+      "postalCode": "L3M3M1",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": "R2",
+    "coordinates": {
+      "latitude": 43.201721,
+      "longitude": -79.559807
+    },
+    "propertyTax": 3911,
+    "lotSize": 5800,
+    "squareFootage": 1122,
+    "askingPrice": 749000,
+    "daysOnMarket": 3,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2025-01-30T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "4KAX7Nj006o7eRPJ",
+        "event": "For Sale"
+      },
+      {
+        "startDate": "2024-10-30T00:00:00.000Z",
+        "endDate": "2024-12-23T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "GMnKYq0KQ1K3w1Qr",
+        "event": "Terminated"
+      },
+      {
+        "startDate": "2024-09-24T00:00:00.000Z",
+        "endDate": "2024-10-30T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "jAXw7QpGAR1yQOzg",
+        "event": "Terminated"
+      },
+      {
+        "startDate": "2019-03-20T00:00:00.000Z",
+        "endDate": "2019-03-24T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "MB5bO3xk2Mv7kWVP",
+        "event": "Sold"
+      }
+    ],
+    "estimatePrice": 735300,
+    "estimatePriceConfident": 0.27,
+    "estimateRent": 2774,
+    "estimateRentDays": 29,
+    "estimateRentYearReturn": 3.63,
+    "scores": {
+      "school": 7,
+      "growth": 6,
+      "rent": 6
+    },
+    "communityValue": {
+      "value": 935500,
+      "growth": 0.054000000000000006,
+      "growth5YearAverage": 0.45,
+      "growth10YearAverage": 0.85
+    }
+  }
+}

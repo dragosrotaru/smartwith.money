@@ -1,0 +1,91 @@
+{
+  "photos": [
+    "https://cache08.housesigma.com/file/pix-itso/156360191/ef655_1.jpg?549f8651",
+    "https://cache09.housesigma.com/file/pix-itso/156360191/ef655_2.jpg?549f8651",
+    "https://cache-e14.housesigma.com/file/pix-itso/156360191/ef655_3.jpg?549f8651",
+    "https://cache14.housesigma.com/file/pix-itso/156360191/ef655_4.jpg?549f8651",
+    "https://cache15.housesigma.com/file/pix-itso/156360191/ef655_5.jpg?549f8651",
+    "https://cache08.housesigma.com/file/pix-itso/156360191/ef655_6.jpg?549f8651",
+    "https://cache09.housesigma.com/file/pix-itso/156360191/ef655_7.jpg?549f8651",
+    "https://cache-e14.housesigma.com/file/pix-itso/156360191/ef655_8.jpg?549f8651",
+    "https://cache14.housesigma.com/file/pix-itso/156360191/ef655_9.jpg?549f8651",
+    "https://cache15.housesigma.com/file/pix-itso/156360191/ef655_10.jpg?549f8651",
+    "https://cache08.housesigma.com/file/pix-itso/156360191/ef655_11.jpg?549f8651",
+    "https://cache09.housesigma.com/file/pix-itso/156360191/ef655_12.jpg?549f8651",
+    "https://cache-e14.housesigma.com/file/pix-itso/156360191/ef655_13.jpg?549f8651",
+    "https://cache14.housesigma.com/file/pix-itso/156360191/ef655_14.jpg?549f8651",
+    "https://cache15.housesigma.com/file/pix-itso/156360191/ef655_15.jpg?549f8651",
+    "https://cache08.housesigma.com/file/pix-itso/156360191/ef655_16.jpg?549f8651",
+    "https://cache09.housesigma.com/file/pix-itso/156360191/ef655_17.jpg?549f8651",
+    "https://cache-e14.housesigma.com/file/pix-itso/156360191/ef655_18.jpg?549f8651",
+    "https://cache14.housesigma.com/file/pix-itso/156360191/ef655_19.jpg?549f8651",
+    "https://cache15.housesigma.com/file/pix-itso/156360191/ef655_20.jpg?549f8651",
+    "https://cache08.housesigma.com/file/pix-itso/156360191/ef655_21.jpg?549f8651"
+  ],
+  "basicInfo": {
+    "address": {
+      "street": "49 Conrad Place",
+      "municipality": "Grimsby",
+      "postalCode": "L3M5S5",
+      "province": "ON",
+      "country": "CA"
+    },
+    "zoning": "R1",
+    "coordinates": {
+      "latitude": 43.190435,
+      "longitude": -79.516773
+    },
+    "propertyTax": 5151,
+    "lotSize": 4588,
+    "squareFootage": 2204,
+    "askingPrice": 899900,
+    "daysOnMarket": 6,
+    "aggregatedDaysOnMarket": null,
+    "listingHistory": [
+      {
+        "startDate": "2025-01-27T00:00:00.000Z",
+        "endDate": null,
+        "askingPrice": null,
+        "listingId": "10Qqyp54JND7LGlV",
+        "event": "For Sale"
+      },
+      {
+        "startDate": "2024-11-26T00:00:00.000Z",
+        "endDate": "2025-01-27T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "1DBW7Rnve9D7qlAp",
+        "event": "Terminated"
+      },
+      {
+        "startDate": "2006-03-03T00:00:00.000Z",
+        "endDate": "2006-05-08T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "0J6Em7bZEKG7XBeq",
+        "event": "Sold"
+      },
+      {
+        "startDate": "2004-11-16T00:00:00.000Z",
+        "endDate": "2005-02-18T00:00:00.000Z",
+        "askingPrice": null,
+        "listingId": "wJKR7P8ZMOG7XeLP",
+        "event": "Sold"
+      }
+    ],
+    "estimatePrice": 888700,
+    "estimatePriceConfident": 0.13,
+    "estimateRent": 3230,
+    "estimateRentDays": 33,
+    "estimateRentYearReturn": 3.38,
+    "scores": {
+      "school": 7,
+      "growth": 6,
+      "rent": 5
+    },
+    "communityValue": {
+      "value": 935500,
+      "growth": 0.054000000000000006,
+      "growth5YearAverage": 0.45,
+      "growth10YearAverage": 0.85
+    }
+  }
+}
