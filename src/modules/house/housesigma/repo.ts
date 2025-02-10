@@ -1,7 +1,7 @@
 import { FILES, getAllIds, readFile, writeFile } from '../repo'
 import { fromHouseSigma } from '.'
 import { HouseSigma } from './schema'
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function loadOrGenHouseSigma(propertyId: string, hasBasicFile: boolean, hsFile: any): HouseSigma {
   if (!hasBasicFile) {
     const houseSigma = fromHouseSigma(hsFile)

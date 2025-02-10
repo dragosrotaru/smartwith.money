@@ -14,6 +14,7 @@ export function readFile(propertyId: string, file: string) {
   return JSON.parse(fileContent)
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function writeFile(propertyId: string, file: string, data: any) {
   fs.writeFileSync(`./data/${propertyId}_${file}.json`, JSON.stringify(data, null, 2))
 }

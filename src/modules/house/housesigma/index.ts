@@ -1,7 +1,9 @@
 import { ListingEvent, PropertyInfo } from './schema'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function detailToBasicInfo(res: any): PropertyInfo {
   const { house, listing_history, key_facts_v2, analytics, community_stats, property_detail } = res.data.data
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const listingHistory = listing_history.map((listing: any) => ({
     startDate: new Date(listing.date_start),
     endDate: listing.date_end ? new Date(listing.date_end) : null,
@@ -18,6 +20,7 @@ function detailToBasicInfo(res: any): PropertyInfo {
       province: house.province,
       country: house.country,
     },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     zoning: property_detail.land.value.find((v: any) => v.name === 'Zoning')?.value || null,
     coordinates: {
       latitude: house.map.lat,
@@ -44,7 +47,7 @@ function detailToBasicInfo(res: any): PropertyInfo {
     },
   }
 }
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function fromHouseSigma(data: any) {
   const detail = data['https://housesigma.com/bkv2/api/listing/info/detail_v2']
   // const soldPriceStats = data['https://housesigma.com/bkv2/api/community/soldpricestats']

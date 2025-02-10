@@ -192,7 +192,9 @@ export const columns: ColumnDef<Renovation>[] = [
 
 export function RenovationTable({
   renovations,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   selectedRenovations,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   onSelected,
 }: {
   renovations: Renovation[]

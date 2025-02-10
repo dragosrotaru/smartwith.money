@@ -13,6 +13,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
+import Logo from './Logo'
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -51,6 +52,7 @@ export default function Navigation() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
+                    <Logo />
                     <div className="mb-2 mt-4 text-lg font-medium">Smart With Money</div>
                     <p className="text-sm leading-tight text-muted-foreground">
                       Helping Canadians navigate personal finance with confidence.
@@ -83,7 +85,7 @@ export default function Navigation() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/downloads" legacyBehavior passHref>
+          <Link href="/extension" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>Browser Extension</NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

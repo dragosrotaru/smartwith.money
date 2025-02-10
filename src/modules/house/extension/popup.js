@@ -38,6 +38,7 @@ document.getElementById('saveHouse').addEventListener('click', async () => {
     const listingUrl = listingDetail.data.data.meta.canonical_url
     const listingTitle = listingDetail.data.data.meta.title
     const listingAddress = listingDetail.data.data.house.address
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const timestamp = new Date().toISOString().split('T')[0]
 
     // Create a temporary link element and trigger the download
