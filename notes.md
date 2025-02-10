@@ -1,12 +1,23 @@
 # TODO
 
+- add onboarding
+- add invite to account
+- add paid features
+- add privacy policy and tos
+- enable Oauth
+- add landing page
+- add metadata for SEO
+- add analytics
+- add google search
+- finish extension and publish
+- creat social media accounts
+
 - add price comparison to other homes in community
 - add explorer map
 - add bedrooms/bathrooms
 - add PoIs
 - add feature detection
 - fix renovation selection
-- add sign in Apple / Facebook
 
 ## Improve accuracy
 
