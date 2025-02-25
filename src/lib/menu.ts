@@ -8,12 +8,18 @@ import {
   LogIn,
   UserPlus,
   CreditCard,
-  Users,
   User,
   FileText,
   Map,
   Info,
   Puzzle,
+  Shield,
+  ScrollText,
+  Mail,
+  Twitter,
+  Linkedin,
+  Github,
+  BookOpen,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -24,12 +30,36 @@ export type MenuItem = {
   icon: LucideIcon
 }
 
+export type SocialLink = {
+  title: string
+  href: string
+  icon: LucideIcon
+}
+
+export const socialLinks = {
+  twitter: {
+    title: 'Twitter',
+    href: 'https://twitter.com/your-handle',
+    icon: Twitter,
+  },
+  linkedin: {
+    title: 'LinkedIn',
+    href: 'https://linkedin.com/company/your-company',
+    icon: Linkedin,
+  },
+  github: {
+    title: 'GitHub',
+    href: 'https://github.com/your-org',
+    icon: Github,
+  },
+} as const
+
 export const menu = {
   // User / Account
-  login: {
-    title: 'Login',
-    href: '/login',
-    description: 'Login to your account',
+  signin: {
+    title: 'Sign In',
+    href: '/signin',
+    description: 'Sign in to your account',
     icon: LogIn,
   },
   onboarding: {
@@ -43,18 +73,6 @@ export const menu = {
     href: '/account',
     description: 'Manage your account',
     icon: CreditCard,
-  },
-  billing: {
-    title: 'Billing',
-    href: '/account/billing',
-    description: 'Manage your billing',
-    icon: CreditCard,
-  },
-  referral: {
-    title: 'Referral',
-    href: '/referral',
-    description: 'Refer friends and earn rewards',
-    icon: Users,
   },
   user: {
     title: 'User Settings',
@@ -130,5 +148,36 @@ export const menu = {
     href: '/extension',
     description: 'Install our browser extension to easily save properties as you browse.',
     icon: Puzzle,
+  },
+  // Legal
+  legal: {
+    title: 'Legal',
+    href: '/legal',
+    description: 'Legal information and policies',
+    icon: Shield,
+  },
+  privacyPolicy: {
+    title: 'Privacy Policy',
+    href: '/legal/privacy-policy',
+    description: 'Our privacy policy and data handling practices',
+    icon: Shield,
+  },
+  termsOfService: {
+    title: 'Terms of Service',
+    href: '/legal/terms-of-service',
+    description: 'Terms of service and user agreement',
+    icon: ScrollText,
+  },
+  contact: {
+    title: 'Contact',
+    href: '/contact',
+    description: 'Get in touch with our team',
+    icon: Mail,
+  },
+  blog: {
+    title: 'Blog',
+    href: '/blog',
+    description: 'Latest insights on Canadian real estate and personal finance',
+    icon: BookOpen,
   },
 } as const

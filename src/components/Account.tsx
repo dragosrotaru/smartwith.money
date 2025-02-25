@@ -10,7 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { User, LogOut, Settings, CreditCard, UserPlus, AlertCircle } from 'lucide-react'
+import { User, LogOut, Settings, AlertCircle } from 'lucide-react'
 import { menu } from '@/lib/menu'
 import { useActiveAccount } from '@/contexts/ActiveAccountContext'
 
@@ -59,21 +59,9 @@ export function Account() {
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href={menu.billing.href} className="flex items-center">
-              <CreditCard className="mr-2 h-4 w-4" />
-              {menu.billing.title}
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
             <Link href={menu.user.href} className="flex items-center">
               <Settings className="mr-2 h-4 w-4" />
               {menu.user.title}
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <Link href={menu.referral.href} className="flex items-center">
-              <UserPlus className="mr-2 h-4 w-4" />
-              {menu.referral.title}
             </Link>
           </DropdownMenuItem>
           <DropdownMenuSeparator />

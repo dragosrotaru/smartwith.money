@@ -47,6 +47,7 @@ function detailToBasicInfo(res: any): PropertyInfo {
     },
   }
 }
+// todo handle schema changes and alert admin
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function fromHouseSigma(data: any) {
   const detail = data['https://housesigma.com/bkv2/api/listing/info/detail_v2']

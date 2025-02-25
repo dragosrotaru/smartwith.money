@@ -1,21 +1,27 @@
 # TODO
 
+- setup deferred referral processing
+- enable billing portal
+- make pricing page
+- setup free trial and trial has ended banner with upgrade to pro / dismiss
+- setup onboarding upgrade to pro step
+- setup upgrade to pro account menu option
+- make sure payment flows work
+- enable Oauth
+- setup login with email loading spinner
 - finish onboarding
 - add invite to account
-- add billing management
 - add account selection / account settings
-- add user settings
-- add referrals
-- add paid features
-- add privacy policy and tos
+- add paid feature flags
 - implement authjs error handling
-- enable Oauth
-- add landing page
 - add metadata for SEO
 - add analytics
+- add better logging with sentry
 - add google search
 - finish extension and publish
-- creat social media accounts
+- creat social media accounts & add to menu links
+- fix dark mode styles acorss the app
+- validate blog writer AI works
 
 - add price comparison to other homes in community
 - add explorer map

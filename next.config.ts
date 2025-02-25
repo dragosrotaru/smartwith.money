@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
       {
         hostname: '*.housesigma.com',
       },
+      {
+        hostname: 'api.dicebear.com',
+      },
     ],
   },
 }

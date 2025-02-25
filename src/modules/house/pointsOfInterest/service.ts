@@ -1,10 +1,13 @@
 'use server'
+import { getActiveAccount } from '@/lib/activeAccount'
 import { POI, POIProps } from './domain'
 import { add, getAllByAccountId, remove } from './repo'
 import { withReadAccess, withReadWriteAccess } from '@/modules/account/actions'
 
 export async function addPOI(poiProps: POIProps) {
-  const accountId = '123'
+  const accountId = await getActiveAccount()
+  if (!accountId) return new Error('No active account')
+
   const auth = await withReadWriteAccess(accountId)
   if (auth instanceof Error) return auth
 
@@ -13,7 +16,9 @@ export async function addPOI(poiProps: POIProps) {
 }
 
 export async function removePOI(id: string) {
-  const accountId = '123'
+  const accountId = await getActiveAccount()
+  if (!accountId) return new Error('No active account')
+
   const auth = await withReadWriteAccess(accountId)
   if (auth instanceof Error) return auth
 
@@ -21,7 +26,9 @@ export async function removePOI(id: string) {
 }
 
 export async function getPOIs() {
-  const accountId = '123'
+  const accountId = await getActiveAccount()
+  if (!accountId) return new Error('No active account')
+
   const auth = await withReadAccess(accountId)
   if (auth instanceof Error) return auth
 

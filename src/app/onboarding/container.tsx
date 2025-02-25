@@ -1,14 +1,18 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FormDataProps } from './formData'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import InvitePeopleStep from './_components/InvitePeopleStep'
 import AccountNameStep from './_components/AccountNameStep'
 import InitialPreferencesStep from './_components/InitialPreferencesStep'
+import { processReferralCode } from '@/modules/referral/actions'
+import { useReferralCode } from '@/hooks/use-referral-code'
 
 export default function OnboardingContainer() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [referralCode, _, clearReferralCode] = useReferralCode()
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState<FormDataProps>({
     accountName: '',
@@ -17,6 +21,21 @@ export default function OnboardingContainer() {
     province: '',
     priorities: [],
   })
+
+  useEffect(() => {
+    async function processReferral() {
+      if (!referralCode) return
+      // todo this isn't right because the user wont be signed up on stripe yet
+      const result = await processReferralCode(referralCode)
+      if (result instanceof Error) {
+        console.error('Error processing referral:', result)
+      } else {
+        clearReferralCode()
+      }
+    }
+
+    processReferral()
+  }, [referralCode, clearReferralCode])
 
   const updateFormData = (data: Partial<typeof formData>) => {
     setFormData((prev) => ({ ...prev, ...data }))

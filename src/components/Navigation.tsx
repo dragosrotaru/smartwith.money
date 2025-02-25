@@ -29,7 +29,7 @@ const subMenuTwo: MenuItem[] = [
 
 export default function Navigation() {
   return (
-    <NavigationMenu className="[&_div.absolute]:-left-48 [&_div.absolute]:top-12">
+    <NavigationMenu className="hidden md:block md:flex [&_div.absolute]:-left-48 [&_div.absolute]:top-12">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Documentation</NavigationMenuTrigger>
@@ -71,6 +71,11 @@ export default function Navigation() {
               ))}
             </ul>
           </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href={menu.blog.href} legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>Blog</NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href={menu.extension.href} legacyBehavior passHref>

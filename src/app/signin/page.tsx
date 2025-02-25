@@ -1,58 +1,88 @@
 'use client'
+
+import { useSearchParams } from 'next/navigation'
+import { useEffect } from 'react'
+import { signIn, useSession } from 'next-auth/react'
 import { Button } from '@/components/ui/button'
-import { signIn } from 'next-auth/react'
+import { redirect } from 'next/navigation'
+import { useReferralCode } from '@/hooks/use-referral-code'
 
-const redirectTo = '/'
+export default function LoginPage() {
+  const { status } = useSession()
+  const searchParams = useSearchParams()
+  const [referralCode, setReferralCode] = useReferralCode()
 
-export default function Login() {
+  useEffect(() => {
+    if (status === 'authenticated') {
+      redirect('/')
+    }
+  }, [status])
+
+  useEffect(() => {
+    const code = searchParams.get('ref')
+    // we dont set the referral code if it already exists (we attribute to the first referral)
+    if (code && !referralCode) setReferralCode(code)
+  }, [searchParams, referralCode, setReferralCode])
+
+  const redirectTo = '/'
   const emailAction = (formData: FormData) => {
     signIn('postmark', { redirect: true, redirectTo, email: formData.get('email') })
   }
-  const googleAction = () => {
-    signIn('google', { redirect: true, redirectTo })
-  }
 
-  const appleAction = () => {
-    signIn('apple', { redirect: true, redirectTo })
-  }
-
-  const facebookAction = () => {
-    signIn('facebook', { redirect: true, redirectTo })
+  const handleLogin = async (provider: string) => {
+    await signIn(provider, { redirect: true, redirectTo })
   }
 
   return (
-    <div className="flex py-48 items-center justify-center px-4 sm:px-6 lg:px-8">
-      <div className="max-w-sm w-full space-y-8">
-        <div className="text-center">
-          <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">Sign in or create an account</h2>
+    <div className="max-w-md mx-auto mt-20 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+      <div className="text-center">
+        <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">Sign in or create an account</h2>
+        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          Smartwith.money is free. If you like the site, you can upgrade for pro features. If you dont, you can export
+          your data and delete your account anytime.
+        </p>
+      </div>
+
+      {referralCode && (
+        <div className="my-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+          <p className="text-sm text-blue-600 dark:text-blue-400">
+            {/* todo */}
+            You&apos;ve been invited! If you decide to upgrade later, you and your friend will get one month free, on
+            top of our 1 month free trial.
+          </p>
         </div>
+      )}
 
-        <div className="mt-8 space-y-6">
-          {/* Email/Password Form */}
-          <form className="space-y-4" action={emailAction}>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email
-              </label>
-              <div className="mt-1">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
+      <div className="space-y-6 mt-6">
+        {/* Email/Password Form */}
+        <form className="space-y-4" action={emailAction}>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              Email
+            </label>
+            <div className="mt-1">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              />
             </div>
+          </div>
 
-            <Button
-              type="submit"
-              className="w-full h-10 flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-            >
-              Sign in with email link
-            </Button>
-          </form>
+          <Button
+            type="submit"
+            className="w-full h-10 flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Sign in with email link
+          </Button>
+        </form>
 
+        <div className="relative flex flex-col gap-3">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full border-t border-gray-200 dark:border-gray-700" />
+          </div>
           <div className="relative">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-gray-300" />
@@ -63,7 +93,7 @@ export default function Login() {
           </div>
 
           {/* Google Sign In */}
-          <form action={googleAction}>
+          <form action={() => handleLogin('google')}>
             <Button
               type="submit"
               className="w-full h-10 flex justify-center items-center gap-3 py-3 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -91,7 +121,7 @@ export default function Login() {
           </form>
 
           {/* Apple Sign In */}
-          <form action={appleAction}>
+          <form action={() => handleLogin('apple')}>
             <Button
               type="submit"
               className="w-full h-10 flex justify-center items-center gap-3 py-3 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -104,7 +134,7 @@ export default function Login() {
           </form>
 
           {/* Facebook Sign In */}
-          <form action={facebookAction}>
+          <form action={() => handleLogin('facebook')}>
             <Button
               type="submit"
               className="w-full h-10 flex justify-center items-center gap-3 py-3 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -120,6 +150,18 @@ export default function Login() {
           </form>
         </div>
       </div>
+
+      <p className="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
+        By continuing, you agree to our{' '}
+        <a href="/legal/terms-of-service" className="text-blue-600 hover:underline">
+          Terms of Service
+        </a>{' '}
+        and{' '}
+        <a href="/legal/privacy-policy" className="text-blue-600 hover:underline">
+          Privacy Policy
+        </a>
+        .
+      </p>
     </div>
   )
 }

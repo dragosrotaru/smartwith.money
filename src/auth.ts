@@ -5,13 +5,14 @@ import Postmark from 'next-auth/providers/postmark'
 import Apple from 'next-auth/providers/apple'
 import { DrizzleAdapter } from '@auth/drizzle-adapter'
 import { userAccounts, authenticators, sessions, users, verificationTokens } from './modules/model'
-import { db } from './lib/db'
+import { db } from '@/lib/db'
 import { menu } from './lib/menu'
 
 declare module 'next-auth' {
   interface Session {
     user: {
       id: string
+      stripeCustomerId?: string | null
     } & DefaultSession['user']
   }
 }
@@ -26,7 +27,7 @@ export const config: NextAuthConfig = {
     authenticatorsTable: authenticators,
   }),
   pages: {
-    signIn: menu.login.href,
+    signIn: menu.signin.href,
     error: '/error',
     newUser: menu.onboarding.href,
   },
@@ -40,7 +41,8 @@ export const config: NextAuthConfig = {
         email: user.email,
       })
       */
-      return { ...session, user: { ...session.user, id: user.id } }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      return { ...session, user: { ...session.user, id: user.id, stripeCustomerId: (user as any).stripeCustomerId } }
     },
     async jwt({ token, user }) {
       if (user) token.id = user.id
