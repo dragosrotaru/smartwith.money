@@ -82,6 +82,11 @@ export default function Navigation() {
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>Browser Extension</NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href={menu.pricing.href} legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>Pricing</NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   )

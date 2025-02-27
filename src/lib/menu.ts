@@ -20,6 +20,7 @@ import {
   Linkedin,
   Github,
   BookOpen,
+  DollarSign,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -61,6 +62,12 @@ export const menu = {
     href: '/signin',
     description: 'Sign in to your account',
     icon: LogIn,
+  },
+  pricing: {
+    title: 'Pricing',
+    href: '/pricing',
+    description: 'View our pricing plans and features',
+    icon: DollarSign,
   },
   onboarding: {
     title: 'Onboarding',
