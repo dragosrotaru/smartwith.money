@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import { menu } from '@/lib/menu'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Check } from 'lucide-react'

@@ -1,19 +1,23 @@
 'use client'
-
 import { Button } from '@/components/ui/button'
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FormDataProps } from './formData'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import InvitePeopleStep from './_components/InvitePeopleStep'
 import AccountNameStep from './_components/AccountNameStep'
 import InitialPreferencesStep from './_components/InitialPreferencesStep'
-import { processReferralCode } from '@/modules/referral/actions'
-import { useReferralCode } from '@/hooks/use-referral-code'
+import { completeOnboarding } from '@/modules/account/actions'
+import { useRouter } from 'next/navigation'
+import { Loader2 } from 'lucide-react'
+import { toast } from 'sonner'
+import { useActiveAccount } from '@/contexts/ActiveAccountContext'
 
 export default function OnboardingContainer() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [referralCode, _, clearReferralCode] = useReferralCode()
   const [step, setStep] = useState(1)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [hasPersonFilledButNotAdded, setHasPersonFilledButNotAdded] = useState(false)
+  const router = useRouter()
+  const { setActiveAccountId } = useActiveAccount()
   const [formData, setFormData] = useState<FormDataProps>({
     accountName: '',
     invitedPeople: [],
@@ -22,27 +26,16 @@ export default function OnboardingContainer() {
     priorities: [],
   })
 
-  useEffect(() => {
-    async function processReferral() {
-      if (!referralCode) return
-      // todo this isn't right because the user wont be signed up on stripe yet
-      const result = await processReferralCode(referralCode)
-      if (result instanceof Error) {
-        console.error('Error processing referral:', result)
-      } else {
-        clearReferralCode()
-      }
-    }
-
-    processReferral()
-  }, [referralCode, clearReferralCode])
-
   const updateFormData = (data: Partial<typeof formData>) => {
     setFormData((prev) => ({ ...prev, ...data }))
   }
 
   const nextStep = () => {
-    if (step < 3) {
+    if (step === 2 && hasPersonFilledButNotAdded) {
+      toast.error('Did you forget to click "Add Person"? Click the button or clear the field and try again.')
+      return
+    }
+    if (step < 3 && isStepComplete()) {
       setStep(step + 1)
     }
   }
@@ -69,12 +62,35 @@ export default function OnboardingContainer() {
     }
   }
 
+  const handleKeyPress = (event: KeyboardEvent) => {
+    if (event.key === 'Enter' && !event.shiftKey && !isSubmitting) {
+      if (step === 3 && isStepComplete()) {
+        handleSubmit()
+      } else {
+        nextStep()
+      }
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyPress)
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress)
+    }
+  }, [step, isStepComplete, isSubmitting])
+
   const renderStep = () => {
     switch (step) {
       case 1:
         return <AccountNameStep formData={formData} updateFormData={updateFormData} />
       case 2:
-        return <InvitePeopleStep formData={formData} updateFormData={updateFormData} />
+        return (
+          <InvitePeopleStep
+            formData={formData}
+            updateFormData={updateFormData}
+            onPersonFilledButNotAdded={setHasPersonFilledButNotAdded}
+          />
+        )
       case 3:
         return <InitialPreferencesStep formData={formData} updateFormData={updateFormData} />
       default:
@@ -84,8 +100,26 @@ export default function OnboardingContainer() {
 
   const handleSubmit = async () => {
     if (!isStepComplete()) return
-    console.log('Form submitted:', formData)
-    // Here you would typically send the data to your backend
+
+    setIsSubmitting(true)
+    try {
+      const result = await completeOnboarding(formData)
+
+      if (result instanceof Error) {
+        toast.error(result.message)
+        return
+      }
+
+      // Set the newly created account as active
+      await setActiveAccountId(result.accountId)
+
+      toast.success('Your account has been created successfully!')
+      router.push('/')
+    } catch {
+      toast.error('Something went wrong. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -98,17 +132,24 @@ export default function OnboardingContainer() {
           {renderStep()}
           <div className="flex justify-between mt-6">
             {step > 1 && (
-              <Button onClick={prevStep} variant="outline">
+              <Button onClick={prevStep} variant="outline" disabled={isSubmitting}>
                 Previous
               </Button>
             )}
             {step < 3 ? (
-              <Button onClick={nextStep} className="ml-auto" disabled={!isStepComplete()}>
+              <Button onClick={nextStep} className="ml-auto" disabled={!isStepComplete() || isSubmitting}>
                 Next
               </Button>
             ) : (
-              <Button onClick={handleSubmit} className="ml-auto" disabled={!isStepComplete()}>
-                Submit
+              <Button onClick={handleSubmit} className="ml-auto" disabled={!isStepComplete() || isSubmitting}>
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Creating Account...
+                  </>
+                ) : (
+                  'Submit'
+                )}
               </Button>
             )}
           </div>

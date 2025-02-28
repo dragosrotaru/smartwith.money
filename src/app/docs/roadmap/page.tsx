@@ -121,8 +121,8 @@ export default function RoadmapPage() {
         </p>
         <p>
           Contact us at{' '}
-          <a href="mailto:feedback@smartwith.money" className="text-blue-600 hover:underline">
-            feedback@smartwith.money
+          <a href={`mailto:${process.env.SUPPORT_EMAIL}`} className="text-blue-600 hover:underline">
+            {process.env.SUPPORT_EMAIL}
           </a>
         </p>
       </div>

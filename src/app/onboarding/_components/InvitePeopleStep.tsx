@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Button } from '@/components/ui/button'
@@ -11,12 +11,19 @@ import { FormDataProps } from '../formData'
 export default function InvitePeopleStep({
   formData,
   updateFormData,
+  onPersonFilledButNotAdded,
 }: {
   formData: FormDataProps
   updateFormData: (data: Partial<FormDataProps>) => void
+  onPersonFilledButNotAdded: (hasIncompleteFields: boolean) => void
 }) {
   const [email, setEmail] = useState('')
   const [role, setRole] = useState('')
+
+  // Check for incomplete fields whenever email or role changes
+  useEffect(() => {
+    onPersonFilledButNotAdded(email.length > 0 || role.length > 0)
+  }, [email, role, onPersonFilledButNotAdded])
 
   const addPerson = () => {
     if (email && role) {
@@ -75,7 +82,7 @@ export default function InvitePeopleStep({
             </SelectContent>
           </Select>
         </div>
-        <Button onClick={addPerson} variant="outline">
+        <Button onClick={addPerson} variant="outline" disabled={!email || !role}>
           Add Person
         </Button>
       </div>

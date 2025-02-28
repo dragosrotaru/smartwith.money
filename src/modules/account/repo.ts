@@ -80,3 +80,13 @@ export async function updateUserRole(accountId: string, userId: string, newRole:
     .where(and(eq(accountUsers.accountId, accountId), eq(accountUsers.userId, userId)))
     .returning()
 }
+
+export async function updateUserStripeCustomerId(userId: string, stripeCustomerId: string) {
+  await db
+    .update(users)
+    .set({
+      stripeCustomerId,
+      updatedAt: new Date(),
+    })
+    .where(eq(users.id, userId))
+}

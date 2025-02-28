@@ -28,11 +28,13 @@ export default async function PostPage({ params }: PostPageProps) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Post Not Found</h1>
-          <p className="text-xl text-gray-600 mb-8">We couldn&apos;t find the blog post you&apos;re looking for.</p>
+          <h1 className="text-4xl font-bold mb-4">Post Not Found</h1>
+          <p className="text-xl text-muted-foreground mb-8">
+            We couldn&apos;t find the blog post you&apos;re looking for.
+          </p>
           <Link
             href="/blog"
-            className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+            className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90"
           >
             Return to Blog
           </Link>
@@ -52,15 +54,15 @@ export default async function PostPage({ params }: PostPageProps) {
             {post.category && (
               <Link
                 href={`/blog/category/${post.category.slug}`}
-                className="text-blue-600 hover:text-blue-700 font-medium"
+                className="text-primary hover:text-primary/80 font-medium"
               >
                 {post.category.name}
               </Link>
             )}
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
-          {post.excerpt && <p className="text-xl text-gray-600 mb-6">{post.excerpt}</p>}
-          <div className="flex items-center justify-center text-sm text-gray-500 space-x-4">
+          <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+          {post.excerpt && <p className="text-xl text-muted-foreground mb-6">{post.excerpt}</p>}
+          <div className="flex items-center justify-center text-sm text-muted-foreground space-x-4">
             <div className="flex items-center">
               <Image
                 src={post.author.avatarUrl || '/images/default-avatar.png'}
@@ -69,7 +71,7 @@ export default async function PostPage({ params }: PostPageProps) {
                 height={40}
                 className="w-10 h-10 rounded-full mr-3"
               />
-              <span className="font-medium text-gray-900">{post.author.name}</span>
+              <span className="font-medium">{post.author.name}</span>
             </div>
             <div className="flex items-center">
               <CalendarDays className="h-4 w-4 mr-2" />
@@ -94,18 +96,18 @@ export default async function PostPage({ params }: PostPageProps) {
         )}
 
         {/* Content */}
-        <div className="prose prose-lg prose-blue mx-auto">
+        <div className="prose prose-lg dark:prose-invert prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-ul:text-foreground prose-ol:text-foreground prose-blockquote:text-foreground prose-figure:text-foreground prose-figcaption:text-foreground prose-table:text-foreground prose-th:text-foreground prose-td:text-foreground prose-a:text-primary hover:prose-a:text-primary/80 prose-code:text-foreground prose-pre:text-foreground mx-auto">
           <Markdown>{post.content}</Markdown>
         </div>
 
         {/* Tags */}
         {post.tags.length > 0 && (
-          <div className="mt-12 pt-6 border-t border-gray-200">
+          <div className="mt-12 pt-6 border-t border-border">
             <div className="flex flex-wrap gap-2">
               {post.tags.map((tag) => (
                 <span
                   key={tag.id}
-                  className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800"
+                  className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary"
                 >
                   {tag.name}
                 </span>
@@ -118,19 +120,22 @@ export default async function PostPage({ params }: PostPageProps) {
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
         <div className="mt-16 max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
+          <h2 className="text-2xl font-bold mb-6">Related Articles</h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {relatedPosts.map((relatedPost) => (
-              <article key={relatedPost.id} className="bg-white rounded-lg shadow-sm overflow-hidden">
+              <article
+                key={relatedPost.id}
+                className="bg-card text-card-foreground rounded-lg shadow-sm overflow-hidden"
+              >
                 <div className="p-6">
                   <Link
                     href={`/blog/category/${relatedPost.category?.slug}/${relatedPost.slug}`}
-                    className="block mb-3 hover:underline"
+                    className="block mb-3 hover:text-primary"
                   >
-                    <h3 className="text-xl font-semibold text-gray-900 line-clamp-2">{relatedPost.title}</h3>
+                    <h3 className="text-xl font-semibold line-clamp-2">{relatedPost.title}</h3>
                   </Link>
-                  <p className="text-gray-600 mb-4 line-clamp-3">{relatedPost.excerpt}</p>
-                  <div className="flex items-center text-sm text-gray-500">
+                  <p className="text-muted-foreground mb-4 line-clamp-3">{relatedPost.excerpt}</p>
+                  <div className="flex items-center text-sm text-muted-foreground">
                     <CalendarDays className="h-4 w-4 mr-2" />
                     <time dateTime={relatedPost.publishedAt?.toISOString()}>
                       {relatedPost.publishedAt ? new Date(relatedPost.publishedAt).toLocaleDateString() : 'Draft'}

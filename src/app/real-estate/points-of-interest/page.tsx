@@ -11,6 +11,7 @@ import { Label } from '@/components/ui/label'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { POI, POIProps } from '@/modules/house/pointsOfInterest/domain'
+import { toast } from 'sonner'
 
 export default function PointsOfInterestPage() {
   const [pointsOfInterest, setPointsOfInterest] = useState<POI[]>([])
@@ -35,9 +36,8 @@ export default function PointsOfInterestPage() {
 
   const fetchPointsOfInterest = async () => {
     const pois = await getPOIs()
-    // todo implement error handling
     if (pois instanceof Error) {
-      alert(pois.message)
+      toast.error(pois.message)
       return
     }
     setPointsOfInterest(pois)

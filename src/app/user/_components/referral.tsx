@@ -36,24 +36,24 @@ export default function ReferralSettings() {
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+    <div className="bg-card text-card-foreground p-6 rounded-lg shadow">
       <h2 className="text-xl font-semibold mb-4">Referral Program</h2>
 
       <div className="space-y-4">
         <div className="flex items-center space-x-2">
-          <div className="p-2 rounded-full bg-gray-100 dark:bg-gray-700">
-            <Users className="h-5 w-5 text-gray-600 dark:text-gray-400" />
+          <div className="p-2 rounded-full bg-muted">
+            <Users className="h-5 w-5 text-muted-foreground" />
           </div>
           <div>
             <Label>Invite Friends</Label>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-sm text-muted-foreground">
               Share your referral link and both you and your friend get one month free!
             </p>
           </div>
         </div>
 
         <div className="flex items-center gap-2">
-          <div className="flex-1 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg font-mono text-sm">
+          <div className="flex-1 p-3 bg-muted rounded-lg font-mono text-sm">
             {referralCode ? `${window.location.origin}/login?ref=${referralCode}` : 'Loading...'}
           </div>
           <Button

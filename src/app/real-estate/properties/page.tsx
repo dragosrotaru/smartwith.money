@@ -10,18 +10,18 @@ export default async function PropertiesPage() {
 
   if (!activeAccount) {
     const auth = await authorization()
-    if (auth instanceof Error) redirect(menu.login.href)
+    if (auth instanceof Error) redirect(menu.signin.href)
     if (auth.accounts.length === 0) redirect(menu.onboarding.href)
     activeAccount = auth.accounts[0].id
     setActiveAccount(activeAccount)
   }
 
   const auth = await withReadAccess(activeAccount)
-  if (auth instanceof Error) redirect(menu.login.href)
+  if (auth instanceof Error) redirect(menu.signin.href)
 
   const properties = await getAllByAccountId(activeAccount)
   return (
-    <main className="min-h-screen bg-gray-100">
+    <main className="min-h-screen bg-background">
       <PropertyExplorer properties={properties} />
     </main>
   )

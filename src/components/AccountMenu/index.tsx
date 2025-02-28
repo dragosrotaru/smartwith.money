@@ -10,16 +10,16 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { User, LogOut, Settings, AlertCircle } from 'lucide-react'
+import { User, LogOut, Settings } from 'lucide-react'
 import { menu } from '@/lib/menu'
-import { useActiveAccount } from '@/contexts/ActiveAccountContext'
+import UpgradeMenuItem from './UpgradeMenuItem'
+import FinishOnboardingMenuItem from './FinishOnboardingMenuItem'
 
-export function Account() {
+export default function AccountMenu() {
   const { status } = useSession()
   const [isOpen, setIsOpen] = useState(false)
-  const { activeAccountId, isLoading } = useActiveAccount()
 
-  if (status === 'loading' || isLoading) {
+  if (status === 'loading') {
     return (
       <Button variant="ghost" className="w-[120px]">
         Loading...
@@ -44,14 +44,8 @@ export function Account() {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-[200px] translate-y-4">
-          {!activeAccountId && (
-            <DropdownMenuItem>
-              <Link href={menu.onboarding.href} className="flex items-center">
-                <AlertCircle className="mr-2 h-4 w-4" />
-                Finish Onboarding
-              </Link>
-            </DropdownMenuItem>
-          )}
+          <FinishOnboardingMenuItem />
+          <UpgradeMenuItem />
           <DropdownMenuItem>
             <Link href={menu.account.href} className="flex items-center">
               <User className="mr-2 h-4 w-4" />
@@ -71,7 +65,7 @@ export function Account() {
               signOut()
             }}
           >
-            <LogOut className="mr-2 h-4 w-4" />
+            <LogOut className="h-4 w-4" />
             Sign out
           </DropdownMenuItem>
         </DropdownMenuContent>

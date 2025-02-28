@@ -39,39 +39,39 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Make Better Financial Decisions</h2>
           <div className="grid md:grid-cols-3 gap-12">
             <Link
               href={menu.mortgage.href}
-              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              className="bg-card text-card-foreground p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <menu.mortgage.icon className="w-6 h-6 text-blue-600" />
+              <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                <menu.mortgage.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-4">{menu.mortgage.title}</h3>
-              <p className="text-gray-600">{menu.mortgage.description}</p>
+              <p className="text-muted-foreground">{menu.mortgage.description}</p>
             </Link>
             <Link
               href={menu.buyVsRent.href}
-              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              className="bg-card text-card-foreground p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <menu.buyVsRent.icon className="w-6 h-6 text-blue-600" />
+              <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                <menu.buyVsRent.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-4">{menu.buyVsRent.title}</h3>
-              <p className="text-gray-600">{menu.buyVsRent.description}</p>
+              <p className="text-muted-foreground">{menu.buyVsRent.description}</p>
             </Link>
             <Link
               href={menu.properties.href}
-              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              className="bg-card text-card-foreground p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <menu.properties.icon className="w-6 h-6 text-blue-600" />
+              <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                <menu.properties.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-4">{menu.properties.title}</h3>
-              <p className="text-gray-600">
+              <p className="text-muted-foreground">
                 Track and compare properties you&apos;re interested in. Get instant analysis and recommendations.
               </p>
             </Link>
@@ -83,12 +83,12 @@ export default function LandingPage() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">More Features Coming Soon</h2>
-          <p className="text-xl text-center text-gray-600 mb-12">
+          <p className="text-xl text-center text-muted-foreground mb-12">
             We&apos;re building tools to help you make better decisions about:
           </p>
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {['Investments', 'Retirement Planning', 'Tax Optimization', 'Debt Management'].map((feature) => (
-              <div key={feature} className="p-6 rounded-lg bg-gray-50">
+              <div key={feature} className="p-6 rounded-lg bg-muted">
                 <p className="font-semibold text-lg">{feature}</p>
               </div>
             ))}

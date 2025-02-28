@@ -1,6 +1,6 @@
 'use client'
 import Logo from '@/components/Logo'
-import { Account } from './Account'
+import AccountMenu from './AccountMenu'
 import Navigation from './Navigation'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
@@ -23,7 +23,7 @@ export function Header() {
         </div>
         <div className="relative flex items-center gap-2">
           <Navigation />
-          <Account />
+          <AccountMenu />
         </div>
       </div>
     </header>

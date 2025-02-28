@@ -23,11 +23,19 @@ export default function CardImageCarousel({ photos }: { photos: string[] }) {
         layout="fill"
         objectFit="cover"
       />
-      <Button className="absolute top-2 left-2 z-10 bg-[rgba(0,0,0,0.4)]" onClick={prevPhoto} variant="ghost">
-        <ChevronLeftIcon className="text-white" />
+      <Button
+        className="absolute top-2 left-2 z-10 bg-background/80 hover:bg-background/90 transition-colors"
+        onClick={prevPhoto}
+        variant="ghost"
+      >
+        <ChevronLeftIcon className="text-foreground" />
       </Button>
-      <Button className="absolute top-2 right-2 z-10 bg-[rgba(0,0,0,0.4)]" onClick={nextPhoto} variant="ghost">
-        <ChevronRightIcon className="text-white" />
+      <Button
+        className="absolute top-2 right-2 z-10 bg-background/80 hover:bg-background/90 transition-colors"
+        onClick={nextPhoto}
+        variant="ghost"
+      >
+        <ChevronRightIcon className="text-foreground" />
       </Button>
     </div>
   )

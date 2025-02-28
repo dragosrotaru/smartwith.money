@@ -8,6 +8,10 @@ import { ActiveAccountProvider } from '@/contexts/ActiveAccountContext'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 import { SidebarProvider } from '@/components/ui/sidebar'
 import { MobileNavigation } from '@/components/MobileNavigation'
+import { SubscriptionProvider } from '@/contexts/SubscriptionContext'
+import { Toaster } from 'sonner'
+import { InviteDialog } from '@/components/InviteDialog'
+import { EnsureActiveAccount } from '@/components/EnsureActiveAccount'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -33,18 +37,23 @@ export default async function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <SessionProvider>
         <ActiveAccountProvider>
-          <ThemeProvider>
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-              <SidebarProvider defaultOpen={false}>
-                <div className="flex flex-col min-h-screen w-full">
-                  <Header />
-                  <main className="container mx-auto px-4 py-8 flex-grow">{children}</main>
-                  <Footer />
-                  <MobileNavigation />
-                </div>
-              </SidebarProvider>
-            </body>
-          </ThemeProvider>
+          <SubscriptionProvider>
+            <ThemeProvider>
+              <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+                <SidebarProvider defaultOpen={false}>
+                  <div className="flex flex-col min-h-screen w-full">
+                    <EnsureActiveAccount />
+                    <Header />
+                    <main className="container mx-auto px-4 py-8 flex-grow">{children}</main>
+                    <Footer />
+                    <MobileNavigation />
+                  </div>
+                  <Toaster />
+                  <InviteDialog />
+                </SidebarProvider>
+              </body>
+            </ThemeProvider>
+          </SubscriptionProvider>
         </ActiveAccountProvider>
       </SessionProvider>
     </html>

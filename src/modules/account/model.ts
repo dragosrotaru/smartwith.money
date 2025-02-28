@@ -10,6 +10,7 @@ export const users = pgTable('user', {
   email: text('email').unique(),
   emailVerified: timestamp('emailVerified', { mode: 'date' }),
   image: text('image'),
+  stripeCustomerId: text('stripe_customer_id').unique(),
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
 })
@@ -139,3 +140,57 @@ export const accountUsersRelations = relations(accountUsers, ({ one }) => ({
     references: [accounts.id],
   }),
 }))
+
+export const accountInvites = pgTable('account_invites', {
+  id: text('id')
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
+  accountId: text('account_id')
+    .notNull()
+    .references(() => accounts.id),
+  email: text('email').notNull(),
+  role: text('role', { enum: ACCOUNT_ROLES }).$type<AccountRole>().notNull(),
+  invitedBy: text('invited_by')
+    .notNull()
+    .references(() => users.id),
+  status: text('status', { enum: ['pending', 'accepted', 'rejected', 'expired'] })
+    .notNull()
+    .default('pending'),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+  updatedAt: timestamp('updated_at').notNull().defaultNow(),
+})
+
+export const accountPreferences = pgTable('account_preferences', {
+  id: text('id')
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
+  accountId: text('account_id')
+    .notNull()
+    .references(() => accounts.id),
+  isFirstTimeHomeBuyer: boolean('is_first_time_home_buyer').notNull(),
+  province: text('province').notNull(),
+  priorities: text('priorities').array().notNull(),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+  updatedAt: timestamp('updated_at').notNull().defaultNow(),
+})
+
+export const EXPORT_JOB_STATUS = ['pending', 'processing', 'completed', 'failed'] as const
+export type ExportJobStatus = (typeof EXPORT_JOB_STATUS)[number]
+
+export const accountExportJobs = pgTable('account_export_jobs', {
+  id: text('id')
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
+  accountId: text('account_id')
+    .notNull()
+    .references(() => accounts.id),
+  requestedBy: text('requested_by')
+    .notNull()
+    .references(() => users.id),
+  status: text('status', { enum: EXPORT_JOB_STATUS }).$type<ExportJobStatus>().notNull().default('pending'),
+  error: text('error'),
+  downloadUrl: text('download_url'),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+  updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  completedAt: timestamp('completed_at'),
+})

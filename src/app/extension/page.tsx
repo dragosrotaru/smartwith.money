@@ -88,7 +88,7 @@ function HowItWorks() {
   ]
 
   return (
-    <section className="p-12 bg-gray-100">
+    <section className="p-12 bg-muted/50">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8">How It Works</h2>
         <ol className="space-y-4">
@@ -142,13 +142,13 @@ function Benefits() {
   ]
 
   return (
-    <section className="p-12 bg-gray-100">
+    <section className="p-12 bg-muted/50">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8">Benefits of Using Our Extension</h2>
         <ul className="space-y-4">
           {benefits.map((benefit, index) => (
             <li key={index} className="flex items-center">
-              <CheckCircle className="text-green-500 mr-4" />
+              <CheckCircle className="text-primary mr-4" />
               {benefit}
             </li>
           ))}
@@ -229,12 +229,12 @@ function FAQSection() {
     },
     {
       question: 'What if I encounter issues with the extension?',
-      answer: 'If you experience any issues, please contact our support team: support@smartwith.money',
+      answer: `If you experience any issues, please contact our support team: ${process.env.SUPPORT_EMAIL}`,
     },
   ]
 
   return (
-    <section className="p-12 mb-20 bg-gray-100">
+    <section className="p-12 mb-20 bg-muted/50">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
         <Accordion type="single" collapsible className="w-full">

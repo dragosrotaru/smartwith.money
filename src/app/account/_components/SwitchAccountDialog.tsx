@@ -8,12 +8,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
-import { Plus, SwitchCamera } from 'lucide-react'
-import Link from 'next/link'
+import { SwitchCamera } from 'lucide-react'
 import { authorization } from '@/modules/account/actions'
 import { useEffect, useState } from 'react'
 import { useActiveAccount } from '@/contexts/ActiveAccountContext'
-import { menu } from '@/lib/menu'
 
 type Account = {
   id: string
@@ -50,7 +48,7 @@ export function SwitchAccountDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="justify-start gap-2">
+        <Button variant="outline" className="justify-start gap-2 w-full">
           <SwitchCamera className="mr-2 h-4 w-4" />
           Switch Active Account
         </Button>
@@ -72,12 +70,6 @@ export function SwitchAccountDialog() {
               {account.id === activeAccountId && <span className="ml-auto text-xs text-muted-foreground">Current</span>}
             </Button>
           ))}
-          <Link href={menu.onboarding.href} className="w-full">
-            <Button variant="outline" className="w-full justify-start gap-2">
-              <Plus className="h-4 w-4" />
-              Create New Account
-            </Button>
-          </Link>
         </div>
       </DialogContent>
     </Dialog>

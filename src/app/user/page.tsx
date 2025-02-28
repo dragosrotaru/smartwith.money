@@ -1,3 +1,4 @@
+'use client'
 import ThemeSettings from './_components/theme'
 import BillingSettings from './_components/billing'
 import ReferralSettings from './_components/referral'

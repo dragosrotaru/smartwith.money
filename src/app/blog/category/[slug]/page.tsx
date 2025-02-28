@@ -47,13 +47,11 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">No Posts Found</h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-            We couldn&apos;t find any posts in this category.
-          </p>
+          <h1 className="text-4xl font-bold mb-4">No Posts Found</h1>
+          <p className="text-xl text-muted-foreground mb-8">We couldn&apos;t find any posts in this category.</p>
           <Link
             href="/blog"
-            className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
+            className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90"
           >
             Return to Blog
           </Link>
@@ -72,10 +70,10 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
       {/* Header */}
       <div className="text-center mb-12">
         <div className="flex items-center justify-center mb-4">
-          <Icon className="h-8 w-8 text-blue-600 dark:text-blue-400 mr-3" />
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">{category.name}</h1>
+          <Icon className="h-8 w-8 text-primary mr-3" />
+          <h1 className="text-4xl font-bold">{category.name}</h1>
         </div>
-        <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">{category.description}</p>
+        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">{category.description}</p>
       </div>
 
       {/* Posts Grid */}
@@ -83,7 +81,7 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
         {posts.map((post) => (
           <article
             key={post.id}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden border border-gray-100 dark:border-gray-700"
+            className="bg-card text-card-foreground rounded-lg shadow-sm overflow-hidden border border-border"
           >
             {post.featuredImage && (
               <Image
@@ -95,14 +93,11 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
               />
             )}
             <div className="p-6">
-              <Link
-                href={`/blog/category/${slug}/${post.slug}`}
-                className="block mb-3 hover:text-blue-600 dark:hover:text-blue-400"
-              >
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 line-clamp-2">{post.title}</h3>
+              <Link href={`/blog/category/${slug}/${post.slug}`} className="block mb-3 hover:text-primary">
+                <h3 className="text-xl font-semibold line-clamp-2">{post.title}</h3>
               </Link>
-              <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">{post.excerpt}</p>
-              <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+              <p className="text-muted-foreground mb-4 line-clamp-3">{post.excerpt}</p>
+              <div className="flex items-center text-sm text-muted-foreground">
                 <CalendarDays className="h-4 w-4 mr-2" />
                 <time dateTime={post.publishedAt?.toISOString()}>
                   {post.publishedAt ? new Date(post.publishedAt).toLocaleDateString() : 'Draft'}
@@ -124,8 +119,8 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
               href={`/blog/category/${slug}?page=${pageNum}`}
               className={`px-4 py-2 rounded ${
                 pageNum === page
-                  ? 'bg-blue-600 dark:bg-blue-500 text-white'
-                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-100 dark:border-gray-700'
+                  ? 'bg-primary text-primary-foreground'
+                  : 'bg-card text-card-foreground hover:bg-muted border border-border'
               }`}
             >
               {pageNum}

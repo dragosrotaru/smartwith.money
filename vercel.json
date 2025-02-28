@@ -3,6 +3,10 @@
     {
       "path": "/app/api/cron/process-feeds",
       "schedule": "0 * * * *"
+    },
+    {
+      "path": "/app/api/cron/process-exports",
+      "schedule": "*/5 * * * *"
     }
   ]
 }

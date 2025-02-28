@@ -19,12 +19,12 @@ export function PropertyCard({ property, photos }: PropertyCardProps) {
       <Card className="w-full max-w-sm mx-auto md:mx-0">
         <CardImageCarousel photos={photos} />
         <CardContent className="p-4">
-          <h2 className="text-xl font-bold mb-2">{property.address.street}</h2>
-          <p className="text-gray-600 mb-2">
+          <h2 className="text-xl font-bold mb-2 text-foreground">{property.address.street}</h2>
+          <p className="text-muted-foreground mb-2">
             {property.address.municipality}, {property.address.province}
           </p>
-          <p className="text-lg font-semibold mb-2">${property.askingPrice.toLocaleString()}</p>
-          <div className="grid grid-cols-2 gap-2 text-sm">
+          <p className="text-lg font-semibold mb-2 text-foreground">${property.askingPrice.toLocaleString()}</p>
+          <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
             <p>Per Sq Ft: ${formatNum(property.askingPrice / property.squareFootage)}</p>
             <p>Growth: {formatNum((property.communityValue.growth10YearAverage * 100) / 10)}%</p>
             <p>Sq Ft: {property.squareFootage}</p>
@@ -32,7 +32,6 @@ export function PropertyCard({ property, photos }: PropertyCardProps) {
             <p>Bedrooms: N/A</p>
             <p>Bathrooms: N/A</p>
             <p>Zoning: {property.zoning}</p>
-
             <p>Listed: {listingDate ? listingDate : 'N/A'}</p>
           </div>
         </CardContent>

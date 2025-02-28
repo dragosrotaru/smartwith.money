@@ -57,8 +57,8 @@ export const config: NextAuthConfig = {
     Facebook({}),
     Apple({}),
     Postmark({
-      from: 'auth@smartwith.money',
-      apiKey: process.env.POSTMARK_API_KEY,
+      from: process.env.POSTMARK_FROM_EMAIL!,
+      apiKey: process.env.POSTMARK_API_KEY!,
     }),
   ],
 }
