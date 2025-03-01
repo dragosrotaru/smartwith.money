@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import type { House } from '@/modules/house/domain/house'
+import type { House } from '@/modules/real-estate/domain/house'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Input } from '@/components/ui/input'

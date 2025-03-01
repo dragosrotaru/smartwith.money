@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { PropertyCard } from './PropertyCard'
-import { HouseSigma } from '@/modules/house/housesigma/schema'
+import { HouseSigma } from '@/modules/real-estate/housesigma/schema'
 
 export default function PropertyExplorer(props: { properties: HouseSigma[] }) {
   const [properties, setProperties] = useState<HouseSigma[]>(props.properties)

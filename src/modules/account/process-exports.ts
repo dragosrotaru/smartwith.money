@@ -1,6 +1,6 @@
 import { db } from '@/lib/db'
 import { accountExportJobs, accountUsers, accountPreferences, users } from '@/modules/account/model'
-import { pointsOfInterest } from '@/modules/house/pointsOfInterest/model'
+import { pointsOfInterest } from '@/modules/real-estate/pointsOfInterest/model'
 import { eq } from 'drizzle-orm'
 import { createObjectCsvWriter } from 'csv-writer'
 import { mkdir, writeFile } from 'fs/promises'

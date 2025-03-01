@@ -1,12 +1,13 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState } from 'react'
-import { getActiveAccount, setActiveAccount } from '@/lib/activeAccount'
+import { getActiveAccount, setActiveAccount, clearActiveAccount as clearActiveAccountCookie } from '@/lib/activeAccount'
 import { authorization } from '@/modules/account/actions'
 
 type ActiveAccountContextType = {
   activeAccountId: string | undefined
   setActiveAccountId: (accountId: string) => Promise<void>
+  clearActiveAccount: () => Promise<void>
   isLoading: boolean
   ensureActiveAccount: () => Promise<void>
 }
@@ -68,11 +69,22 @@ export function ActiveAccountProvider({ children }: { children: React.ReactNode 
     }
   }
 
+  const clearActiveAccount = async () => {
+    try {
+      await clearActiveAccountCookie()
+      setActiveAccountIdState(undefined)
+    } catch (error) {
+      console.error('Failed to clear active account:', error)
+      throw error
+    }
+  }
+
   return (
     <ActiveAccountContext.Provider
       value={{
         activeAccountId,
         setActiveAccountId,
+        clearActiveAccount,
         isLoading,
         ensureActiveAccount,
       }}

@@ -1,2 +1,0 @@
-- add support to track third parties
-- add support for invoices and matching journal entry lines

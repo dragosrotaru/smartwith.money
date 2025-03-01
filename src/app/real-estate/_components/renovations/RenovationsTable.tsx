@@ -1,5 +1,5 @@
 'use client'
-import { type Renovation as Reno } from '@/modules/house/photo'
+import { type Renovation as Reno } from '@/modules/real-estate/photo'
 import * as React from 'react'
 import {
   ColumnDef,

@@ -33,6 +33,8 @@ export function InviteDialog() {
       try {
         const result = await getPendingInvites()
         if (result instanceof Error) {
+          if (result.message === 'Unauthorized') return
+
           console.error('Failed to fetch invites:', result)
           return
         }

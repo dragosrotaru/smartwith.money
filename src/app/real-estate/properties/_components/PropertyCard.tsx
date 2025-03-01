@@ -1,8 +1,8 @@
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
-import type { PropertyInfo } from '@/modules/house/housesigma/schema'
+import type { PropertyInfo } from '@/modules/real-estate/housesigma/schema'
 import Link from 'next/link'
 import CardImageCarousel from './CardImageCarousel'
-import { formatNum } from '@/modules/house/util'
+import { formatNum } from '@/modules/real-estate/util'
 
 interface PropertyCardProps {
   property: PropertyInfo

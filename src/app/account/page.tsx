@@ -4,6 +4,7 @@ import { withReadAccess } from '@/modules/account/actions'
 import { redirect } from 'next/navigation'
 import { UsersSection } from './_components/UsersSection'
 import { ExportSection } from './_components/ExportSection'
+import { DeleteSection } from './_components/DeleteSection'
 import { Button } from '@/components/ui/button'
 import { Plus } from 'lucide-react'
 import Link from 'next/link'
@@ -45,6 +46,11 @@ export default async function AccountPage() {
         <section>
           <h2 className="text-lg font-medium mb-6">Export Account Data</h2>
           <ExportSection accountId={accountId} />
+        </section>
+
+        <section>
+          <h2 className="text-lg font-medium mb-6">Delete Account</h2>
+          <DeleteSection accountId={accountId} />
         </section>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { getById } from '@/modules/house/housesigma/repo'
+import { getById } from '@/modules/real-estate/housesigma/repo'
 import PropertyDetailContainer from './Container'
 
 export default async function PropertyDetail({ params }: { params: Promise<{ id: string }> }) {

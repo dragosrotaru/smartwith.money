@@ -11,8 +11,11 @@ import {
   accounts,
   accountExportJobs,
 } from './model'
+import { pointsOfInterest } from '../real-estate/pointsOfInterest/model'
 import { and, eq, sql, desc } from 'drizzle-orm'
-import { sendInviteEmail } from '../notifications/email'
+import { sendInviteEmail, sendAccountDeletionFeedbackEmail } from '../notifications/email'
+import { feedback } from '../feedback/model'
+import { Province } from '../location/provinces'
 
 export async function authorization() {
   const session = await auth()
@@ -47,11 +50,26 @@ export async function withOwnerAccess(accountId: string) {
   return new Error('Unauthorized')
 }
 
+export async function getAccountPreferences(accountId: string) {
+  const auth = await withReadAccess(accountId)
+  if (auth instanceof Error) return auth
+
+  const [preferences] = await db
+    .select()
+    .from(accountPreferences)
+    .where(eq(accountPreferences.accountId, accountId))
+    .limit(1)
+
+  if (!preferences) return new Error('Account preferences not found')
+
+  return preferences
+}
+
 export type OnboardingData = {
   accountName: string
   invitedPeople: { email: string; role: string }[]
   isFirstTimeHomeBuyer: boolean
-  province: string
+  province: Province
   priorities: string[]
 }
 
@@ -117,28 +135,33 @@ export async function getAccountUsers(accountId: string) {
   return { users: usersList, invites }
 }
 
+async function isLastOwner(accountId: string, userId: string): Promise<boolean> {
+  // Check if user is an owner
+  const [currentUser] = await db
+    .select({ role: accountUsers.role })
+    .from(accountUsers)
+    .where(and(eq(accountUsers.accountId, accountId), eq(accountUsers.userId, userId)))
+    .limit(1)
+
+  if (currentUser?.role !== 'owner') return false
+
+  // Count owners
+  const [{ count }] = await db
+    .select({ count: sql<number>`count(*)` })
+    .from(accountUsers)
+    .where(and(eq(accountUsers.accountId, accountId), eq(accountUsers.role, 'owner')))
+
+  return count <= 1
+}
+
 export async function updateUserRole(accountId: string, userId: string, role: AccountRole) {
   const auth = await withOwnerAccess(accountId)
   if (auth instanceof Error) return auth
 
   try {
-    // Get the user's current role
-    const [currentUser] = await db
-      .select({ role: accountUsers.role })
-      .from(accountUsers)
-      .where(and(eq(accountUsers.accountId, accountId), eq(accountUsers.userId, userId)))
-      .limit(1)
-
-    // If we're changing an owner to non-owner, check if they're the last owner
-    if (currentUser?.role === 'owner' && role !== 'owner') {
-      const [{ count }] = await db
-        .select({ count: sql<number>`count(*)` })
-        .from(accountUsers)
-        .where(and(eq(accountUsers.accountId, accountId), eq(accountUsers.role, 'owner')))
-
-      if (count <= 1) {
-        return new Error('Cannot remove the last owner of the account')
-      }
+    // If we're changing to non-owner role, check if they're the last owner
+    if (role !== 'owner' && (await isLastOwner(accountId, userId))) {
+      return new Error('Cannot remove the last owner of the account')
     }
 
     await db
@@ -301,9 +324,6 @@ export async function rejectInvite(inviteId: string) {
 }
 
 export async function sendInvite(accountId: string, email: string, role: AccountRole) {
-  const session = await auth()
-  if (!session?.user?.id) return new Error('Unauthorized')
-
   const authResult = await withOwnerAccess(accountId)
   if (authResult instanceof Error) return authResult
 
@@ -315,7 +335,7 @@ export async function sendInvite(accountId: string, email: string, role: Account
         accountId,
         email,
         role,
-        invitedBy: session.user.id,
+        invitedBy: authResult.user.id,
       })
       .returning()
 
@@ -409,4 +429,154 @@ export async function downloadExport(jobId: string) {
   if (auth instanceof Error) return auth
 
   return { url: job.downloadUrl }
+}
+
+export async function deleteAccount(accountId: string) {
+  const auth = await withOwnerAccess(accountId)
+  if (auth instanceof Error) return auth
+
+  try {
+    // Get the stripe subscription ID if it exists
+    // todo implement this after moving the customerid to the account table
+    /* const [subscription] = await db
+      .select({ stripeSubscriptionId: accounts.stripeSubscriptionId })
+      .from(accounts)
+      .where(eq(accounts.id, accountId))
+      .limit(1) */
+
+    // Cancel Stripe subscription if it exists
+    /* if (subscription?.stripeSubscriptionId) {
+      const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
+      await stripe.subscriptions.cancel(subscription.stripeSubscriptionId)
+    } */
+
+    // Delete all related data
+    await db.transaction(async (tx) => {
+      // Delete account preferences
+      await tx.delete(accountPreferences).where(eq(accountPreferences.accountId, accountId))
+
+      // Delete points of interest
+      await tx.delete(pointsOfInterest).where(eq(pointsOfInterest.accountId, accountId))
+
+      // Delete export jobs
+      await tx.delete(accountExportJobs).where(eq(accountExportJobs.accountId, accountId))
+
+      // Delete invites
+      await tx.delete(accountInvites).where(eq(accountInvites.accountId, accountId))
+
+      // Delete account users
+      await tx.delete(accountUsers).where(eq(accountUsers.accountId, accountId))
+
+      // Finally delete the account itself
+      await tx.delete(accounts).where(eq(accounts.id, accountId))
+    })
+
+    return { success: true }
+  } catch (error) {
+    console.error('Failed to delete account:', error)
+    return new Error('Failed to delete account')
+  }
+}
+
+export async function cancelInvite(inviteId: string) {
+  // Get the invite details first to verify ownership
+  const [invite] = await db
+    .select({
+      accountId: accountInvites.accountId,
+      status: accountInvites.status,
+    })
+    .from(accountInvites)
+    .where(eq(accountInvites.id, inviteId))
+    .limit(1)
+
+  if (!invite) return new Error('Invite not found')
+  if (invite.status !== 'pending') return new Error('Can only cancel pending invites')
+
+  // Verify user has owner access to this account
+  const auth = await withOwnerAccess(invite.accountId)
+  if (auth instanceof Error) return auth
+
+  try {
+    await db
+      .update(accountInvites)
+      .set({
+        status: 'cancelled',
+        updatedAt: sql`CURRENT_TIMESTAMP`,
+      })
+      .where(eq(accountInvites.id, inviteId))
+
+    return { success: true }
+  } catch (error) {
+    console.error('Failed to cancel invite:', error)
+    return new Error('Failed to cancel invite')
+  }
+}
+
+export async function removeUser(accountId: string, userId: string) {
+  const auth = await withOwnerAccess(accountId)
+  if (auth instanceof Error) return auth
+
+  try {
+    if (await isLastOwner(accountId, userId)) {
+      return new Error('Cannot remove the last owner of the account')
+    }
+
+    // Remove the user
+    await db.delete(accountUsers).where(and(eq(accountUsers.accountId, accountId), eq(accountUsers.userId, userId)))
+
+    return { success: true }
+  } catch (error) {
+    console.error('Failed to remove user:', error)
+    return new Error('Failed to remove user')
+  }
+}
+
+export async function submitAccountDeletionFeedback(
+  accountId: string,
+  reason: string,
+  improvementSuggestions?: string,
+) {
+  const authResult = await withOwnerAccess(accountId)
+  if (authResult instanceof Error) return authResult
+
+  try {
+    // Get account details
+    const [account] = await db
+      .select({
+        name: accounts.name,
+        createdAt: accounts.createdAt,
+      })
+      .from(accounts)
+      .where(eq(accounts.id, accountId))
+      .limit(1)
+
+    if (!account) return new Error('Account not found')
+
+    // Store feedback
+    await db.insert(feedback).values({
+      userId: authResult.user.id,
+      accountId,
+      activity: 'account_deletion',
+      reason,
+      improvementSuggestions,
+    })
+
+    // Calculate days active
+    const daysActive = Math.floor((Date.now() - account.createdAt.getTime()) / (1000 * 60 * 60 * 24))
+
+    // Send email notification
+    await sendAccountDeletionFeedbackEmail({
+      userEmail: authResult.user.email!,
+      accountName: account.name,
+      reason,
+      improvementSuggestions,
+      daysActive,
+      plan: 'Free', // TODO: Update this when we have subscription info
+    })
+
+    return { success: true }
+  } catch (error) {
+    console.error('Failed to submit feedback:', error)
+    return new Error('Failed to submit feedback')
+  }
 }

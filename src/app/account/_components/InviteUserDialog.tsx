@@ -19,7 +19,13 @@ import { toast } from 'sonner'
 import { ACCOUNT_ROLES, AccountRole } from '@/modules/account/model'
 import { sendInvite } from '@/modules/account/actions'
 
-export function InviteUserDialog({ accountId }: { accountId: string }) {
+export function InviteUserDialog({
+  accountId,
+  onInviteComplete,
+}: {
+  accountId: string
+  onInviteComplete?: () => void
+}) {
   const [isOpen, setIsOpen] = useState(false)
   const [email, setEmail] = useState('')
   const [role, setRole] = useState<AccountRole>()
@@ -40,6 +46,7 @@ export function InviteUserDialog({ accountId }: { accountId: string }) {
       setIsOpen(false)
       setEmail('')
       setRole(undefined)
+      onInviteComplete?.()
     } catch {
       toast.error('Failed to send invitation')
     } finally {

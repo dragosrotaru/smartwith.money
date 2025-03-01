@@ -2,11 +2,14 @@
 
 ## Accounts / Billing / User Settings
 
+- fix too many calls to auth/refreshes
 - all accounts should become immediate customers with free trial
 - billing should be at account level - each account pays separately.
 - add paid feature flags
 - create account -> onboarding
-- delete account
+- collect metadata about account before deletion
+- user deletion
+- make sure that the export zips are secure
 - confirm payment flow works
 - enable Oauth
 - implement authjs error handling
@@ -14,21 +17,9 @@
 
 ## Mortgage Calculator
 
-- mortgage calculator should show beautiful graphs
-- mortgage calculator should work for any province
-- mortgage calculator should load location as default from account_preferences.
-- mortgage calculator should have hover cards for all the numbers describing how they are calculated, what they mean.
-- mortgage calculator should have a graph showing the prime interest rate over time and the latest news
-- should show data from https://api.ratehub.ca/mortgage-rates/best/purchase-rates?amortization=25&city=Toronto&downPaymentPercent=0.05&homePrice=400000&isCashBack=0&isFeatured=1&isOpen=0&isOwnerOccupied=1&isPreApproval=0&language=en&province=ON&scenario=purchase&term[]=12&term[]=24&term[]=36&term[]=48&term[]=60&term[]=72&term[]=84&term[]=96&term[]=108&term[]=120&term[]=300&type[]=fixed&type[]=variable
 - should include a guide like ratehub
 
-## Land Transfer Tax Calculator
-
-- same as mortgage calculator
-
-## CMHC Insurance Calulator
-
-- same as Land Transfer Tax calculator
+- separate Land Transfer Tax, CMHC Insurance Calculators and dedicated guides
 
 ## Utilities Estimator
 

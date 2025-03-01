@@ -1,23 +1,36 @@
-'use client'
-import { Mortgage } from '@/modules/house/domain/mortgage'
+import { getActiveAccount } from '@/lib/activeAccount'
+import { getAccountPreferences } from '@/modules/account/actions'
 import MortgageCalculator from '../_components/mortgage/MortgageCalculator'
-import { useState } from 'react'
+import { MortgageProps } from '@/modules/real-estate/domain/mortgage'
+import { Province } from '@/modules/location/provinces'
 
-export default function MortgagePage() {
-  const initialProps = {
-    purchasePrice: 8000000,
+export default async function MortgagePage() {
+  const accountId = await getActiveAccount()
+  let isFirstTimeBuyer = false
+  let province: Province = 'ON'
+
+  if (accountId) {
+    const preferences = await getAccountPreferences(accountId)
+    if (!(preferences instanceof Error)) {
+      isFirstTimeBuyer = preferences.isFirstTimeHomeBuyer
+      province = preferences.province
+    }
+  }
+
+  const initialMortgageProps: MortgageProps = {
+    purchasePrice: 800_000,
     interestRate: 4.2,
     amortizationYears: 30,
     paymentFrequency: 'monthly',
-    isFirstTimeBuyer: false, // todo load from Account if available
+    isFirstTimeBuyer,
     isNewConstruction: false,
-    province: 'ON', // todo load from Account if available
+    province,
   }
-  const [mortgage, setMortgage] = useState<Mortgage>(new Mortgage(initialProps))
+
   return (
-    <div>
-      <h1 className="text-2xl font-bold text-center my-8">Mortgage Calculator</h1>
-      <MortgageCalculator mortgage={mortgage} setMortgage={setMortgage} initialParams={initialProps} />
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold text-center mb-8">Mortgage Calculator</h1>
+      <MortgageCalculator initialMortgageProps={initialMortgageProps} />
     </div>
   )
 }

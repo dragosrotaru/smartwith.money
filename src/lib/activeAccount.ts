@@ -16,3 +16,8 @@ export async function setActiveAccount(accountId: string) {
     sameSite: 'lax',
   })
 }
+
+export async function clearActiveAccount() {
+  const cookieStore = await cookies()
+  cookieStore.delete(ACTIVE_ACCOUNT_ID_KEY)
+}

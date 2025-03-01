@@ -4,14 +4,22 @@ import { Button } from '@/components/ui/button'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { ACCOUNT_ROLES, AccountRole } from '@/modules/account/model'
-import { getAccountUsers, resendInvite, updateUserRole, withOwnerAccess } from '@/modules/account/actions'
+import {
+  getAccountUsers,
+  resendInvite,
+  updateUserRole,
+  withOwnerAccess,
+  cancelInvite,
+  removeUser,
+} from '@/modules/account/actions'
 import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
-import { Loader2, RefreshCw } from 'lucide-react'
+import { Loader2, MoreHorizontal } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { InviteUserDialog } from '@/components/InviteUserDialog'
+import { InviteUserDialog } from './InviteUserDialog'
 import { AlertCircle } from 'lucide-react'
 import { Alert, AlertDescription } from '@/components/ui/alert'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
 
 type User = {
   userId: string
@@ -27,7 +35,7 @@ type Invite = {
   accountId: string
   email: string
   role: AccountRole
-  status: 'pending' | 'accepted' | 'rejected' | 'expired'
+  status: 'pending' | 'accepted' | 'rejected' | 'expired' | 'cancelled'
   createdAt: Date
   updatedAt: Date
 }
@@ -38,6 +46,8 @@ export function UsersSection({ accountId }: { accountId: string }) {
   const [loading, setLoading] = useState(true)
   const [updatingRole, setUpdatingRole] = useState<string | null>(null)
   const [resendingInvite, setResendingInvite] = useState<string | null>(null)
+  const [cancellingInvite, setCancellingInvite] = useState<string | null>(null)
+  const [removingUser, setRemovingUser] = useState<string | null>(null)
   const [isOwner, setIsOwner] = useState(false)
 
   useEffect(() => {
@@ -104,6 +114,40 @@ export function UsersSection({ accountId }: { accountId: string }) {
     }
   }
 
+  const handleCancelInvite = async (inviteId: string) => {
+    setCancellingInvite(inviteId)
+    try {
+      const result = await cancelInvite(inviteId)
+      if (result instanceof Error) {
+        toast.error(result.message)
+        return
+      }
+      toast.success('Invite cancelled successfully')
+      loadUsers()
+    } catch {
+      toast.error('Failed to cancel invite')
+    } finally {
+      setCancellingInvite(null)
+    }
+  }
+
+  const handleRemoveUser = async (userId: string) => {
+    setRemovingUser(userId)
+    try {
+      const result = await removeUser(accountId, userId)
+      if (result instanceof Error) {
+        toast.error(result.message)
+        return
+      }
+      toast.success('User removed successfully')
+      loadUsers()
+    } catch {
+      toast.error('Failed to remove user')
+    } finally {
+      setRemovingUser(null)
+    }
+  }
+
   if (loading) {
     return (
       <div className="flex items-center justify-center p-8">
@@ -128,7 +172,7 @@ export function UsersSection({ accountId }: { accountId: string }) {
   return (
     <div className="space-y-4">
       <div className="flex justify-end">
-        <InviteUserDialog accountId={accountId} />
+        <InviteUserDialog accountId={accountId} onInviteComplete={loadUsers} />
       </div>
       <div className="rounded-md border">
         <Table>
@@ -137,7 +181,7 @@ export function UsersSection({ accountId }: { accountId: string }) {
               <TableHead>User</TableHead>
               <TableHead>Role</TableHead>
               <TableHead>Status</TableHead>
-              <TableHead className="w-[100px]">Actions</TableHead>
+              <TableHead className="w-[50px]"></TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -157,7 +201,7 @@ export function UsersSection({ accountId }: { accountId: string }) {
                   <Select
                     value={user.role}
                     onValueChange={(value: AccountRole) => handleRoleChange(user.userId, value)}
-                    disabled={updatingRole === user.userId}
+                    disabled={updatingRole === user.userId || removingUser === user.userId}
                   >
                     <SelectTrigger className="w-[130px]">
                       <SelectValue />
@@ -175,7 +219,23 @@ export function UsersSection({ accountId }: { accountId: string }) {
                   <span className="text-sm font-medium">Active</span>
                 </TableCell>
                 <TableCell>
-                  {updatingRole === user.userId && <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />}
+                  {removingUser === user.userId ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button variant="ghost" size="sm">
+                          <MoreHorizontal className="h-4 w-4" />
+                          <span className="sr-only">Open menu</span>
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="end">
+                        <DropdownMenuItem onClick={() => handleRemoveUser(user.userId)}>
+                          Remove from account
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  )}
                 </TableCell>
               </TableRow>
             ))}
@@ -196,19 +256,26 @@ export function UsersSection({ accountId }: { accountId: string }) {
                     <span className="text-sm font-medium text-yellow-600">Pending</span>
                   </TableCell>
                   <TableCell>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => handleResendInvite(invite.id)}
-                      disabled={resendingInvite === invite.id}
-                    >
-                      {resendingInvite === invite.id ? (
-                        <Loader2 className="h-4 w-4 animate-spin" />
-                      ) : (
-                        <RefreshCw className="h-4 w-4" />
-                      )}
-                      <span className="sr-only">Resend invite</span>
-                    </Button>
+                    {resendingInvite === invite.id || cancellingInvite === invite.id ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                          <Button variant="ghost" size="sm">
+                            <MoreHorizontal className="h-4 w-4" />
+                            <span className="sr-only">Open menu</span>
+                          </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="end">
+                          <DropdownMenuItem onClick={() => handleResendInvite(invite.id)}>
+                            Resend invite
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={() => handleCancelInvite(invite.id)}>
+                            Cancel invite
+                          </DropdownMenuItem>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    )}
                   </TableCell>
                 </TableRow>
               ))}

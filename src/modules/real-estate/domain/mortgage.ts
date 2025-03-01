@@ -1,11 +1,18 @@
-import { MONTHS_IN_YEAR, BIMONTHS_IN_YEAR, calculateBracket, calculateCumulative, formatNum } from '../util'
-import { APPRAISER_FEE, INSPECTOR_FEE, LAWYER_FEE, STANDARD_PURCHASE_DEPOSIT, TITLE_INSURANCE_FEE } from './constants'
+import {
+  MONTHS_IN_YEAR,
+  BIWEEKLY_IN_YEAR,
+  SEMI_MONTHLY_IN_YEAR,
+  WEEKLY_IN_YEAR,
+  calculateBracket,
+  calculateCumulative,
+  formatNum,
+} from '../util'
+import { STANDARD_PURCHASE_DEPOSIT } from './constants'
+import { ClosingCosts, ClosingCostsProps } from './closingCosts'
+import { Province } from '@/modules/location/provinces'
 
-export const PAYMENT_FREQUENCIES = ['monthly', 'bi-weekly']
+export const PAYMENT_FREQUENCIES = ['monthly', 'bi-weekly', 'semi-monthly', 'weekly']
 export type PaymentFrequency = (typeof PAYMENT_FREQUENCIES)[number]
-
-export const PROVINCES = ['ON', 'MB', 'QC', 'SK', 'Other']
-export type Province = (typeof PROVINCES)[number]
 
 export type MortgageProps = {
   purchasePrice: number
@@ -16,6 +23,7 @@ export type MortgageProps = {
   isFirstTimeBuyer: boolean
   isNewConstruction: boolean
   province: Province
+  closingCosts?: ClosingCostsProps
 }
 
 export class Mortgage {
@@ -32,6 +40,8 @@ export class Mortgage {
   public isFirstTimeBuyer: boolean
   public isNewConstruction: boolean
   public province: Province
+  public closingCosts: ClosingCosts
+
   constructor(props: MortgageProps) {
     this.purchasePrice = props.purchasePrice
     this.interestRate = props.interestRate
@@ -41,6 +51,7 @@ export class Mortgage {
     this.isNewConstruction = props.isNewConstruction
     this.province = props.province
     this.downPayment = props.downPayment || this.minDownPayment
+    this.closingCosts = new ClosingCosts(props.closingCosts)
     if (this.interestRate <= 0) throw new Error('Interest rate cannot be 0')
     if (this.purchasePrice <= 0) throw new Error('Principal cannot be 0')
     if (this.downPayment < 0) throw new Error('Down payment cannot be negative')
@@ -48,7 +59,6 @@ export class Mortgage {
     if (this.downPayment < this.minDownPayment) throw new Error('Down payment cannot be less than min down payment')
     if (this.amortizationYears <= 0) throw new Error('Amortization years cannot be 0')
     if (this.amortizationYears > 30) throw new Error('Amortization years cannot be greater than 30')
-    if (this.province !== 'ON') throw new Error('Province not supported')
     if (this.isNewConstruction) throw new Error('New construction not supported (Sales Tax support is missing)')
   }
 
@@ -79,7 +89,21 @@ export class Mortgage {
     const rate = this.insurancePremiumRate
     const premium = this.loanPrincipal * rate
 
-    const pstRates: Record<string, number> = { MB: 0.07, QC: 0.099, ON: 0.08, SK: 0.06 }
+    const pstRates: Record<string, number> = {
+      MB: 0, // Manitoba
+      QC: 0.09, // Quebec
+      ON: 0.08, // Ontario
+      SK: 0.06, // Saskatchewan
+      AB: 0, // Alberta
+      BC: 0, // British Columbia
+      PE: 0, // Prince Edward Island
+      YT: 0, // Yukon
+      NT: 0, // Northwest Territories
+      NU: 0, // Nunavut
+      NS: 0, // Nova Scotia
+      NB: 0, // New Brunswick
+      NL: 0, // Newfoundland and Labrador
+    }
     const pst = pstRates[this.province] ? premium * pstRates[this.province] : 0
 
     return { premium, pst }
@@ -91,7 +115,7 @@ export class Mortgage {
       { threshold: 250000, rate: 0.01 },
       { threshold: 400000, rate: 0.015 },
       { threshold: 2000000, rate: 0.02 },
-      { threshold: 2000000, rate: 0.025 },
+      { threshold: Infinity, rate: 0.025 },
     ])
     if (this.isFirstTimeBuyer) {
       tax = tax - Math.max(0, tax - 4000)
@@ -100,21 +124,14 @@ export class Mortgage {
   }
 
   get totalFees() {
-    return (
-      this.mortgageInsurance.pst +
-      this.landTransferTax +
-      LAWYER_FEE +
-      INSPECTOR_FEE +
-      APPRAISER_FEE +
-      TITLE_INSURANCE_FEE
-    )
+    return this.mortgageInsurance.pst + this.landTransferTax + this.closingCosts.total
   }
 
   get minDownPayment() {
     return calculateBracket(this.purchasePrice, [
       { threshold: 500000, rate: 0.05 },
       { threshold: 1500000, rate: 0.1 },
-      { threshold: 2000000, rate: 0.2 },
+      { threshold: Infinity, rate: 0.2 },
     ])
   }
 
@@ -143,7 +160,16 @@ export class Mortgage {
   }
 
   get numberOfPaymentsPerYear() {
-    return this.paymentFrequency === 'monthly' ? MONTHS_IN_YEAR : BIMONTHS_IN_YEAR
+    if (this.paymentFrequency === 'monthly') {
+      return MONTHS_IN_YEAR
+    } else if (this.paymentFrequency === 'bi-weekly') {
+      return BIWEEKLY_IN_YEAR
+    } else if (this.paymentFrequency === 'semi-monthly') {
+      return SEMI_MONTHLY_IN_YEAR
+    } else if (this.paymentFrequency === 'weekly') {
+      return WEEKLY_IN_YEAR
+    }
+    throw new Error('Invalid payment frequency')
   }
 
   get numberOfPayments() {
@@ -154,12 +180,41 @@ export class Mortgage {
     return this.amortizationYears * MONTHS_IN_YEAR
   }
 
-  get paymentsPerMonth() {
-    return this.paymentFrequency === 'monthly' ? 1 : 2
+  get numberOfPaymentsPerMonth() {
+    if (this.paymentFrequency === 'monthly') {
+      return 1
+    } else if (this.paymentFrequency === 'bi-weekly') {
+      return BIWEEKLY_IN_YEAR / MONTHS_IN_YEAR
+    } else if (this.paymentFrequency === 'semi-monthly') {
+      return SEMI_MONTHLY_IN_YEAR / MONTHS_IN_YEAR
+    } else if (this.paymentFrequency === 'weekly') {
+      return WEEKLY_IN_YEAR / MONTHS_IN_YEAR
+    }
+    throw new Error('Invalid payment frequency')
   }
 
   get paymentInterestRate() {
-    return this.interestRate / 100 / this.numberOfPaymentsPerYear
+    // Convert to semi-annual rate first (Canadian standard)
+    const semiAnnualRate = this.interestRate / 200
+
+    if (this.paymentFrequency === 'monthly') {
+      // For monthly payments: Convert semi-annual to monthly using (1 + r)^(2/12) - 1
+      return Math.pow(1 + semiAnnualRate, 2 / 12) - 1
+    } else if (this.paymentFrequency === 'bi-weekly') {
+      // For bi-weekly payments: Convert semi-annual to bi-weekly using (1 + r)^(2/26) - 1
+      // 26 bi-weekly periods in a year
+      return Math.pow(1 + semiAnnualRate, 2 / 26) - 1
+    } else if (this.paymentFrequency === 'semi-monthly') {
+      // For semi-monthly payments: Convert semi-annual to semi-monthly using (1 + r)^(2/24) - 1
+      // 24 semi-monthly periods in a year
+      return Math.pow(1 + semiAnnualRate, 2 / 24) - 1
+    } else if (this.paymentFrequency === 'weekly') {
+      // For weekly payments: Convert semi-annual to weekly using (1 + r)^(2/52) - 1
+      // 52 weekly periods in a year
+      return Math.pow(1 + semiAnnualRate, 2 / 52) - 1
+    } else {
+      throw new Error('Invalid payment frequency')
+    }
   }
 
   get insurancePayment() {
@@ -167,7 +222,7 @@ export class Mortgage {
   }
 
   get monthlyPayment() {
-    return this.payment / this.paymentsPerMonth
+    return this.payment * this.numberOfPaymentsPerMonth
   }
 
   get totalInterest() {
@@ -175,15 +230,33 @@ export class Mortgage {
   }
 
   get payment() {
-    return (
-      (this.finalPrincipal *
-        (this.paymentInterestRate * Math.pow(1 + this.paymentInterestRate, this.numberOfPayments))) /
-      (Math.pow(1 + this.paymentInterestRate, this.numberOfPayments) - 1)
-    )
+    // Calculate the monthly payment first
+    const monthlyPayment =
+      this.finalPrincipal *
+      ((this.monthlyInterestRate * Math.pow(1 + this.monthlyInterestRate, this.numberOfMonths)) /
+        (Math.pow(1 + this.monthlyInterestRate, this.numberOfMonths) - 1))
+
+    // For non-monthly frequencies, use the accelerated payment calculation
+    if (this.paymentFrequency === 'monthly') {
+      return monthlyPayment
+    } else if (this.paymentFrequency === 'semi-monthly') {
+      return monthlyPayment / 2
+    } else if (this.paymentFrequency === 'bi-weekly') {
+      return monthlyPayment / (BIWEEKLY_IN_YEAR / MONTHS_IN_YEAR)
+    } else if (this.paymentFrequency === 'weekly') {
+      return monthlyPayment / (WEEKLY_IN_YEAR / MONTHS_IN_YEAR)
+    }
+    throw new Error('Invalid payment frequency')
+  }
+
+  // Add helper for monthly interest rate calculation
+  private get monthlyInterestRate() {
+    const semiAnnualRate = this.interestRate / 200
+    return Math.pow(1 + semiAnnualRate, 2 / 12) - 1
   }
 
   getMonthToPaymentNumber(month: number) {
-    return month * this.paymentsPerMonth
+    return month * this.numberOfPaymentsPerMonth
   }
 
   interestAtPayment(paymentNumber: number) {
@@ -234,7 +307,7 @@ export class Mortgage {
 
     console.log('Interest Rate', formatNum(this.interestRate))
     console.log('Payment Frequency', this.paymentFrequency)
-    console.log('Payments Per Month', this.paymentsPerMonth)
+    console.log('Payments Per Month', this.numberOfPaymentsPerMonth)
     console.log('Payment', formatNum(this.payment))
     console.log('Monthly Payment', formatNum(this.monthlyPayment))
     console.log('Ammortization Years', formatNum(this.amortizationYears))

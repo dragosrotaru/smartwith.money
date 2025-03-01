@@ -1,3 +1,5 @@
+import { Province } from '@/modules/location/provinces'
+
 // these are pretty standard and I dont want to change them, just validate their accuracy
 export const STANDARD_PURCHASE_DEPOSIT = 0.05
 export const LAWYER_FEE = 1500
@@ -9,7 +11,7 @@ export const ANNUAL_INSURANCE = 1_411 // average found online
 
 export const IS_FIRST_TIME_BUYER = true
 export const IS_NEW_CONSTRUCTION = false
-export const PROVINCE = 'ON'
+export const PROVINCE: Province = 'ON'
 
 // these are variable but hard to estimate
 export const CAPITAL_GAINS_TAX_PORTION = 0.5

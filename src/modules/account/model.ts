@@ -1,6 +1,7 @@
 import { relations } from 'drizzle-orm'
 import { boolean, timestamp, pgTable, text, primaryKey, integer } from 'drizzle-orm/pg-core'
 import type { AdapterAccountType } from 'next-auth/adapters'
+import { PROVINCES } from '../location/provinces'
 
 export const users = pgTable('user', {
   id: text('id')
@@ -153,7 +154,7 @@ export const accountInvites = pgTable('account_invites', {
   invitedBy: text('invited_by')
     .notNull()
     .references(() => users.id),
-  status: text('status', { enum: ['pending', 'accepted', 'rejected', 'expired'] })
+  status: text('status', { enum: ['pending', 'accepted', 'rejected', 'expired', 'cancelled'] })
     .notNull()
     .default('pending'),
   createdAt: timestamp('created_at').notNull().defaultNow(),
@@ -168,7 +169,7 @@ export const accountPreferences = pgTable('account_preferences', {
     .notNull()
     .references(() => accounts.id),
   isFirstTimeHomeBuyer: boolean('is_first_time_home_buyer').notNull(),
-  province: text('province').notNull(),
+  province: text('province', { enum: PROVINCES }).notNull(),
   priorities: text('priorities').array().notNull(),
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),

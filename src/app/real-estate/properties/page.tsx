@@ -1,6 +1,6 @@
 import { getActiveAccount, setActiveAccount } from '@/lib/activeAccount'
 import PropertyExplorer from './_components/PropertyExplorer'
-import { getAllByAccountId } from '@/modules/house/housesigma/repo'
+import { getAllByAccountId } from '@/modules/real-estate/housesigma/repo'
 import { authorization, withReadAccess } from '@/modules/account/actions'
 import { menu } from '@/lib/menu'
 import { redirect } from 'next/navigation'

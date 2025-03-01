@@ -1,16 +1,16 @@
 'use client'
-import { Mortgage as MortgageModel } from '@/modules/house/domain/mortgage'
-import { House as HouseModel } from '@/modules/house/domain/house'
+import { Mortgage as MortgageModel, MortgageProps } from '@/modules/real-estate/domain/mortgage'
+import { House as HouseModel } from '@/modules/real-estate/domain/house'
 import { useState } from 'react'
 import MortgageCalculator from '../../_components/mortgage/MortgageCalculator'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { HouseSigma } from '@/modules/house/housesigma/schema'
+import { HouseSigma } from '@/modules/real-estate/housesigma/schema'
 import { ChevronLeftIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { RenovationRecommendations } from '../../_components/renovations/Renovations'
 import { HouseDisplay } from '../../_components/house/HouseDisplay'
-import { Value } from '@/modules/house/util'
+import { Value } from '@/modules/real-estate/util'
 import {
   ANNUAL_PROPERTY_TAX_INCREASE_RATE,
   ANNUAL_UPKEEP_PERCENTAGE,
@@ -18,7 +18,7 @@ import {
   IS_NEW_CONSTRUCTION,
   PROVINCE,
   VACANCY_RATE,
-} from '@/modules/house/domain/constants'
+} from '@/modules/real-estate/domain/constants'
 import ImageCarousel from '../_components/ImageCarousel'
 import { menu } from '@/lib/menu'
 
@@ -27,7 +27,7 @@ export default function PropertyDetailContainer(props: { property: HouseSigma })
 
   const INFLATION_RATE = 0.02
 
-  const initialMortgageParams = {
+  const initialMortgageParams: MortgageProps = {
     purchasePrice: property.basicInfo.askingPrice,
     downPayment: undefined, // todo parameterize
     interestRate: 4.2, // todo parameterize
@@ -38,6 +38,7 @@ export default function PropertyDetailContainer(props: { property: HouseSigma })
     isNewConstruction: IS_NEW_CONSTRUCTION,
   }
 
+  // todo bubble up to parent
   const [mortgage, setMortgage] = useState<MortgageModel>(new MortgageModel(initialMortgageParams))
 
   const [house] = useState<HouseModel>(
@@ -145,7 +146,7 @@ export default function PropertyDetailContainer(props: { property: HouseSigma })
         </div>
 
         <div>
-          <MortgageCalculator mortgage={mortgage} setMortgage={setMortgage} initialParams={initialMortgageParams} />
+          <MortgageCalculator initialMortgageProps={mortgage} />
           <HouseDisplay house={house} />
         </div>
       </div>

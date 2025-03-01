@@ -1,5 +1,7 @@
 export const MONTHS_IN_YEAR = 12
-export const BIMONTHS_IN_YEAR = 26
+export const BIWEEKLY_IN_YEAR = 26
+export const SEMI_MONTHLY_IN_YEAR = 24
+export const WEEKLY_IN_YEAR = 52
 
 export function futureValue(principal: number, rate: number, time: number) {
   return principal * Math.pow(1 + rate, time)

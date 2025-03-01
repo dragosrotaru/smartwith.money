@@ -143,3 +143,58 @@ export async function sendExportReadyEmail(userId: string) {
     MessageStream: 'outbound',
   })
 }
+
+type AccountDeletionFeedbackParams = {
+  userEmail: string
+  accountName: string
+  reason: string
+  improvementSuggestions?: string
+  daysActive: number
+  plan: string
+}
+
+export async function sendAccountDeletionFeedbackEmail(params: AccountDeletionFeedbackParams): Promise<void> {
+  await postmark.sendEmail({
+    From: process.env.POSTMARK_FROM_EMAIL!,
+    To: process.env.SUPPORT_EMAIL!,
+    Subject: `Account Deletion Feedback - ${params.accountName}`,
+    HtmlBody: generateAccountDeletionFeedbackTemplate(params),
+    MessageStream: 'outbound',
+  })
+}
+
+function generateAccountDeletionFeedbackTemplate(params: AccountDeletionFeedbackParams): string {
+  return `
+    <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+      <h1 style="color: #2563eb;">Account Deletion Feedback</h1>
+      
+      <div style="margin: 24px 0;">
+        <h2 style="color: #1f2937;">Account Details</h2>
+        <p style="color: #4b5563; margin: 8px 0;">
+          <strong>Account:</strong> ${params.accountName}<br>
+          <strong>User Email:</strong> ${params.userEmail}<br>
+          <strong>Days Active:</strong> ${params.daysActive}<br>
+          <strong>Plan:</strong> ${params.plan}
+        </p>
+      </div>
+
+      <div style="margin: 24px 0;">
+        <h2 style="color: #1f2937;">Feedback</h2>
+        <p style="color: #4b5563; margin: 8px 0;">
+          <strong>Reason for Leaving:</strong><br>
+          ${params.reason}
+        </p>
+        ${
+          params.improvementSuggestions
+            ? `
+        <p style="color: #4b5563; margin: 8px 0;">
+          <strong>Suggestions for Improvement:</strong><br>
+          ${params.improvementSuggestions}
+        </p>
+        `
+            : ''
+        }
+      </div>
+    </div>
+  `
+}

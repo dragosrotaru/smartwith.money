@@ -1,6 +1,7 @@
 import { sql } from 'drizzle-orm'
 import { text, timestamp, pgTable, pgEnum, index, uuid, boolean } from 'drizzle-orm/pg-core'
 import { blogPosts } from '../blog/model'
+import { PROVINCES } from '../location/provinces'
 
 // Enums
 export const feedItemStatusEnum = pgEnum('feed_item_status', [
@@ -20,7 +21,7 @@ export const feedSources = pgTable(
     name: text('name').notNull(),
     url: text('url').notNull(),
     category: feedCategoryEnum('category').notNull(),
-    province: text('province'), // Only for provincial government feeds
+    province: text('province', { enum: PROVINCES }), // Only for provincial government feeds
     lastChecked: timestamp('last_checked'),
     isActive: boolean('is_active').default(true),
     createdAt: timestamp('created_at')

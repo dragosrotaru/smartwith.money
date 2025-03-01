@@ -6,22 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Button } from '@/components/ui/button'
 import { FormDataProps } from '../formData'
-
-const provinces = [
-  'Alberta',
-  'British Columbia',
-  'Manitoba',
-  'New Brunswick',
-  'Newfoundland and Labrador',
-  'Nova Scotia',
-  'Ontario',
-  'Prince Edward Island',
-  'Quebec',
-  'Saskatchewan',
-  'Northwest Territories',
-  'Nunavut',
-  'Yukon',
-]
+import { PROVINCE_MAP } from '@/modules/location/provinces'
 
 const priorities = [
   'Finding a home you love',
@@ -68,9 +53,9 @@ export default function InitialPreferencesStep({
             <SelectValue placeholder="Select a province" />
           </SelectTrigger>
           <SelectContent>
-            {provinces.map((province) => (
+            {Object.entries(PROVINCE_MAP).map(([province, name]) => (
               <SelectItem key={province} value={province}>
-                {province}
+                {name}
               </SelectItem>
             ))}
           </SelectContent>

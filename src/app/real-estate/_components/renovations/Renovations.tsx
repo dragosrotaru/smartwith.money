@@ -2,14 +2,14 @@
 import { useMemo, useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Label } from '@/components/ui/label'
-import { type Renovation as Reno } from '@/modules/house/photo'
-import { loadOrGenPhoto } from '@/modules/house/photo/repo'
-import { HouseSigma } from '@/modules/house/housesigma/schema'
+import { type Renovation as Reno } from '@/modules/real-estate/photo'
+import { loadOrGenPhoto } from '@/modules/real-estate/photo/repo'
+import { HouseSigma } from '@/modules/real-estate/housesigma/schema'
 import * as React from 'react'
 import { BrainIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { maximizeROI } from '@/modules/house/renovation'
+import { maximizeROI } from '@/modules/real-estate/renovation'
 import { RenovationTable } from './RenovationsTable'
 
 type Renovation = Reno & {
