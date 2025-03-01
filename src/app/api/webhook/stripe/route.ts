@@ -1,8 +1,10 @@
 import { headers } from 'next/headers'
 import { NextResponse } from 'next/server'
 import type Stripe from 'stripe'
-import { constructWebhookEvent } from '@/modules/billing/stripe'
-import { updateSubscription, getPriceByStripeId } from '@/modules/billing/service'
+import { updateSubscription, getPriceByStripeId, constructWebhookEvent } from '@/modules/billing/service'
+import { db } from '@/lib/db'
+import { accounts } from '@/modules/account/model'
+import { eq } from 'drizzle-orm'
 
 export async function POST(request: Request) {
   const body = await request.text()
@@ -21,8 +23,20 @@ export async function POST(request: Request) {
       case 'customer.subscription.updated':
       case 'customer.subscription.deleted': {
         const subscription = event.data.object as Stripe.Subscription
-        const price = await getPriceByStripeId(subscription.items.data[0].price.id)
 
+        // Get account by stripe customer ID
+        const [account] = await db
+          .select()
+          .from(accounts)
+          .where(eq(accounts.stripeCustomerId, subscription.customer as string))
+          .limit(1)
+
+        if (!account) {
+          console.error('Account not found for customer:', subscription.customer)
+          return new NextResponse('Account not found', { status: 400 })
+        }
+
+        const price = await getPriceByStripeId(subscription.items.data[0].price.id)
         if (!price) {
           console.error('Price not found:', subscription.items.data[0].price.id)
           return new NextResponse('Price not found', { status: 400 })
@@ -41,6 +55,8 @@ export async function POST(request: Request) {
         await updateSubscription(subscription.id, {
           status,
           priceId: price.id,
+          accountId: account.id,
+          stripeCustomerId: subscription.customer as string,
           stripeCurrentPeriodStart: new Date(subscription.current_period_start * 1000),
           stripeCurrentPeriodEnd: new Date(subscription.current_period_end * 1000),
           cancelAtPeriodEnd: subscription.cancel_at_period_end,

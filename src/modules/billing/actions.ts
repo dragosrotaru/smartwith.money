@@ -1,24 +1,27 @@
 'use server'
 
-import { auth } from '@/auth'
 import {
   createBillingPortalSession,
-  createCustomer,
   createCheckoutSession as createStripeCheckoutSession,
-} from '@/modules/billing/stripe'
+} from '@/modules/billing/service'
 import { getActiveSubscription } from './service'
-import { updateUserStripeCustomerId } from '@/modules/account/repo'
+import { db } from '@/lib/db'
+import { accounts } from '@/modules/account/model'
+import { eq } from 'drizzle-orm'
+import { withOwnerAccess } from '@/modules/account/actions'
 
-export async function createPortalSession() {
+export async function createPortalSession(accountId: string) {
   try {
-    const session = await auth()
-    if (!session?.user?.stripeCustomerId) {
-      throw new Error('Unauthorized')
-    }
+    const auth = await withOwnerAccess(accountId)
+    if (auth instanceof Error) throw new Error('Unauthorized')
+
+    // Get account
+    const [account] = await db.select().from(accounts).where(eq(accounts.id, accountId)).limit(1)
+    if (!account?.stripeCustomerId) throw new Error('No billing account found')
 
     const portalSession = await createBillingPortalSession({
-      customerId: session.user.stripeCustomerId,
-      returnUrl: `${process.env.APP_URL}/user`,
+      customerId: account.stripeCustomerId,
+      returnUrl: `${process.env.APP_URL}/account`,
     })
 
     return { url: portalSession.url }
@@ -28,14 +31,12 @@ export async function createPortalSession() {
   }
 }
 
-export async function getSubscriptionStatus() {
+export async function getSubscriptionStatus(accountId: string) {
   try {
-    const session = await auth()
-    if (!session?.user) {
-      return { isProMember: false }
-    }
+    const auth = await withOwnerAccess(accountId)
+    if (auth instanceof Error) return { isProMember: false }
 
-    const subscription = await getActiveSubscription(session.user.id)
+    const subscription = await getActiveSubscription(accountId)
     return {
       isProMember: !!subscription && subscription.price.type === 'pro',
     }
@@ -45,46 +46,31 @@ export async function getSubscriptionStatus() {
   }
 }
 
-export async function createCheckoutSession(): Promise<{ url: string }> {
+export async function createCheckoutSession(accountId: string): Promise<{ url: string }> {
   try {
-    const session = await auth()
-    if (!session?.user) {
-      throw new Error('Unauthorized')
-    }
+    const auth = await withOwnerAccess(accountId)
+    if (auth instanceof Error) throw new Error('Unauthorized')
 
-    // Check if user already has an active subscription
-    const subscription = await getActiveSubscription(session.user.id)
-    if (subscription) {
-      throw new Error('User already has an active subscription')
-    }
+    // Get account
+    const [account] = await db.select().from(accounts).where(eq(accounts.id, accountId)).limit(1)
+    if (!account?.stripeCustomerId) throw new Error('No billing account found')
 
-    // Create or get Stripe customer
-    let customerId = session.user.stripeCustomerId
-    if (!customerId) {
-      const customer = await createCustomer({
-        email: session.user.email!,
-        name: session.user.name || undefined,
-      })
-      customerId = customer.id
+    // Check if account already has an active subscription
+    const subscription = await getActiveSubscription(accountId)
+    if (subscription) throw new Error('Account already has an active subscription')
 
-      // Save customer ID to user record
-      await updateUserStripeCustomerId(session.user.id, customerId)
-    }
-
-    // Create Stripe checkout session with referral code in success URL if provided
-    const successUrl = new URL(`${process.env.APP_URL}/user`)
+    // Create Stripe checkout session
+    const successUrl = new URL(`${process.env.APP_URL}/account`)
     successUrl.searchParams.set('subscription', 'success')
 
     const checkoutSession = await createStripeCheckoutSession({
-      customerId,
+      customerId: account.stripeCustomerId,
       priceId: process.env.STRIPE_PRO_PRICE_ID!,
       successUrl: successUrl.toString(),
-      cancelUrl: `${process.env.APP_URL}/user?subscription=cancelled`,
+      cancelUrl: `${process.env.APP_URL}/account?subscription=cancelled`,
     })
 
-    if (!checkoutSession.url) {
-      throw new Error('Failed to create checkout session URL')
-    }
+    if (!checkoutSession.url) throw new Error('Failed to create checkout session URL')
 
     return { url: checkoutSession.url }
   } catch (error) {

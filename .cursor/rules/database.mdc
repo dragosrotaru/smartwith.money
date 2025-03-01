@@ -1,0 +1,10 @@
+---
+description: when you want to do something with the database - create a new table, migration, etc.
+globs: 
+---
+- use drizzle.
+- all models are defined in a model.ts in their respective module
+- all model.ts files imported in the [model.ts](mdc:src/modules/model.ts)
+- no sql migrations are necessary, dont create them. drizzle is setup to work from the model exclusively
+- always prefer the sql style drizzle like db.insert(someTable). never use db.query.someTable.
+- 

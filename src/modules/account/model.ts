@@ -18,7 +18,7 @@ export const users = pgTable('user', {
 export type User = typeof users.$inferSelect
 
 export const userAccounts = pgTable(
-  'user_account',
+  'auth_account',
   {
     userId: text('userId')
       .notNull()
@@ -42,17 +42,18 @@ export const userAccounts = pgTable(
     },
   ],
 )
+export type UserAccount = typeof userAccounts.$inferSelect
 
-export const sessions = pgTable('session', {
+export const sessions = pgTable('auth_session', {
   sessionToken: text('sessionToken').primaryKey(),
   userId: text('userId')
     .notNull()
     .references(() => users.id, { onDelete: 'cascade' }),
   expires: timestamp('expires', { mode: 'date' }).notNull(),
 })
-
+export type Session = typeof sessions.$inferSelect
 export const verificationTokens = pgTable(
-  'verificationToken',
+  'auth_verificationToken',
   {
     identifier: text('identifier').notNull(),
     token: text('token').notNull(),
@@ -66,9 +67,9 @@ export const verificationTokens = pgTable(
     },
   ],
 )
-
+export type VerificationToken = typeof verificationTokens.$inferSelect
 export const authenticators = pgTable(
-  'authenticator',
+  'auth_authenticator',
   {
     credentialID: text('credentialID').notNull().unique(),
     userId: text('userId')
@@ -89,12 +90,15 @@ export const authenticators = pgTable(
     },
   ],
 )
+export type Authenticator = typeof authenticators.$inferSelect
 
-export const accounts = pgTable('accounts', {
+export const accounts = pgTable('account', {
   id: text('id')
     .primaryKey()
     .$defaultFn(() => crypto.randomUUID()),
   name: text('name').notNull(),
+  isInactive: boolean('is_inactive').notNull().default(false),
+  stripeCustomerId: text('stripe_customer_id').unique(),
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
 })
@@ -105,7 +109,7 @@ export type AccountRole = (typeof ACCOUNT_ROLES)[number]
 
 // Junction table for many-to-many relationship
 export const accountUsers = pgTable(
-  'account_users',
+  'account_user',
   {
     accountId: text('account_id')
       .notNull()
@@ -121,6 +125,7 @@ export const accountUsers = pgTable(
     pk: primaryKey({ columns: [t.accountId, t.userId] }),
   }),
 )
+export type AccountUser = typeof accountUsers.$inferSelect
 
 // Define relations
 export const usersRelations = relations(users, ({ many }) => ({
@@ -142,7 +147,9 @@ export const accountUsersRelations = relations(accountUsers, ({ one }) => ({
   }),
 }))
 
-export const accountInvites = pgTable('account_invites', {
+export const ACCOUNT_INVITE_STATUS = ['pending', 'accepted', 'rejected', 'expired', 'cancelled'] as const
+export type AccountInviteStatus = (typeof ACCOUNT_INVITE_STATUS)[number]
+export const accountInvites = pgTable('account_invite', {
   id: text('id')
     .primaryKey()
     .$defaultFn(() => crypto.randomUUID()),
@@ -154,14 +161,12 @@ export const accountInvites = pgTable('account_invites', {
   invitedBy: text('invited_by')
     .notNull()
     .references(() => users.id),
-  status: text('status', { enum: ['pending', 'accepted', 'rejected', 'expired', 'cancelled'] })
-    .notNull()
-    .default('pending'),
+  status: text('status', { enum: ACCOUNT_INVITE_STATUS }).$type<AccountInviteStatus>().notNull().default('pending'),
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
 })
-
-export const accountPreferences = pgTable('account_preferences', {
+export type AccountInvite = typeof accountInvites.$inferSelect
+export const accountPreferences = pgTable('account_preference', {
   id: text('id')
     .primaryKey()
     .$defaultFn(() => crypto.randomUUID()),
@@ -174,11 +179,12 @@ export const accountPreferences = pgTable('account_preferences', {
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
 })
+export type AccountPreferences = typeof accountPreferences.$inferSelect
 
-export const EXPORT_JOB_STATUS = ['pending', 'processing', 'completed', 'failed'] as const
+export const EXPORT_JOB_STATUS = ['pending', 'processing', 'completed', 'failed', 'cancelled'] as const
 export type ExportJobStatus = (typeof EXPORT_JOB_STATUS)[number]
 
-export const accountExportJobs = pgTable('account_export_jobs', {
+export const accountExportJobs = pgTable('account_export_job', {
   id: text('id')
     .primaryKey()
     .$defaultFn(() => crypto.randomUUID()),
@@ -195,3 +201,4 @@ export const accountExportJobs = pgTable('account_export_jobs', {
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
   completedAt: timestamp('completed_at'),
 })
+export type AccountExportJob = typeof accountExportJobs.$inferSelect

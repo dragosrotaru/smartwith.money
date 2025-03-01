@@ -1,12 +1,11 @@
 'use client'
 import { Button } from '@/components/ui/button'
 import { useState, useEffect } from 'react'
-import { FormDataProps } from './formData'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import InvitePeopleStep from './_components/InvitePeopleStep'
 import AccountNameStep from './_components/AccountNameStep'
 import InitialPreferencesStep from './_components/InitialPreferencesStep'
-import { completeOnboarding } from '@/modules/account/actions'
+import { completeOnboarding, OnboardingData } from '@/modules/account/actions'
 import { useRouter } from 'next/navigation'
 import { Loader2 } from 'lucide-react'
 import { toast } from 'sonner'
@@ -18,15 +17,15 @@ export default function OnboardingContainer() {
   const [hasPersonFilledButNotAdded, setHasPersonFilledButNotAdded] = useState(false)
   const router = useRouter()
   const { setActiveAccountId } = useActiveAccount()
-  const [formData, setFormData] = useState<FormDataProps>({
+  const [formData, setFormData] = useState<OnboardingData>({
     accountName: '',
     invitedPeople: [],
     isFirstTimeHomeBuyer: false,
-    province: '',
+    province: 'ON',
     priorities: [],
   })
 
-  const updateFormData = (data: Partial<typeof formData>) => {
+  const updateFormData = (data: Partial<OnboardingData>) => {
     setFormData((prev) => ({ ...prev, ...data }))
   }
 

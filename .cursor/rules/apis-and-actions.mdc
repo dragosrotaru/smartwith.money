@@ -1,0 +1,5 @@
+---
+description: always prefer creating a server action instead of an api route.ts
+globs: 
+---
+When ever you need to query or mutate state with a network API call, create a server action inside the appropriate module in an actions.ts file. do not define route.ts files with a traditional api unless it is absolutely required for external integration to another system outside of Nextjs

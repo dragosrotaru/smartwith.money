@@ -1,5 +1,5 @@
 'use server'
-import { getActiveAccount } from '@/lib/activeAccount'
+import { getActiveAccount } from '@/modules/account/activeAccount'
 import { POI, POIProps } from './domain'
 import { add, getAllByAccountId, remove } from './repo'
 import { withReadAccess, withReadWriteAccess } from '@/modules/account/actions'

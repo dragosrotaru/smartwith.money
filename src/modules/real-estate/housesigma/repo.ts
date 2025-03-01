@@ -3,7 +3,7 @@ import { fromHouseSigma } from '.'
 import { HouseSigma } from './schema'
 import { db } from '@/lib/db'
 import { eq } from 'drizzle-orm'
-import { housesigma, accountHousesigma } from './model'
+import { housesigmaRaw, houseSigma } from './model'
 
 // deprecated
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -20,11 +20,11 @@ export function loadOrGenHouseSigma(propertyId: string, hasBasicFile: boolean, h
 export async function getAllByAccountId(accountId: string): Promise<HouseSigma[]> {
   const result = await db
     .select({
-      data: housesigma.data,
+      data: housesigmaRaw.data,
     })
-    .from(housesigma)
-    .innerJoin(accountHousesigma, eq(housesigma.id, accountHousesigma.housesigmaId))
-    .where(eq(accountHousesigma.accountId, accountId))
+    .from(housesigmaRaw)
+    .innerJoin(houseSigma, eq(housesigmaRaw.id, houseSigma.housesigmaId))
+    .where(eq(houseSigma.accountId, accountId))
 
   return result.map((row) => fromHouseSigma(row.data))
 }
@@ -32,10 +32,10 @@ export async function getAllByAccountId(accountId: string): Promise<HouseSigma[]
 export async function getById(id: string): Promise<HouseSigma | Error> {
   const [result] = await db
     .select({
-      data: housesigma.data,
+      data: housesigmaRaw.data,
     })
-    .from(housesigma)
-    .where(eq(housesigma.id, id))
+    .from(housesigmaRaw)
+    .where(eq(housesigmaRaw.id, id))
 
   if (!result) {
     return new Error(`HouseSigma entry with id ${id} not found`)
@@ -49,16 +49,16 @@ export async function add(id: string, data: unknown): Promise<void> {
     // Get existing account relationships if any
     const existingRelations = await tx
       .select({
-        accountId: accountHousesigma.accountId,
+        accountId: houseSigma.accountId,
       })
-      .from(accountHousesigma)
-      .where(eq(accountHousesigma.housesigmaId, id))
+      .from(houseSigma)
+      .where(eq(houseSigma.housesigmaId, id))
 
     // Delete existing housesigma entry if it exists
-    await tx.delete(housesigma).where(eq(housesigma.id, id))
+    await tx.delete(housesigmaRaw).where(eq(housesigmaRaw.id, id))
 
     // Insert new housesigma entry
-    await tx.insert(housesigma).values({
+    await tx.insert(housesigmaRaw).values({
       id,
       data,
       createdAt: new Date(),
@@ -67,7 +67,7 @@ export async function add(id: string, data: unknown): Promise<void> {
 
     // Restore account relationships if there were any
     if (existingRelations.length > 0) {
-      await tx.insert(accountHousesigma).values(
+      await tx.insert(houseSigma).values(
         existingRelations.map((relation) => ({
           accountId: relation.accountId,
           housesigmaId: id,

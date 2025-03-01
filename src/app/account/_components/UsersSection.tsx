@@ -4,22 +4,16 @@ import { Button } from '@/components/ui/button'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { ACCOUNT_ROLES, AccountRole } from '@/modules/account/model'
-import {
-  getAccountUsers,
-  resendInvite,
-  updateUserRole,
-  withOwnerAccess,
-  cancelInvite,
-  removeUser,
-} from '@/modules/account/actions'
+import { getAccountUsers, resendInvite, updateUserRole, cancelInvite, removeUser } from '@/modules/account/actions'
 import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
 import { Loader2, MoreHorizontal } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { InviteUserDialog } from './InviteUserDialog'
-import { AlertCircle } from 'lucide-react'
-import { Alert, AlertDescription } from '@/components/ui/alert'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
+import { useWithOwnerAccess } from '@/hooks/use-with-access'
+import { SectionSkeleton } from './SectionSkeleton'
+import { AccessAlert } from '@/components/AccessAlert'
 
 type User = {
   userId: string
@@ -43,29 +37,20 @@ type Invite = {
 export function UsersSection({ accountId }: { accountId: string }) {
   const [users, setUsers] = useState<User[]>([])
   const [invites, setInvites] = useState<Invite[]>([])
-  const [loading, setLoading] = useState(true)
+  const { isOwner, isLoadingAccess } = useWithOwnerAccess(accountId)
+  const [isLoading, setIsLoading] = useState(true)
   const [updatingRole, setUpdatingRole] = useState<string | null>(null)
   const [resendingInvite, setResendingInvite] = useState<string | null>(null)
   const [cancellingInvite, setCancellingInvite] = useState<string | null>(null)
   const [removingUser, setRemovingUser] = useState<string | null>(null)
-  const [isOwner, setIsOwner] = useState(false)
 
   useEffect(() => {
-    const checkAccess = async () => {
-      const auth = await withOwnerAccess(accountId)
-      if (auth instanceof Error) {
-        setIsOwner(false)
-        setLoading(false)
-        return
-      }
-      setIsOwner(true)
-      loadUsers()
-    }
-    checkAccess()
+    loadUsers()
   }, [accountId])
 
   const loadUsers = async () => {
     try {
+      setIsLoading(true)
       const result = await getAccountUsers(accountId)
       if (result instanceof Error) {
         toast.error(result.message)
@@ -76,7 +61,7 @@ export function UsersSection({ accountId }: { accountId: string }) {
     } catch {
       toast.error('Failed to load users')
     } finally {
-      setLoading(false)
+      setIsLoading(false)
     }
   }
 
@@ -148,26 +133,8 @@ export function UsersSection({ accountId }: { accountId: string }) {
     }
   }
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center p-8">
-        <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
-      </div>
-    )
-  }
-
-  if (!isOwner) {
-    return (
-      <Alert>
-        <div className="flex align-middle gap-2">
-          <AlertCircle className="h-4 w-4 flex-shrink-0 self-center" />
-          <AlertDescription className="m-0">
-            You must be an owner of this account to access users and permissions settings.
-          </AlertDescription>
-        </div>
-      </Alert>
-    )
-  }
+  if (isLoadingAccess || isLoading) return <SectionSkeleton />
+  if (!isOwner) return <AccessAlert message="Only account owners can manage users and invites." />
 
   return (
     <div className="space-y-4">

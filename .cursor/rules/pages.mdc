@@ -1,0 +1,14 @@
+---
+description: When you want to create a new page
+globs: 
+---
+
+# Your rule content
+
+all links (paths) should be defined inside of [menu.ts](mdc:src/lib/menu.ts). All references to the root url of the app should use process.env.APP_URL. If you create a new page, it should be defined there. If appropriate, add it to the [Navigation.tsx](mdc:src/components/Navigation.tsx) and [MobileNavigation.tsx](mdc:src/components/MobileNavigation.tsx)
+
+Always define the metadata and think about SEO for pages.
+
+All pages which present data that the user is required to be logged in for (there are no features on the page for anonymous users) must check the appropriate user role with the [actions.ts](mdc:src/modules/account/actions.ts) authorization functions
+
+If pages are complex, start thinking early about splitting them up into sub components. Group functionality into logical sub components which are isolated and easily decoupled. I dont like massive pages or components

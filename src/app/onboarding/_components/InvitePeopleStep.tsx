@@ -6,15 +6,15 @@ import { Label } from '@/components/ui/label'
 import { Button } from '@/components/ui/button'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
-import { FormDataProps } from '../formData'
+import { OnboardingData } from '@/modules/account/actions'
 
 export default function InvitePeopleStep({
   formData,
   updateFormData,
   onPersonFilledButNotAdded,
 }: {
-  formData: FormDataProps
-  updateFormData: (data: Partial<FormDataProps>) => void
+  formData: OnboardingData
+  updateFormData: (data: Partial<OnboardingData>) => void
   onPersonFilledButNotAdded: (hasIncompleteFields: boolean) => void
 }) {
   const [email, setEmail] = useState('')

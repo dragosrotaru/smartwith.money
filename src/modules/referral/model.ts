@@ -2,7 +2,7 @@ import { sql } from 'drizzle-orm'
 import { text, timestamp, pgTable, index, uuid, boolean } from 'drizzle-orm/pg-core'
 
 export const referralCodes = pgTable(
-  'referral_codes',
+  'referral_code',
   {
     id: uuid('id').defaultRandom().primaryKey(),
     userId: uuid('user_id').notNull(),
@@ -22,7 +22,7 @@ export const referralCodes = pgTable(
 )
 
 export const referralUses = pgTable(
-  'referral_uses',
+  'referral_use',
   {
     id: uuid('id').defaultRandom().primaryKey(),
     referralCodeId: uuid('referral_code_id')

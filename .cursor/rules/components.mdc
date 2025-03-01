@@ -1,0 +1,8 @@
+---
+description: when you want to create a new UI component
+globs: 
+---
+- Always prefer ShadCN components already installed or existing components from the components folder over new libraries. use the shadcn library as much as possible
+- Always make sure that the component you are creating has darkmode and lightmode styles in accordance to the rest of the app
+- If a component is generally useful and generic, put it in the root components directory. If it is specific to the page or feature you are building, put it in the _components folder nested in that pages or parent components directory, and make a new _components folder if it doesn't exist.
+- Always put the logic related to presenting the data, or grabbing the data, as close to where the data is actually presented. contain functionality inside logical components. Don't make massive components or deep props drilling. 

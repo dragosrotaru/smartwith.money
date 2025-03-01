@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
 import { deleteAccount, withOwnerAccess, submitAccountDeletionFeedback } from '@/modules/account/actions'
@@ -20,6 +20,9 @@ import {
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { cn } from '@/lib/utils'
+import { useWithOwnerAccess } from '@/hooks/use-with-access'
+import { AccessAlert } from '@/components/AccessAlert'
+import { SectionSkeleton } from './SectionSkeleton'
 
 const glowingButtonStyles = `
   shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_3px_#08f,0_0_30px_#08f]
@@ -28,24 +31,15 @@ const glowingButtonStyles = `
 `
 
 export function DeleteSection({ accountId }: { accountId: string }) {
+  const { isOwner, isLoadingAccess } = useWithOwnerAccess(accountId)
   const [isDeleting, setIsDeleting] = useState(false)
   const [isSubmittingFeedback, setIsSubmittingFeedback] = useState(false)
-  const [isOwner, setIsOwner] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
+
   const [isOpen, setIsOpen] = useState(false)
   const [reason, setReason] = useState('')
   const [improvements, setImprovements] = useState('')
   const router = useRouter()
   const { clearActiveAccount } = useActiveAccount()
-
-  useEffect(() => {
-    async function checkAccess() {
-      const auth = await withOwnerAccess(accountId)
-      setIsOwner(!(auth instanceof Error))
-      setIsLoading(false)
-    }
-    checkAccess()
-  }, [accountId])
 
   const handleDelete = async () => {
     // Double check owner access before proceeding
@@ -98,22 +92,8 @@ export function DeleteSection({ accountId }: { accountId: string }) {
     }
   }
 
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center p-8">
-        <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
-      </div>
-    )
-  }
-
-  if (!isOwner) {
-    return (
-      <Alert>
-        <AlertCircle className="h-4 w-4" />
-        <AlertDescription>Only account owners can delete this account.</AlertDescription>
-      </Alert>
-    )
-  }
+  if (isLoadingAccess) return <SectionSkeleton />
+  if (!isOwner) return <AccessAlert message="Only account owners can delete this account." />
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>

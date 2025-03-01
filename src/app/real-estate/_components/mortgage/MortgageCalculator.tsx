@@ -3,7 +3,7 @@ import { Mortgage as MortgageModel, MortgageProps } from '@/modules/real-estate/
 import { MortgageDisplay } from './MortgageDisplay'
 import MortgageForm from './MortgageForm'
 import { useState } from 'react'
-import { MortgageRatesCard } from '@/modules/real-estate/components/MortgageRatesCard'
+import { MortgageRatesCard } from './MortgageRatesCard'
 
 export default function MortgageCalculator({ initialMortgageProps }: { initialMortgageProps: MortgageProps }) {
   const [mortgage, setMortgage] = useState<MortgageModel>(() => new MortgageModel(initialMortgageProps))

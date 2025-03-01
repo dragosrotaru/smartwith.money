@@ -4,7 +4,7 @@ import { accounts, users } from '../account/model'
 export const FEEDBACK_ACTIVITIES = ['account_deletion'] as const
 export type FeedbackActivity = (typeof FEEDBACK_ACTIVITIES)[number]
 
-export const feedback = pgTable('feedback', {
+export const feedback = pgTable('account_feedback', {
   id: text('id')
     .primaryKey()
     .$defaultFn(() => crypto.randomUUID()),

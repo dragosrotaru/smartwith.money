@@ -1,8 +1,62 @@
 import { and, eq } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { prices, subscriptions, type Price, type Subscription, type NewSubscription } from './model'
+import Stripe from 'stripe'
 
-export async function getActiveSubscription(userId: string): Promise<(Subscription & { price: Price }) | null> {
+if (!process.env.STRIPE_SECRET_KEY) {
+  throw new Error('STRIPE_SECRET_KEY is required')
+}
+
+if (!process.env.STRIPE_WEBHOOK_SECRET) {
+  throw new Error('STRIPE_WEBHOOK_SECRET is required')
+}
+
+export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+  apiVersion: '2025-02-24.acacia',
+})
+
+export async function createCustomer(params: { email: string; name?: string }) {
+  return stripe.customers.create({
+    email: params.email,
+    name: params.name,
+  })
+}
+
+export async function createCheckoutSession(params: {
+  customerId: string
+  priceId: string
+  successUrl: string
+  cancelUrl: string
+}) {
+  return stripe.checkout.sessions.create({
+    customer: params.customerId,
+    line_items: [
+      {
+        price: params.priceId,
+        quantity: 1,
+      },
+    ],
+    mode: 'subscription',
+    success_url: params.successUrl,
+    cancel_url: params.cancelUrl,
+    subscription_data: {
+      trial_period_days: 14,
+    },
+  })
+}
+
+export async function createBillingPortalSession(params: { customerId: string; returnUrl: string }) {
+  return stripe.billingPortal.sessions.create({
+    customer: params.customerId,
+    return_url: params.returnUrl,
+  })
+}
+
+export function constructWebhookEvent(payload: string | Buffer, signature: string) {
+  return stripe.webhooks.constructEvent(payload, signature, process.env.STRIPE_WEBHOOK_SECRET!)
+}
+
+export async function getActiveSubscription(accountId: string): Promise<(Subscription & { price: Price }) | null> {
   const results = await db
     .select({
       subscription: subscriptions,
@@ -10,7 +64,7 @@ export async function getActiveSubscription(userId: string): Promise<(Subscripti
     })
     .from(subscriptions)
     .leftJoin(prices, eq(subscriptions.priceId, prices.id))
-    .where(and(eq(subscriptions.userId, userId), eq(subscriptions.status, 'active')))
+    .where(and(eq(subscriptions.accountId, accountId), eq(subscriptions.status, 'active')))
     .limit(1)
 
   if (!results.length) return null
@@ -19,30 +73,6 @@ export async function getActiveSubscription(userId: string): Promise<(Subscripti
   if (!price) return null
 
   return { ...subscription, price }
-}
-
-export async function getSubscriptionWithPrice(
-  subscriptionId: string,
-): Promise<(Subscription & { price: Price }) | null> {
-  const results = await db
-    .select({
-      subscription: subscriptions,
-      price: prices,
-    })
-    .from(subscriptions)
-    .leftJoin(prices, eq(subscriptions.priceId, prices.id))
-    .where(eq(subscriptions.id, subscriptionId))
-    .limit(1)
-
-  if (!results.length || !results[0].price) return null
-
-  const { subscription, price } = results[0]
-  return { ...subscription, price }
-}
-
-export async function createSubscription(subscription: NewSubscription): Promise<Subscription> {
-  const [newSubscription] = await db.insert(subscriptions).values(subscription).returning()
-  return newSubscription
 }
 
 export async function updateSubscription(id: string, data: Partial<NewSubscription>): Promise<Subscription> {
@@ -54,40 +84,7 @@ export async function updateSubscription(id: string, data: Partial<NewSubscripti
   return updatedSubscription
 }
 
-export async function getActivePrices(): Promise<Price[]> {
-  return db.select().from(prices).where(eq(prices.active, true))
-}
-
 export async function getPriceByStripeId(stripeId: string): Promise<Price | null> {
   const results = await db.select().from(prices).where(eq(prices.stripeId, stripeId)).limit(1)
   return results[0] || null
-}
-
-export async function createPrice(price: Price): Promise<Price> {
-  const [newPrice] = await db.insert(prices).values(price).returning()
-  return newPrice
-}
-
-export async function updatePrice(id: string, data: Partial<Price>): Promise<Price> {
-  const [updatedPrice] = await db
-    .update(prices)
-    .set({ ...data, updatedAt: new Date() })
-    .where(eq(prices.id, id))
-    .returning()
-  return updatedPrice
-}
-
-export async function deactivatePrice(id: string): Promise<Price> {
-  return updatePrice(id, { active: false })
-}
-
-export async function getPrices() {
-  const allPrices = await db.select().from(prices)
-  return allPrices.map((price) => ({
-    id: price.id,
-    name: price.name,
-    description: price.description,
-    amount: price.amount,
-    features: price.features || [],
-  }))
 }

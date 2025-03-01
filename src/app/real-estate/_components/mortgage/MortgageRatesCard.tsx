@@ -1,7 +1,7 @@
 'use client'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { getMortgageRates, MortgageRate, MortgageRatesResponse } from '../actions'
+import { getMortgageRates, MortgageRate, MortgageRatesResponse } from '@/modules/real-estate/mortgageRates'
 import Image from 'next/image'
 import { formatPercent } from '@/lib/format'
 import { useEffect, useState } from 'react'

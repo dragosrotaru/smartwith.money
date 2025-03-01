@@ -1,13 +1,13 @@
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { FormDataProps } from '../formData'
+import { OnboardingData } from '@/modules/account/actions'
 
 export default function AccountNameStep({
   formData,
   updateFormData,
 }: {
-  formData: FormDataProps
-  updateFormData: (data: Partial<FormDataProps>) => void
+  formData: OnboardingData
+  updateFormData: (data: Partial<OnboardingData>) => void
 }) {
   return (
     <div className="space-y-8">

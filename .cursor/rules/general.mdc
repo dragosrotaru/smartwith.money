@@ -1,0 +1,9 @@
+---
+description: general ettiquete. dont be overeager, always write JSDOC dont overwrite comments or go beyond the scope of the requested feature
+globs: 
+---
+Never delete comments unless they are made redundant. For example, if there is a // todo comment, that you have just solved, you may delete it. but if there is a comment (todo or otherwise) completely unrelated to what you're doing, DO NOT DELETE IT. Dont touch comments unless they are now incorrect.
+
+Always add JSDocs to Server Actions, Domain Classes, Interfaces, complex types, and so on. 
+
+Dont go beyond the scope of what was asked of you.

@@ -1,7 +1,7 @@
 import { and, eq } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { referralCodes, referralUses } from './model'
-import { stripe } from '@/modules/billing/stripe'
+import { stripe } from '@/modules/billing/service'
 import { nanoid } from 'nanoid'
 
 export async function getOrCreateReferralCode(userId: string): Promise<string> {

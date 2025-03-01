@@ -15,7 +15,7 @@ export const feedCategoryEnum = pgEnum('feed_category', ['tax', 'housing', 'fina
 
 // Tables
 export const feedSources = pgTable(
-  'feed_sources',
+  'rss_feed_source',
   {
     id: uuid('id').defaultRandom().primaryKey(),
     name: text('name').notNull(),
@@ -37,7 +37,7 @@ export const feedSources = pgTable(
 )
 
 export const feedItems = pgTable(
-  'feed_items',
+  'rss_feed_item',
   {
     id: uuid('id').defaultRandom().primaryKey(),
     sourceId: uuid('source_id')

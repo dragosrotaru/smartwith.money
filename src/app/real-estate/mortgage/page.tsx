@@ -1,4 +1,4 @@
-import { getActiveAccount } from '@/lib/activeAccount'
+import { getActiveAccount } from '@/modules/account/activeAccount'
 import { getAccountPreferences } from '@/modules/account/actions'
 import MortgageCalculator from '../_components/mortgage/MortgageCalculator'
 import { MortgageProps } from '@/modules/real-estate/domain/mortgage'

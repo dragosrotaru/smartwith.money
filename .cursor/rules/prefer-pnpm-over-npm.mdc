@@ -1,0 +1,10 @@
+---
+description: when you want to install, update a package or run an npm command
+globs: 
+---
+
+# Your rule content
+
+Use pnpm! Never suggest a command with npm
+
+NEVER add a package directly to package.json. Ask me to install it. I dont want outdated versions being added by you since you dont have knowledge of the latest versions

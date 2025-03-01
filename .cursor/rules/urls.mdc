@@ -1,0 +1,8 @@
+---
+description: when you are creating a new url/link/path
+globs: 
+---
+
+# Your rule content
+
+all links (paths) should be defined inside of [menu.ts](mdc:src/lib/menu.ts). All references to the root url of the app should use process.env.APP_URL. If you create a new page, it should be defined there. If appropriate, add it to the [Navigation.tsx](mdc:src/components/Navigation.tsx) and [MobileNavigation.tsx](mdc:src/components/MobileNavigation.tsx)

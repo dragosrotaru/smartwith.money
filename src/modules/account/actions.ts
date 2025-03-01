@@ -1,6 +1,5 @@
 'use server'
 import { auth } from '@/auth'
-import { getUserAndAccounts, createNewAccountForUser } from './repo'
 import { db } from '@/lib/db'
 import {
   accountInvites,
@@ -11,41 +10,75 @@ import {
   accounts,
   accountExportJobs,
 } from './model'
-import { pointsOfInterest } from '../real-estate/pointsOfInterest/model'
 import { and, eq, sql, desc } from 'drizzle-orm'
 import { sendInviteEmail, sendAccountDeletionFeedbackEmail } from '../notifications/email'
 import { feedback } from '../feedback/model'
 import { Province } from '../location/provinces'
+import { createCustomer } from '@/modules/billing/service'
 
+/**
+ * Returns the user and any active accounts they have access to
+ */
 export async function authorization() {
   const session = await auth()
   if (!session || !session.user.id) return new Error('Unauthorized')
-  return await getUserAndAccounts(session.user.id)
+
+  const [user] = await db.select().from(users).where(eq(users.id, session.user.id))
+
+  if (!user) return new Error('User not found')
+
+  const accountsWithRoles = await db
+    .select({
+      id: accounts.id,
+      name: accounts.name,
+      role: accountUsers.role,
+      isInactive: accounts.isInactive,
+    })
+    .from(accounts)
+    .innerJoin(accountUsers, eq(accounts.id, accountUsers.accountId))
+    .where(and(eq(accountUsers.userId, session.user.id), eq(accounts.isInactive, false)))
+
+  return {
+    user,
+    accounts: accountsWithRoles,
+  }
 }
 
-export async function withReadWriteAccess(accountId: string) {
-  const auth = await authorization()
-  if (auth instanceof Error) return auth
-
-  const account = auth.accounts.find((a) => a.id === accountId)
-  if (account?.role === 'read-write' || account?.role === 'owner') return auth
-  return new Error('Unauthorized')
-}
-
+/**
+ * Returns the user and the active account if they have read access to it
+ */
 export async function withReadAccess(accountId: string) {
   const auth = await authorization()
   if (auth instanceof Error) return auth
 
   const account = auth.accounts.find((a) => a.id === accountId)
+  if (!account) return new Error('Account not found')
   if (account?.role === 'read' || account?.role === 'read-write' || account?.role === 'owner') return auth
   return new Error('Unauthorized')
 }
 
+/**
+ * Returns the user and the active account if they have read-write access to it
+ */
+export async function withReadWriteAccess(accountId: string) {
+  const auth = await authorization()
+  if (auth instanceof Error) return auth
+
+  const account = auth.accounts.find((a) => a.id === accountId)
+  if (!account) return new Error('Account not found')
+  if (account?.role === 'read-write' || account?.role === 'owner') return auth
+  return new Error('Unauthorized')
+}
+
+/**
+ * Returns the user and the active account if they have owner access to it
+ */
 export async function withOwnerAccess(accountId: string) {
   const auth = await authorization()
   if (auth instanceof Error) return auth
 
   const account = auth.accounts.find((a) => a.id === accountId)
+  if (!account) return new Error('Account not found')
   if (account?.role === 'owner') return auth
   return new Error('Unauthorized')
 }
@@ -78,7 +111,32 @@ export async function completeOnboarding(data: OnboardingData) {
   if (!session || !session.user.id) return new Error('Unauthorized')
 
   try {
-    const account = await createNewAccountForUser(session.user.id, data.accountName)
+    // Create new account for user and set up billing
+    const account = await db.transaction(async (tx) => {
+      // Create Stripe customer
+      const customer = await createCustomer({
+        email: session.user.email!,
+        name: data.accountName,
+      })
+
+      // Create new account
+      const [account] = await tx
+        .insert(accounts)
+        .values({
+          name: data.accountName,
+          stripeCustomerId: customer.id,
+        })
+        .returning()
+
+      // Add user as owner
+      await tx.insert(accountUsers).values({
+        userId: session.user.id,
+        accountId: account.id,
+        role: 'owner',
+      })
+
+      return account
+    })
 
     // Invite people if any
     for (const person of data.invitedPeople) {
@@ -235,7 +293,13 @@ export async function getPendingInvites() {
       })
       .from(accountInvites)
       .innerJoin(accounts, eq(accounts.id, accountInvites.accountId))
-      .where(and(eq(accountInvites.email, session.user.email), eq(accountInvites.status, 'pending')))
+      .where(
+        and(
+          eq(accountInvites.email, session.user.email),
+          eq(accountInvites.status, 'pending'),
+          eq(accounts.isInactive, false),
+        ),
+      )
 
     return pendingInvites
   } catch (error) {
@@ -450,26 +514,34 @@ export async function deleteAccount(accountId: string) {
       await stripe.subscriptions.cancel(subscription.stripeSubscriptionId)
     } */
 
-    // Delete all related data
+    // Mark account as inactive and update all related data
     await db.transaction(async (tx) => {
-      // Delete account preferences
-      await tx.delete(accountPreferences).where(eq(accountPreferences.accountId, accountId))
+      await tx
+        .update(accounts)
+        .set({
+          isInactive: true,
+          updatedAt: sql`CURRENT_TIMESTAMP`,
+        })
+        .where(eq(accounts.id, accountId))
 
-      // Delete points of interest
-      await tx.delete(pointsOfInterest).where(eq(pointsOfInterest.accountId, accountId))
-
-      // Delete export jobs
-      await tx.delete(accountExportJobs).where(eq(accountExportJobs.accountId, accountId))
-
-      // Delete invites
-      await tx.delete(accountInvites).where(eq(accountInvites.accountId, accountId))
-
-      // Delete account users
-      await tx.delete(accountUsers).where(eq(accountUsers.accountId, accountId))
-
-      // Finally delete the account itself
-      await tx.delete(accounts).where(eq(accounts.id, accountId))
+      // Cancel any pending invites
+      await tx
+        .update(accountInvites)
+        .set({
+          status: 'cancelled',
+          updatedAt: sql`CURRENT_TIMESTAMP`,
+        })
+        .where(and(eq(accountInvites.accountId, accountId), eq(accountInvites.status, 'pending')))
     })
+
+    // Cancel any pending export jobs
+    await db
+      .update(accountExportJobs)
+      .set({
+        status: 'cancelled',
+        updatedAt: sql`CURRENT_TIMESTAMP`,
+      })
+      .where(and(eq(accountExportJobs.accountId, accountId), eq(accountExportJobs.status, 'pending')))
 
     return { success: true }
   } catch (error) {
@@ -545,6 +617,7 @@ export async function submitAccountDeletionFeedback(
       .select({
         name: accounts.name,
         createdAt: accounts.createdAt,
+        isInactive: accounts.isInactive,
       })
       .from(accounts)
       .where(eq(accounts.id, accountId))

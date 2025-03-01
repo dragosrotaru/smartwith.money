@@ -1,7 +1,11 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState } from 'react'
-import { getActiveAccount, setActiveAccount, clearActiveAccount as clearActiveAccountCookie } from '@/lib/activeAccount'
+import {
+  getActiveAccount,
+  setActiveAccount,
+  clearActiveAccount as clearActiveAccountCookie,
+} from '@/modules/account/activeAccount'
 import { authorization } from '@/modules/account/actions'
 
 type ActiveAccountContextType = {
@@ -20,21 +24,31 @@ export function ActiveAccountProvider({ children }: { children: React.ReactNode 
 
   const ensureActiveAccount = async () => {
     try {
-      // If there's already an active account, we're good
+      // If there's already an active account, verify it's still active
       const currentActiveAccount = await getActiveAccount()
       if (currentActiveAccount) {
-        setActiveAccountIdState(currentActiveAccount)
-        return
+        const auth = await authorization()
+        if (!(auth instanceof Error)) {
+          const account = auth.accounts.find((a) => a.id === currentActiveAccount)
+          if (!account) {
+            // If current active account is inactive or not found, clear it
+            await clearActiveAccountCookie()
+            setActiveAccountIdState(undefined)
+          } else {
+            setActiveAccountIdState(currentActiveAccount)
+            return
+          }
+        }
       }
 
-      // Otherwise, try to get the user's accounts
+      // Try to get the user's accounts
       const auth = await authorization()
       if (auth instanceof Error) {
         console.error('Failed to get user accounts:', auth)
         return
       }
 
-      // If they have accounts, set the first one as active
+      // If they have active accounts, set the first one as active
       if (auth.accounts.length > 0) {
         const firstAccount = auth.accounts[0]
         await setActiveAccount(firstAccount.id)

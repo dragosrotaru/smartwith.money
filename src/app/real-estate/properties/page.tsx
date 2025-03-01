@@ -1,4 +1,4 @@
-import { getActiveAccount, setActiveAccount } from '@/lib/activeAccount'
+import { getActiveAccount, setActiveAccount } from '@/modules/account/activeAccount'
 import PropertyExplorer from './_components/PropertyExplorer'
 import { getAllByAccountId } from '@/modules/real-estate/housesigma/repo'
 import { authorization, withReadAccess } from '@/modules/account/actions'

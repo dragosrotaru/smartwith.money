@@ -1,10 +1,11 @@
 import { SwitchAccountDialog } from './_components/SwitchAccountDialog'
-import { getActiveAccount } from '@/lib/activeAccount'
+import { getActiveAccount } from '@/modules/account/activeAccount'
 import { withReadAccess } from '@/modules/account/actions'
 import { redirect } from 'next/navigation'
 import { UsersSection } from './_components/UsersSection'
 import { ExportSection } from './_components/ExportSection'
 import { DeleteSection } from './_components/DeleteSection'
+import { BillingSection } from './_components/BillingSection'
 import { Button } from '@/components/ui/button'
 import { Plus } from 'lucide-react'
 import Link from 'next/link'
@@ -15,6 +16,7 @@ export default async function AccountPage() {
   if (!accountId) redirect('/')
 
   const auth = await withReadAccess(accountId)
+  console.log('accountId', auth)
   if (auth instanceof Error) redirect('/')
 
   return (
@@ -36,6 +38,11 @@ export default async function AccountPage() {
               </Button>
             </Link>
           </div>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-medium mb-6">Billing</h2>
+          <BillingSection accountId={accountId} />
         </section>
 
         <section>

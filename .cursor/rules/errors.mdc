@@ -1,0 +1,5 @@
+---
+description: When yuo want to handle errors or create new ones
+globs: 
+---
+All errors must be returned, not thrown. All errors must be logged on the server side and presented with sonner Toasts on the client side. if the error makes sense to display inside the UI itself, you may do so.

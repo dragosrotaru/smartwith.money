@@ -5,7 +5,7 @@ import { text, timestamp, pgTable, pgEnum, index, uuid } from 'drizzle-orm/pg-co
 export const postStatusEnum = pgEnum('post_status', ['draft', 'published', 'archived'])
 
 // Tables
-export const blogCategories = pgTable('blog_categories', {
+export const blogCategories = pgTable('blog_category', {
   id: uuid('id').defaultRandom().primaryKey(),
   name: text('name').notNull(),
   slug: text('slug').notNull().unique(),
@@ -18,7 +18,7 @@ export const blogCategories = pgTable('blog_categories', {
     .notNull(),
 })
 
-export const blogAuthors = pgTable('blog_authors', {
+export const blogAuthors = pgTable('blog_author', {
   id: uuid('id').defaultRandom().primaryKey(),
   name: text('name').notNull(),
   email: text('email').notNull().unique(),
@@ -32,7 +32,7 @@ export const blogAuthors = pgTable('blog_authors', {
     .notNull(),
 })
 
-export const blogTags = pgTable('blog_tags', {
+export const blogTags = pgTable('blog_tag', {
   id: uuid('id').defaultRandom().primaryKey(),
   name: text('name').notNull(),
   slug: text('slug').notNull().unique(),
@@ -42,7 +42,7 @@ export const blogTags = pgTable('blog_tags', {
 })
 
 export const blogPosts = pgTable(
-  'blog_posts',
+  'blog_post',
   {
     id: uuid('id').defaultRandom().primaryKey(),
     title: text('title').notNull(),
@@ -72,7 +72,7 @@ export const blogPosts = pgTable(
 )
 
 export const blogPostTags = pgTable(
-  'blog_post_tags',
+  'blog_post_tag',
   {
     postId: uuid('post_id')
       .references(() => blogPosts.id)

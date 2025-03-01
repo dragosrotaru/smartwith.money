@@ -5,8 +5,8 @@ import { Label } from '@/components/ui/label'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Button } from '@/components/ui/button'
-import { FormDataProps } from '../formData'
-import { PROVINCE_MAP } from '@/modules/location/provinces'
+import { OnboardingData } from '@/modules/account/actions'
+import { Province, PROVINCE_MAP } from '@/modules/location/provinces'
 
 const priorities = [
   'Finding a home you love',
@@ -23,8 +23,8 @@ export default function InitialPreferencesStep({
   formData,
   updateFormData,
 }: {
-  formData: FormDataProps
-  updateFormData: (data: Partial<FormDataProps>) => void
+  formData: OnboardingData
+  updateFormData: (data: Partial<OnboardingData>) => void
 }) {
   const [rankedPriorities, setRankedPriorities] = useState(
     formData.priorities.length ? formData.priorities : priorities,
@@ -48,7 +48,7 @@ export default function InitialPreferencesStep({
       {/* Province Selection */}
       <div className="space-y-2">
         <Label htmlFor="province">Select your province of interest</Label>
-        <Select value={formData.province} onValueChange={(value) => updateFormData({ province: value })}>
+        <Select value={formData.province} onValueChange={(value) => updateFormData({ province: value as Province })}>
           <SelectTrigger>
             <SelectValue placeholder="Select a province" />
           </SelectTrigger>

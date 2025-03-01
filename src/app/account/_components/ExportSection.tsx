@@ -2,15 +2,16 @@
 
 import { Button } from '@/components/ui/button'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
-import { createExportJob, downloadExport, getExportJobs, withOwnerAccess } from '@/modules/account/actions'
+import { createExportJob, downloadExport, getExportJobs } from '@/modules/account/actions'
 import { ExportJobStatus } from '@/modules/account/model'
-import { Alert, AlertDescription } from '@/components/ui/alert'
-import { AlertCircle, Download, Loader2 } from 'lucide-react'
+import { Download, Loader2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
 import { formatDistanceToNow } from 'date-fns'
 import { cn } from '@/lib/utils'
-
+import { AccessAlert } from '@/components/AccessAlert'
+import { useWithOwnerAccess } from '@/hooks/use-with-access'
+import { SectionSkeleton } from './SectionSkeleton'
 type ExportJob = {
   id: string
   status: ExportJobStatus
@@ -26,25 +27,13 @@ type ExportJob = {
 }
 
 export function ExportSection({ accountId }: { accountId: string }) {
+  const [isLoading, setIsLoading] = useState(true)
   const [jobs, setJobs] = useState<ExportJob[]>([])
-  const [loading, setLoading] = useState(true)
-  const [isOwner, setIsOwner] = useState(false)
+
+  const { isOwner, isLoadingAccess } = useWithOwnerAccess(accountId)
+
   const [isCreatingJob, setIsCreatingJob] = useState(false)
   const [isDownloading, setIsDownloading] = useState<string | null>(null)
-
-  useEffect(() => {
-    const checkAccess = async () => {
-      const auth = await withOwnerAccess(accountId)
-      if (auth instanceof Error) {
-        setIsOwner(false)
-        setLoading(false)
-        return
-      }
-      setIsOwner(true)
-      loadJobs()
-    }
-    checkAccess()
-  }, [accountId])
 
   const loadJobs = async () => {
     try {
@@ -57,9 +46,13 @@ export function ExportSection({ accountId }: { accountId: string }) {
     } catch {
       toast.error('Failed to load export jobs')
     } finally {
-      setLoading(false)
+      setIsLoading(false)
     }
   }
+
+  useEffect(() => {
+    loadJobs()
+  }, [accountId])
 
   const handleCreateExport = async () => {
     setIsCreatingJob(true)
@@ -100,26 +93,8 @@ export function ExportSection({ accountId }: { accountId: string }) {
     }
   }
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center p-8">
-        <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
-      </div>
-    )
-  }
-
-  if (!isOwner) {
-    return (
-      <Alert>
-        <div className="flex align-middle gap-2">
-          <AlertCircle className="h-4 w-4 flex-shrink-0 self-center" />
-          <AlertDescription className="m-0">
-            You must be an owner of this account to access data export functionality.
-          </AlertDescription>
-        </div>
-      </Alert>
-    )
-  }
+  if (isLoading || isLoadingAccess) return <SectionSkeleton />
+  if (!isOwner) return <AccessAlert message="Only account owners can export account data." />
 
   return (
     <div className="space-y-4">

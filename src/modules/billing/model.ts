@@ -16,7 +16,7 @@ export const planTypeEnum = pgEnum('plan_type', ['free', 'pro'])
 
 // Tables
 export const prices = pgTable(
-  'prices',
+  'stripe_price',
   {
     id: uuid('id').defaultRandom().primaryKey(),
     stripeId: text('stripe_id').notNull().unique(),
@@ -42,10 +42,10 @@ export const prices = pgTable(
 )
 
 export const subscriptions = pgTable(
-  'subscriptions',
+  'stripe_subscription',
   {
     id: uuid('id').defaultRandom().primaryKey(),
-    userId: uuid('user_id').notNull(),
+    accountId: uuid('account_id').notNull(),
     stripeId: text('stripe_id').notNull().unique(),
     stripeCustomerId: text('stripe_customer_id').notNull(),
     stripeCurrentPeriodStart: timestamp('stripe_current_period_start').notNull(),
@@ -64,7 +64,7 @@ export const subscriptions = pgTable(
       .notNull(),
   },
   (table) => ({
-    userIdx: index('subscriptions_user_id_idx').on(table.userId),
+    accountIdIdx: index('subscriptions_account_id_idx').on(table.accountId),
     stripeIdIdx: index('subscriptions_stripe_id_idx').on(table.stripeId),
     statusIdx: index('subscriptions_status_idx').on(table.status),
   }),
