@@ -12,6 +12,8 @@ import { SubscriptionProvider } from '@/contexts/SubscriptionContext'
 import { Toaster } from 'sonner'
 import { InviteDialog } from '@/components/InviteDialog'
 import { EnsureActiveAccount } from '@/components/EnsureActiveAccount'
+import WatchForReferralCode from '@/components/WatchForReferralCode'
+import { BannerProvider } from '@/contexts/BannerContext'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -39,19 +41,22 @@ export default async function RootLayout({
         <ActiveAccountProvider>
           <SubscriptionProvider>
             <ThemeProvider>
-              <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                <SidebarProvider defaultOpen={false}>
-                  <div className="flex flex-col min-h-screen w-full">
-                    <EnsureActiveAccount />
-                    <Header />
-                    <main className="container mx-auto px-4 py-8 flex-grow">{children}</main>
-                    <Footer />
-                    <MobileNavigation />
-                  </div>
-                  <Toaster />
-                  <InviteDialog />
-                </SidebarProvider>
-              </body>
+              <BannerProvider>
+                <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+                  <SidebarProvider defaultOpen={false}>
+                    <div className="flex min-h-screen w-full flex-col">
+                      <EnsureActiveAccount />
+                      <Header />
+                      <main className="container mx-auto px-4 py-8 flex-grow">{children}</main>
+                      <Footer />
+                      <MobileNavigation />
+                    </div>
+                    <Toaster />
+                    <InviteDialog />
+                    <WatchForReferralCode />
+                  </SidebarProvider>
+                </body>
+              </BannerProvider>
             </ThemeProvider>
           </SubscriptionProvider>
         </ActiveAccountProvider>

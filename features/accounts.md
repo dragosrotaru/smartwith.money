@@ -1,9 +1,27 @@
 # Accounts / Billing / User Settings
 
-- all accounts should become immediate customers with free trial
-- billing should be at account level - each account pays separately.
-- add paid feature flags
-- confirm payment flow works
+- user subscription and prices are kept updated with the webhook.
+- user can update payment method, cancel subscription, change billing details, view invoices in the billing portal
+- test out isPro subscription context works
+
+- implement banners for:
+
+  - announcements
+  - trial ending, payment failed
+  - referral code available
+  - offer code
+
+- create a firstLogin flag and add a welcome message
+- create a list of referral_uses and credits earned
+- notification emails:
+
+  - trial ending
+  - welcome
+  - referral successful
+
+- only apply referral on a new user
+- account is signed up for Pro trial by default
+- make active account a db feature, not cookies, set lastActive on the user, company and use a firstLogin flag
 - user should complete a personal financial goals questionaire as part of onboarding, where they can set their priorities, risk tolerance, describe in writing what they are looking for, why they joined the platform, etc.
 
 - enable Oauth

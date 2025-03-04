@@ -4,14 +4,17 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Sparkles } from 'lucide-react'
 import { createCheckoutSession } from '@/modules/billing/actions'
-
+import { useActiveAccount } from '@/contexts/ActiveAccountContext'
 export default function UpgradeButton() {
   const [isLoading, setIsLoading] = useState(false)
+  const { activeAccountId } = useActiveAccount()
+
+  if (!activeAccountId) return null
 
   const handleUpgrade = async () => {
     try {
       setIsLoading(true)
-      const { url } = await createCheckoutSession()
+      const { url } = await createCheckoutSession(activeAccountId)
       window.location.href = url
     } catch (error) {
       console.error('Error creating checkout session:', error)

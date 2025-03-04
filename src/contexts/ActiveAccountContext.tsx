@@ -43,10 +43,7 @@ export function ActiveAccountProvider({ children }: { children: React.ReactNode 
 
       // Try to get the user's accounts
       const auth = await authorization()
-      if (auth instanceof Error) {
-        console.error('Failed to get user accounts:', auth)
-        return
-      }
+      if (auth instanceof Error) return
 
       // If they have active accounts, set the first one as active
       if (auth.accounts.length > 0) {

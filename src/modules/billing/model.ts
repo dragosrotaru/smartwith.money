@@ -1,5 +1,6 @@
 import { sql } from 'drizzle-orm'
 import { text, timestamp, pgTable, pgEnum, index, uuid, boolean, integer } from 'drizzle-orm/pg-core'
+import { accounts } from '../account/model'
 
 // Enums
 export const subscriptionStatusEnum = pgEnum('subscription_status', [
@@ -45,7 +46,9 @@ export const subscriptions = pgTable(
   'stripe_subscription',
   {
     id: uuid('id').defaultRandom().primaryKey(),
-    accountId: uuid('account_id').notNull(),
+    accountId: uuid('account_id')
+      .notNull()
+      .references(() => accounts.id),
     stripeId: text('stripe_id').notNull().unique(),
     stripeCustomerId: text('stripe_customer_id').notNull(),
     stripeCurrentPeriodStart: timestamp('stripe_current_period_start').notNull(),

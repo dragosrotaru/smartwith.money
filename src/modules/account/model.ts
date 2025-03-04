@@ -1,17 +1,16 @@
 import { relations } from 'drizzle-orm'
-import { boolean, timestamp, pgTable, text, primaryKey, integer } from 'drizzle-orm/pg-core'
+import { boolean, timestamp, pgTable, text, primaryKey, integer, uuid } from 'drizzle-orm/pg-core'
 import type { AdapterAccountType } from 'next-auth/adapters'
 import { PROVINCES } from '../location/provinces'
 
 export const users = pgTable('user', {
-  id: text('id')
-    .primaryKey()
-    .$defaultFn(() => crypto.randomUUID()),
+  id: uuid('id').defaultRandom().primaryKey(),
   name: text('name'),
   email: text('email').unique(),
   emailVerified: timestamp('emailVerified', { mode: 'date' }),
   image: text('image'),
   stripeCustomerId: text('stripe_customer_id').unique(),
+  password: text('password'),
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
 })
@@ -20,7 +19,7 @@ export type User = typeof users.$inferSelect
 export const userAccounts = pgTable(
   'auth_account',
   {
-    userId: text('userId')
+    userId: uuid('userId')
       .notNull()
       .references(() => users.id, { onDelete: 'cascade' }),
     type: text('type').$type<AdapterAccountType>().notNull(),
@@ -46,12 +45,13 @@ export type UserAccount = typeof userAccounts.$inferSelect
 
 export const sessions = pgTable('auth_session', {
   sessionToken: text('sessionToken').primaryKey(),
-  userId: text('userId')
+  userId: uuid('userId')
     .notNull()
     .references(() => users.id, { onDelete: 'cascade' }),
   expires: timestamp('expires', { mode: 'date' }).notNull(),
 })
 export type Session = typeof sessions.$inferSelect
+
 export const verificationTokens = pgTable(
   'auth_verificationToken',
   {
@@ -68,11 +68,12 @@ export const verificationTokens = pgTable(
   ],
 )
 export type VerificationToken = typeof verificationTokens.$inferSelect
+
 export const authenticators = pgTable(
   'auth_authenticator',
   {
     credentialID: text('credentialID').notNull().unique(),
-    userId: text('userId')
+    userId: uuid('userId')
       .notNull()
       .references(() => users.id, { onDelete: 'cascade' }),
     providerAccountId: text('providerAccountId').notNull(),
@@ -93,9 +94,7 @@ export const authenticators = pgTable(
 export type Authenticator = typeof authenticators.$inferSelect
 
 export const accounts = pgTable('account', {
-  id: text('id')
-    .primaryKey()
-    .$defaultFn(() => crypto.randomUUID()),
+  id: uuid('id').defaultRandom().primaryKey(),
   name: text('name').notNull(),
   isInactive: boolean('is_inactive').notNull().default(false),
   stripeCustomerId: text('stripe_customer_id').unique(),
@@ -111,10 +110,10 @@ export type AccountRole = (typeof ACCOUNT_ROLES)[number]
 export const accountUsers = pgTable(
   'account_user',
   {
-    accountId: text('account_id')
+    accountId: uuid('account_id')
       .notNull()
       .references(() => accounts.id),
-    userId: text('user_id')
+    userId: uuid('user_id')
       .notNull()
       .references(() => users.id),
     role: text('role', { enum: ACCOUNT_ROLES }).$type<AccountRole>().notNull(),
@@ -149,16 +148,15 @@ export const accountUsersRelations = relations(accountUsers, ({ one }) => ({
 
 export const ACCOUNT_INVITE_STATUS = ['pending', 'accepted', 'rejected', 'expired', 'cancelled'] as const
 export type AccountInviteStatus = (typeof ACCOUNT_INVITE_STATUS)[number]
+
 export const accountInvites = pgTable('account_invite', {
-  id: text('id')
-    .primaryKey()
-    .$defaultFn(() => crypto.randomUUID()),
-  accountId: text('account_id')
+  id: uuid('id').defaultRandom().primaryKey(),
+  accountId: uuid('account_id')
     .notNull()
     .references(() => accounts.id),
   email: text('email').notNull(),
   role: text('role', { enum: ACCOUNT_ROLES }).$type<AccountRole>().notNull(),
-  invitedBy: text('invited_by')
+  invitedBy: uuid('invited_by')
     .notNull()
     .references(() => users.id),
   status: text('status', { enum: ACCOUNT_INVITE_STATUS }).$type<AccountInviteStatus>().notNull().default('pending'),
@@ -166,11 +164,10 @@ export const accountInvites = pgTable('account_invite', {
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
 })
 export type AccountInvite = typeof accountInvites.$inferSelect
+
 export const accountPreferences = pgTable('account_preference', {
-  id: text('id')
-    .primaryKey()
-    .$defaultFn(() => crypto.randomUUID()),
-  accountId: text('account_id')
+  id: uuid('id').defaultRandom().primaryKey(),
+  accountId: uuid('account_id')
     .notNull()
     .references(() => accounts.id),
   isFirstTimeHomeBuyer: boolean('is_first_time_home_buyer').notNull(),
@@ -185,13 +182,11 @@ export const EXPORT_JOB_STATUS = ['pending', 'processing', 'completed', 'failed'
 export type ExportJobStatus = (typeof EXPORT_JOB_STATUS)[number]
 
 export const accountExportJobs = pgTable('account_export_job', {
-  id: text('id')
-    .primaryKey()
-    .$defaultFn(() => crypto.randomUUID()),
-  accountId: text('account_id')
+  id: uuid('id').defaultRandom().primaryKey(),
+  accountId: uuid('account_id')
     .notNull()
     .references(() => accounts.id),
-  requestedBy: text('requested_by')
+  requestedBy: uuid('requested_by')
     .notNull()
     .references(() => users.id),
   status: text('status', { enum: EXPORT_JOB_STATUS }).$type<ExportJobStatus>().notNull().default('pending'),

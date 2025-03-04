@@ -1,9 +1,9 @@
-import { jsonb, pgTable, text, timestamp, primaryKey } from 'drizzle-orm/pg-core'
+import { jsonb, pgTable, timestamp, primaryKey, uuid } from 'drizzle-orm/pg-core'
 import { relations } from 'drizzle-orm'
 import { accounts } from '@/modules/account/model'
 
 export const housesigmaRaw = pgTable('real_estate_housesigma_raw', {
-  id: text('id').primaryKey(),
+  id: uuid('id').defaultRandom().primaryKey(),
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
   data: jsonb('data').notNull(),
@@ -15,10 +15,10 @@ export type HouseSigma = typeof housesigmaRaw.$inferSelect
 export const houseSigma = pgTable(
   'real_estate_house_sigma',
   {
-    accountId: text('account_id')
+    accountId: uuid('account_id')
       .notNull()
       .references(() => accounts.id, { onDelete: 'cascade' }),
-    housesigmaId: text('housesigma_id')
+    housesigmaId: uuid('housesigma_id')
       .notNull()
       .references(() => housesigmaRaw.id, { onDelete: 'cascade' }),
     createdAt: timestamp('created_at').notNull().defaultNow(),

@@ -1,30 +1,22 @@
 'use client'
-
-import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { signIn, useSession } from 'next-auth/react'
 import { Button } from '@/components/ui/button'
 import { redirect } from 'next/navigation'
 import { useReferralCode } from '@/hooks/use-referral-code'
 import Loader from '@/components/Loader'
+import { menu } from '@/lib/menu'
 
 export default function LoginPage() {
   const { status } = useSession()
-  const searchParams = useSearchParams()
-  const [referralCode, setReferralCode] = useReferralCode()
   const [isEmailLoading, setIsEmailLoading] = useState(false)
+  const { referralCode } = useReferralCode()
 
   useEffect(() => {
     if (status === 'authenticated') {
       redirect('/')
     }
   }, [status])
-
-  useEffect(() => {
-    const code = searchParams.get('ref')
-    // we dont set the referral code if it already exists (we attribute to the first referral)
-    if (code && !referralCode) setReferralCode(code)
-  }, [searchParams, referralCode, setReferralCode])
 
   const redirectTo = '/'
   const handleEmailLogin = async (formData: FormData) => {
@@ -158,11 +150,11 @@ export default function LoginPage() {
 
       <p className="mt-6 text-center text-sm text-muted-foreground">
         By continuing, you agree to our{' '}
-        <a href="/legal/terms-of-service" className="text-primary hover:underline">
+        <a href={menu.termsOfService.href} className="text-primary hover:underline">
           Terms of Service
         </a>{' '}
         and{' '}
-        <a href="/legal/privacy-policy" className="text-primary hover:underline">
+        <a href={menu.privacyPolicy.href} className="text-primary hover:underline">
           Privacy Policy
         </a>
         .

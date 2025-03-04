@@ -1,10 +1,12 @@
-import { pgTable, text, numeric, timestamp } from 'drizzle-orm/pg-core'
+import { pgTable, text, numeric, timestamp, uuid } from 'drizzle-orm/pg-core'
 import { relations } from 'drizzle-orm'
 import { accounts } from '@/modules/account/model'
 
 export const pointsOfInterest = pgTable('real_estate_point_of_interest', {
-  id: text('id').primaryKey(),
-  accountId: text('account_id').notNull(),
+  id: uuid('id').defaultRandom().primaryKey(),
+  accountId: uuid('account_id')
+    .notNull()
+    .references(() => accounts.id),
   name: text('name').notNull(),
   address: text('address').notNull(),
   type: text('type').notNull(),

@@ -7,6 +7,9 @@ import { DrizzleAdapter } from '@auth/drizzle-adapter'
 import { userAccounts, authenticators, sessions, users, verificationTokens } from './modules/model'
 import { db } from '@/lib/db'
 import { menu } from './lib/menu'
+import { recordReferralUse } from './modules/referral/service'
+import { cookies } from 'next/headers'
+import { REFERRAL_CODE_COOKIE_NAME } from '@/lib/constants'
 
 declare module 'next-auth' {
   interface Session {
@@ -31,7 +34,36 @@ export const config: NextAuthConfig = {
     error: '/error',
     newUser: menu.onboarding.href,
   },
+  events: {
+    async createUser({ user }) {
+      try {
+        // Get referral code from cookie
+        const cookieStore = await cookies()
+        const referralCode = cookieStore.get(REFERRAL_CODE_COOKIE_NAME)
+
+        if (referralCode && user.id) {
+          // Record the referral use if valid
+          const error = await recordReferralUse(referralCode.value, user.id)
+
+          // Clear the cookie
+          cookieStore.delete(REFERRAL_CODE_COOKIE_NAME)
+
+          if (error instanceof Error) {
+            console.log('Referral use already exists or db error', error.message)
+          } else {
+            console.log('Referral used:', referralCode.value)
+          }
+        }
+      } catch (error) {
+        console.error('Error in createUser event:', error)
+      }
+    },
+  },
   callbacks: {
+    async signIn() {
+      // todo update last active
+      return true
+    },
     async session({ session, user }) {
       /* // todo enable sentry 
        const scope = Sentry.getCurrentScope()

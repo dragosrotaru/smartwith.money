@@ -39,7 +39,8 @@ export default function PropertyDetailContainer(props: { property: HouseSigma })
   }
 
   // todo bubble up to parent
-  const [mortgage, setMortgage] = useState<MortgageModel>(new MortgageModel(initialMortgageParams))
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [mortgage, _setMortgage] = useState<MortgageModel>(new MortgageModel(initialMortgageParams))
 
   const [house] = useState<HouseModel>(
     new HouseModel({

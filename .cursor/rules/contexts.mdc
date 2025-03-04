@@ -1,0 +1,5 @@
+---
+description: Providers and Contexts
+globs: 
+---
+Providers (and Contexts) always go in the contexts directory. Provider Components are always name SomeProvider.

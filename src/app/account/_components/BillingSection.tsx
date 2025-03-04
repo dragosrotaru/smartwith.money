@@ -1,14 +1,17 @@
 'use client'
 
-import { CreditCard } from 'lucide-react'
+import { CreditCard, Sparkles } from 'lucide-react'
 import { Label } from '@/components/ui/label'
 import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
 import { useEffect, useState } from 'react'
 import { createPortalSession } from '@/modules/billing/actions'
 import { useSearchParams } from 'next/navigation'
-import { useReferralCode } from '@/hooks/use-referral-code'
+import { useSubscription } from '@/contexts/SubscriptionContext'
+import UpgradeButton from '@/components/UpgradeButton'
+
 import { toast } from 'sonner'
-import { processReferralCode } from '@/modules/referral/actions'
+import { completeReferralSubscription } from '@/modules/referral/actions'
 import { AccessAlert } from '@/components/AccessAlert'
 import { useWithOwnerAccess } from '@/hooks/use-with-access'
 import { SectionSkeleton } from './SectionSkeleton'
@@ -17,30 +20,26 @@ export function BillingSection({ accountId }: { accountId: string }) {
   const { isOwner, isLoadingAccess } = useWithOwnerAccess(accountId)
   const [loading, setIsLoading] = useState(false)
   const searchParams = useSearchParams()
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [referralCode, _, clearReferralCode] = useReferralCode()
+  const { isProMember, isLoading: isLoadingSubscription } = useSubscription()
 
   useEffect(() => {
     const handleSubscriptionStatus = async () => {
       const subscription = searchParams.get('subscription')
-      const referralCode = searchParams.get('referral')
 
       if (subscription === 'success') {
         toast.success('Thank you for subscribing! Your subscription will be active shortly.')
 
-        if (referralCode) {
-          try {
-            const error = await processReferralCode(referralCode)
-            if (error instanceof Error) {
-              toast.error(error.message)
-            } else {
-              clearReferralCode()
-              toast.success('Referral bonus applied!')
-            }
-          } catch (error) {
-            console.error('Error processing referral:', error)
-            toast.error('Failed to process referral')
+        try {
+          // todo complete the referral in the webhook?
+          const error = await completeReferralSubscription(accountId)
+          if (error instanceof Error) {
+            toast.error(error.message)
+          } else {
+            toast.success('Referral bonus applied!')
           }
+        } catch (error) {
+          console.error('Error processing referral:', error)
+          toast.error('Failed to process referral')
         }
       } else if (subscription === 'cancelled') {
         toast.info('Subscription cancelled. You can upgrade anytime.')
@@ -48,40 +47,65 @@ export function BillingSection({ accountId }: { accountId: string }) {
     }
 
     handleSubscriptionStatus()
-  }, [searchParams, referralCode, clearReferralCode])
+  }, [searchParams, accountId])
 
   const handleManageBilling = async () => {
+    setIsLoading(true)
     try {
-      setIsLoading(true)
-      const { url } = await createPortalSession(accountId)
-      window.location.href = url
-    } catch (error) {
-      console.error('Failed to create portal session:', error)
-      toast.error('Failed to manage billing')
+      const result = await createPortalSession(accountId)
+      if (result instanceof Error) {
+        toast.error(result.message)
+        return
+      }
+      window.location.href = result.url
+    } catch {
+      toast.error('Failed to open billing portal')
     } finally {
       setIsLoading(false)
     }
   }
 
-  if (isLoadingAccess) return <SectionSkeleton />
+  if (isLoadingAccess || isLoadingSubscription) return <SectionSkeleton />
   if (!isOwner) return <AccessAlert message="Only account owners can manage billing." />
 
   return (
-    <div className="bg-card text-card-foreground p-6 rounded-lg shadow">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <div className="p-2 rounded-full bg-gray-100 dark:bg-gray-700">
-            <CreditCard className="h-5 w-5 text-gray-600 dark:text-gray-400" />
+    <Card>
+      <CardContent className="pt-6 space-y-6">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <div className="p-2 rounded-full bg-gray-100 dark:bg-gray-700">
+              <CreditCard className="h-5 w-5 text-gray-600 dark:text-gray-400" />
+            </div>
+            <div>
+              <Label>Subscription & Billing</Label>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Manage your subscription and payment details</p>
+            </div>
           </div>
-          <div>
-            <Label>Subscription & Billing</Label>
-            <p className="text-sm text-gray-500 dark:text-gray-400">Manage your subscription and payment details</p>
-          </div>
+          <Button onClick={handleManageBilling} disabled={loading}>
+            {loading ? 'Opening Portal...' : 'Manage Billing'}
+          </Button>
         </div>
-        <Button onClick={handleManageBilling} disabled={loading}>
-          {loading ? 'Loading...' : 'Manage Billing'}
-        </Button>
-      </div>
-    </div>
+        {!isProMember && (
+          <div className="border-t pt-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <div className="p-2 rounded-full bg-gray-100 dark:bg-gray-700">
+                  <Sparkles className="h-5 w-5 text-gray-600 dark:text-gray-400" />
+                </div>
+                <div>
+                  <Label>Upgrade to Pro</Label>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Get access to advanced features and unlimited usage
+                  </p>
+                </div>
+              </div>
+              <div className="w-[140px]">
+                <UpgradeButton />
+              </div>
+            </div>
+          </div>
+        )}
+      </CardContent>
+    </Card>
   )
 }

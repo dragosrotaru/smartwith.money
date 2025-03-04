@@ -11,7 +11,7 @@ export function Header() {
   const { openMobile, setOpenMobile } = useSidebar()
   return (
     <header className="sticky top-0 z-50 h-16 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="flex items-center justify-between px-2 h-full">
+      <div className="flex h-full items-center justify-between px-2">
         <div className="flex items-center">
           <Link className="hidden md:block" href="/">
             <Logo />
