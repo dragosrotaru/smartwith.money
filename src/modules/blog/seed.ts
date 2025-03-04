@@ -5,8 +5,7 @@ export async function seedBlog() {
   console.log('🌱 Seeding blog data...')
 
   // Create categories
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [realEstate, investing, personalFinance] = await db
+  const [realEstate, personalFinance] = await db
     .insert(blogCategories)
     .values([
       {
@@ -15,14 +14,14 @@ export async function seedBlog() {
         description: 'Tips and analysis of the Canadian housing market',
       },
       {
-        name: 'Investing',
-        slug: 'investing',
-        description: 'Investment strategies and market analysis',
-      },
-      {
         name: 'Personal Finance',
         slug: 'personal-finance',
         description: 'Budgeting, saving, and financial planning advice',
+      },
+      {
+        name: 'Investing',
+        slug: 'investing',
+        description: 'Investment strategies and market analysis',
       },
     ])
     .returning()
