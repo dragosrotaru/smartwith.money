@@ -1,6 +1,6 @@
 'use client'
 import { Button } from '@/components/ui/button'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import InvitePeopleStep from './_components/InvitePeopleStep'
 import AccountNameStep from './_components/AccountNameStep'
@@ -29,23 +29,13 @@ export default function OnboardingContainer() {
     setFormData((prev) => ({ ...prev, ...data }))
   }
 
-  const nextStep = () => {
-    if (step === 2 && hasPersonFilledButNotAdded) {
-      toast.error('Did you forget to click "Add Person"? Click the button or clear the field and try again.')
-      return
-    }
-    if (step < 3 && isStepComplete()) {
-      setStep(step + 1)
-    }
-  }
-
   const prevStep = () => {
     if (step > 1) {
       setStep(step - 1)
     }
   }
 
-  const isStepComplete = () => {
+  const isStepComplete = useCallback(() => {
     switch (step) {
       case 1:
         return formData.accountName.trim().length > 0
@@ -59,45 +49,19 @@ export default function OnboardingContainer() {
       default:
         return false
     }
-  }
+  }, [formData, step])
 
-  const handleKeyPress = (event: KeyboardEvent) => {
-    if (event.key === 'Enter' && !event.shiftKey && !isSubmitting) {
-      if (step === 3 && isStepComplete()) {
-        handleSubmit()
-      } else {
-        nextStep()
-      }
+  const nextStep = useCallback(() => {
+    if (step === 2 && hasPersonFilledButNotAdded) {
+      toast.error('Did you forget to click "Add Person"? Click the button or clear the field and try again.')
+      return
     }
-  }
-
-  useEffect(() => {
-    window.addEventListener('keydown', handleKeyPress)
-    return () => {
-      window.removeEventListener('keydown', handleKeyPress)
+    if (step < 3 && isStepComplete()) {
+      setStep(step + 1)
     }
-  }, [step, isStepComplete, isSubmitting])
+  }, [step, hasPersonFilledButNotAdded, isStepComplete])
 
-  const renderStep = () => {
-    switch (step) {
-      case 1:
-        return <AccountNameStep formData={formData} updateFormData={updateFormData} />
-      case 2:
-        return (
-          <InvitePeopleStep
-            formData={formData}
-            updateFormData={updateFormData}
-            onPersonFilledButNotAdded={setHasPersonFilledButNotAdded}
-          />
-        )
-      case 3:
-        return <InitialPreferencesStep formData={formData} updateFormData={updateFormData} />
-      default:
-        return null
-    }
-  }
-
-  const handleSubmit = async () => {
+  const handleSubmit = useCallback(async () => {
     if (!isStepComplete()) return
 
     setIsSubmitting(true)
@@ -118,6 +82,45 @@ export default function OnboardingContainer() {
       toast.error('Something went wrong. Please try again.')
     } finally {
       setIsSubmitting(false)
+    }
+  }, [formData, setActiveAccountId, router, isStepComplete])
+
+  const handleKeyPress = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.key === 'Enter' && !event.shiftKey && !isSubmitting) {
+        if (step === 3 && isStepComplete()) {
+          handleSubmit()
+        } else {
+          nextStep()
+        }
+      }
+    },
+    [step, isStepComplete, isSubmitting, handleSubmit, nextStep],
+  )
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyPress)
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress)
+    }
+  }, [handleKeyPress])
+
+  const renderStep = () => {
+    switch (step) {
+      case 1:
+        return <AccountNameStep formData={formData} updateFormData={updateFormData} />
+      case 2:
+        return (
+          <InvitePeopleStep
+            formData={formData}
+            updateFormData={updateFormData}
+            onPersonFilledButNotAdded={setHasPersonFilledButNotAdded}
+          />
+        )
+      case 3:
+        return <InitialPreferencesStep formData={formData} updateFormData={updateFormData} />
+      default:
+        return null
     }
   }
 

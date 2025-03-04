@@ -5,7 +5,7 @@ import { recordReferralUse, completeReferralUse } from './service'
 import { nanoid } from 'nanoid'
 import { db } from '@/lib/db'
 import { referralCodes, referralUses } from './model'
-import { and, eq, isNull, sql } from 'drizzle-orm'
+import { and, eq, isNull } from 'drizzle-orm'
 
 export async function getOrCreateReferralCode(): Promise<string | Error> {
   const session = await auth()

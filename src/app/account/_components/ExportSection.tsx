@@ -5,7 +5,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { createExportJob, downloadExport, getExportJobs } from '@/modules/account/actions'
 import { ExportJobStatus } from '@/modules/account/model'
 import { Download, Loader2 } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { toast } from 'sonner'
 import { formatDistanceToNow } from 'date-fns'
 import { cn } from '@/lib/utils'
@@ -35,7 +35,7 @@ export function ExportSection({ accountId }: { accountId: string }) {
   const [isCreatingJob, setIsCreatingJob] = useState(false)
   const [isDownloading, setIsDownloading] = useState<string | null>(null)
 
-  const loadJobs = async () => {
+  const loadJobs = useCallback(async () => {
     try {
       const result = await getExportJobs(accountId)
       if (result instanceof Error) {
@@ -48,11 +48,11 @@ export function ExportSection({ accountId }: { accountId: string }) {
     } finally {
       setIsLoading(false)
     }
-  }
+  }, [accountId])
 
   useEffect(() => {
     loadJobs()
-  }, [accountId])
+  }, [accountId, loadJobs])
 
   const handleCreateExport = async () => {
     setIsCreatingJob(true)

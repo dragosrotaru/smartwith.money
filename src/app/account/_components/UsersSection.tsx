@@ -5,7 +5,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { ACCOUNT_ROLES, AccountRole } from '@/modules/account/model'
 import { getAccountUsers, resendInvite, updateUserRole, cancelInvite, removeUser } from '@/modules/account/actions'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { toast } from 'sonner'
 import { Loader2, MoreHorizontal } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
@@ -44,11 +44,7 @@ export function UsersSection({ accountId }: { accountId: string }) {
   const [cancellingInvite, setCancellingInvite] = useState<string | null>(null)
   const [removingUser, setRemovingUser] = useState<string | null>(null)
 
-  useEffect(() => {
-    loadUsers()
-  }, [accountId])
-
-  const loadUsers = async () => {
+  const loadUsers = useCallback(async () => {
     try {
       setIsLoading(true)
       const result = await getAccountUsers(accountId)
@@ -63,7 +59,11 @@ export function UsersSection({ accountId }: { accountId: string }) {
     } finally {
       setIsLoading(false)
     }
-  }
+  }, [accountId])
+
+  useEffect(() => {
+    loadUsers()
+  }, [accountId, loadUsers])
 
   const handleRoleChange = async (userId: string, newRole: AccountRole) => {
     setUpdatingRole(userId)
