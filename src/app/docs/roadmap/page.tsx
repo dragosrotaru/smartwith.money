@@ -1,16 +1,16 @@
 'use client'
 
+import { useState } from 'react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Badge } from '@/components/ui/badge'
+
 const statusColors = {
   'in-progress': 'bg-blue-500',
   planned: 'bg-green-500',
   considering: 'bg-yellow-500',
   researching: 'bg-purple-500',
 }
-
-import { useState } from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Badge } from '@/components/ui/badge'
 
 const roadmapData = {
   'Q3 2023': [

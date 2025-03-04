@@ -9,6 +9,7 @@ import {
   users,
   accounts,
   accountExportJobs,
+  AccountExportJob,
 } from './model'
 import { and, eq, sql, desc } from 'drizzle-orm'
 import { sendInviteEmail, sendAccountDeletionFeedbackEmail } from '../notifications/email'
@@ -441,6 +442,14 @@ export async function createExportJob(accountId: string) {
   }
 }
 
+export type AccountExportJobViewModel = Omit<AccountExportJob, 'requestedBy'> & {
+  requestedBy: {
+    id: string
+    name: string | null
+    email: string | null
+  }
+}
+
 export async function getExportJobs(accountId: string) {
   const auth = await withOwnerAccess(accountId)
   if (auth instanceof Error) return auth
@@ -454,6 +463,8 @@ export async function getExportJobs(accountId: string) {
         downloadUrl: accountExportJobs.downloadUrl,
         createdAt: accountExportJobs.createdAt,
         completedAt: accountExportJobs.completedAt,
+        updatedAt: accountExportJobs.updatedAt,
+        accountId: accountExportJobs.accountId,
         requestedBy: {
           id: users.id,
           name: users.name,

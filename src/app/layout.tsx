@@ -14,6 +14,7 @@ import { InviteDialog } from '@/components/InviteDialog'
 import { EnsureActiveAccount } from '@/components/EnsureActiveAccount'
 import WatchForReferralCode from '@/components/WatchForReferralCode'
 import { BannerProvider } from '@/contexts/BannerContext'
+import { Suspense } from 'react'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -53,7 +54,9 @@ export default async function RootLayout({
                     </div>
                     <Toaster />
                     <InviteDialog />
-                    <WatchForReferralCode />
+                    <Suspense>
+                      <WatchForReferralCode />
+                    </Suspense>
                   </SidebarProvider>
                 </body>
               </BannerProvider>

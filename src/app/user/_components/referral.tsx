@@ -21,8 +21,14 @@ export default function ReferralSettings() {
   const [referralUses, setReferralUses] = useState<ReferralUse[]>([])
   const [availableReferral, setAvailableReferral] = useState<ReferralCode | null>(null)
   const [copied, setCopied] = useState(false)
+  const [referralLink, setReferralLink] = useState<string>('')
   const { data: session } = useSession()
-  const referralLink = `${window.location.origin}/?ref=${referralCode}`
+
+  useEffect(() => {
+    if (referralCode) {
+      setReferralLink(`${window.location.origin}/?ref=${referralCode}`)
+    }
+  }, [referralCode])
 
   useEffect(() => {
     async function fetchData() {
