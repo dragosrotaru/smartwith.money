@@ -6,14 +6,15 @@ import { Markdown } from '@/components/Markdown'
 import Image from 'next/image'
 
 interface PostPageProps {
-  params: {
+  params: Promise<{
     slug: string
     post: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
-  const post = await getBlogPost(params.post)
+  const { post: postId } = await params
+  const post = await getBlogPost(postId)
   if (!post) return {}
 
   return {
@@ -23,7 +24,8 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-  const post = await getBlogPost(params.post)
+  const { post: postId } = await params
+  const post = await getBlogPost(postId)
   if (!post) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
