@@ -5,12 +5,12 @@ import { getBlogPosts } from '@/modules/blog/service'
 import Image from 'next/image'
 
 interface CategoryPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
-  searchParams: {
+  }>
+  searchParams: Promise<{
     page?: string
-  }
+  }>
 }
 
 // Map category slugs to icons
@@ -21,7 +21,7 @@ const categoryIcons = {
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-  const slug = await Promise.resolve(params.slug)
+  const { slug } = await params
   const { posts } = await getBlogPosts({ categorySlug: slug, limit: 1 })
   if (!posts.length || !posts[0].category) return {}
 
@@ -33,7 +33,8 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 }
 
 export default async function CategoryPage({ params, searchParams }: CategoryPageProps) {
-  const [slug, pageParam] = await Promise.all([Promise.resolve(params.slug), Promise.resolve(searchParams.page)])
+  const { slug } = await params
+  const { page: pageParam } = await searchParams
 
   const page = pageParam ? parseInt(pageParam) : 1
   const { posts, total } = await getBlogPosts({
