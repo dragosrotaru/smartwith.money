@@ -6,7 +6,7 @@ export async function uploadExportsFile(filePath: string, key: string): Promise<
   const blob = await put(key, stream, {
     access: 'public',
     addRandomSuffix: true,
-    token: process.env.DATA_EXPORTS_READ_WRITE_TOKEN,
+    token: process.env.DATA_EXPORT_READ_WRITE_TOKEN,
   })
 
   return blob.url
