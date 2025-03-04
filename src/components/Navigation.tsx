@@ -29,7 +29,7 @@ const subMenuTwo: MenuItem[] = [
 
 export default function Navigation() {
   return (
-    <NavigationMenu className="hidden md:block md:flex [&_div.absolute]:-left-48 [&_div.absolute]:top-12">
+    <NavigationMenu className="hidden md:flex [&_div.absolute]:-left-48 [&_div.absolute]:top-12">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Documentation</NavigationMenuTrigger>

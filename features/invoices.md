@@ -1,0 +1,8 @@
+- import invoices from PDF
+- download invoice PDFs
+- mark as paid, cancel
+- send to customer
+- payment reminders
+- payment options
+- customize style
+-

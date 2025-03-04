@@ -2,6 +2,7 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/h
 import { InfoCircledIcon } from '@radix-ui/react-icons'
 import React from 'react'
 import { Label } from '@/components/ui/label'
+import { formatCurrency, formatPercent } from '@/lib/format'
 
 interface ValueWithExplanationProps {
   label: string
@@ -9,14 +10,6 @@ interface ValueWithExplanationProps {
   explanation: string | React.ReactNode
   type?: 'currency' | 'percentage' | 'text'
   children?: React.ReactNode
-}
-
-export function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(amount)
-}
-
-export function formatPercentage(value: number): string {
-  return new Intl.NumberFormat('en-CA', { style: 'percent', minimumFractionDigits: 2 }).format(value / 100)
 }
 
 export function ValueWithExplanation({
@@ -32,7 +25,7 @@ export function ValueWithExplanation({
       case 'currency':
         return formatCurrency(value)
       case 'percentage':
-        return formatPercentage(value)
+        return formatPercent(value)
       default:
         return value.toString()
     }

@@ -11,14 +11,6 @@ interface HouseDisplayProps {
   house: House
 }
 
-function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(amount)
-}
-
-function formatPercentage(value: number): string {
-  return new Intl.NumberFormat('en-CA', { style: 'percent', minimumFractionDigits: 2 }).format(value)
-}
-
 export function HouseDisplay({ house }: HouseDisplayProps) {
   const [month, setMonth] = useState(0)
 
@@ -52,7 +44,7 @@ export function HouseDisplay({ house }: HouseDisplayProps) {
               </div>
               <div>
                 <Label>Rented Percentage</Label>
-                <div>{formatPercentage(house.rentedPercentage)}</div>
+                <div>{formatPercent(house.rentedPercentage)}</div>
               </div>
               <div>
                 <Label>Renovation Cost</Label>
@@ -60,7 +52,7 @@ export function HouseDisplay({ house }: HouseDisplayProps) {
               </div>
               <div>
                 <Label>Renovation ROI</Label>
-                <div>{formatPercentage(house.rennovationROI)}</div>
+                <div>{formatPercent(house.rennovationROI)}</div>
               </div>
             </div>
           </TabsContent>
@@ -85,7 +77,7 @@ export function HouseDisplay({ house }: HouseDisplayProps) {
               </div>
               <div>
                 <Label>Annual Appreciation Rate</Label>
-                <div>{formatPercentage(house.annualAppreciationRate)}</div>
+                <div>{formatPercent(house.annualAppreciationRate)}</div>
               </div>
             </div>
           </TabsContent>
@@ -98,7 +90,7 @@ export function HouseDisplay({ house }: HouseDisplayProps) {
               </div>
               <div>
                 <Label>Annual Rent Vacancy Rate</Label>
-                <div>{formatPercentage(house.annualRentVacancyRate)}</div>
+                <div>{formatPercent(house.annualRentVacancyRate)}</div>
               </div>
               <div>
                 <Label>Rent Income (Year 0)</Label>
