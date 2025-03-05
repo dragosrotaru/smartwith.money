@@ -1,6 +1,7 @@
 import { sql } from 'drizzle-orm'
 import { text, timestamp, pgTable, pgEnum, index, uuid, boolean } from 'drizzle-orm/pg-core'
 import { accounts } from '../account/model'
+import Stripe from 'stripe'
 
 // Enums
 export const subscriptionStatusEnum = pgEnum('subscription_status', [
@@ -11,8 +12,9 @@ export const subscriptionStatusEnum = pgEnum('subscription_status', [
   'past_due',
   'trialing',
   'unpaid',
-])
-export type SubscriptionStatus = (typeof subscriptionStatusEnum.enumValues)[number]
+  'paused',
+] as const satisfies Stripe.Subscription.Status[])
+export type SubscriptionStatus = Stripe.Subscription.Status
 
 export const subscriptions = pgTable(
   'stripe_subscription',
@@ -26,7 +28,7 @@ export const subscriptions = pgTable(
     stripeCurrentPeriodStart: timestamp('stripe_current_period_start').notNull(),
     stripeCurrentPeriodEnd: timestamp('stripe_current_period_end').notNull(),
     status: subscriptionStatusEnum('status').notNull(),
-    priceId: text('price_id').notNull(),
+    stripePriceId: text('stripe_price_id').notNull(),
     cancelAtPeriodEnd: boolean('cancel_at_period_end').notNull().default(false),
     canceledAt: timestamp('canceled_at'),
     createdAt: timestamp('created_at')

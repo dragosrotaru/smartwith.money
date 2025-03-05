@@ -1,7 +1,7 @@
 import { headers } from 'next/headers'
 import { NextResponse } from 'next/server'
 import type Stripe from 'stripe'
-import { updateSubscription, constructWebhookEvent } from '@/modules/billing/service'
+import { createSubscription, updateSubscription, constructWebhookEvent } from '@/modules/billing/service'
 import { db } from '@/lib/db'
 import { accounts } from '@/modules/account/model'
 import { eq } from 'drizzle-orm'
@@ -30,9 +30,7 @@ export async function POST(request: Request) {
     const event = constructWebhookEvent(body, signature)
 
     switch (event.type) {
-      case 'customer.subscription.created':
-      case 'customer.subscription.updated':
-      case 'customer.subscription.deleted': {
+      case 'customer.subscription.created': {
         const subscription = event.data.object as Stripe.Subscription
 
         // Get account by stripe customer ID
@@ -47,26 +45,16 @@ export async function POST(request: Request) {
           return new NextResponse('Account not found', { status: 400 })
         }
 
-        // Map Stripe status to our status
-        const status = subscription.status as
-          | 'active'
-          | 'canceled'
-          | 'incomplete'
-          | 'incomplete_expired'
-          | 'past_due'
-          | 'trialing'
-          | 'unpaid'
+        // Add accountId to subscription metadata
+        subscription.metadata.accountId = account.id
+        await createSubscription(subscription)
+        break
+      }
 
-        await updateSubscription(subscription.id, {
-          status,
-          priceId: subscription.items.data[0].price.id,
-          accountId: account.id,
-          stripeCustomerId: subscription.customer as string,
-          stripeCurrentPeriodStart: new Date(subscription.current_period_start * 1000),
-          stripeCurrentPeriodEnd: new Date(subscription.current_period_end * 1000),
-          cancelAtPeriodEnd: subscription.cancel_at_period_end,
-          canceledAt: subscription.canceled_at ? new Date(subscription.canceled_at * 1000) : null,
-        })
+      case 'customer.subscription.updated':
+      case 'customer.subscription.deleted': {
+        const subscription = event.data.object as Stripe.Subscription
+        await updateSubscription(subscription)
         break
       }
 

@@ -1,6 +1,6 @@
 import { and, eq } from 'drizzle-orm'
 import { db } from '@/lib/db'
-import { subscriptions, type Subscription, type NewSubscription } from './model'
+import { subscriptions, type Subscription } from './model'
 import Stripe from 'stripe'
 
 if (!process.env.STRIPE_SECRET_KEY) {
@@ -69,11 +69,41 @@ export async function getActiveSubscription(accountId: string) {
   return subscription
 }
 
-export async function updateSubscription(id: string, data: Partial<NewSubscription>): Promise<Subscription> {
+export async function createSubscription(subscription: Stripe.Subscription): Promise<Subscription> {
+  const [newSubscription] = await db
+    .insert(subscriptions)
+    .values({
+      stripeId: subscription.id,
+      stripeCustomerId: subscription.customer as string,
+      accountId: subscription.metadata.accountId,
+      status: subscription.status,
+      stripeCurrentPeriodStart: new Date(subscription.current_period_start * 1000),
+      stripeCurrentPeriodEnd: new Date(subscription.current_period_end * 1000),
+      stripePriceId: subscription.items.data[0].price.id,
+      cancelAtPeriodEnd: subscription.cancel_at_period_end,
+      canceledAt: subscription.canceled_at ? new Date(subscription.canceled_at * 1000) : null,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    })
+    .returning()
+
+  return newSubscription
+}
+
+export async function updateSubscription(subscription: Stripe.Subscription): Promise<Subscription> {
   const [updatedSubscription] = await db
     .update(subscriptions)
-    .set({ ...data, updatedAt: new Date() })
-    .where(eq(subscriptions.id, id))
+    .set({
+      status: subscription.status,
+      stripeCurrentPeriodStart: new Date(subscription.current_period_start * 1000),
+      stripeCurrentPeriodEnd: new Date(subscription.current_period_end * 1000),
+      stripePriceId: subscription.items.data[0].price.id,
+      cancelAtPeriodEnd: subscription.cancel_at_period_end,
+      canceledAt: subscription.canceled_at ? new Date(subscription.canceled_at * 1000) : null,
+      updatedAt: new Date(),
+    })
+    .where(eq(subscriptions.stripeId, subscription.id))
     .returning()
+
   return updatedSubscription
 }
