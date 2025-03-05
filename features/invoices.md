@@ -1,3 +1,15 @@
+- invoice must come from own company
+- change company to customer
+- improve printable style
+- terms must be drop-down
+- Make invoice item a single line in a table
+- auto-calculate tax
+- Offer more tax codes
+- auto increment invoice number, setup custom invoice number settings with prefix, company prefix
+- pick or create new company, show in a dialog
+- show invoice status, mark as paid, mark as unpaid, cancel, void, refund, apply credits
+- Company address should be autocomplete, country, state should be drop down
+
 - import invoices from PDF
 - download invoice PDFs
 - mark as paid, cancel
@@ -5,4 +17,4 @@
 - payment reminders
 - payment options
 - customize style
--
+- AI UI to create new invoice, customer, query data and answer questions

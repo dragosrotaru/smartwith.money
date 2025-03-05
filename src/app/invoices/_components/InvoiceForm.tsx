@@ -8,11 +8,29 @@ import { Button } from '@/components/ui/button'
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Card, CardContent } from '@/components/ui/card'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { Trash2, Plus } from 'lucide-react'
 import { createInvoice } from '@/modules/invoices/actions'
 import { toast } from 'sonner'
 import { InvoiceCompany } from '@/modules/invoices/model'
+import Link from 'next/link'
+import { useEffect } from 'react'
+import { cn } from '@/lib/utils'
+import { CompanyCombobox } from './CompanyCombobox'
+
+const TAX_RATES = {
+  'HST (13%)': 0.13,
+  'GST (5%)': 0.05,
+} as const
+
+const PAYMENT_TERMS = {
+  due_upon_receipt: 'Due upon receipt',
+  net_15: 'Net 15',
+  net_30: 'Net 30',
+  net_45: 'Net 45',
+  net_60: 'Net 60',
+  custom: 'Custom',
+} as const
 
 const invoiceItemSchema = z.object({
   description: z.string().min(1, 'Description is required'),
@@ -45,10 +63,35 @@ export function InvoiceForm({ accountId, companies }: InvoiceFormProps) {
     defaultValues: {
       date: new Date().toISOString().split('T')[0],
       items: [{ description: '', amount: 0, tax: 0, taxType: 'HST (13%)' }],
-      terms: 'Due upon receipt',
+      terms: PAYMENT_TERMS.due_upon_receipt,
       currency: 'CAD',
     },
   })
+
+  useEffect(() => {
+    const subscription = form.watch((value, { name, type }) => {
+      if (!name?.includes('items') || !type) return
+
+      const match = name.match(/items\.(\d+)\.(amount|taxType)/)
+      if (!match) return
+
+      const index = parseInt(match[1])
+      const field = match[2]
+
+      if (field === 'amount' || field === 'taxType') {
+        const item = form.getValues(`items.${index}`)
+        const amount = Number(item.amount)
+        const taxRate = TAX_RATES[item.taxType as keyof typeof TAX_RATES] || 0
+        const calculatedTax = Number((amount * taxRate).toFixed(2))
+
+        form.setValue(`items.${index}.tax`, calculatedTax, {
+          shouldValidate: true,
+        })
+      }
+    })
+
+    return () => subscription.unsubscribe()
+  }, [form])
 
   const onSubmit = async (data: FormValues) => {
     try {
@@ -107,20 +150,14 @@ export function InvoiceForm({ accountId, companies }: InvoiceFormProps) {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>From Company</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a company" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    {companies.map((company) => (
-                      <SelectItem key={company.id} value={company.id}>
-                        {company.name}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                <FormControl>
+                  <CompanyCombobox
+                    companies={companies}
+                    value={field.value}
+                    onChange={field.onChange}
+                    accountId={accountId}
+                  />
+                </FormControl>
                 <FormMessage />
               </FormItem>
             )}
@@ -132,20 +169,14 @@ export function InvoiceForm({ accountId, companies }: InvoiceFormProps) {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>To Company</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a company" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    {companies.map((company) => (
-                      <SelectItem key={company.id} value={company.id}>
-                        {company.name}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                <FormControl>
+                  <CompanyCombobox
+                    companies={companies}
+                    value={field.value}
+                    onChange={field.onChange}
+                    accountId={accountId}
+                  />
+                </FormControl>
                 <FormMessage />
               </FormItem>
             )}
@@ -179,9 +210,20 @@ export function InvoiceForm({ accountId, companies }: InvoiceFormProps) {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Terms</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    {Object.entries(PAYMENT_TERMS).map(([key, value]) => (
+                      <SelectItem key={key} value={value}>
+                        {value}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
                 <FormMessage />
               </FormItem>
             )}
@@ -205,99 +247,129 @@ export function InvoiceForm({ accountId, companies }: InvoiceFormProps) {
             </Button>
           </div>
 
-          {form.watch('items').map((_, index) => (
-            <Card key={index}>
-              <CardContent className="pt-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name={`items.${index}.description`}
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Description</FormLabel>
-                        <FormControl>
-                          <Input {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name={`items.${index}.amount`}
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Amount</FormLabel>
-                        <FormControl>
-                          <Input type="number" step="0.01" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name={`items.${index}.tax`}
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Tax</FormLabel>
-                        <FormControl>
-                          <Input type="number" step="0.01" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name={`items.${index}.taxType`}
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Tax Type</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="HST (13%)">HST (13%)</SelectItem>
-                            <SelectItem value="GST (5%)">GST (5%)</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                {index > 0 && (
-                  <Button
-                    type="button"
-                    variant="destructive"
-                    size="sm"
-                    className="mt-4"
-                    onClick={() => {
-                      const items = form.getValues('items')
-                      form.setValue(
-                        'items',
-                        items.filter((_, i) => i !== index),
-                      )
-                    }}
-                  >
-                    <Trash2 className="h-4 w-4 mr-2" />
-                    Remove Item
-                  </Button>
-                )}
-              </CardContent>
-            </Card>
-          ))}
+          <div className="rounded-md border">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Description</TableHead>
+                  <TableHead>Amount</TableHead>
+                  <TableHead>Tax Type</TableHead>
+                  <TableHead>Tax</TableHead>
+                  <TableHead></TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {form.watch('items').map((_, index) => (
+                  <TableRow key={index}>
+                    <TableCell className="py-2">
+                      <FormField
+                        control={form.control}
+                        name={`items.${index}.description`}
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormControl>
+                              <Input {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </TableCell>
+                    <TableCell className="py-2">
+                      <FormField
+                        control={form.control}
+                        name={`items.${index}.amount`}
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormControl>
+                              <Input
+                                type="number"
+                                step="0.01"
+                                {...field}
+                                className={cn(
+                                  '[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none',
+                                )}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </TableCell>
+                    <TableCell className="py-2">
+                      <FormField
+                        control={form.control}
+                        name={`items.${index}.taxType`}
+                        render={({ field }) => (
+                          <FormItem>
+                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                              <FormControl>
+                                <SelectTrigger>
+                                  <SelectValue />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                <SelectItem value="HST (13%)">HST (13%)</SelectItem>
+                                <SelectItem value="GST (5%)">GST (5%)</SelectItem>
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </TableCell>
+                    <TableCell className="py-2">
+                      <FormField
+                        control={form.control}
+                        name={`items.${index}.tax`}
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormControl>
+                              <Input
+                                type="number"
+                                step="0.01"
+                                {...field}
+                                disabled
+                                className={cn(
+                                  'bg-muted',
+                                  '[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none',
+                                )}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </TableCell>
+                    <TableCell className="py-2">
+                      {index > 0 && (
+                        <Button
+                          type="button"
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => {
+                            const items = form.getValues('items')
+                            form.setValue(
+                              'items',
+                              items.filter((_, i) => i !== index),
+                            )
+                          }}
+                        >
+                          <Trash2 className="h-4 w-4 text-destructive" />
+                        </Button>
+                      )}
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
         </div>
 
-        <div className="flex justify-end">
+        <div className="flex justify-end gap-4">
+          <Button variant="outline" asChild>
+            <Link href="/invoices">Back to Invoices</Link>
+          </Button>
           <Button type="submit">Create Invoice</Button>
         </div>
       </form>

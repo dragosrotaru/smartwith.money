@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
 import { Card } from '@/components/ui/card'
 import { formatCurrency } from '@/lib/format'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 export interface InvoiceItem {
   description: string
@@ -45,7 +45,7 @@ export function Invoice({ data, className }: InvoiceProps) {
     <Card className={cn('p-8 print:p-6 print:shadow-none', className)}>
       <div className="flex justify-between items-start">
         <div className="flex-shrink-0">
-          <Image src="/logo.png" alt="Company Logo" width={64} height={64} className="h-16 w-auto" />
+          {/* <Image src="/logo.png" alt="Company Logo" width={64} height={64} className="h-16 w-auto" /> */}
         </div>
         <div className="text-right">
           <p className="text-sm text-muted-foreground">

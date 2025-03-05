@@ -21,7 +21,7 @@ export default async function NewInvoicePage() {
         <p className="text-muted-foreground">
           You need to create at least one company before you can create an invoice.
         </p>
-        <a href="/companies/new" className="text-primary hover:underline">
+        <a href="/invoices/companies/new" className="text-primary hover:underline">
           Create your first company
         </a>
       </div>

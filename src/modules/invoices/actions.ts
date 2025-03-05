@@ -1,3 +1,5 @@
+'use server'
+
 import { db } from '@/lib/db'
 import { eq, asc } from 'drizzle-orm'
 import { InvoiceData } from '@/app/invoices/_components/Invoice'
@@ -214,4 +216,84 @@ export async function getCompaniesForInvoice(accountId: string) {
     .orderBy(asc(companies.name))
 
   return companyList
+}
+
+interface CompanyInput {
+  name: string
+  address: string
+  city: string
+  state: string
+  postalCode: string
+  country: string
+  businessNumber?: string
+  taxNumber?: string
+  contactName: string
+  email: string
+  accountId: string
+}
+
+export async function createCompany(data: CompanyInput) {
+  try {
+    const [company] = await db
+      .insert(companies)
+      .values({
+        name: data.name,
+        address: data.address,
+        city: data.city,
+        state: data.state,
+        postalCode: data.postalCode,
+        country: data.country,
+        businessNumber: data.businessNumber || null,
+        taxNumber: data.taxNumber || null,
+        contactName: data.contactName,
+        email: data.email,
+        accountId: data.accountId,
+      })
+      .returning()
+
+    return company
+  } catch (error) {
+    console.error('Error creating company:', error)
+    return null
+  }
+}
+
+export interface CompanyListItem {
+  id: string
+  name: string
+  email: string
+  contactName: string
+  address: string
+  city: string
+  state: string
+  postalCode: string
+  country: string
+}
+
+export async function getCompaniesByAccountId(accountId: string): Promise<CompanyListItem[] | Error> {
+  const auth = await withReadAccess(accountId)
+  if (auth instanceof Error) return auth
+
+  try {
+    const result = await db
+      .select({
+        id: companies.id,
+        name: companies.name,
+        email: companies.email,
+        contactName: companies.contactName,
+        address: companies.address,
+        city: companies.city,
+        state: companies.state,
+        postalCode: companies.postalCode,
+        country: companies.country,
+      })
+      .from(companies)
+      .where(eq(companies.accountId, accountId))
+      .orderBy(asc(companies.name))
+
+    return result
+  } catch (error) {
+    console.error('Error fetching companies:', error)
+    return new Error('Failed to fetch companies')
+  }
 }
