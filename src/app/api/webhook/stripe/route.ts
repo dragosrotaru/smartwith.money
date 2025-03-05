@@ -1,7 +1,7 @@
 import { headers } from 'next/headers'
 import { NextResponse } from 'next/server'
 import type Stripe from 'stripe'
-import { updateSubscription, getPriceByStripeId, constructWebhookEvent } from '@/modules/billing/service'
+import { updateSubscription, constructWebhookEvent } from '@/modules/billing/service'
 import { db } from '@/lib/db'
 import { accounts } from '@/modules/account/model'
 import { eq } from 'drizzle-orm'
@@ -47,12 +47,6 @@ export async function POST(request: Request) {
           return new NextResponse('Account not found', { status: 400 })
         }
 
-        const price = await getPriceByStripeId(subscription.items.data[0].price.id)
-        if (!price) {
-          console.error('Price not found:', subscription.items.data[0].price.id)
-          return new NextResponse('Price not found', { status: 400 })
-        }
-
         // Map Stripe status to our status
         const status = subscription.status as
           | 'active'
@@ -65,7 +59,7 @@ export async function POST(request: Request) {
 
         await updateSubscription(subscription.id, {
           status,
-          priceId: price.id,
+          priceId: subscription.items.data[0].price.id,
           accountId: account.id,
           stripeCustomerId: subscription.customer as string,
           stripeCurrentPeriodStart: new Date(subscription.current_period_start * 1000),

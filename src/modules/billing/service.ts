@@ -1,6 +1,6 @@
 import { and, eq } from 'drizzle-orm'
 import { db } from '@/lib/db'
-import { prices, subscriptions, type Price, type Subscription, type NewSubscription } from './model'
+import { subscriptions, type Subscription, type NewSubscription } from './model'
 import Stripe from 'stripe'
 
 if (!process.env.STRIPE_SECRET_KEY) {
@@ -56,23 +56,17 @@ export function constructWebhookEvent(payload: string | Buffer, signature: strin
   return stripe.webhooks.constructEvent(payload, signature, process.env.STRIPE_WEBHOOK_SECRET!)
 }
 
-export async function getActiveSubscription(accountId: string): Promise<(Subscription & { price: Price }) | null> {
-  const results = await db
-    .select({
-      subscription: subscriptions,
-      price: prices,
-    })
+export async function getActiveSubscription(accountId: string) {
+  const subscription = await db
+    .select()
     .from(subscriptions)
-    .leftJoin(prices, eq(subscriptions.priceId, prices.id))
     .where(and(eq(subscriptions.accountId, accountId), eq(subscriptions.status, 'active')))
     .limit(1)
+    .then((results) => results[0])
 
-  if (!results.length) return null
+  if (!subscription) return null
 
-  const { subscription, price } = results[0]
-  if (!price) return null
-
-  return { ...subscription, price }
+  return subscription
 }
 
 export async function updateSubscription(id: string, data: Partial<NewSubscription>): Promise<Subscription> {
@@ -82,9 +76,4 @@ export async function updateSubscription(id: string, data: Partial<NewSubscripti
     .where(eq(subscriptions.id, id))
     .returning()
   return updatedSubscription
-}
-
-export async function getPriceByStripeId(stripeId: string): Promise<Price | null> {
-  const results = await db.select().from(prices).where(eq(prices.stripeId, stripeId)).limit(1)
-  return results[0] || null
 }

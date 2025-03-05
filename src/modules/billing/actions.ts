@@ -38,7 +38,7 @@ export async function getSubscriptionStatus() {
 
     const subscription = await getActiveSubscription(auth.activeAccountId)
     return {
-      isProMember: !!subscription && subscription.price.type === 'pro',
+      isProMember: !!subscription && subscription.status === 'active',
       status: subscription?.status || null,
       trialEndsAt: subscription?.stripeCurrentPeriodEnd || null,
     }
