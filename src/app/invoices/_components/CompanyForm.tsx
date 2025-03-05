@@ -27,11 +27,10 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>
 
 interface CompanyFormProps {
-  accountId: string
   onSuccess?: (company: InvoiceCompany) => void
 }
 
-export function CompanyForm({ accountId, onSuccess }: CompanyFormProps) {
+export function CompanyForm({ onSuccess }: CompanyFormProps) {
   const router = useRouter()
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -41,25 +40,20 @@ export function CompanyForm({ accountId, onSuccess }: CompanyFormProps) {
   })
 
   const onSubmit = async (data: FormValues) => {
-    try {
-      const result = await createCompany({
-        ...data,
-        accountId,
-      })
+    const result = await createCompany(data)
 
-      if (!result) throw new Error('Failed to create company')
+    if (result instanceof Error) {
+      toast.error(result.message)
+      return
+    }
 
-      toast.success('Company created successfully')
+    toast.success('Company created successfully')
 
-      if (onSuccess) {
-        onSuccess(result)
-      } else {
-        router.push('/invoices/companies')
-        router.refresh()
-      }
-    } catch (error) {
-      console.error('Failed to create company:', error)
-      toast.error('Failed to create company')
+    if (onSuccess) {
+      onSuccess(result)
+    } else {
+      router.push('/invoices/companies')
+      router.refresh()
     }
   }
 

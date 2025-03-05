@@ -1,16 +1,16 @@
-import { getActiveAccount } from '@/modules/account/activeAccount'
-import { getAccountPreferences } from '@/modules/account/actions'
+import { getAccountPreferences, getActiveAccount } from '@/modules/account/actions'
 import MortgageCalculator from '../_components/mortgage/MortgageCalculator'
 import { MortgageProps } from '@/modules/real-estate/domain/mortgage'
 import { Province } from '@/modules/location/provinces'
 
 export default async function MortgagePage() {
   const accountId = await getActiveAccount()
+
   let isFirstTimeBuyer = false
   let province: Province = 'ON'
 
   if (accountId) {
-    const preferences = await getAccountPreferences(accountId)
+    const preferences = await getAccountPreferences()
     if (!(preferences instanceof Error)) {
       isFirstTimeBuyer = preferences.isFirstTimeHomeBuyer
       province = preferences.province

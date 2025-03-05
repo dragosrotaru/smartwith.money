@@ -52,11 +52,10 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>
 
 interface InvoiceFormProps {
-  accountId: string
   companies: InvoiceCompany[]
 }
 
-export function InvoiceForm({ accountId, companies }: InvoiceFormProps) {
+export function InvoiceForm({ companies }: InvoiceFormProps) {
   const router = useRouter()
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -97,11 +96,13 @@ export function InvoiceForm({ accountId, companies }: InvoiceFormProps) {
     try {
       const result = await createInvoice({
         ...data,
-        accountId,
         date: new Date(data.date),
       })
 
-      if (!result) throw new Error('Failed to create invoice')
+      if (result instanceof Error) {
+        toast.error(result.message)
+        return
+      }
 
       toast.success('Invoice created successfully')
       router.push(`/invoices/${result.id}`)
@@ -151,12 +152,7 @@ export function InvoiceForm({ accountId, companies }: InvoiceFormProps) {
               <FormItem>
                 <FormLabel>From Company</FormLabel>
                 <FormControl>
-                  <CompanyCombobox
-                    companies={companies}
-                    value={field.value}
-                    onChange={field.onChange}
-                    accountId={accountId}
-                  />
+                  <CompanyCombobox companies={companies} value={field.value} onChange={field.onChange} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -170,12 +166,7 @@ export function InvoiceForm({ accountId, companies }: InvoiceFormProps) {
               <FormItem>
                 <FormLabel>To Company</FormLabel>
                 <FormControl>
-                  <CompanyCombobox
-                    companies={companies}
-                    value={field.value}
-                    onChange={field.onChange}
-                    accountId={accountId}
-                  />
+                  <CompanyCombobox companies={companies} value={field.value} onChange={field.onChange} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

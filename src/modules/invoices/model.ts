@@ -55,7 +55,7 @@ export const companies = pgTable('invoice_company', {
   updatedAt: timestamp('updated_at').defaultNow(),
 })
 export type InvoiceCompany = typeof companies.$inferSelect
-export type NewInvoiceCompany = typeof companies.$inferInsert
+export type InvoiceCompanyNew = typeof companies.$inferInsert
 
 export const invoiceRelations = relations(invoices, ({ one, many }) => ({
   fromCompany: one(companies, {

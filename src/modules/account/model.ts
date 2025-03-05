@@ -11,6 +11,7 @@ export const users = pgTable('user', {
   image: text('image'),
   stripeCustomerId: text('stripe_customer_id').unique(),
   password: text('password'),
+  activeAccountId: uuid('active_account_id').references(() => accounts.id),
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
 })

@@ -5,21 +5,20 @@ import { DropdownMenuItem } from '@/components/ui/dropdown-menu'
 import { Sparkles } from 'lucide-react'
 import { useSubscription } from '@/contexts/SubscriptionContext'
 import { createCheckoutSession } from '@/modules/billing/actions'
-import { useActiveAccount } from '@/contexts/ActiveAccountContext'
+import { useWithOwnerAccess } from '@/hooks/use-with-access'
 
 export default function UpgradeMenuItem() {
   const [isUpgrading, setIsUpgrading] = useState(false)
-  const { isProMember, isLoading } = useSubscription()
-  const { activeAccountId } = useActiveAccount()
+  const { isProMember, isLoading: isLoadingSubscription } = useSubscription()
+  const { isOwner, isLoadingAccess } = useWithOwnerAccess()
 
-  if (!activeAccountId) return null
-
-  if (isLoading || isProMember) return null
+  const isDisabled = isLoadingSubscription || isLoadingAccess || !isOwner || isProMember
+  if (isDisabled) return null
 
   const handleUpgrade = async () => {
     try {
       setIsUpgrading(true)
-      const { url } = await createCheckoutSession(activeAccountId)
+      const { url } = await createCheckoutSession()
       window.location.href = url
     } catch (error) {
       console.error('Error creating checkout session:', error)

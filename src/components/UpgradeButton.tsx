@@ -4,29 +4,34 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Sparkles } from 'lucide-react'
 import { createCheckoutSession } from '@/modules/billing/actions'
-import { useActiveAccount } from '@/contexts/ActiveAccountContext'
+import { useWithOwnerAccess } from '@/hooks/use-with-access'
+import { useSubscription } from '@/contexts/SubscriptionContext'
 export default function UpgradeButton() {
-  const [isLoading, setIsLoading] = useState(false)
-  const { activeAccountId } = useActiveAccount()
+  const [isLoadingUpgrade, setIsLoadingUpgrade] = useState(false)
+  const { isProMember, isLoading: isLoadingSubscription } = useSubscription()
+  const { isOwner, isLoadingAccess } = useWithOwnerAccess()
 
-  if (!activeAccountId) return null
+  const isLoading = isLoadingUpgrade || isLoadingAccess || isLoadingSubscription
+  const isDisabled = isLoading || !isOwner
+
+  if (isProMember) return null
 
   const handleUpgrade = async () => {
     try {
-      setIsLoading(true)
-      const { url } = await createCheckoutSession(activeAccountId)
+      setIsLoadingUpgrade(true)
+      const { url } = await createCheckoutSession()
       window.location.href = url
     } catch (error) {
       console.error('Error creating checkout session:', error)
     } finally {
-      setIsLoading(false)
+      setIsLoadingUpgrade(false)
     }
   }
 
   return (
     <Button
       onClick={handleUpgrade}
-      disabled={isLoading}
+      disabled={isDisabled}
       variant="default"
       className="w-full flex items-center justify-center gap-2"
     >

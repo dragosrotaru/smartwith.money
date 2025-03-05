@@ -6,20 +6,21 @@ import { toast } from 'sonner'
 import { formatDistanceToNow } from 'date-fns'
 import { AccessAlert } from '@/components/AccessAlert'
 import { useWithOwnerAccess } from '@/hooks/use-with-access'
-import { SectionSkeleton } from './SectionSkeleton'
+import { SectionSkeleton } from '../SectionSkeleton'
 import ExportJobStatus from './ExportJobStatus'
 import ExportCreateButton from './ExportCreateButton'
 import ExportDownloadButton from './ExportDownloadButton'
 
-export function ExportSection({ accountId }: { accountId: string }) {
-  const [isLoading, setIsLoading] = useState(true)
+export function ExportSection() {
+  const [isLoading, setIsLoading] = useState(false)
   const [jobs, setJobs] = useState<AccountExportJobViewModel[]>([])
 
-  const { isOwner, isLoadingAccess } = useWithOwnerAccess(accountId)
+  const { isOwner, isLoadingAccess } = useWithOwnerAccess()
 
   const loadJobs = useCallback(async () => {
     try {
-      const result = await getExportJobs(accountId)
+      setIsLoading(true)
+      const result = await getExportJobs()
       if (result instanceof Error) {
         toast.error(result.message)
         return
@@ -30,11 +31,13 @@ export function ExportSection({ accountId }: { accountId: string }) {
     } finally {
       setIsLoading(false)
     }
-  }, [accountId])
+  }, [])
 
   useEffect(() => {
-    loadJobs()
-  }, [accountId, loadJobs])
+    if (isOwner) {
+      loadJobs()
+    }
+  }, [loadJobs, isOwner])
 
   if (isLoading || isLoadingAccess) return <SectionSkeleton />
   if (!isOwner) return <AccessAlert message="Only account owners can export account data." />
@@ -42,7 +45,7 @@ export function ExportSection({ accountId }: { accountId: string }) {
   return (
     <div className="space-y-4">
       <div className="flex justify-end">
-        <ExportCreateButton accountId={accountId} reloadJobs={loadJobs} />
+        <ExportCreateButton reloadJobs={loadJobs} />
       </div>
 
       <div className="rounded-md border">

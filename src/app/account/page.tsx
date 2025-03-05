@@ -1,5 +1,4 @@
 import { SwitchAccountDialog } from './_components/SwitchAccountDialog'
-import { getActiveAccount } from '@/modules/account/activeAccount'
 import { withReadAccess } from '@/modules/account/actions'
 import { redirect } from 'next/navigation'
 import { UsersSection } from './_components/UsersSection'
@@ -12,12 +11,8 @@ import Link from 'next/link'
 import { menu } from '@/lib/menu'
 
 export default async function AccountPage() {
-  const accountId = await getActiveAccount()
-  if (!accountId) redirect('/')
-
-  const auth = await withReadAccess(accountId)
-  console.log('accountId', auth)
-  if (auth instanceof Error) redirect('/')
+  const auth = await withReadAccess()
+  if (auth instanceof Error || !auth.activeAccountId) redirect('/')
 
   return (
     <div className="space-y-8">
@@ -42,22 +37,22 @@ export default async function AccountPage() {
 
         <section>
           <h2 className="text-lg font-medium mb-6">Billing</h2>
-          <BillingSection accountId={accountId} />
+          <BillingSection />
         </section>
 
         <section>
           <h2 className="text-lg font-medium mb-6">Users & Permissions</h2>
-          <UsersSection accountId={accountId} />
+          <UsersSection />
         </section>
 
         <section>
           <h2 className="text-lg font-medium mb-6">Export Account Data</h2>
-          <ExportSection accountId={accountId} />
+          <ExportSection />
         </section>
 
         <section>
           <h2 className="text-lg font-medium mb-6">Delete Account</h2>
-          <DeleteSection accountId={accountId} />
+          <DeleteSection />
         </section>
       </div>
     </div>

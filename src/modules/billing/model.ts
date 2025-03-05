@@ -12,8 +12,10 @@ export const subscriptionStatusEnum = pgEnum('subscription_status', [
   'trialing',
   'unpaid',
 ])
+export type SubscriptionStatus = (typeof subscriptionStatusEnum.enumValues)[number]
 
 export const planTypeEnum = pgEnum('plan_type', ['free', 'pro'])
+export type PlanType = (typeof planTypeEnum.enumValues)[number]
 
 // Tables
 export const prices = pgTable(
@@ -41,6 +43,8 @@ export const prices = pgTable(
     typeIdx: index('prices_type_idx').on(table.type),
   }),
 )
+export type Price = typeof prices.$inferSelect
+export type NewPrice = typeof prices.$inferInsert
 
 export const subscriptions = pgTable(
   'stripe_subscription',
@@ -72,9 +76,5 @@ export const subscriptions = pgTable(
     statusIdx: index('subscriptions_status_idx').on(table.status),
   }),
 )
-
-// Types
-export type Price = typeof prices.$inferSelect
-export type NewPrice = typeof prices.$inferInsert
 export type Subscription = typeof subscriptions.$inferSelect
 export type NewSubscription = typeof subscriptions.$inferInsert

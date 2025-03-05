@@ -4,10 +4,13 @@ import { createContext, useContext, useEffect, useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { getSubscriptionStatus } from '@/modules/billing/actions'
 import { useActiveAccount } from './ActiveAccountContext'
+import { SubscriptionStatus } from '@/modules/billing/model'
 
 type SubscriptionContextType = {
   isLoading: boolean
   isProMember: boolean
+  status: SubscriptionStatus | null
+  trialEndsAt: Date | null
 }
 
 const SubscriptionContext = createContext<SubscriptionContextType | undefined>(undefined)
@@ -16,6 +19,8 @@ export function SubscriptionProvider({ children }: { children: React.ReactNode }
   const { data: session, status } = useSession()
   const [isLoading, setIsLoading] = useState(true)
   const [isProMember, setIsProMember] = useState(false)
+  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus | null>(null)
+  const [trialEndsAt, setTrialEndsAt] = useState<Date | null>(null)
   const { activeAccountId } = useActiveAccount()
 
   useEffect(() => {
@@ -31,8 +36,10 @@ export function SubscriptionProvider({ children }: { children: React.ReactNode }
       }
 
       try {
-        const { isProMember: isPro } = await getSubscriptionStatus(activeAccountId)
+        const { isProMember: isPro, status, trialEndsAt } = await getSubscriptionStatus()
         setIsProMember(isPro)
+        setSubscriptionStatus(status)
+        setTrialEndsAt(trialEndsAt ? new Date(trialEndsAt) : null)
       } catch (error) {
         console.error('Failed to load subscription:', error)
       } finally {
@@ -48,6 +55,8 @@ export function SubscriptionProvider({ children }: { children: React.ReactNode }
       value={{
         isLoading,
         isProMember,
+        status: subscriptionStatus,
+        trialEndsAt,
       }}
     >
       {children}

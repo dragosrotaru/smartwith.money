@@ -4,6 +4,7 @@ import { HouseSigma } from './schema'
 import { db } from '@/lib/db'
 import { eq } from 'drizzle-orm'
 import { housesigmaRaw, houseSigma } from './model'
+import { withReadAccess } from '@/modules/account/actions'
 
 // deprecated
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -17,14 +18,18 @@ export function loadOrGenHouseSigma(propertyId: string, hasBasicFile: boolean, h
   }
 }
 
-export async function getAllByAccountId(accountId: string): Promise<HouseSigma[]> {
+export async function getAllByActiveAccount(): Promise<HouseSigma[] | Error> {
+  const auth = await withReadAccess()
+  if (auth instanceof Error) return auth
+  if (!auth.activeAccountId) return new Error('No active account')
+
   const result = await db
     .select({
       data: housesigmaRaw.data,
     })
     .from(housesigmaRaw)
     .innerJoin(houseSigma, eq(housesigmaRaw.id, houseSigma.housesigmaId))
-    .where(eq(houseSigma.accountId, accountId))
+    .where(eq(houseSigma.accountId, auth.activeAccountId))
 
   return result.map((row) => fromHouseSigma(row.data))
 }

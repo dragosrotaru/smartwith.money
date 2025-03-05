@@ -1,12 +1,16 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState } from 'react'
-import {
-  getActiveAccount,
-  setActiveAccount,
-  clearActiveAccount as clearActiveAccountCookie,
-} from '@/modules/account/activeAccount'
+import { setActiveAccount, clearActiveAccount as clearActiveAccountDb } from '@/modules/account/actions'
 import { authorization } from '@/modules/account/actions'
+
+/* 
+
+This context is used to manage the current active account. It should not be used
+to obtain the active account id since the server actions should be getting the 
+active account id from the withXAccess methods.
+
+*/
 
 type ActiveAccountContextType = {
   activeAccountId: string | undefined
@@ -24,28 +28,23 @@ export function ActiveAccountProvider({ children }: { children: React.ReactNode 
 
   const ensureActiveAccount = async () => {
     try {
-      // If there's already an active account, verify it's still active
-      const currentActiveAccount = await getActiveAccount()
-      if (currentActiveAccount) {
-        const auth = await authorization()
-        if (!(auth instanceof Error)) {
-          const account = auth.accounts.find((a) => a.id === currentActiveAccount)
-          if (!account) {
-            // If current active account is inactive or not found, clear it
-            await clearActiveAccountCookie()
-            setActiveAccountIdState(undefined)
-          } else {
-            setActiveAccountIdState(currentActiveAccount)
-            return
-          }
-        }
-      }
-
-      // Try to get the user's accounts
       const auth = await authorization()
       if (auth instanceof Error) return
 
-      // If they have active accounts, set the first one as active
+      // If there's an active account in the database, verify it's still active
+      if (auth.activeAccountId) {
+        const account = auth.accounts.find((a) => a.id === auth.activeAccountId)
+        if (!account) {
+          // If current active account is inactive or not found, clear it
+          await clearActiveAccountDb()
+          setActiveAccountIdState(undefined)
+        } else {
+          setActiveAccountIdState(auth.activeAccountId)
+          return
+        }
+      }
+
+      // If they have active accounts but no active account set, set the first one as active
       if (auth.accounts.length > 0) {
         const firstAccount = auth.accounts[0]
         await setActiveAccount(firstAccount.id)
@@ -82,7 +81,7 @@ export function ActiveAccountProvider({ children }: { children: React.ReactNode 
 
   const clearActiveAccount = async () => {
     try {
-      await clearActiveAccountCookie()
+      await clearActiveAccountDb()
       setActiveAccountIdState(undefined)
     } catch (error) {
       console.error('Failed to clear active account:', error)

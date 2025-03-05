@@ -14,6 +14,7 @@ import { acceptInvite, getPendingInvites, rejectInvite } from '@/modules/account
 import { toast } from 'sonner'
 import { Loader2 } from 'lucide-react'
 import { useActiveAccount } from '@/contexts/ActiveAccountContext'
+import { redirect } from 'next/navigation'
 
 type PendingInvite = {
   id: string
@@ -65,7 +66,6 @@ export function InviteDialog() {
       await setActiveAccountId(currentInvite.accountId)
 
       toast.success('Invite accepted successfully')
-
       // Move to next invite or close dialog
       const nextInvite = invites.find((invite) => invite.id !== currentInvite.id)
       if (nextInvite) {
@@ -73,6 +73,8 @@ export function InviteDialog() {
       } else {
         setCurrentInvite(null)
       }
+
+      redirect('/')
     } catch {
       toast.error('Failed to accept invite')
     } finally {

@@ -14,10 +14,9 @@ interface CompanyComboboxProps {
   companies: InvoiceCompany[]
   value?: string
   onChange: (value: string) => void
-  accountId: string
 }
 
-export function CompanyCombobox({ companies, value, onChange, accountId }: CompanyComboboxProps) {
+export function CompanyCombobox({ companies, value, onChange }: CompanyComboboxProps) {
   const [open, setOpen] = React.useState(false)
   const [dialogOpen, setDialogOpen] = React.useState(false)
   const [search, setSearch] = React.useState('')
@@ -112,7 +111,7 @@ export function CompanyCombobox({ companies, value, onChange, accountId }: Compa
         <DialogHeader>
           <DialogTitle>Create New Company</DialogTitle>
         </DialogHeader>
-        <CompanyForm accountId={accountId} onSuccess={handleCompanyCreated} />
+        <CompanyForm onSuccess={handleCompanyCreated} />
       </DialogContent>
     </Dialog>
   )

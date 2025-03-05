@@ -16,12 +16,13 @@ import { AccessAlert } from '@/components/AccessAlert'
 import { useWithOwnerAccess } from '@/hooks/use-with-access'
 import { SectionSkeleton } from './SectionSkeleton'
 
-export function BillingSection({ accountId }: { accountId: string }) {
-  const { isOwner, isLoadingAccess } = useWithOwnerAccess(accountId)
+export function BillingSection() {
+  const { isOwner, isLoadingAccess } = useWithOwnerAccess()
   const [loading, setIsLoading] = useState(false)
   const searchParams = useSearchParams()
   const { isProMember, isLoading: isLoadingSubscription } = useSubscription()
 
+  // This is for the callback from the billing portal
   useEffect(() => {
     const handleSubscriptionStatus = async () => {
       const subscription = searchParams.get('subscription')
@@ -31,7 +32,7 @@ export function BillingSection({ accountId }: { accountId: string }) {
 
         try {
           // todo complete the referral in the webhook?
-          const error = await completeReferralSubscription(accountId)
+          const error = await completeReferralSubscription()
           if (error instanceof Error) {
             toast.error(error.message)
           } else {
@@ -47,12 +48,12 @@ export function BillingSection({ accountId }: { accountId: string }) {
     }
 
     handleSubscriptionStatus()
-  }, [searchParams, accountId])
+  }, [searchParams])
 
   const handleManageBilling = async () => {
     setIsLoading(true)
     try {
-      const result = await createPortalSession(accountId)
+      const result = await createPortalSession()
       if (result instanceof Error) {
         toast.error(result.message)
         return

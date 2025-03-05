@@ -17,14 +17,29 @@ import { feedback } from '../feedback/model'
 import { Province } from '../location/provinces'
 import { createCustomer } from '@/modules/billing/service'
 
+/* AUTHORIZATION */
+
 /**
- * Returns the user and any active accounts they have access to
+ * Returns the user and any active accounts they have access to,
+ * as well as the active account id
  */
 export async function authorization() {
   const session = await auth()
   if (!session || !session.user.id) return new Error('Unauthorized')
 
-  const [user] = await db.select().from(users).where(eq(users.id, session.user.id))
+  const [user] = await db
+    .select({
+      id: users.id,
+      email: users.email,
+      activeAccountId: users.activeAccountId,
+      name: users.name,
+      image: users.image,
+      createdAt: users.createdAt,
+      updatedAt: users.updatedAt,
+    })
+    .from(users)
+    .where(eq(users.id, session.user.id))
+    .limit(1)
 
   if (!user) return new Error('User not found')
 
@@ -39,59 +54,127 @@ export async function authorization() {
     .innerJoin(accountUsers, eq(accounts.id, accountUsers.accountId))
     .where(and(eq(accountUsers.userId, session.user.id), eq(accounts.isInactive, false)))
 
+  // fix the user activeAccountId if the company is inactive or not found
+  if (user.activeAccountId && accountsWithRoles.find((a) => a.id === user.activeAccountId)?.isInactive) {
+    await clearActiveAccount()
+    user.activeAccountId = null
+  }
+
   return {
     user,
     accounts: accountsWithRoles,
+    activeAccountId: user.activeAccountId,
   }
 }
 
 /**
  * Returns the user and the active account if they have read access to it
  */
-export async function withReadAccess(accountId: string) {
+export async function withReadAccess() {
   const auth = await authorization()
   if (auth instanceof Error) return auth
 
-  const account = auth.accounts.find((a) => a.id === accountId)
+  if (!auth.activeAccountId) return new Error('No active account')
+
+  const account = auth.accounts.find((a) => a.id === auth.activeAccountId)
   if (!account) return new Error('Account not found')
-  if (account?.role === 'read' || account?.role === 'read-write' || account?.role === 'owner') return auth
+
+  if (account?.role === 'read' || account?.role === 'read-write' || account?.role === 'owner')
+    return { ...auth, activeAccountId: account.id }
   return new Error('Unauthorized')
 }
 
 /**
  * Returns the user and the active account if they have read-write access to it
  */
-export async function withReadWriteAccess(accountId: string) {
+export async function withReadWriteAccess() {
   const auth = await authorization()
   if (auth instanceof Error) return auth
 
-  const account = auth.accounts.find((a) => a.id === accountId)
+  if (!auth.activeAccountId) return new Error('No active account')
+
+  const account = auth.accounts.find((a) => a.id === auth.activeAccountId)
   if (!account) return new Error('Account not found')
-  if (account?.role === 'read-write' || account?.role === 'owner') return auth
+
+  if (account?.role === 'read-write' || account?.role === 'owner') return { ...auth, activeAccountId: account.id }
   return new Error('Unauthorized')
 }
 
 /**
  * Returns the user and the active account if they have owner access to it
  */
-export async function withOwnerAccess(accountId: string) {
+export async function withOwnerAccess() {
   const auth = await authorization()
   if (auth instanceof Error) return auth
 
-  const account = auth.accounts.find((a) => a.id === accountId)
+  if (!auth.activeAccountId) return new Error('No active account')
+
+  const account = auth.accounts.find((a) => a.id === auth.activeAccountId)
   if (!account) return new Error('Account not found')
-  if (account?.role === 'owner') return auth
+
+  if (account?.role === 'owner') return { ...auth, activeAccountId: account.id }
   return new Error('Unauthorized')
 }
 
-export async function getAccountPreferences(accountId: string) {
-  const auth = await withReadAccess(accountId)
+/* ACTIVE ACCOUNT */
+
+/**
+ * Returns the active account id for the user
+ */
+export async function getActiveAccount(): Promise<string | undefined> {
+  const auth = await authorization()
+  if (auth instanceof Error) return undefined
+
+  return auth.activeAccountId ?? undefined
+}
+
+/**
+ * This should only be used in the client ActiveAccountContext, since the client
+ * needs to be informed that that the active account has changed.
+ * @param accountId
+ */
+export async function setActiveAccount(accountId: string) {
+  const auth = await authorization()
+  if (auth instanceof Error) throw new Error('Unauthorized')
+
+  await db
+    .update(users)
+    .set({
+      activeAccountId: accountId,
+      updatedAt: sql`CURRENT_TIMESTAMP`,
+    })
+    .where(eq(users.id, auth.user.id))
+}
+
+/**
+ * Clears the active account for the user
+ */
+export async function clearActiveAccount() {
+  const auth = await authorization()
+  if (auth instanceof Error) throw new Error('Unauthorized')
+
+  await db
+    .update(users)
+    .set({
+      activeAccountId: null,
+      updatedAt: sql`CURRENT_TIMESTAMP`,
+    })
+    .where(eq(users.id, auth.user.id))
+}
+
+/* ACCOUNT ACTIONS */
+
+/**
+ * Returns the preferences for the active account
+ */
+export async function getAccountPreferences() {
+  const auth = await withReadAccess()
   if (auth instanceof Error) return auth
 
   const [preferences] = await db
     .select()
     .from(accountPreferences)
-    .where(eq(accountPreferences.accountId, accountId))
+    .where(eq(accountPreferences.accountId, auth.activeAccountId))
     .limit(1)
 
   if (!preferences) return new Error('Account preferences not found')
@@ -107,16 +190,21 @@ export type OnboardingData = {
   priorities: string[]
 }
 
+/**
+ * Completes the onboarding process for a user to create an account
+ */
 export async function completeOnboarding(data: OnboardingData) {
-  const session = await auth()
-  if (!session || !session.user.id) return new Error('Unauthorized')
+  const auth = await authorization()
+  if (auth instanceof Error) return auth
+
+  if (!auth.user.id) return new Error('Unauthorized')
 
   try {
     // Create new account for user and set up billing
     const account = await db.transaction(async (tx) => {
       // Create Stripe customer
       const customer = await createCustomer({
-        email: session.user.email!,
+        email: auth.user.email!,
         name: data.accountName,
       })
 
@@ -131,7 +219,7 @@ export async function completeOnboarding(data: OnboardingData) {
 
       // Add user as owner
       await tx.insert(accountUsers).values({
-        userId: session.user.id,
+        userId: auth.user.id,
         accountId: account.id,
         role: 'owner',
       })
@@ -146,7 +234,7 @@ export async function completeOnboarding(data: OnboardingData) {
         accountId: account.id,
         email: person.email,
         role: person.role as AccountRole,
-        invitedBy: session.user.id,
+        invitedBy: auth.user.id,
       })
 
       // Send invite email
@@ -172,8 +260,13 @@ export async function completeOnboarding(data: OnboardingData) {
   }
 }
 
-export async function getAccountUsers(accountId: string) {
-  const auth = await withOwnerAccess(accountId)
+/* USERS & PERMISSIONS */
+
+/**
+ * Returns the users and invites for the active account
+ */
+export async function getAccountUsers() {
+  const auth = await withOwnerAccess()
   if (auth instanceof Error) return auth
 
   const usersList = await db
@@ -187,13 +280,16 @@ export async function getAccountUsers(accountId: string) {
     })
     .from(accountUsers)
     .innerJoin(users, eq(users.id, accountUsers.userId))
-    .where(eq(accountUsers.accountId, accountId))
+    .where(eq(accountUsers.accountId, auth.activeAccountId))
 
-  const invites = await db.select().from(accountInvites).where(eq(accountInvites.accountId, accountId))
+  const invites = await db.select().from(accountInvites).where(eq(accountInvites.accountId, auth.activeAccountId))
 
   return { users: usersList, invites }
 }
 
+/**
+ * Checks if the user is the last owner of the account
+ */
 async function isLastOwner(accountId: string, userId: string): Promise<boolean> {
   // Check if user is an owner
   const [currentUser] = await db
@@ -213,13 +309,16 @@ async function isLastOwner(accountId: string, userId: string): Promise<boolean> 
   return count <= 1
 }
 
-export async function updateUserRole(accountId: string, userId: string, role: AccountRole) {
-  const auth = await withOwnerAccess(accountId)
+/**
+ * Updates the role of a user in the active account
+ */
+export async function updateUserRole(userId: string, role: AccountRole) {
+  const auth = await withOwnerAccess()
   if (auth instanceof Error) return auth
 
   try {
     // If we're changing to non-owner role, check if they're the last owner
-    if (role !== 'owner' && (await isLastOwner(accountId, userId))) {
+    if (role !== 'owner' && (await isLastOwner(auth.activeAccountId, userId))) {
       return new Error('Cannot remove the last owner of the account')
     }
 
@@ -229,7 +328,7 @@ export async function updateUserRole(accountId: string, userId: string, role: Ac
         role,
         updatedAt: sql`CURRENT_TIMESTAMP`,
       })
-      .where(and(eq(accountUsers.accountId, accountId), eq(accountUsers.userId, userId)))
+      .where(and(eq(accountUsers.accountId, auth.activeAccountId), eq(accountUsers.userId, userId)))
 
     return { success: true }
   } catch (error) {
@@ -238,7 +337,78 @@ export async function updateUserRole(accountId: string, userId: string, role: Ac
   }
 }
 
+/**
+ * Removes a user from the active account
+ */
+export async function removeUser(userId: string) {
+  const auth = await withOwnerAccess()
+  if (auth instanceof Error) return auth
+
+  try {
+    if (await isLastOwner(auth.activeAccountId, userId)) {
+      return new Error('Cannot remove the last owner of the account')
+    }
+
+    // Remove the user
+    await db
+      .delete(accountUsers)
+      .where(and(eq(accountUsers.accountId, auth.activeAccountId), eq(accountUsers.userId, userId)))
+
+    return { success: true }
+  } catch (error) {
+    console.error('Failed to remove user:', error)
+    return new Error('Failed to remove user')
+  }
+}
+
+/**
+ * Sends an invite to the user
+ */
+export async function sendInvite(email: string, role: AccountRole) {
+  const authResult = await withOwnerAccess()
+  if (authResult instanceof Error) return authResult
+
+  try {
+    // Store the invite in the database
+    const [invite] = await db
+      .insert(accountInvites)
+      .values({
+        accountId: authResult.activeAccountId,
+        email,
+        role,
+        invitedBy: authResult.user.id,
+      })
+      .returning()
+
+    // Get the account name for the email
+    const [account] = await db
+      .select({ name: accounts.name })
+      .from(accounts)
+      .where(eq(accounts.id, authResult.activeAccountId))
+      .limit(1)
+    if (!account) return new Error('Account not found')
+
+    // Send invite email
+    await sendInviteEmail({
+      email,
+      accountName: account.name,
+      role,
+    })
+
+    return { success: true, inviteId: invite.id }
+  } catch (error) {
+    console.error('Failed to send invite:', error)
+    return new Error('Failed to send invite')
+  }
+}
+
+/**
+ * Resends an invite email to the user
+ */
 export async function resendInvite(inviteId: string) {
+  const auth = await withOwnerAccess()
+  if (auth instanceof Error) return auth
+
   const [invite] = await db
     .select({
       id: accountInvites.id,
@@ -248,14 +418,13 @@ export async function resendInvite(inviteId: string) {
       accountName: accounts.name,
     })
     .from(accountInvites)
-    .innerJoin(accounts, eq(accounts.id, accountInvites.accountId))
+    .innerJoin(accounts, and(eq(accounts.id, accountInvites.accountId), eq(accounts.isInactive, false)))
     .where(eq(accountInvites.id, inviteId))
     .limit(1)
 
-  if (!invite) return new Error('Invite not found')
+  if (invite?.accountId !== auth.activeAccountId) return new Error('Invite not found')
 
-  const auth = await withOwnerAccess(invite.accountId)
-  if (auth instanceof Error) return auth
+  if (!invite) return new Error('Invite not found')
 
   try {
     await db
@@ -280,9 +449,51 @@ export async function resendInvite(inviteId: string) {
   }
 }
 
+/**
+ * Cancels an invite
+ */
+export async function cancelInvite(inviteId: string) {
+  const auth = await withOwnerAccess()
+  if (auth instanceof Error) return auth
+
+  // Get the invite details first to verify ownership
+  const [invite] = await db
+    .select({
+      accountId: accountInvites.accountId,
+      status: accountInvites.status,
+    })
+    .from(accountInvites)
+    .where(eq(accountInvites.id, inviteId))
+    .limit(1)
+
+  if (!invite) return new Error('Invite not found')
+  if (invite.status !== 'pending') return new Error('Can only cancel pending invites')
+
+  if (invite.accountId !== auth.activeAccountId) return new Error('Invite not found')
+
+  try {
+    await db
+      .update(accountInvites)
+      .set({
+        status: 'cancelled',
+        updatedAt: sql`CURRENT_TIMESTAMP`,
+      })
+      .where(eq(accountInvites.id, inviteId))
+
+    return { success: true }
+  } catch (error) {
+    console.error('Failed to cancel invite:', error)
+    return new Error('Failed to cancel invite')
+  }
+}
+
+/**
+ * Returns the pending invites for the current user
+ */
 export async function getPendingInvites() {
-  const session = await auth()
-  if (!session?.user?.email) return new Error('Unauthorized')
+  const auth = await authorization()
+  if (auth instanceof Error) return auth
+  if (!auth.user.email) return new Error('Unauthorized')
 
   try {
     const pendingInvites = await db
@@ -296,7 +507,7 @@ export async function getPendingInvites() {
       .innerJoin(accounts, eq(accounts.id, accountInvites.accountId))
       .where(
         and(
-          eq(accountInvites.email, session.user.email),
+          eq(accountInvites.email, auth.user.email),
           eq(accountInvites.status, 'pending'),
           eq(accounts.isInactive, false),
         ),
@@ -309,9 +520,13 @@ export async function getPendingInvites() {
   }
 }
 
+/**
+ * Accepts an invite
+ */
 export async function acceptInvite(inviteId: string) {
-  const session = await auth()
-  if (!session?.user?.id || !session?.user?.email) return new Error('Unauthorized')
+  const auth = await authorization()
+  if (auth instanceof Error) return auth
+  if (!auth.user.email) return new Error('Unauthorized')
 
   try {
     // Verify the invite belongs to the user and is pending
@@ -321,7 +536,7 @@ export async function acceptInvite(inviteId: string) {
       .where(
         and(
           eq(accountInvites.id, inviteId),
-          eq(accountInvites.email, session.user.email as string),
+          eq(accountInvites.email, auth.user.email),
           eq(accountInvites.status, 'pending'),
         ),
       )
@@ -332,7 +547,7 @@ export async function acceptInvite(inviteId: string) {
     // Add user to account
     await db.insert(accountUsers).values({
       accountId: invite.accountId,
-      userId: session.user.id,
+      userId: auth.user.id,
       role: invite.role,
     })
 
@@ -352,9 +567,13 @@ export async function acceptInvite(inviteId: string) {
   }
 }
 
+/**
+ * Rejects an invite
+ */
 export async function rejectInvite(inviteId: string) {
-  const session = await auth()
-  if (!session?.user?.email) return new Error('Unauthorized')
+  const auth = await authorization()
+  if (auth instanceof Error) return auth
+  if (!auth.user.email) return new Error('Unauthorized')
 
   try {
     // Verify the invite belongs to the user and is pending
@@ -364,7 +583,7 @@ export async function rejectInvite(inviteId: string) {
       .where(
         and(
           eq(accountInvites.id, inviteId),
-          eq(accountInvites.email, session.user.email as string),
+          eq(accountInvites.email, auth.user.email),
           eq(accountInvites.status, 'pending'),
         ),
       )
@@ -388,49 +607,20 @@ export async function rejectInvite(inviteId: string) {
   }
 }
 
-export async function sendInvite(accountId: string, email: string, role: AccountRole) {
-  const authResult = await withOwnerAccess(accountId)
-  if (authResult instanceof Error) return authResult
+/* EXPORT JOBS */
 
-  try {
-    // Store the invite in the database
-    const [invite] = await db
-      .insert(accountInvites)
-      .values({
-        accountId,
-        email,
-        role,
-        invitedBy: authResult.user.id,
-      })
-      .returning()
-
-    // Get the account name for the email
-    const [account] = await db.select({ name: accounts.name }).from(accounts).where(eq(accounts.id, accountId)).limit(1)
-    if (!account) return new Error('Account not found')
-
-    // Send invite email
-    await sendInviteEmail({
-      email,
-      accountName: account.name,
-      role,
-    })
-
-    return { success: true, inviteId: invite.id }
-  } catch (error) {
-    console.error('Failed to send invite:', error)
-    return new Error('Failed to send invite')
-  }
-}
-
-export async function createExportJob(accountId: string) {
-  const auth = await withOwnerAccess(accountId)
+/**
+ * Creates an export job
+ */
+export async function createExportJob() {
+  const auth = await withOwnerAccess()
   if (auth instanceof Error) return auth
 
   try {
     const [job] = await db
       .insert(accountExportJobs)
       .values({
-        accountId,
+        accountId: auth.activeAccountId,
         requestedBy: auth.user.id,
       })
       .returning()
@@ -450,8 +640,11 @@ export type AccountExportJobViewModel = Omit<AccountExportJob, 'requestedBy'> & 
   }
 }
 
-export async function getExportJobs(accountId: string) {
-  const auth = await withOwnerAccess(accountId)
+/**
+ * Returns the export jobs for the active account
+ */
+export async function getExportJobs() {
+  const auth = await withOwnerAccess()
   if (auth instanceof Error) return auth
 
   try {
@@ -473,7 +666,7 @@ export async function getExportJobs(accountId: string) {
       })
       .from(accountExportJobs)
       .innerJoin(users, eq(users.id, accountExportJobs.requestedBy))
-      .where(eq(accountExportJobs.accountId, accountId))
+      .where(eq(accountExportJobs.accountId, auth.activeAccountId))
       .orderBy(desc(accountExportJobs.createdAt))
 
     return jobs
@@ -483,7 +676,13 @@ export async function getExportJobs(accountId: string) {
   }
 }
 
+/**
+ * Downloads an export job
+ */
 export async function downloadExport(jobId: string) {
+  const auth = await withOwnerAccess()
+  if (auth instanceof Error) return auth
+
   // Get the export job
   const [job] = await db
     .select({
@@ -499,15 +698,18 @@ export async function downloadExport(jobId: string) {
     return new Error('Export not found or not ready')
   }
 
-  // Verify user has owner access to this account
-  const auth = await withOwnerAccess(job.accountId)
-  if (auth instanceof Error) return auth
+  if (job.accountId !== auth.activeAccountId) return new Error('Export not found')
 
   return { url: job.downloadUrl }
 }
 
-export async function deleteAccount(accountId: string) {
-  const auth = await withOwnerAccess(accountId)
+/* DELETE ACCOUNT */
+
+/**
+ * Deletes the active account
+ */
+export async function deleteAccount() {
+  const auth = await withOwnerAccess()
   if (auth instanceof Error) return auth
 
   try {
@@ -533,7 +735,7 @@ export async function deleteAccount(accountId: string) {
           isInactive: true,
           updatedAt: sql`CURRENT_TIMESTAMP`,
         })
-        .where(eq(accounts.id, accountId))
+        .where(eq(accounts.id, auth.activeAccountId))
 
       // Cancel any pending invites
       await tx
@@ -542,7 +744,7 @@ export async function deleteAccount(accountId: string) {
           status: 'cancelled',
           updatedAt: sql`CURRENT_TIMESTAMP`,
         })
-        .where(and(eq(accountInvites.accountId, accountId), eq(accountInvites.status, 'pending')))
+        .where(and(eq(accountInvites.accountId, auth.activeAccountId), eq(accountInvites.status, 'pending')))
     })
 
     // Cancel any pending export jobs
@@ -552,7 +754,7 @@ export async function deleteAccount(accountId: string) {
         status: 'cancelled',
         updatedAt: sql`CURRENT_TIMESTAMP`,
       })
-      .where(and(eq(accountExportJobs.accountId, accountId), eq(accountExportJobs.status, 'pending')))
+      .where(and(eq(accountExportJobs.accountId, auth.activeAccountId), eq(accountExportJobs.status, 'pending')))
 
     return { success: true }
   } catch (error) {
@@ -561,65 +763,8 @@ export async function deleteAccount(accountId: string) {
   }
 }
 
-export async function cancelInvite(inviteId: string) {
-  // Get the invite details first to verify ownership
-  const [invite] = await db
-    .select({
-      accountId: accountInvites.accountId,
-      status: accountInvites.status,
-    })
-    .from(accountInvites)
-    .where(eq(accountInvites.id, inviteId))
-    .limit(1)
-
-  if (!invite) return new Error('Invite not found')
-  if (invite.status !== 'pending') return new Error('Can only cancel pending invites')
-
-  // Verify user has owner access to this account
-  const auth = await withOwnerAccess(invite.accountId)
-  if (auth instanceof Error) return auth
-
-  try {
-    await db
-      .update(accountInvites)
-      .set({
-        status: 'cancelled',
-        updatedAt: sql`CURRENT_TIMESTAMP`,
-      })
-      .where(eq(accountInvites.id, inviteId))
-
-    return { success: true }
-  } catch (error) {
-    console.error('Failed to cancel invite:', error)
-    return new Error('Failed to cancel invite')
-  }
-}
-
-export async function removeUser(accountId: string, userId: string) {
-  const auth = await withOwnerAccess(accountId)
-  if (auth instanceof Error) return auth
-
-  try {
-    if (await isLastOwner(accountId, userId)) {
-      return new Error('Cannot remove the last owner of the account')
-    }
-
-    // Remove the user
-    await db.delete(accountUsers).where(and(eq(accountUsers.accountId, accountId), eq(accountUsers.userId, userId)))
-
-    return { success: true }
-  } catch (error) {
-    console.error('Failed to remove user:', error)
-    return new Error('Failed to remove user')
-  }
-}
-
-export async function submitAccountDeletionFeedback(
-  accountId: string,
-  reason: string,
-  improvementSuggestions?: string,
-) {
-  const authResult = await withOwnerAccess(accountId)
+export async function submitAccountDeletionFeedback(reason: string, improvementSuggestions?: string) {
+  const authResult = await withOwnerAccess()
   if (authResult instanceof Error) return authResult
 
   try {
@@ -631,7 +776,7 @@ export async function submitAccountDeletionFeedback(
         isInactive: accounts.isInactive,
       })
       .from(accounts)
-      .where(eq(accounts.id, accountId))
+      .where(eq(accounts.id, authResult.activeAccountId))
       .limit(1)
 
     if (!account) return new Error('Account not found')
@@ -639,7 +784,7 @@ export async function submitAccountDeletionFeedback(
     // Store feedback
     await db.insert(feedback).values({
       userId: authResult.user.id,
-      accountId,
+      accountId: authResult.activeAccountId,
       activity: 'account_deletion',
       reason,
       improvementSuggestions,

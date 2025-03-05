@@ -11,10 +11,11 @@ import { MobileNavigation } from '@/components/MobileNavigation'
 import { SubscriptionProvider } from '@/contexts/SubscriptionContext'
 import { Toaster } from 'sonner'
 import { InviteDialog } from '@/components/InviteDialog'
-import { EnsureActiveAccount } from '@/components/EnsureActiveAccount'
-import WatchForReferralCode from '@/components/WatchForReferralCode'
+import { EnsureActiveAccount } from '@/components/Effects/EnsureActiveAccount'
+import WatchForReferralCode from '@/components/Effects/WatchForReferralCode'
 import { BannerProvider } from '@/contexts/BannerContext'
 import { Suspense } from 'react'
+import WatchForSubscriptionBanner from '@/components/Effects/WatchForSubscriptionBanner'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -45,8 +46,12 @@ export default async function RootLayout({
               <BannerProvider>
                 <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                   <SidebarProvider defaultOpen={false}>
-                    <div className="flex min-h-screen w-full flex-col">
+                    <Suspense>
+                      <WatchForReferralCode />
+                      <WatchForSubscriptionBanner />
                       <EnsureActiveAccount />
+                    </Suspense>
+                    <div className="flex min-h-screen w-full flex-col">
                       <Header />
                       <main className="container mx-auto px-4 py-8 flex-grow">{children}</main>
                       <Footer />
@@ -54,9 +59,6 @@ export default async function RootLayout({
                     </div>
                     <Toaster />
                     <InviteDialog />
-                    <Suspense>
-                      <WatchForReferralCode />
-                    </Suspense>
                   </SidebarProvider>
                 </body>
               </BannerProvider>

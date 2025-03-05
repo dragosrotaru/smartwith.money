@@ -19,13 +19,7 @@ import { toast } from 'sonner'
 import { ACCOUNT_ROLES, AccountRole } from '@/modules/account/model'
 import { sendInvite } from '@/modules/account/actions'
 
-export function InviteUserDialog({
-  accountId,
-  onInviteComplete,
-}: {
-  accountId: string
-  onInviteComplete?: () => void
-}) {
+export function InviteUserDialog({ onInviteComplete }: { onInviteComplete?: () => void }) {
   const [isOpen, setIsOpen] = useState(false)
   const [email, setEmail] = useState('')
   const [role, setRole] = useState<AccountRole>()
@@ -36,7 +30,7 @@ export function InviteUserDialog({
 
     setIsSubmitting(true)
     try {
-      const result = await sendInvite(accountId, email, role)
+      const result = await sendInvite(email, role)
       if (result instanceof Error) {
         toast.error(result.message)
         return

@@ -1,34 +1,23 @@
 # Accounts / Billing / User Settings
 
-- user subscription and prices are kept updated with the webhook.
-- user can update payment method, cancel subscription, change billing details, view invoices in the billing portal
+- test user subscription and prices are kept updated with the webhook.
+- test user can update payment method, cancel subscription, change billing details, view invoices in the billing portal
 - test out isPro subscription context works
+- unsubscribe on deletion
+- allow user to change email, name, picture
 
-- implement banners for:
+## Future
 
-  - announcements
-  - trial ending, payment failed
-  - referral code available
-  - offer code
-
-- create a firstLogin flag and add a welcome message
-- create a list of referral_uses and credits earned
-- notification emails:
-
-  - trial ending
-  - welcome
-  - referral successful
-
-- only apply referral on a new user
-- account is signed up for Pro trial by default
-- make active account a db feature, not cookies, set lastActive on the user, company and use a firstLogin flag
-- user should complete a personal financial goals questionaire as part of onboarding, where they can set their priorities, risk tolerance, describe in writing what they are looking for, why they joined the platform, etc.
-
+- show an active account and user account indicator in the menu
 - enable Oauth
-- implement authjs error handling
+
+- account is signed up for Pro trial by default
+- user should complete a personal financial goals questionaire as part of onboarding, where they can set their priorities, risk tolerance, describe in writing what they are looking for, why they joined the platform, etc.
+- create notification emails for trial ending, welcome, referral successful
+
 - implement user level deletion
-- store active account in DB instead of cookie to save a request checking if its active
 - make sure that the export zips are secure
-- dont create feedback unless the fill out the form, and update with the subscription info
 - create a cron job for account deletion and generate a report on the user
-- fix too many calls to auth/refreshes
+- use a firstLogin flag with a welcome message
+
+- implement authjs error handling

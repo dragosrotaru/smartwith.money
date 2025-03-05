@@ -4,12 +4,12 @@ import { Loader2 } from 'lucide-react'
 import { useState } from 'react'
 import { toast } from 'sonner'
 
-export default function ExportCreateButton({ accountId, reloadJobs }: { accountId: string; reloadJobs: () => void }) {
+export default function ExportCreateButton({ reloadJobs }: { reloadJobs: () => void }) {
   const [isCreatingJob, setIsCreatingJob] = useState(false)
   const handleCreateExport = async () => {
     setIsCreatingJob(true)
     try {
-      const result = await createExportJob(accountId)
+      const result = await createExportJob()
       if (result instanceof Error) {
         toast.error(result.message)
         return

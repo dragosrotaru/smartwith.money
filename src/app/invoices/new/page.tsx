@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { getCompaniesForInvoice } from '@/modules/invoices/actions'
 import { InvoiceForm } from '../_components/InvoiceForm'
-import { getActiveAccount } from '@/modules/account/activeAccount'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -11,10 +10,9 @@ export const metadata: Metadata = {
 }
 
 export default async function NewInvoicePage() {
-  const account = await getActiveAccount()
-  if (!account) redirect('/accounts')
+  const companies = await getCompaniesForInvoice()
+  if (companies instanceof Error) redirect('/')
 
-  const companies = await getCompaniesForInvoice(account)
   if (!companies.length) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[50vh] gap-4">
@@ -36,7 +34,7 @@ export default async function NewInvoicePage() {
         <p className="text-muted-foreground">Create a new invoice</p>
       </div>
 
-      <InvoiceForm accountId={account} companies={companies} />
+      <InvoiceForm companies={companies} />
     </div>
   )
 }

@@ -34,11 +34,11 @@ type Invite = {
   updatedAt: Date
 }
 
-export function UsersSection({ accountId }: { accountId: string }) {
+export function UsersSection() {
   const [users, setUsers] = useState<User[]>([])
   const [invites, setInvites] = useState<Invite[]>([])
-  const { isOwner, isLoadingAccess } = useWithOwnerAccess(accountId)
-  const [isLoading, setIsLoading] = useState(true)
+  const { isOwner, isLoadingAccess } = useWithOwnerAccess()
+  const [isLoading, setIsLoading] = useState(false)
   const [updatingRole, setUpdatingRole] = useState<string | null>(null)
   const [resendingInvite, setResendingInvite] = useState<string | null>(null)
   const [cancellingInvite, setCancellingInvite] = useState<string | null>(null)
@@ -47,7 +47,7 @@ export function UsersSection({ accountId }: { accountId: string }) {
   const loadUsers = useCallback(async () => {
     try {
       setIsLoading(true)
-      const result = await getAccountUsers(accountId)
+      const result = await getAccountUsers()
       if (result instanceof Error) {
         toast.error(result.message)
         return
@@ -59,16 +59,18 @@ export function UsersSection({ accountId }: { accountId: string }) {
     } finally {
       setIsLoading(false)
     }
-  }, [accountId])
+  }, [])
 
   useEffect(() => {
-    loadUsers()
-  }, [accountId, loadUsers])
+    if (isOwner) {
+      loadUsers()
+    }
+  }, [loadUsers, isOwner])
 
   const handleRoleChange = async (userId: string, newRole: AccountRole) => {
     setUpdatingRole(userId)
     try {
-      const result = await updateUserRole(accountId, userId, newRole)
+      const result = await updateUserRole(userId, newRole)
       if (result instanceof Error) {
         toast.error(result.message)
         return
@@ -119,7 +121,7 @@ export function UsersSection({ accountId }: { accountId: string }) {
   const handleRemoveUser = async (userId: string) => {
     setRemovingUser(userId)
     try {
-      const result = await removeUser(accountId, userId)
+      const result = await removeUser(userId)
       if (result instanceof Error) {
         toast.error(result.message)
         return
@@ -139,7 +141,7 @@ export function UsersSection({ accountId }: { accountId: string }) {
   return (
     <div className="space-y-4">
       <div className="flex justify-end">
-        <InviteUserDialog accountId={accountId} onInviteComplete={loadUsers} />
+        <InviteUserDialog onInviteComplete={loadUsers} />
       </div>
       <div className="rounded-md border">
         <Table>

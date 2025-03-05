@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 import { getInvoiceById } from '@/modules/invoices/actions'
 import { InvoiceView } from '../_components/InvoiceView'
 
@@ -18,6 +18,8 @@ export default async function InvoicePage({ params }: InvoicePageProps) {
   const { id } = await params
   const invoice = await getInvoiceById(id)
 
+  if (invoice instanceof Error) redirect('/')
   if (!invoice) notFound()
+
   return <InvoiceView data={invoice} />
 }

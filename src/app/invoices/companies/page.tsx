@@ -1,11 +1,11 @@
 import { Metadata } from 'next'
-import { notFound, redirect } from 'next/navigation'
-import { getActiveAccount } from '@/modules/account/activeAccount'
-import { getCompaniesByAccountId } from '@/modules/invoices/actions'
+import { redirect } from 'next/navigation'
+import { getCompaniesForActiveAccount } from '@/modules/invoices/actions'
 import { Button } from '@/components/ui/button'
 import { Plus } from 'lucide-react'
 import Link from 'next/link'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import { withReadWriteAccess } from '@/modules/account/actions'
 
 export const metadata: Metadata = {
   title: 'Companies',
@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 }
 
 export default async function CompaniesPage() {
-  const account = await getActiveAccount()
-  if (!account) redirect('/accounts')
+  const result = await getCompaniesForActiveAccount()
+  if (result instanceof Error) redirect('/')
 
-  const result = await getCompaniesByAccountId(account)
-  if (result instanceof Error) notFound()
+  const writeAuth = await withReadWriteAccess()
+  const writeAccess = !(writeAuth instanceof Error)
 
   return (
     <div className="container py-10">
@@ -26,12 +26,14 @@ export default async function CompaniesPage() {
           <h1 className="text-2xl font-semibold">Companies</h1>
           <p className="text-muted-foreground">View and manage your companies</p>
         </div>
-        <Button asChild>
-          <Link href="/invoices/companies/new">
-            <Plus className="h-4 w-4 mr-2" />
-            New Company
-          </Link>
-        </Button>
+        {writeAccess && (
+          <Button asChild>
+            <Link href="/invoices/companies/new">
+              <Plus className="h-4 w-4 mr-2" />
+              New Company
+            </Link>
+          </Button>
+        )}
       </div>
 
       <div className="rounded-md border">

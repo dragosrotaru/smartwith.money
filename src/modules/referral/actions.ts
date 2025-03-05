@@ -1,20 +1,19 @@
 'use server'
-
-import { auth } from '@/auth'
 import { recordReferralUse, completeReferralUse } from './service'
 import { nanoid } from 'nanoid'
 import { db } from '@/lib/db'
 import { referralCodes, referralUses } from './model'
 import { and, eq, isNull } from 'drizzle-orm'
+import { authorization, withOwnerAccess } from '../account/actions'
 
 export async function getOrCreateReferralCode(): Promise<string | Error> {
-  const session = await auth()
-  if (!session) return new Error('Unauthorized')
+  const auth = await authorization()
+  if (auth instanceof Error) return auth
 
   const codes = await db
     .select()
     .from(referralCodes)
-    .where(and(eq(referralCodes.userId, session.user.id), eq(referralCodes.active, true)))
+    .where(and(eq(referralCodes.userId, auth.user.id), eq(referralCodes.active, true)))
 
   if (codes.length > 0) return codes[0].code
 
@@ -23,7 +22,7 @@ export async function getOrCreateReferralCode(): Promise<string | Error> {
 
   // Create an active referral code
   await db.insert(referralCodes).values({
-    userId: session.user.id,
+    userId: auth.user.id,
     code,
     active: true,
   })
@@ -35,26 +34,28 @@ export async function getOrCreateReferralCode(): Promise<string | Error> {
  * Records a referral use during signup
  */
 export async function recordReferralSignup(code: string) {
-  const session = await auth()
-  if (!session) return new Error('Unauthorized')
-  return await recordReferralUse(code, session.user.id)
+  const auth = await authorization()
+  if (auth instanceof Error) return auth
+
+  return await recordReferralUse(code, auth.user.id)
 }
 
 /**
  * Completes a referral use when subscribing to an account
  */
-export async function completeReferralSubscription(accountId: string) {
-  const session = await auth()
-  if (!session) return new Error('Unauthorized')
-  return await completeReferralUse(session.user.id, accountId)
+export async function completeReferralSubscription() {
+  const auth = await withOwnerAccess()
+  if (auth instanceof Error) return auth
+
+  return await completeReferralUse(auth.user.id, auth.activeAccountId)
 }
 
 /**
  * Gets all referral uses for the current user's referral code
  */
 export async function getReferralUses() {
-  const session = await auth()
-  if (!session) return new Error('Unauthorized')
+  const auth = await authorization()
+  if (auth instanceof Error) return auth
 
   const referralData = await db
     .select({
@@ -63,7 +64,7 @@ export async function getReferralUses() {
     })
     .from(referralCodes)
     .leftJoin(referralUses, eq(referralUses.referralCodeId, referralCodes.id))
-    .where(eq(referralCodes.userId, session.user.id))
+    .where(eq(referralCodes.userId, auth.user.id))
 
   return referralData
 }
@@ -72,13 +73,13 @@ export async function getReferralUses() {
  * Gets any available (unused) referral code for the current user
  */
 export async function getAvailableReferral() {
-  const session = await auth()
-  if (!session) return new Error('Unauthorized')
+  const auth = await authorization()
+  if (auth instanceof Error) return auth
 
   const referral = await db
     .select()
     .from(referralUses)
-    .where(and(eq(referralUses.referredUserId, session.user.id), isNull(referralUses.completedAt)))
+    .where(and(eq(referralUses.referredUserId, auth.user.id), isNull(referralUses.completedAt)))
     .limit(1)
 
   if (referral.length === 0) return null

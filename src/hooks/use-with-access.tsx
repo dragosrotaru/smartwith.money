@@ -2,50 +2,58 @@ import { withOwnerAccess, withReadAccess, withReadWriteAccess } from '@/modules/
 import { useState } from 'react'
 import { useEffect } from 'react'
 
-export function useWithOwnerAccess(accountId: string) {
+/* 
+
+These hooks are used to determine if the user has the right access to the 
+active account. They are meant to be used in client components for UI state,
+not as guards for API calls.
+
+*/
+
+export function useWithOwnerAccess() {
   const [isOwner, setIsOwner] = useState(false)
   const [isLoadingAccess, setIsLoadingAccess] = useState(true)
 
   useEffect(() => {
     const ownerAccess = async () => {
-      const auth = await withOwnerAccess(accountId)
+      const auth = await withOwnerAccess()
       setIsOwner(auth instanceof Error ? false : true)
       setIsLoadingAccess(false)
     }
     ownerAccess()
-  }, [accountId])
+  }, [])
 
   return { isOwner, isLoadingAccess }
 }
 
-export function useWithReadAccess(accountId: string) {
+export function useWithReadAccess() {
   const [isRead, setIsRead] = useState(false)
   const [isLoadingAccess, setIsLoadingAccess] = useState(true)
 
   useEffect(() => {
     const readAccess = async () => {
-      const auth = await withReadAccess(accountId)
+      const auth = await withReadAccess()
       setIsRead(auth instanceof Error ? false : true)
       setIsLoadingAccess(false)
     }
     readAccess()
-  }, [accountId])
+  }, [])
 
   return { isRead, isLoadingAccess }
 }
 
-export function useWithReadWriteAccess(accountId: string) {
+export function useWithReadWriteAccess() {
   const [isReadWriteAccess, setIsReadWriteAccess] = useState(false)
   const [isLoadingAccess, setIsLoadingAccess] = useState(true)
 
   useEffect(() => {
     const readWriteAccess = async () => {
-      const auth = await withReadWriteAccess(accountId)
+      const auth = await withReadWriteAccess()
       setIsReadWriteAccess(auth instanceof Error ? false : true)
       setIsLoadingAccess(false)
     }
     readWriteAccess()
-  }, [accountId])
+  }, [])
 
   return { isReadWriteAccess, isLoadingAccess }
 }

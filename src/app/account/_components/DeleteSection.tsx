@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
-import { deleteAccount, withOwnerAccess, submitAccountDeletionFeedback } from '@/modules/account/actions'
+import { deleteAccount, submitAccountDeletionFeedback } from '@/modules/account/actions'
 import { toast } from 'sonner'
 import { useActiveAccount } from '@/contexts/ActiveAccountContext'
 import { Alert, AlertDescription } from '@/components/ui/alert'
@@ -30,8 +30,8 @@ const glowingButtonStyles = `
   transition-shadow duration-300
 `
 
-export function DeleteSection({ accountId }: { accountId: string }) {
-  const { isOwner, isLoadingAccess } = useWithOwnerAccess(accountId)
+export function DeleteSection() {
+  const { isOwner, isLoadingAccess } = useWithOwnerAccess()
   const [isDeleting, setIsDeleting] = useState(false)
   const [isSubmittingFeedback, setIsSubmittingFeedback] = useState(false)
 
@@ -42,53 +42,44 @@ export function DeleteSection({ accountId }: { accountId: string }) {
   const { clearActiveAccount } = useActiveAccount()
 
   const handleDelete = async () => {
-    // Double check owner access before proceeding
-    const auth = await withOwnerAccess(accountId)
-    if (auth instanceof Error) {
-      toast.error('You must be an owner to delete this account')
-      return
+    setIsDeleting(true)
+    // First submit feedback
+    if (reason.trim() !== '' || improvements.trim() !== '') {
+      const feedbackResult = await submitAccountDeletionFeedback(reason, improvements)
+      if (feedbackResult instanceof Error) {
+        toast.error('Failed to submit feedback. Please try again.')
+      }
     }
 
-    setIsDeleting(true)
-    try {
-      // First submit feedback
-      const feedbackResult = await submitAccountDeletionFeedback(accountId, reason, improvements)
-      if (feedbackResult instanceof Error) throw feedbackResult
-
-      // Then delete account
-      const result = await deleteAccount(accountId)
-      if (result instanceof Error) throw result
-
+    // Then delete account
+    const result = await deleteAccount()
+    setIsDeleting(false)
+    if (result instanceof Error) {
+      toast.error('Failed to delete account. Please try again.')
+      setIsOpen(false)
+    } else {
       toast.success('Account successfully deleted')
-
       // Clear active account and redirect
       await clearActiveAccount()
       router.push('/')
-    } catch {
-      toast.error('Failed to delete account. Please try again.')
-      setIsOpen(false)
-    } finally {
-      setIsDeleting(false)
     }
   }
 
   const handleSubmitFeedback = async () => {
-    if (!reason) {
+    if (reason.trim() === '' && improvements.trim() === '') {
       toast.error('Please tell us why you are considering leaving')
       return
     }
 
     setIsSubmittingFeedback(true)
-    try {
-      const result = await submitAccountDeletionFeedback(accountId, reason, improvements)
-      if (result instanceof Error) throw result
 
+    const result = await submitAccountDeletionFeedback(reason, improvements)
+    setIsSubmittingFeedback(false)
+    if (result instanceof Error) {
+      toast.error('Failed to submit feedback. Please try again.')
+    } else {
       toast.success('Thank you for your feedback! We will be in touch shortly.')
       setIsOpen(false)
-    } catch {
-      toast.error('Failed to submit feedback. Please try again.')
-    } finally {
-      setIsSubmittingFeedback(false)
     }
   }
 

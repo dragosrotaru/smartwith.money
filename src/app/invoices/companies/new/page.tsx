@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { redirect } from 'next/navigation'
-import { getActiveAccount } from '@/modules/account/activeAccount'
+import { withReadWriteAccess } from '@/modules/account/actions'
 import { CompanyForm } from '../../_components/CompanyForm'
 
 export const metadata: Metadata = {
@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 }
 
 export default async function NewCompanyPage() {
-  const account = await getActiveAccount()
-  if (!account) redirect('/accounts')
+  const auth = await withReadWriteAccess()
+  if (auth instanceof Error) redirect('/')
 
   return (
     <div className="container py-10">
@@ -19,7 +19,7 @@ export default async function NewCompanyPage() {
         <p className="text-muted-foreground">Create a new company</p>
       </div>
 
-      <CompanyForm accountId={account} />
+      <CompanyForm />
     </div>
   )
 }
