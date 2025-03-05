@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
@@ -21,9 +22,9 @@ export function Markdown({ children }: MarkdownProps) {
         ol: ({ children }) => <ol className="list-decimal pl-6 mb-4 space-y-2 [&_ol]:mt-2 [&_ol]:mb-0">{children}</ol>,
         li: ({ children }) => <li className="text-gray-700 pl-2">{children}</li>,
         a: ({ href, children }) => (
-          <a href={href} className="text-blue-600 hover:text-blue-800 hover:underline">
+          <Link href={href ?? ''} className="text-blue-600 hover:text-blue-800 hover:underline">
             {children}
-          </a>
+          </Link>
         ),
         blockquote: ({ children }) => (
           <blockquote className="border-l-4 border-gray-200 pl-4 italic my-4">{children}</blockquote>

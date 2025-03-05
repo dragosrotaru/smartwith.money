@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
 
 const statusColors = {
   'in-progress': 'bg-blue-500',
@@ -121,9 +122,9 @@ export default function RoadmapPage() {
         </p>
         <p>
           Contact us at{' '}
-          <a href={`mailto:${process.env.SUPPORT_EMAIL}`} className="text-blue-600 hover:underline">
+          <Link href={`mailto:${process.env.SUPPORT_EMAIL}`} className="text-blue-600 hover:underline">
             {process.env.SUPPORT_EMAIL}
-          </a>
+          </Link>
         </p>
       </div>
     </div>

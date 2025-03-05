@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { menu } from '@/lib/menu'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: menu.privacyPolicy.title + ' | Canadian Financial Tools',
@@ -70,9 +71,9 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
           <p>
             If you have questions about this Privacy Policy or our practices, please contact us at{' '}
-            <a href="mailto:privacy@example.com" className="text-blue-600 hover:text-blue-800">
-              privacy@example.com
-            </a>
+            <Link href={`mailto:${process.env.SUPPORT_EMAIL}`} className="text-blue-600 hover:text-blue-800">
+              {process.env.SUPPORT_EMAIL}
+            </Link>
             .
           </p>
         </section>

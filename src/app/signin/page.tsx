@@ -7,7 +7,7 @@ import SignInFacebook from './SigninFacebook'
 import SignInEmail from './SignInEmail'
 import { auth } from '@/auth'
 import { redirect } from 'next/navigation'
-
+import Link from 'next/link'
 export default async function LoginPage() {
   const session = await auth()
   if (session?.user) redirect('/')
@@ -47,13 +47,13 @@ export default async function LoginPage() {
 
       <p className="mt-6 text-center text-sm text-muted-foreground">
         By continuing, you agree to our{' '}
-        <a href={menu.termsOfService.href} className="text-primary hover:underline">
+        <Link href={menu.termsOfService.href} className="text-primary hover:underline">
           Terms of Service
-        </a>{' '}
+        </Link>{' '}
         and{' '}
-        <a href={menu.privacyPolicy.href} className="text-primary hover:underline">
+        <Link href={menu.privacyPolicy.href} className="text-primary hover:underline">
           Privacy Policy
-        </a>
+        </Link>
         .
       </p>
     </div>

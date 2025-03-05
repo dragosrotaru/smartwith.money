@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation'
 import { getCompaniesForInvoice } from '@/modules/invoices/actions'
 import { InvoiceForm } from '../_components/InvoiceForm'
 import { getActiveAccount } from '@/modules/account/activeAccount'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'New Invoice',
@@ -21,9 +22,9 @@ export default async function NewInvoicePage() {
         <p className="text-muted-foreground">
           You need to create at least one company before you can create an invoice.
         </p>
-        <a href="/invoices/companies/new" className="text-primary hover:underline">
+        <Link href="/invoices/companies/new" className="text-primary hover:underline">
           Create your first company
-        </a>
+        </Link>
       </div>
     )
   }
