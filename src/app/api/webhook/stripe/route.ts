@@ -6,6 +6,17 @@ import { db } from '@/lib/db'
 import { accounts } from '@/modules/account/model'
 import { eq } from 'drizzle-orm'
 
+export async function GET() {
+  const headersList = await headers()
+  const signature = headersList.get('stripe-signature')
+
+  if (!signature) {
+    return new NextResponse('No signature', { status: 400 })
+  }
+
+  return new NextResponse('Webhook endpoint is alive', { status: 200 })
+}
+
 export async function POST(request: Request) {
   const body = await request.text()
   const headersList = await headers()
