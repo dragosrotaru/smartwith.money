@@ -37,6 +37,7 @@ export function SubscriptionProvider({ children }: { children: React.ReactNode }
 
       try {
         const { isProMember: isPro, status, trialEndsAt } = await getSubscriptionStatus()
+        console.log('isProMember', isPro)
         setIsProMember(isPro)
         setSubscriptionStatus(status)
         setTrialEndsAt(trialEndsAt ? new Date(trialEndsAt) : null)

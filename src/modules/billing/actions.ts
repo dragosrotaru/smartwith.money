@@ -9,6 +9,7 @@ import { db } from '@/lib/db'
 import { accounts } from '@/modules/account/model'
 import { eq } from 'drizzle-orm'
 import { withOwnerAccess } from '@/modules/account/actions'
+import { menu } from '@/lib/menu'
 
 export async function createPortalSession() {
   try {
@@ -37,8 +38,9 @@ export async function getSubscriptionStatus() {
     if (auth instanceof Error) return { isProMember: false, status: null, trialEndsAt: null }
 
     const subscription = await getActiveSubscription(auth.activeAccountId)
+    const isProMember = !!subscription && subscription.status !== 'canceled' && subscription.status !== 'paused'
     return {
-      isProMember: !!subscription && subscription.status === 'active',
+      isProMember,
       status: subscription?.status || null,
       trialEndsAt: subscription?.stripeCurrentPeriodEnd || null,
     }
@@ -62,14 +64,12 @@ export async function createCheckoutSession(): Promise<{ url: string }> {
     if (subscription) throw new Error('Account already has an active subscription')
 
     // Create Stripe checkout session
-    const successUrl = new URL(`${process.env.APP_URL}/account`)
-    successUrl.searchParams.set('subscription', 'success')
+    const successUrl = `${process.env.APP_URL}${menu.account.href}?subscription=success`
 
     const checkoutSession = await createStripeCheckoutSession({
       customerId: account.stripeCustomerId,
       priceId: process.env.STRIPE_PRO_PRICE_ID!,
-      successUrl: successUrl.toString(),
-      cancelUrl: `${process.env.APP_URL}/account?subscription=cancelled`,
+      successUrl,
     })
 
     if (!checkoutSession.url) throw new Error('Failed to create checkout session URL')

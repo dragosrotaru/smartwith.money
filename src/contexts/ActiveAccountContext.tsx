@@ -14,6 +14,7 @@ active account id from the withXAccess methods.
 
 type ActiveAccountContextType = {
   activeAccountId: string | undefined
+  activeAccount: { id: string; name: string } | undefined
   setActiveAccountId: (accountId: string) => Promise<void>
   clearActiveAccount: () => Promise<void>
   isLoading: boolean
@@ -24,6 +25,7 @@ const ActiveAccountContext = createContext<ActiveAccountContextType | undefined>
 
 export function ActiveAccountProvider({ children }: { children: React.ReactNode }) {
   const [activeAccountId, setActiveAccountIdState] = useState<string | undefined>()
+  const [activeAccount, setActiveAccountState] = useState<{ id: string; name: string } | undefined>()
   const [isLoading, setIsLoading] = useState(true)
 
   const ensureActiveAccount = async () => {
@@ -38,8 +40,10 @@ export function ActiveAccountProvider({ children }: { children: React.ReactNode 
           // If current active account is inactive or not found, clear it
           await clearActiveAccountDb()
           setActiveAccountIdState(undefined)
+          setActiveAccountState(undefined)
         } else {
           setActiveAccountIdState(auth.activeAccountId)
+          setActiveAccountState({ id: account.id, name: account.name })
           return
         }
       }
@@ -49,6 +53,7 @@ export function ActiveAccountProvider({ children }: { children: React.ReactNode 
         const firstAccount = auth.accounts[0]
         await setActiveAccount(firstAccount.id)
         setActiveAccountIdState(firstAccount.id)
+        setActiveAccountState({ id: firstAccount.id, name: firstAccount.name })
       }
     } catch (error) {
       console.error('Failed to ensure active account:', error)
@@ -73,6 +78,13 @@ export function ActiveAccountProvider({ children }: { children: React.ReactNode 
     try {
       await setActiveAccount(accountId)
       setActiveAccountIdState(accountId)
+      const auth = await authorization()
+      if (!(auth instanceof Error)) {
+        const account = auth.accounts.find((a) => a.id === accountId)
+        if (account) {
+          setActiveAccountState({ id: account.id, name: account.name })
+        }
+      }
     } catch (error) {
       console.error('Failed to set active account:', error)
       throw error
@@ -83,6 +95,7 @@ export function ActiveAccountProvider({ children }: { children: React.ReactNode 
     try {
       await clearActiveAccountDb()
       setActiveAccountIdState(undefined)
+      setActiveAccountState(undefined)
     } catch (error) {
       console.error('Failed to clear active account:', error)
       throw error
@@ -93,6 +106,7 @@ export function ActiveAccountProvider({ children }: { children: React.ReactNode 
     <ActiveAccountContext.Provider
       value={{
         activeAccountId,
+        activeAccount,
         setActiveAccountId,
         clearActiveAccount,
         isLoading,

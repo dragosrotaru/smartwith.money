@@ -4,6 +4,7 @@ import { referralCodes, referralUses } from './model'
 import { stripe } from '@/modules/billing/service'
 import { subscriptions } from '@/modules/billing/model'
 import { accounts, accountUsers } from '@/modules/account/model'
+import Stripe from 'stripe'
 
 /**
  * Records a referral use
@@ -40,13 +41,13 @@ export async function recordReferralUse(code: string, newUserId: string): Promis
  * This is called during the subscription process.
  * An account can only use one referral code in its lifetime.
  */
-export async function completeReferralUse(userId: string, accountId: string): Promise<null | Error> {
+export async function completeReferralUse(userId: string, accountId: string): Promise<boolean | Error> {
   // Get the user's incomplete referral use
   const userReferralUses = await db.select().from(referralUses).where(eq(referralUses.referredUserId, userId))
 
   const [referralUse] = userReferralUses.filter((use) => use.completedAt === null)
   // No referral to complete, not an error
-  if (!referralUse) return null
+  if (!referralUse) return false
 
   // Check if account has already used any referral code (lifetime constraint)
   const completedReferrals = userReferralUses.filter((use) => use.completedAt !== null)
@@ -94,7 +95,7 @@ export async function completeReferralUse(userId: string, accountId: string): Pr
       applyReferralReward(accountId),
     ])
 
-    return null
+    return true
   } catch (error) {
     console.error('Failed to complete referral:', error)
     return new Error('Failed to complete referral')
@@ -105,7 +106,10 @@ async function applyReferralReward(accountId: string): Promise<null | Error> {
   try {
     // Get the account's active subscription
     const [subscription] = await db
-      .select()
+      .select({
+        stripeId: subscriptions.stripeId,
+        stripeCustomerId: subscriptions.stripeCustomerId,
+      })
       .from(subscriptions)
       .where(and(eq(subscriptions.accountId, accountId), eq(subscriptions.status, 'active')))
       .limit(1)
@@ -114,9 +118,13 @@ async function applyReferralReward(accountId: string): Promise<null | Error> {
       return new Error('No active subscription found')
     }
 
-    // Apply a 1-month free trial via Stripe
-    await stripe.subscriptions.update(subscription.stripeId, {
-      trial_end: Math.floor(Date.now() / 1000) + 30 * 24 * 60 * 60, // 30 days from now
+    const CREDIT_VALUE = 1000 // $10 in cents
+
+    // Apply the credit to the customer's balance
+    // The amount needs to be negative because negative customer balance means credit
+    const customer = (await stripe.customers.retrieve(subscription.stripeCustomerId)) as Stripe.Customer
+    await stripe.customers.update(subscription.stripeCustomerId, {
+      balance: (customer.balance || 0) - CREDIT_VALUE,
     })
 
     return null

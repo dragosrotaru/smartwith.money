@@ -198,3 +198,48 @@ function generateAccountDeletionFeedbackTemplate(params: AccountDeletionFeedback
     </div>
   `
 }
+
+type EmailVerificationParams = {
+  email: string
+  token: string
+}
+
+export async function sendVerificationEmail({ email, token }: EmailVerificationParams): Promise<void> {
+  await postmark.sendEmail({
+    From: process.env.POSTMARK_FROM_EMAIL!,
+    To: email,
+    Subject: 'Verify your email address',
+    HtmlBody: generateVerificationEmailTemplate({ token }),
+    MessageStream: 'outbound',
+  })
+}
+
+function generateVerificationEmailTemplate({ token }: { token: string }): string {
+  return `
+    <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+      <h1 style="color: #2563eb;">Verify Your Email</h1>
+      
+      <div style="margin: 24px 0;">
+        <p style="color: #4b5563;">
+          Please verify your email address by clicking the button below.
+          This helps us ensure the security of your account.
+        </p>
+      </div>
+
+      <div style="margin: 24px 0; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
+        <div style="margin: 24px 0;">
+          <a
+            href="${process.env.APP_URL}/verify-email?token=${token}"
+            style="display: inline-block; background-color: #2563eb; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px;"
+          >
+            Verify Email Address
+          </a>
+        </div>
+      </div>
+
+      <p style="color: #6b7280; font-size: 14px; margin-top: 24px;">
+        This verification link will expire in 24 hours. If you did not request this verification, please ignore this email.
+      </p>
+    </div>
+  `
+}

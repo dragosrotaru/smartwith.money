@@ -10,12 +10,15 @@ import {
   accounts,
   accountExportJobs,
   AccountExportJob,
+  verificationTokens,
 } from './model'
 import { and, eq, sql, desc } from 'drizzle-orm'
-import { sendInviteEmail, sendAccountDeletionFeedbackEmail } from '../notifications/email'
+import { sendInviteEmail, sendAccountDeletionFeedbackEmail, sendVerificationEmail } from '../notifications/email'
 import { feedback } from '../feedback/model'
 import { Province } from '../location/provinces'
-import { createCustomer } from '@/modules/billing/service'
+import { createCustomer, getActiveSubscription, cancelSubscription } from '@/modules/billing/service'
+import { randomBytes } from 'crypto'
+import { uploadProfilePicture } from '@/lib/blob'
 
 /* AUTHORIZATION */
 
@@ -713,19 +716,11 @@ export async function deleteAccount() {
   if (auth instanceof Error) return auth
 
   try {
-    // Get the stripe subscription ID if it exists
-    // todo implement this after moving the customerid to the account table
-    /* const [subscription] = await db
-      .select({ stripeSubscriptionId: accounts.stripeSubscriptionId })
-      .from(accounts)
-      .where(eq(accounts.id, accountId))
-      .limit(1) */
-
     // Cancel Stripe subscription if it exists
-    /* if (subscription?.stripeSubscriptionId) {
-      const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
-      await stripe.subscriptions.cancel(subscription.stripeSubscriptionId)
-    } */
+    const subscription = await getActiveSubscription(auth.activeAccountId)
+    if (subscription) {
+      await cancelSubscription(subscription.stripeId)
+    }
 
     // Mark account as inactive and update all related data
     await db.transaction(async (tx) => {
@@ -793,6 +788,9 @@ export async function submitAccountDeletionFeedback(reason: string, improvementS
     // Calculate days active
     const daysActive = Math.floor((Date.now() - account.createdAt.getTime()) / (1000 * 60 * 60 * 24))
 
+    // Get subscription status
+    const subscription = await getActiveSubscription(authResult.activeAccountId)
+
     // Send email notification
     await sendAccountDeletionFeedbackEmail({
       userEmail: authResult.user.email!,
@@ -800,12 +798,147 @@ export async function submitAccountDeletionFeedback(reason: string, improvementS
       reason,
       improvementSuggestions,
       daysActive,
-      plan: 'Free', // TODO: Update this when we have subscription info
+      plan: subscription !== null ? 'Paid' : 'Free',
     })
 
     return { success: true }
   } catch (error) {
     console.error('Failed to submit feedback:', error)
     return new Error('Failed to submit feedback')
+  }
+}
+
+/**
+ * Updates the user's email address and sends a verification email
+ * Requires authentication and validates the new email format
+ */
+export async function updateEmail(newEmail: string): Promise<Error | null> {
+  const auth = await authorization()
+  if (auth instanceof Error) return auth
+
+  if (!newEmail || !newEmail.includes('@')) {
+    return new Error('Invalid email address')
+  }
+
+  // Check if email is already taken
+  const existingUser = await db.select({ id: users.id }).from(users).where(eq(users.email, newEmail)).limit(1)
+
+  if (existingUser.length > 0) {
+    return new Error('Email address is already in use')
+  }
+
+  // Update the email and send verification
+  const token = randomBytes(32).toString('hex')
+  const expires = new Date(Date.now() + 24 * 60 * 60 * 1000) // 24 hours
+
+  await db.transaction(async (tx) => {
+    await tx
+      .update(users)
+      .set({
+        email: newEmail,
+        emailVerified: null, // Reset email verification status
+        updatedAt: sql`CURRENT_TIMESTAMP`,
+      })
+      .where(eq(users.id, auth.user.id))
+
+    await tx.insert(verificationTokens).values({
+      identifier: newEmail,
+      token,
+      expires,
+    })
+  })
+
+  await sendVerificationEmail({ email: newEmail, token })
+  return null
+}
+
+/**
+ * Verifies an email address using a token
+ */
+export async function verifyEmail(token: string): Promise<Error | true> {
+  // Find the verification token
+  const [verificationToken] = await db
+    .select()
+    .from(verificationTokens)
+    .where(eq(verificationTokens.token, token))
+    .limit(1)
+
+  if (!verificationToken) {
+    return new Error('Invalid or expired verification token')
+  }
+
+  if (verificationToken.expires < new Date()) {
+    // Delete expired token
+    await db.delete(verificationTokens).where(eq(verificationTokens.token, token))
+    return new Error('Verification token has expired')
+  }
+
+  // Update user's email verification status
+  await db.transaction(async (tx) => {
+    await tx
+      .update(users)
+      .set({
+        emailVerified: new Date(),
+        updatedAt: sql`CURRENT_TIMESTAMP`,
+      })
+      .where(eq(users.email, verificationToken.identifier))
+
+    // Delete the used token
+    await tx.delete(verificationTokens).where(eq(verificationTokens.token, token))
+  })
+
+  return true
+}
+
+/**
+ * Updates the user's name
+ */
+export async function updateName(newName: string): Promise<Error | null> {
+  const auth = await authorization()
+  if (auth instanceof Error) return auth
+
+  if (!newName.trim()) {
+    return new Error('Name cannot be empty')
+  }
+
+  try {
+    await db
+      .update(users)
+      .set({
+        name: newName.trim(),
+        updatedAt: sql`CURRENT_TIMESTAMP`,
+      })
+      .where(eq(users.id, auth.user.id))
+
+    return null
+  } catch (error) {
+    console.error('Failed to update name:', error)
+    return new Error('Failed to update name')
+  }
+}
+
+/**
+ * Uploads a profile picture file to Vercel Blob and returns the URL
+ */
+export async function updateProfilePicture(file: File): Promise<string | Error> {
+  const auth = await authorization()
+  if (auth instanceof Error) return auth
+
+  try {
+    const url = await uploadProfilePicture(file, `profile-pictures/${auth.user.id}-${Date.now()}`)
+
+    // Update the user's profile picture URL
+    await db
+      .update(users)
+      .set({
+        image: url,
+        updatedAt: sql`CURRENT_TIMESTAMP`,
+      })
+      .where(eq(users.id, auth.user.id))
+
+    return url
+  } catch (error) {
+    console.error('Failed to upload profile picture:', error)
+    return new Error('Failed to upload profile picture')
   }
 }

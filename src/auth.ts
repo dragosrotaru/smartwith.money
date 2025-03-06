@@ -15,7 +15,7 @@ declare module 'next-auth' {
   interface Session {
     user: {
       id: string
-      stripeCustomerId?: string | null
+      emailVerified?: Date | null
     } & DefaultSession['user']
   }
 }
@@ -73,8 +73,14 @@ export const config: NextAuthConfig = {
         email: user.email,
       })
       */
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      return { ...session, user: { ...session.user, id: user.id, stripeCustomerId: (user as any).stripeCustomerId } }
+      return {
+        ...session,
+        user: {
+          ...session.user,
+          id: user.id,
+          emailVerified: user.emailVerified,
+        },
+      }
     },
     async jwt({ token, user }) {
       if (user) token.id = user.id

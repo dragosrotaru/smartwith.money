@@ -14,7 +14,10 @@ export function Header() {
       <div className="flex h-full items-center justify-between px-2">
         <div className="flex items-center">
           <Link className="hidden md:block" href="/">
-            <Logo />
+            <div className="flex items-center gap-2">
+              <Logo />
+              <span className="text-xl font-semibold">SmartWithMoney</span>
+            </div>
           </Link>
           <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setOpenMobile(!openMobile)}>
             <Menu className="h-5 w-5" />

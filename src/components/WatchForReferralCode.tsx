@@ -5,6 +5,7 @@ import { useReferralCode } from '@/hooks/use-referral-code'
 import { useBanner } from '@/contexts/BannerContext'
 import { getAvailableReferral } from '@/modules/referral/actions'
 import { createCheckoutSession } from '@/modules/billing/actions'
+import { REFERRAL_TEXT } from '@/modules/referral/text'
 
 export default function WatchForReferralCode() {
   const { showBanner } = useBanner()
@@ -32,7 +33,7 @@ export default function WatchForReferralCode() {
 
       showBanner('floating', {
         id: 'referral-upgrade',
-        message: 'You have a referral code available! Upgrade to Pro now to get 1 month free.',
+        message: REFERRAL_TEXT.REFERRAL_NOTIFICATION,
         variant: 'success',
         action: {
           label: isUpgrading ? 'Loading...' : 'Upgrade to Pro',

@@ -6,7 +6,7 @@ import { ExportSection } from './_components/ExportSection'
 import { DeleteSection } from './_components/DeleteSection'
 import { BillingSection } from './_components/BillingSection'
 import { Button } from '@/components/ui/button'
-import { Plus } from 'lucide-react'
+import { Plus, Building2 } from 'lucide-react'
 import Link from 'next/link'
 import { menu } from '@/lib/menu'
 
@@ -25,7 +25,14 @@ export default async function AccountPage() {
         <section>
           <h2 className="text-lg font-medium mb-6">Accounts</h2>
           <div className="space-y-4 flex flex-col gap-2 w-56">
-            <SwitchAccountDialog />
+            <SwitchAccountDialog
+              trigger={
+                <Button variant="outline" className="w-full justify-start gap-2">
+                  <Building2 className="mr-2 h-4 w-4" />
+                  Switch Active Account
+                </Button>
+              }
+            />
             <Link href={menu.onboarding.href} className="w-full">
               <Button variant="outline" className="w-full justify-start gap-2">
                 <Plus className="mr-2 h-4 w-4" />

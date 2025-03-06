@@ -15,8 +15,6 @@ const tiers = [
     price: 'Free',
     description: 'Basic access to essential tools',
     features: ['Access to basic tools', 'Property search', 'Basic mortgage calculator'],
-    href: '/',
-    buttonText: 'Get Started',
   },
   {
     name: 'Free Account',
@@ -28,8 +26,10 @@ const tiers = [
       'Rate-limited access to AI tools',
       'Browser extension access',
     ],
-    href: '/signin',
-    buttonText: 'Sign Up',
+    button: {
+      text: 'Sign Up',
+      href: '/signin',
+    },
   },
   {
     name: 'Pro',
@@ -42,8 +42,10 @@ const tiers = [
       'Priority support',
       'All Free Account features',
     ],
-    href: '/signin?plan=pro',
-    buttonText: 'Get Pro',
+    button: {
+      text: 'Get Pro',
+      href: '/signin',
+    },
     featured: true,
   },
 ]
@@ -85,9 +87,11 @@ export default function PricingPage() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button asChild className="w-full" variant={tier.featured ? 'default' : 'outline'}>
-                <Link href={tier.href}>{tier.buttonText}</Link>
-              </Button>
+              {tier.button && (
+                <Button asChild className="w-full" variant={tier.featured ? 'default' : 'outline'}>
+                  <Link href={tier.button.href}>{tier.button.text}</Link>
+                </Button>
+              )}
             </CardFooter>
           </Card>
         ))}

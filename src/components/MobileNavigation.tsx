@@ -1,3 +1,4 @@
+'use client'
 import * as React from 'react'
 import Link from 'next/link'
 import {
@@ -12,7 +13,12 @@ import {
   SidebarMenuItem,
 } from '@/components/ui/sidebar'
 import { menu, MenuItem } from '@/lib/menu'
-import Logo from './Logo'
+import { useSession } from 'next-auth/react'
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
+import { useActiveAccount } from '@/contexts/ActiveAccountContext'
+import { SwitchAccountDialog } from '@/app/account/_components/SwitchAccountDialog'
+import { ArrowLeftRight } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 const subMenuOne: MenuItem[] = [menu.docs, menu.about, menu.roadmap]
 const subMenuTwo: MenuItem[] = [
@@ -25,12 +31,42 @@ const subMenuTwo: MenuItem[] = [
 ]
 
 export function MobileNavigation() {
+  const { data: session } = useSession()
+  const { activeAccount } = useActiveAccount()
+
   return (
     <Sidebar collapsible="offcanvas">
       <SidebarHeader>
-        <Link href="/">
-          <Logo />
-        </Link>
+        <div className="flex items-center gap-3 px-4 py-2">
+          <Avatar className="h-10 w-10">
+            <AvatarImage src={session?.user?.image || undefined} />
+            <AvatarFallback>
+              {session?.user?.name?.[0]?.toUpperCase() || session?.user?.email?.[0]?.toUpperCase()}
+            </AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col">
+            <p className="font-medium">{session?.user?.name || 'User'}</p>
+            <p className="text-sm text-muted-foreground">{session?.user?.email}</p>
+          </div>
+        </div>
+        {activeAccount && (
+          <div className="mt-2 px-4 py-2 border-t">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 mr-2" />
+                <p className="text-xs font-medium text-muted-foreground">Active Account</p>
+              </div>
+              <SwitchAccountDialog
+                trigger={
+                  <Button variant="ghost" size="icon" className="h-5 w-5 text-muted-foreground hover:text-foreground">
+                    <ArrowLeftRight className="h-4 w-4" />
+                  </Button>
+                }
+              />
+            </div>
+            <p className="text-sm font-medium pl-3.5 mt-1">{activeAccount.name}</p>
+          </div>
+        )}
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>

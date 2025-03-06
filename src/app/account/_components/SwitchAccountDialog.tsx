@@ -1,17 +1,10 @@
 'use client'
 import { Button } from '@/components/ui/button'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog'
-import { SwitchCamera } from 'lucide-react'
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { authorization } from '@/modules/account/actions'
 import { useEffect, useState } from 'react'
 import { useActiveAccount } from '@/contexts/ActiveAccountContext'
+import Loader from '@/components/Loader'
 
 type Account = {
   id: string
@@ -19,10 +12,15 @@ type Account = {
   role: string
 }
 
-export function SwitchAccountDialog() {
+type SwitchAccountDialogProps = {
+  trigger: React.ReactNode
+}
+
+export function SwitchAccountDialog({ trigger }: SwitchAccountDialogProps) {
   const { activeAccountId, setActiveAccountId } = useActiveAccount()
   const [accounts, setAccounts] = useState<Account[]>([])
   const [isLoading, setIsLoading] = useState(true)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     const loadAccounts = async () => {
@@ -40,36 +38,39 @@ export function SwitchAccountDialog() {
       }
     }
 
-    loadAccounts()
-  }, [])
-
-  if (isLoading) return null
+    if (open) {
+      loadAccounts()
+    }
+  }, [open])
 
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <Button variant="outline" className="justify-start gap-2 w-full">
-          <SwitchCamera className="mr-2 h-4 w-4" />
-          Switch Active Account
-        </Button>
-      </DialogTrigger>
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Switch Account</DialogTitle>
-          <DialogDescription>Select an account to switch to or create a new one.</DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          {accounts.map((account) => (
-            <Button
-              key={account.id}
-              variant={account.id === activeAccountId ? 'default' : 'outline'}
-              className="w-full justify-start"
-              onClick={() => setActiveAccountId(account.id)}
-            >
-              {account.name}
-              {account.id === activeAccountId && <span className="ml-auto text-xs text-muted-foreground">Current</span>}
-            </Button>
-          ))}
+          {isLoading ? (
+            <div className="flex justify-center py-4">
+              <Loader size={24} />
+            </div>
+          ) : (
+            accounts.map((account) => (
+              <Button
+                key={account.id}
+                variant={account.id === activeAccountId ? 'default' : 'outline'}
+                className="w-full justify-start"
+                onClick={() => setActiveAccountId(account.id)}
+              >
+                {account.id === activeAccountId && <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 mr-2" />}
+                {account.name}
+                {account.id === activeAccountId && (
+                  <span className="ml-auto text-xs text-primary-foreground">Active</span>
+                )}
+              </Button>
+            ))
+          )}
         </div>
       </DialogContent>
     </Dialog>

@@ -8,6 +8,7 @@ import { getOrCreateReferralCode, getReferralUses, getAvailableReferral } from '
 import { redirect } from 'next/navigation'
 import { Card } from '@/components/ui/card'
 import type { ReferralCode } from '@/modules/referral/model'
+import { REFERRAL_TEXT } from '@/modules/referral/text'
 
 interface ReferralUse {
   referralUse: {
@@ -78,9 +79,7 @@ export default function ReferralSettings() {
               </div>
               <div>
                 <Label>Invite Friends</Label>
-                <p className="text-sm text-muted-foreground">
-                  Share your referral link and both you and your friend get one month free!
-                </p>
+                <p className="text-sm text-muted-foreground">{REFERRAL_TEXT.REFERRAL_LINK}</p>
               </div>
             </div>
 
@@ -113,7 +112,7 @@ export default function ReferralSettings() {
                 <div>
                   <h3 className="font-semibold">You have an unused referral!</h3>
                   <p className="text-sm text-muted-foreground">
-                    Subscribe to any plan to get one month free with referral code: {availableReferral.code}
+                    {REFERRAL_TEXT.REFERRAL_AVAILABLE} {availableReferral.code}
                   </p>
                 </div>
               </div>
@@ -132,7 +131,7 @@ export default function ReferralSettings() {
                   <div key={index} className="flex items-center justify-between p-3 bg-muted rounded-lg">
                     <div className="flex items-center gap-2">
                       <Users className="h-4 w-4 text-muted-foreground" />
-                      <span className="text-sm text-green-600 font-medium">Credit Applied +$10</span>
+                      <span className="text-sm text-green-600 font-medium">{REFERRAL_TEXT.CREDIT_APPLIED}</span>
                     </div>
                     <div className="text-sm text-muted-foreground">
                       {new Date(use.referralUse!.completedAt!).toLocaleDateString()}

@@ -45,20 +45,20 @@ export default async function RootLayout({
             <ThemeProvider>
               <BannerProvider>
                 <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+                  <Toaster />
+                  <Suspense>
+                    <WatchForReferralCode />
+                    <WatchForSubscriptionBanner />
+                    <EnsureActiveAccount />
+                  </Suspense>
+                  <InviteDialog />
                   <SidebarProvider defaultOpen={false}>
-                    <Suspense>
-                      <WatchForReferralCode />
-                      <WatchForSubscriptionBanner />
-                      <EnsureActiveAccount />
-                    </Suspense>
                     <div className="flex min-h-screen w-full flex-col">
                       <Header />
                       <main className="container mx-auto px-4 py-8 flex-grow">{children}</main>
                       <Footer />
                       <MobileNavigation />
                     </div>
-                    <Toaster />
-                    <InviteDialog />
                   </SidebarProvider>
                 </body>
               </BannerProvider>

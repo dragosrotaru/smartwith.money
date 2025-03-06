@@ -11,11 +11,10 @@ import { useSubscription } from '@/contexts/SubscriptionContext'
 import UpgradeButton from '@/components/UpgradeButton'
 
 import { toast } from 'sonner'
-import { completeReferralSubscription } from '@/modules/referral/actions'
 import { AccessAlert } from '@/components/AccessAlert'
 import { useWithOwnerAccess } from '@/hooks/use-with-access'
 import { SectionSkeleton } from './SectionSkeleton'
-
+import { completeReferralSubscription } from '@/modules/referral/actions'
 export function BillingSection() {
   const { isOwner, isLoadingAccess } = useWithOwnerAccess()
   const [loading, setIsLoading] = useState(false)
@@ -26,24 +25,16 @@ export function BillingSection() {
   useEffect(() => {
     const handleSubscriptionStatus = async () => {
       const subscription = searchParams.get('subscription')
-
       if (subscription === 'success') {
         toast.success('Thank you for subscribing! Your subscription will be active shortly.')
-
-        try {
-          // todo complete the referral in the webhook?
-          const error = await completeReferralSubscription()
-          if (error instanceof Error) {
-            toast.error(error.message)
-          } else {
+        const result = await completeReferralSubscription()
+        if (result instanceof Error) {
+          toast.error(result.message)
+        } else {
+          if (result) {
             toast.success('Referral bonus applied!')
           }
-        } catch (error) {
-          console.error('Error processing referral:', error)
-          toast.error('Failed to process referral')
         }
-      } else if (subscription === 'cancelled') {
-        toast.info('Subscription cancelled. You can upgrade anytime.')
       }
     }
 

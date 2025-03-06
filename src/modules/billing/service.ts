@@ -1,4 +1,4 @@
-import { and, eq } from 'drizzle-orm'
+import { eq } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { subscriptions, type Subscription } from './model'
 import Stripe from 'stripe'
@@ -22,12 +22,7 @@ export async function createCustomer(params: { email: string; name?: string }) {
   })
 }
 
-export async function createCheckoutSession(params: {
-  customerId: string
-  priceId: string
-  successUrl: string
-  cancelUrl: string
-}) {
+export async function createCheckoutSession(params: { customerId: string; priceId: string; successUrl: string }) {
   return stripe.checkout.sessions.create({
     customer: params.customerId,
     line_items: [
@@ -38,7 +33,6 @@ export async function createCheckoutSession(params: {
     ],
     mode: 'subscription',
     success_url: params.successUrl,
-    cancel_url: params.cancelUrl,
     subscription_data: {
       trial_period_days: 14,
     },
@@ -60,7 +54,7 @@ export async function getActiveSubscription(accountId: string) {
   const subscription = await db
     .select()
     .from(subscriptions)
-    .where(and(eq(subscriptions.accountId, accountId), eq(subscriptions.status, 'active')))
+    .where(eq(subscriptions.accountId, accountId))
     .limit(1)
     .then((results) => results[0])
 
@@ -106,4 +100,12 @@ export async function updateSubscription(subscription: Stripe.Subscription): Pro
     .returning()
 
   return updatedSubscription
+}
+
+export async function cancelSubscription(subscriptionId: string): Promise<Subscription> {
+  // Cancel the subscription in Stripe
+  const stripeSubscription = await stripe.subscriptions.cancel(subscriptionId)
+
+  // Update the subscription in our database
+  return updateSubscription(stripeSubscription)
 }
