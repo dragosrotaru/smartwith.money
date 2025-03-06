@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import { menu } from '@/lib/menu'
 import ShowReferralMessage from './ShowReferralMessage'
 import SignInGoogle from './SignInGoogle'
-import SignInApple from './SignInApple'
+// import SignInApple from './SignInApple'
 import SignInFacebook from './SigninFacebook'
 import SignInEmail from './SignInEmail'
 import { auth } from '@/auth'
@@ -40,7 +40,7 @@ export default async function LoginPage() {
           </div>
 
           <SignInGoogle />
-          <SignInApple />
+          {/* <SignInApple /> */}
           <SignInFacebook />
         </div>
       </div>

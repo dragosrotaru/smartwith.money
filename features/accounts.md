@@ -1,6 +1,15 @@
 # Accounts / Billing / User Settings
 
-- enable Oauth
+## OAuth
+
+- enable Apple OAuth
+- fix Facebook OAuth
+- email verification with OAuth
+- Name and Profile Pic
+- Linking Email and OAuth Login
+
+## Features
+
 - implement authjs error handling
 - apply the referral credit
 
