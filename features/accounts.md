@@ -2,11 +2,11 @@
 
 ## OAuth
 
-- enable Apple OAuth
 - fix Facebook OAuth
 - email verification with OAuth
 - Name and Profile Pic
-- Linking Email and OAuth Login
+- implement solution for OAuthAccountNotLinked
+- enable Apple OAuth
 
 ## Features
 

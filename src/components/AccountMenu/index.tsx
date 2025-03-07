@@ -107,7 +107,7 @@ export default function AccountMenu() {
             onSelect={(event) => {
               event.preventDefault()
               signOut({
-                callbackUrl: `${window.location.origin}/login`,
+                callbackUrl: `${window.location.origin}${menu.signin.href}`,
               })
             }}
           >

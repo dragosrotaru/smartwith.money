@@ -21,7 +21,7 @@ declare module 'next-auth' {
 }
 
 export const config: NextAuthConfig = {
-  debug: process.env.NODE_ENV === 'development',
+  debug: true, // process.env.NODE_ENV === 'development',
   adapter: DrizzleAdapter(db, {
     usersTable: users,
     accountsTable: userAccounts,
